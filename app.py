@@ -17,9 +17,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/user")
+@app.route("/player_home")
 def user():
-    user = mongo.db.users.find()
+    user = mongo.db.user.find()
     return render_template("player_home.html", user=user)
 
 
