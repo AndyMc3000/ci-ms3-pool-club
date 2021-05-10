@@ -1,6 +1,6 @@
-<a name="top-of-page">![Party Chef Logo created using FreeLogoDesign.org](/assets/readme-assets/party-chef-logo-readme.png)</a>
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using https://www.pinclipart.com/](/assets/readme-assets/readme-heading-logo.png)</a>
 
-# Cill na Martra Pool Club :cocktail: #
+# Cill na Martra Pool Club (CPC) :8ball: #
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
 ## Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ##
 ### Developer: Andrew McDonald - Contact me on GitHub :octocat: @ <a href="https://github.com/AndyMc3000"><strong>AndyMc3000</strong></a> ###
@@ -18,17 +18,25 @@
 1. [Technologies Used](#technologies-used)
 1. [Testing & Bugs](#testing)
 1. [Deployment](#deployment)
-1. [Credits](#deployment)
+1. [Credits](#credits)
 <br>
 <hr>
 
 # 1. <a name="introduction-heading">Introduction</a> #
 
-The Party Chef website is my Milestone 2 (MS2) project for the Diploma in Fullstack Software Development course at Code Institute. The underlying goal of the project is to meet and exceed the requirements laid out for the MS2 project by Code Institute. The high-level requirement of the MS2 project is to "..build an interactive front-end site. The site should respond to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals." 
+The Cill na Martra Pool Club (hereafter called CPC) website is my Milestone 2 (MS3) project for the Diploma in Fullstack Software Development course at Code Institute. The underlying goal of the project is to meet and exceed the requirements laid out for the MS2 project by Code Institute. The high-level requirement of the MS2 project is to "..build a full-stack site that allows your users to manage a common dataset about a particular domain. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members." 
 
-This README refers to Party Chef as a fictional client of mine, where I have been hired to develop a website for the business owners to meet certain criteria (see UX section below). The principle technologies used in the development of the site are; HTML5, CSS3, and JavaScript. Other technologies include; the Bootstrap front-end framework, the jQuery library, and the EmailJS email service.
+This README refers to CPC as a fictional client of mine, where I have been hired to develop a website for CPC to meet certain criteria (see UX section below). The principle languages used in the development of the site are; HTML5, CSS3, JavaScript, and Python. Other technologies include; 
+* The Bootstrap front-end CSS framework.
+* The jQuery JavaScript library.
+* The Flask Python web framework.
+* The Jinja templating language for Python.
+* The MongoDB NoSQL database program.
+* The EmailJS email service.
 
-Party Chef is a private catering business with multiple office locations around Ireland. Party Chef is run by a professional team of chef's, service personnel, and party planners. The businesses offices are referred to as 'kitchens' on the website, as this is where food is prepared before being delivered to event/party locations. Customers can vist the kitchens in order to discuss and plan their events with the Party Chef team. 
+CPC is a small Pool Club with members based around a number of parishes close to Cill na Martra in Co.Cork, Ireland. Club members meet weekly at a number of local pubs to play pool. Membership numbers fluctuate between roughly 25 to 40 players. CPC runs a Pool League twice yearly. Members arrange to meet at a venue to play matches which comprise of playing best out of 5 games format. A Referee must also be present at league matches. Any other member can referee a match.
+
+Managing members and pool league data was traditionally paper-based, and was a headache for those members who were 'voluntold' to manage that job. The club want a simple web-based application to make it easy for members to manage league results, to allow members to get real-time result information, and to allow members to easily get contact information for players when they need to schedule a match with them.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -132,10 +140,7 @@ Following on from the tasks decided upon in the Structure Plane, the Skeleton Pl
 
 With this in mind the following wireframes were created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
 
-1. <a href="assets/readme-assets/party-chef-homepage.png"><strong>Homepage Wireframe</strong></a>
-1. <a href="assets/readme-assets/party-chef-contact-page.png"><strong>Contact Page Wireframe</strong></a>
-1. <a href="assets/readme-assets/party-chef-mymenu-modal.png"><strong>'MyMenu' Modal Wireframe</strong></a>
-
+1. <a href="assets/readme-assets/cpc-wireframes.png"><strong>Large Screen Wireframes</strong></a>
 
 ### 5. The Surface Plane ###
 
