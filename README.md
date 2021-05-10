@@ -24,9 +24,16 @@
 
 # 1. <a name="introduction-heading">Introduction</a> #
 
-The Cill na Martra Pool Club (hereafter called CPC) website is my Milestone 2 (MS3) project for the Diploma in Fullstack Software Development course at Code Institute. The underlying goal of the project is to meet and exceed the requirements laid out for the MS2 project by Code Institute. The high-level requirement of the MS2 project is to "..build a full-stack site that allows your users to manage a common dataset about a particular domain. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members." 
+The Cill na Martra Pool Club (hereafter called CPC) website is my Milestone 3 (MS3) project for the Diploma in Fullstack Software Development course at Code Institute. The underlying goal of the project is to meet and exceed the requirements laid out for the MS3 project by Code Institute. The high-level requirement of the MS3 project is to "..build a full-stack site that allows your users to manage a common dataset about a particular domain. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members." 
 
-This README refers to CPC as a fictional client of mine, where I have been hired to develop a website for CPC to meet certain criteria (see UX section below). The principle languages used in the development of the site are; HTML5, CSS3, JavaScript, and Python. Other technologies include; 
+This README refers to CPC as a fictional client of mine, where I have been hired to develop a website for CPC to meet certain criteria (see the User Experience Design section below). CPC is a small Pool Club with members based around a number of parishes close to Cill na Martra in Co.Cork, Ireland. Club members meet weekly at a number of local pubs to play pool. Membership numbers fluctuate between roughly 25 to 50 players. CPC runs a Pool League twice yearly. Members arrange to meet at a venue to play league matches, which comprise of playing the best out of 5 games format. A Referee must also be present at league matches. Any other member can referee a match.
+
+Managing members and pool league data was traditionally paper-based, and was a headache for those members who were 'voluntold' to manage that job. The club want a simple web-based application to make it easy for members to; 
+* Manage a league table.
+* To allow members to get real-time match/league result information.
+* To allow members to easily get contact information for players for the purpose of scheduling matches.
+
+The principle languages used in the development of the site are; HTML5, CSS3, JavaScript, and Python. Other technologies include; 
 * The Bootstrap front-end CSS framework.
 * The jQuery JavaScript library.
 * The Flask Python web framework.
@@ -34,17 +41,13 @@ This README refers to CPC as a fictional client of mine, where I have been hired
 * The MongoDB NoSQL database program.
 * The EmailJS email service.
 
-CPC is a small Pool Club with members based around a number of parishes close to Cill na Martra in Co.Cork, Ireland. Club members meet weekly at a number of local pubs to play pool. Membership numbers fluctuate between roughly 25 to 40 players. CPC runs a Pool League twice yearly. Members arrange to meet at a venue to play matches which comprise of playing best out of 5 games format. A Referee must also be present at league matches. Any other member can referee a match.
-
-Managing members and pool league data was traditionally paper-based, and was a headache for those members who were 'voluntold' to manage that job. The club want a simple web-based application to make it easy for members to manage league results, to allow members to get real-time result information, and to allow members to easily get contact information for players when they need to schedule a match with them.
-
 #### [Back To Top ^ ](#top-of-page) ####
 
 <hr>
 
 # 2. <a name="user-experience-design">User Experience Design (UX)</a> #
 
-The design of the Party Chef site was determined by assessing and quantifying the goals and objectives of the business owner ('client stories'), as well as the requirements of end users who will visit and use the site ('user stories'). Following the determination of client and user stories and their subsequent technical requirements, the site was designed using the principles of Jesse James Garrett's '5 Planes of UX Design'. The outcome or tasks created for each of the 5 design planes is outlinined below.
+The design of the CPC website was determined by assessing and quantifying the goals and objectives of the club organisers ('client stories'), as well as the requirements of players who will visit and use the site ('user stories'). Following the determination of client and user stories and their subsequent technical requirements, the site was designed using the principles of Jesse James Garrett's '5 Planes of UX Design'. The outcome or tasks created for each of the 5 design planes is outlinined below.
 
 ### 1. The Strategy Plane ###
 
