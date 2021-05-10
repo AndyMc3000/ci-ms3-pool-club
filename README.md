@@ -1,8 +1,8 @@
 <a name="top-of-page">![Party Chef Logo created using FreeLogoDesign.org](/assets/readme-assets/party-chef-logo-readme.png)</a>
 
-# PartyChef.ie :cocktail: #
-## A website for Professional Private Caterers ## 
-## Purpose: Interactive Frontend Development Project (Milestone Project 2) for Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ##
+# Cill na Martra Pool Club :cocktail: #
+## A web application for managing the members and leagues of a fictional Pool Club ## 
+## Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ##
 ### Developer: Andrew McDonald - Contact me on GitHub :octocat: @ <a href="https://github.com/AndyMc3000"><strong>AndyMc3000</strong></a> ###
 ### Website deployed on GitHub Pages: [Click Me!](https://andymc3000.github.io/ci-ms2-party-chef/)
 
