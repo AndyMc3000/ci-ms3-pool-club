@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Home</title>
+</head>
+<body>
+    {% for user in user %}
+        {{ user.first_name }}<br>
+        {{ user.surname }}<br>
+        {{ user.nickname }}<br>
+        {{ user.email }}<br>
+        {{ user.mobile_number }}<br>
+        {{ user.active_league }}<br>
+    {% endfor %}
+    
+</body>
+</html>
