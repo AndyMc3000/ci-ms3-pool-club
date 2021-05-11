@@ -17,10 +17,10 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/player_home")
+@app.route("/index")
 def user():
     user = mongo.db.user.find()
-    return render_template("player_home.html", user=user)
+    return render_template("index.html", user=user)
 
 
 if __name__ == "__main__":
