@@ -1,11 +1,13 @@
-<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using https://www.pinclipart.com/](/readme-assets/readme-heading-logo.png)</a>
-
+##### <br> #####
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/readme-heading-logo.png)</a>
+##### <br> #####
 # Cill na Martra Pool Club (CPC) :8ball: #
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
-## Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ##
+##### <br> #####
+### Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ###
 ### Developer: Andrew McDonald - Contact me on GitHub :octocat: @ <a href="https://github.com/AndyMc3000"><strong>AndyMc3000</strong></a> ###
-### Website deployed on GitHub Pages: [Click Me!](https://andymc3000.github.io/ci-ms2-party-chef/)
-
+### Website deployed to an Heroku App: [UPDATE ME](https://andymc3000.github.io/ci-ms2-party-chef/)
+##### <br> #####
 <hr>
 <img src="assets/readme-assets/party-chef-am-i-responsive-screenshot.png" width="900">
 <hr>
@@ -22,7 +24,10 @@
 <br>
 <hr>
 
-# 1. <a name="introduction-heading">Introduction</a> #
+#### <br> ####
+## 1. <a name="introduction-heading">Introduction</a> ##
+#### <br> ####
+<hr>
 
 The Cill na Martra Pool Club (hereafter called CPC) website is my Milestone 3 (MS3) project for the Diploma in Fullstack Software Development course at Code Institute. The underlying goal of the project is to meet and exceed the requirements laid out for the MS3 project by Code Institute. The high-level requirement of the MS3 project is to "..build a full-stack site that allows your users to manage a common dataset about a particular domain. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members." 
 
@@ -45,7 +50,10 @@ The principle languages used in the development of the site are; HTML5, CSS3, Ja
 
 <hr>
 
-# 2. <a name="user-experience-design">User Experience Design (UX)</a> #
+#### <br> ####
+## 2. <a name="user-experience-design">User Experience Design (UX)</a> ##
+#### <br> ####
+<hr>
 
 The design of the CPC website was determined by assessing and quantifying the goals and objectives of the club organisers ('client stories'), as well as the requirements of players who will visit and use the site ('user stories'). Following the determination of client and user stories and their subsequent technical requirements, the site was designed using the principles of Jesse James Garrett's '5 Planes of UX Design'. The outcome or tasks created for each of the 5 design planes is outlinined below.
 
@@ -171,7 +179,10 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 
 <hr>
 
+#### <br> ####
 ## 3. <a name="development-process">Development Process</a> ##
+#### <br> ####
+<hr>
 
 I drew up a process to follow for developing the Party Chef website. This is listed in sequence below.
 
@@ -189,7 +200,13 @@ I drew up a process to follow for developing the Party Chef website. This is lis
 
 <hr>
 
+#### <br> ####
 ## 4. <a name="website-features">Website Features</a> ##
+#### <br> ####
+<hr>
+
+The site employs the following features/functionality;
+
 * Bootstrap Navigation Bar on index.html and contact.html.
 * Bootstrap Jumbotron on index.html and contact.html. 
 * Bootstrap Accordions for menus.
@@ -210,7 +227,10 @@ I drew up a process to follow for developing the Party Chef website. This is lis
 
 <hr>
 
+#### <br> ####
 ## 5. <a name="technologies-used">Technologies Used</a> ##
+#### <br> ####
+<hr>
 
 <img src="assets/readme-assets/technologies-used-logos-readme.png" width="330">
 
@@ -238,7 +258,10 @@ I used the following technologies, services, and devices to develop, style, depl
 
 <hr>
 
+#### <br> ####
 ## 6. <a name="testing">Testing</a> ##
+#### <br> ####
+<hr>
 
 Testing was completed under the below headings. A detailed testing document can be seen <a href="https://github.com/AndyMc3000/ci-ms3-pool-club/blob/49f7ec47dd7b7c3f485164d843033c1753617dd5/testing.md"><strong>Here - testing.md.</strong></a>
 
@@ -260,13 +283,16 @@ Testing was completed under the below headings. A detailed testing document can 
 
 <hr>
 
+#### <br> ####
 ## 7. <a name="deployment">Deployment</a> ##
+#### <br> ####
+<hr>
 
 This site was developed by firstly setting up a GitHub repository to store the website files. GitHub is a free online code hosting platform for websites or web applications, which enables version control and collaboration during the development of a project. A repository on GitHub containes all of a project's files and each file's revision history. You can learn more about GitHub and repositories here: [Click here to go to GitHub](https://docs.github.com/en/free-pro-team@latest/github)
 
-I then used the online GitPod Integrated Development Environment (or GitPod IDE) to write the code for the website. Once I was happy with a section of code I commited or saved those to a staging area. Then on a regular basis I commited changes to the working version of the website on GitPod. These commits included a short description of what the changes are. I would then 'push' those changes from the GitPod IDE to my GitHub repository where the master set of files was updated. You can learn more about GitPod here: [Click here to go to GitPod](https://docs.github.com/en/free-pro-team@latest/github)
+I then used the online GitPod Integrated Development Environment (or GitPod IDE) to write the code for the website. Once I was happy with a section of code I commited or saved those to a staging area. Then on a regular basis I commited changes to the working version of the website on GitPod. These commits included a short description of what the changes were. I would then 'push' those changes from the GitPod IDE to my GitHub repository where the master set of files was updated. You can learn more about GitPod here: [Click here to go to GitPod](https://docs.github.com/en/free-pro-team@latest/github)
 
-Early on in the development process I also deployed the website to a live web address using GitHub Pages. GitHub pages is a free static-site hosting service. It takes HTML, CSS, and JavaScript files directly from a GitHub repository and publishes a website with them. Once setup, any changes you make on your IDE which are subsequently 'pushed' to your GitHub repository, are automatically updated on GitHub Pages too. The published GitHub Pages website can be seen here: [Click here to go to Party Chef](https://andymc3000.github.io/ci-ms2-party-chef/)
+Early on in the development process I also deployed the website to a live web address using Heroku. GitHub pages is a free static-site hosting service. It takes HTML, CSS, and JavaScript files directly from a GitHub repository and publishes a website with them. Once setup, any changes I made on my GitPod IDE (and which were subsequently 'pushed' to my GitHub repository, were automatically oushed to my Heroku app. The published GitHub Pages website can be seen here: [UPDATE ME](https://andymc3000.github.io/ci-ms2-party-chef/)
 
 Here are the steps I took to deploy the website on GitHub Pages;
 1. Login to GitHub.
@@ -286,7 +312,10 @@ The working version of the Party Chef website deployed on GitHub Pages can be se
 
 <hr>
 
+#### <br> ####
 ## 8. <a name="credits">Credits</a> ##
+#### <br> ####
+<hr>
 
 1. Coding Websites - I regularly used website to help me learn how to code certain elements/features. I also copied code snippets from these sites in some cases. These websites include; 
 * [W3Schools.com](https://www.w3schools.com/)
@@ -324,11 +353,13 @@ The working version of the Party Chef website deployed on GitHub Pages can be se
 In order to get design ideas, I took inspiration from a number of industry relevant websites.
 These websites are;
 
-No. | Business Name | Website | Description
---- | ------------- | ------- | -----------
-1 | **The Whole Hog** | [TheWholeHog.ie](https://www.thewholehog.ie/) | A team of professional chefs who deliver event catering across the whole of Ireland.
-2 | **Prestige Catering** | [PrestigeCatering.ie](https://www.prestigecatering.ie/) | Prestige Catering is a caterer recognised as one of Cork’s best catering companies.
-
+No. | Business     | Website     | Description |
+--- | ------------ | ----------- | ----------- |
+1 | **The UK Premier League(EPL)** | [PremierLeague.com](https://www.premierleague.com/) | Wikipedia describes the Premier League as; "The Premier League, often referred to exonymously as the English Premier League or the EPL, is the top level of the English football league system. Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League.
+2 | **World Pool-Billiard Association (WPA)** | [WPAPool.com](https://wpapool.com/) | Wikipedia describes the World Pool-Billiard Association as; "The World Pool-Billiard Association is the international governing body for pool. It was formed in 1987, and was initially headed by a provisional board of directors consisting of representatives from Japan, the United States, Sweden, and Germany. as of February 2019, the WPA president is Ian Anderson of Australia."
+2 | **American Poolplayers Association (APA)** | [WPAPool.com](https://poolplayers.com/) | The American Poolplayers Association (APA) describes them as; "The American Poolplayers Association (APA) is the World's Largest Amateur Pool League. With nearly 250,000 members throughout the United States, Canada and Japan, the APA awards nearly $2 Million in guaranteed prize money every year during the APA Championships in Las Vegas! In the APA, Everyone Can Play… Anyone Can Win – even you!"
+ 
+ 
 
 ### Additonal Support ###
 
