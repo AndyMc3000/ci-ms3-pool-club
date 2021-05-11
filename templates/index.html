@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPC | Hompage</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>I'm extending the base template!</h2>
+
     {% for user in user %}
         {{ user.first_name }}<br>
         {{ user.surname }}<br>
@@ -15,5 +12,4 @@
         {{ user.active_league }}<br>
     {% endfor %}
     
-</body>
-</html>
+{% endblock %}
