@@ -143,7 +143,7 @@ Interaction design is defined as the "..development of application flows to faci
 
 Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett). As such Party Chef was designed to allows a user to find the information they need easily. For example, the navigation bar is fixed to the top of the page view so is always immediately accessible, and buttons and links are clearly visible and communicate their purpose in an unambiguous way.
 
-The structure of the website and outline of page sections is outlined in the Sitemap. Click the link to view the <a href="assets/readme-assets/party-chef-sitemap.png"><strong>Sitemap.</strong></a>
+The structure of the website is outlined in the Sitemap. Click the link to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
 
 
 ### 4. The Skeleton Plane ###
