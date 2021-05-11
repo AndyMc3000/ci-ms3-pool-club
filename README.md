@@ -5,7 +5,7 @@
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
 ### Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ###
 ### Developer: Andrew McDonald - Contact me on GitHub :octocat: @ <a href="https://github.com/AndyMc3000"><strong>AndyMc3000</strong></a> ###
-### Website deployed to an Heroku App: [UPDATE ME](https://andymc3000.github.io/ci-ms2-party-chef/)###
+### Website deployed to an Heroku App: [UPDATE ME](https://andymc3000.github.io/ci-ms2-party-chef/) ###
 <hr>
 <img src="assets/readme-assets/party-chef-am-i-responsive-screenshot.png" width="900">
 <hr>
@@ -36,12 +36,15 @@ Managing members and pool league data was traditionally paper-based, and was a h
 * To allow members to get real-time match/league result information.
 * To allow members to easily get contact information for players for the purpose of scheduling matches.
 
-The principle languages used in the development of the site are; HTML5, CSS3, JavaScript, and Python. Other technologies include; 
+The principle languages used in the development of the site are; HTML5, CSS3, JavaScript, and Python.
+
+Other technologies include; 
 * The Bootstrap front-end CSS framework.
 * The jQuery JavaScript library.
 * The Flask Python web framework.
 * The Jinja templating language for Python.
 * The MongoDB NoSQL database program.
+* The Heroku cloud Platform-as-a-Service.
 * The EmailJS email service.
 
 #### [Back To Top ^ ](#top-of-page) ####
