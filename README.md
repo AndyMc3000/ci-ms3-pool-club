@@ -152,7 +152,7 @@ Following on from the tasks decided upon in the Structure Plane, the Skeleton Pl
 
 With this in mind the following wireframes were created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
 
-1. <a href="assets/readme-assets/cpc-wireframes.png"><strong>Large Screen Wireframes</strong></a>
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Large Screen Wireframes</strong></a>
 
 ### 5. The Surface Plane ###
 
