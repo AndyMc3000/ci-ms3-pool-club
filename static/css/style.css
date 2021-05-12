@@ -4,17 +4,39 @@ body {
 }
 
 .card {
-    max-width: 800px;
+    max-width: 850px;
+    border: 0px;
+}
+
+.card-img-overlay .card-title {
+    font-size: 50px
 }
 
 .card-body {
-    background-color: #30363c;
+    background-color: #212529;
 }
 
 .card-img-top {
     width: 100%;
-    height: auto;
+    max-height: 250px;
     background-size: cover;
+}
+
+.card-img-overlay {
+    padding: 3rem;
+    top: 40px;
+}
+
+.form-div {
+    display: block;
+    text-align: center;
+}
+
+.form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .input-group-text {
