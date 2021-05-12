@@ -25,42 +25,83 @@
                         </div>
                         <hr>
                         <h3 class="card-title pt-4 pb-4">Registration Form</h3>
-                        <span>All Fields Required</span>
                         <div class="container-fluid">
-                            <div class="row">
+                            <div class="row justify-content-center">
                                 <div class="col-12 form-div">
-                                    <form action="newaccount" class="form w-75" method=post oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
+                                    <form action="" class="form w-75 needs-validation" method=post oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")' novalidate>
                                         <div class="form-group">
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="firstName"><i class="fas fa-user"></i></span>
-                                                <input type="text" class="form-control" placeholder="First Name" aria-label="firstName" aria-describedby="firstName">
+                                                <input type="text" class="form-control" placeholder="First Name" aria-label="firstName" aria-describedby="firstName" autocomplete="given-name" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please type your First Name.
+                                                </div>
                                             </div>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="nickname"><i class="far fa-user"></i></span>
-                                                <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname">
+                                                <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname" autocomplete="nickname" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please type your Nickname.
+                                                </div>
                                             </div>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="surname"><i class="fas fa-user"></i></span>
-                                                <input type="text" class="form-control" placeholder="Surname" aria-label="surname" aria-describedby="surname">
+                                                <input type="text" class="form-control" placeholder="Surname" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please type your Surname.
+                                                </div>
                                             </div>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
-                                                <input type="text" class="form-control" placeholder="Email Address" aria-label="email" aria-describedby="email">
+                                                <input type="email" class="form-control" placeholder="Email Address" aria-label="email" aria-describedby="email" autocomplete="email" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please type a valid Email Address.
+                                                </div>
                                             </div>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="telephone"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="text" class="form-control" placeholder="Mobile Number" aria-label="telephone" aria-describedby="telephone">
+                                                <input type="tel" class="form-control" placeholder="Mobile Number" aria-label="telephone" aria-describedby="telephone" autocomplete="tel-national" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please type a Mobile Number.
+                                                </div>
                                             </div>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password1"><i class="fas fa-key"></i></span>
-                                                <input type="text" class="form-control" placeholder="Choose a Password" aria-label="password1"" aria-describedby="password1" name="up">
+                                                <input type="password" class="form-control" placeholder="Choose a Password" aria-label="password1"" aria-describedby="password1" name="up" autocomplete="new-password" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please choose a Password.
+                                                </div>
                                             </div>
-                                            <div class="input-group mb-3">
+                                            <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password2"><i class="fas fa-lock"></i></span>
-                                                <input type="text" class="form-control" placeholder="Confirm Password" aria-label="password2"" aria-describedby="password2" name="up2">
+                                                <input type="password" class="form-control" placeholder="Confirm Password" aria-label="password2"" aria-describedby="password2" name="up2" autocomplete="new-password">
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Passwords do not match.
+                                                </div>
                                             </div>
-                                            <div class="mb-3 text-center">
-                                                <button type="submit" class="btn btn-primary mb-3">Register</button>
+                                            <div class="input-group m-auto text-center">
+                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Register</button>
                                             </div>
                                         </div>
                                     </form>

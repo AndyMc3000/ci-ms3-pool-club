@@ -43,3 +43,8 @@ body {
     color:white; 
     background-color: #30363c
 }
+
+.form-submit-button {
+    text-align: center;
+    margin: auto;
+}
