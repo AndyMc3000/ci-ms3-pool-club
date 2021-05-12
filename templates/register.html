@@ -1,15 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-    <div class="card mb-3">
-        <img src="{{ url_for('static', filename='images/ricardo-velasquez-7ZqraEtt_K4-unsplash.jpg') }}" class="card-img-top" alt="Unsplash Ricardo Velasquez Pool Table Photo">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="contanier-fluid h-100 m-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-danger text-center w-75 my-4 mx-5 mx-auto">
+                    <img src="{{ url_for('static', filename='images/ricardo-velasquez-7ZqraEtt_K4-unsplash.jpg') }}" class="card-img-top" alt="Unsplash Ricardo Velasquez Pool Table Photo">
+                    <div class="card-img-overlay top-50 start-50 translate-middle">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                    <div class="card-body top-50 start-50">
+                        <h5 class="card-title">Register</h5>
+                        <form action="newaccount" class="justify-content-center text-center align-items-center" method=post oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
+                            <div class="form-group w-75 justify-content-center">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="firstName"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="First Name" aria-label="firstName" aria-describedby="firstName">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nickname"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nickname"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nickname"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nickname"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nickname"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nickname" aria-label="nickname" aria-describedby="nickname">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
    
-    
 {% endblock %}

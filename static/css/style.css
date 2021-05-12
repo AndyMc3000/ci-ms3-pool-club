@@ -2,3 +2,16 @@ body {
     background-color: #30363c;
     color: white;
 }
+
+.card {
+    max-height: 400px;
+}
+
+.card-body {
+    background-color: #30363c;
+}
+
+.input-group-text {
+    color:white; 
+    background-color: #30363c
+}
