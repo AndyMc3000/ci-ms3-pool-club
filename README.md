@@ -340,14 +340,14 @@ The live version of the CPC website deployed via Heroku can be seen here: [UPDAT
 <hr>
 
 1. Coding Websites - I regularly used website to help me learn how to code certain elements/features. I also copied code snippets from these sites in some cases. These websites include; 
+* [GetBootstrap.com](https://getbootstrap.com/)
 * [W3Schools.com](https://www.w3schools.com/)
 * [Mozilla MDN Web Docs](https://developer.mozilla.org/)
-* [Bootstrap](https://getbootstrap.com/)
 * [GitHub.com](https://github.com/)
 * [StackOverflow.com](https://stackoverflow.com/)
 * [CSSTricks.com](https://css-tricks.com/)
 
-1. BBC Good Food webite - I copied the images and descriptions for 50 dishes on the BBC Good Food website to poulate the different menus on the Party Chef homepage. I edited some of the text descriptions but didn't edit any of the images. I did prefix each image filename with a number, but otherwise the filename is as the BCC Good Food website named them. Learn about the BBC Good Food website here: [BBC Good Food](https://www.bbcgoodfood.com/)
+1. Code Institute Course Material - I copied code snippets from some of the course material relating to Backend Development Mini-Project module.
 
 1. Javascript Shoping Cart Plugin -  I used a Javascript plugin for the MyMenu feature on Party Chef. This was copied from code supplied by a GitHub user called WebDevSimplified who offers online coding course on YouTube. See that users profile here: [WebDevSimplified](https://github.com/WebDevSimplified). See the code repository for this plugin here: [Introduction to JavaScript Lesson 1](https://github.com/WebDevSimplified/Introduction-to-Web-Development/tree/master/Introduction%20to%20JavaScript/Lesson%201).
 
@@ -387,7 +387,6 @@ No. | Business     | Website     | Description |
 
 I also received help and support from;
 * Reuben Ferrante - Code Institute Mentor - Slack Username: [reubenfer_mentor](https://code-institute-room.slack.com/team/UKD9L615F) - Reuben is my new Mentor and was hugely helpful with helping me with my JavaScript code, having jumped in at a late stage in the project. Reuben also helped me with fixing issues for the resubmission of my project.
-* Allen Thomas Varghese - GitHub username: @allentv - my initial mentor at Code Institute for this project.
 * Anna Greaves - Full Stack Developer and Content Developer at Code Institute - GitHub profile here: [@AJGreaves](https://github.com/AJGreaves)
  - I took inspiration from Anna's Family Hub project on GitHub. In particular I found Anne's README.md and Testing.md files very helpful. See that repository here: [FamilyHub](https://github.com/AJGreaves/familyhub)
 * The Student Support team at Code Institute.
