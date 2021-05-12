@@ -4,11 +4,17 @@ body {
 }
 
 .card {
-    max-height: 400px;
+    max-width: 800px;
 }
 
 .card-body {
     background-color: #30363c;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    background-size: cover;
 }
 
 .input-group-text {
