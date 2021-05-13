@@ -81,7 +81,8 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Choose a Password" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <input type="password" name="password" class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Choose a Password" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <span>*Passwords must be 5-15 charachters and contain only letters and numbers</span>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -114,8 +115,8 @@
     </div>
     <div class="row">
         <div class="col s12">
-            <p class="text-centeer">
-                Already Registered? <a href="" class="">Log In</a>
+            <p class="text-center">
+                Already Registered? <a href="{{ url_for('login') }}" class="">Log In</a>
             </p>
         </div>
     </div>
