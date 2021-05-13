@@ -18,3 +18,6 @@ class="fa fa-fw fa-user"
             </div>
         </div>
     </nav>
+
+
+    oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'
