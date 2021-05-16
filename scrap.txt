@@ -21,3 +21,9 @@ class="fa fa-fw fa-user"
 
 
     oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'
+
+
+    # put the new user into 'session' cookie
+        session["user"] = request.form.get("email")
+        flash("Registration Successful!")
+        return redirect(url_for("playerhome", firstname=session["user"]))

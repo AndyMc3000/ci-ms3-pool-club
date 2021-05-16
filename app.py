@@ -38,17 +38,17 @@ def register():
         register = {
             "email": request.form.get("email"),
             "password": generate_password_hash(request.form.get("password")),
-            "first_name": request.form.get("firstName"),
+            "firstname": request.form.get("firstname"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
-            "mobile_number": request.form.get("telephone")     
+            "telephone": request.form.get("telephone")     
         }
         mongo.db.user.insert_one(register)
 
         # put the new user into 'session' cookie
-        session["user"] = request.form.get("email")
+        session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
-        return redirect(url_for("profile", email=session["user"]))
+        return redirect(url_for("playerhome", firstname=session["user"]))
 
     return render_template("register.html")
 
@@ -61,11 +61,14 @@ def login():
             {"email": request.form.get("email")})
 
         if existing_user:
-            # ensure our hashed password for the user matches the user input
+            # ensures hashed password for the user matches the user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("email")
                     flash("Welcome, {}".format(request.form.get("email")))
+                    return redirect(url_for(
+                        "playerhome", firstname=session["user"]))
+        
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -79,13 +82,22 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<first_name>", methods=["GET", "POST"])
-def profile(first_name):
-    # grab the session user's username from db
-    usernamefirts_name = mongo.db.user.find_one(
-        {"first_name": session["user"]})["first_name"]
-    return render_template("profile.html", first_name=first_name)
+@app.route("/player-home/<firstname>", methods=["GET", "POST"])
+def playerhome(firstname):
+    # Fetch the session user's first name from MongoDB
+    firstname = mongo.db.user.find_one(
+        {"email": session["user"]})['email']
+    
+    if session["user"]:
+        return render_template("player-home.html", firstname=firstname)
 
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for user in user %}
-        {{ user.first_name }}<br>
-        {{ user.nickname }}<br>
-        {{ user.surname }}<br>
-        {{ user.email }}<br>
-        {{ user.mobile_number }}<br>
-        {{ user.active_league }}<br>
-    {% endfor %}
+    <div class="container-fluid"w
+        <div class="rox justify-content-center">
+            <div class="col-12 text-center">
+                {% for user in user %}
+                    {{ user.firstname }}<br>
+                    {{ user.nickname }}<br>
+                    {{ user.surname }}<br>
+                    {{ user.email }}<br>
+                    {{ user.telephone }}<br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     
 {% endblock %}
