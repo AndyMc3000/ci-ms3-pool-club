@@ -18,11 +18,28 @@
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="date"><i class="far fa-calendar-alt"></i></span>
                                                 <input type="date" name="date" class="form-control" placeholder="Enter Match Date" aria-label="date" aria-describedby="date" autocomplete="date" required>
+                                                <label for="date"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
                                                     Please add a valid Date.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-4">
+                                                <span class="input-group-text" id="league"><i class="fas fa-scroll"></i></span>
+                                                <select id="league" name="league" class="validate form-control form-select" required>
+                                                    <option value="" disabled selected>Pick a League</option>
+                                                {% for league in league %}
+                                                    <option value="{{ league.name }}">{{ league.name }}</option>
+                                                {% endfor %}
+                                                </select>
+                                                <label for="league"></label>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please select a League.
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
@@ -49,7 +66,7 @@
                                                     <option value="{{ playerone.surname }}, {{ playerone.firstname }} '{{ playerone.nickname }}'">{{ playerone.surname }}, {{ playerone.firstname }} '{{ playerone.nickname }}'</option>
                                                 {% endfor %}
                                                 </select>
-                                                <label for="player1"></label>
+                                                <label for="playerone"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -66,7 +83,7 @@
                                                     <option value="2">2 Frames</option>
                                                     <option value="2">3 Frames</option>
                                                 </select>
-                                                <label for="player1"></label>
+                                                <label for="playeronewon"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>

@@ -100,12 +100,28 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add-match")
+@app.route("/add-match", methods=["GET", "POST"])
 def addmatch():
-    return render_template("add-match.html",
-            referee=mongo.db.user.find().sort("surname", 1),
-            playerone=mongo.db.user.find().sort("surname", 1),
-            playertwo=mongo.db.user.find().sort("surname", 1),)
+    if request.method == "POST":
+        match = {
+            "playerone": request.form.get("playerone"),
+            "playertwo": request.form.get("playertwo"),
+            "playeronewon": request.form.get("playeronewon"),
+            "playertwowon": request.form.get("playertwowon"),
+            "date": request.form.get("date"),
+            "league": request.form.get("league"),
+            "referee": request.form.get("referee"),
+            "createdby": session["user"]
+        }
+        mongo.db.matches.insert_one(match)
+        flash("Match Successfully Added")
+        return redirect(url_for("playerhome", firstname=session["user"]))
+
+    return render_template("add-match.html", 
+        referee=mongo.db.user.find().sort("surname", 1),
+        playerone=mongo.db.user.find().sort("surname", 1),
+        playertwo=mongo.db.user.find().sort("surname", 1),
+        league=mongo.db.league.find().sort("name", 1), )
 
 
 if __name__ == "__main__":
