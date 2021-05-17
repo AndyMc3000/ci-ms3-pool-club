@@ -54,51 +54,61 @@
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
-                                                    Please choose a Referee.
+                                                    Please choose Player 1
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Select Player 1" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <span class="input-group-text" id="playeronewon"><i class="fas fa-trophy"></i></span>
+                                                <select id="playeronewon" name="playeronewon" class="validate form-control form-select" required>
+                                                    <option value="" disabled selected>Pick Player 1 Frames Won</option>
+                                                    <option value="0">0 Frames</option>
+                                                    <option value="1">1 Frame</option>
+                                                    <option value="2">2 Frames</option>
+                                                    <option value="2">3 Frames</option>
+                                                </select>
+                                                <label for="player1"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
-                                                    Please choose a Password.
+                                                    Please make a selection
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Enter Player 1 Matches Won" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <span class="input-group-text" id="playertwo"><i class="fas fa-user-shield"></i></span>
+                                                <select id="playertwo" name="playertwo" class="validate form-control form-select" required>
+                                                    <option value="" disabled selected>Choose Player 2</option>
+                                                {% for playertwo in playertwo %}
+                                                    <option value="{{ playertwo.surname }}, {{ playertwo.firstname }} '{{ playertwo.nickname }}'">{{ playertwo.surname }}, {{ playertwo.firstname }} '{{ playertwo.nickname }}'</option>
+                                                {% endfor %}
+                                                </select>
+                                                <label for="playertwo"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
-                                                    Please choose a Password.
+                                                    Please choose Player 1
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Select Player 2" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <span class="input-group-text" id="playertwowon"><i class="fas fa-trophy"></i></span>
+                                                <select id="playertwowon" name="playertwowon" class="validate form-control form-select" required>
+                                                    <option value="" disabled selected>Pick Player 2 Frames Won</option>
+                                                    <option value="0">0 Frames</option>
+                                                    <option value="1">1 Frame</option>
+                                                    <option value="2">2 Frames</option>
+                                                    <option value="2">3 Frames</option>
+                                                </select>
+                                                <label for="playertwowon"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
-                                                    Please choose a Password.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Enter Player 2 Matches Won" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose a Password.
+                                                    Please make a selection
                                                 </div>
                                             </div>
                                             <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Log In</button>
+                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Add Result</button>
                                             </div>
                                         </div>
                                     </form>
