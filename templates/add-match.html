@@ -26,13 +26,19 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Select Referee" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <span class="input-group-text" id="referee"><i class="far fa-eye"></i></span>
+                                                <select id="referee" name="referee" class="validate form-control form-select" required>
+                                                    <option value="" disabled selected>Choose Referee</option>
+                                                {% for referee in referee %}
+                                                    <option value="{{ referee.firstname }} {{ referee.surname }}">{{ referee.firstname }} {{ referee.surname }}</option>
+                                                {% endfor %}
+                                                </select>
+                                                <label for="referee"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
-                                                    Please choose a Password.
+                                                    Please choose a Referee.
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">

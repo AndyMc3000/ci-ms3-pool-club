@@ -102,7 +102,8 @@ def logout():
 
 @app.route("/add-match")
 def addmatch():
-    return render_template("add-match.html")
+    referee = mongo.db.user.find().sort("firstname", 1)
+    return render_template("add-match.html", referee=referee)
 
 
 if __name__ == "__main__":
