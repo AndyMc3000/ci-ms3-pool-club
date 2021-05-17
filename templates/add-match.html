@@ -9,25 +9,65 @@
                     <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                     </div>
                     <div class="card-body top-50 start-50">
-                        <h3 class="card-title pt-4 pb-4">Log In</h3>
+                        <h3 class="card-title pt-4 pb-4">Add Match Result</h3>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
-                                    <form action="{{ url_for('login') }}" class="form w-75 needs-validation" method="POST" novalidate>
+                                    <form action="{{ url_for('addmatch') }}" class="form w-75 needs-validation" method="POST" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
-                                                <input type="email" name="email" class="form-control" placeholder="Enter Email Address" aria-label="email" aria-describedby="email" autocomplete="email" required>
+                                                <span class="input-group-text" id="date"><i class="far fa-calendar-alt"></i></span>
+                                                <input type="date" name="date" class="form-control" placeholder="Enter Match Date" aria-label="date" aria-describedby="date" autocomplete="date" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
                                                 <div class="invalid-feedback">
-                                                    Please type a valid Email Address.
+                                                    Please add a valid Date.
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" placeholder="Enter Password" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <input type="password" name="password" class="form-control" placeholder="Select Referee" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please choose a Password.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-4">
+                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
+                                                <input type="password" name="password" class="form-control" placeholder="Select Player 1" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please choose a Password.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-4">
+                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
+                                                <input type="password" name="password" class="form-control" placeholder="Enter Player 1 Matches Won" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please choose a Password.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-4">
+                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
+                                                <input type="password" name="password" class="form-control" placeholder="Select Player 2" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please choose a Password.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-4">
+                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
+                                                <input type="password" name="password" class="form-control" placeholder="Enter Player 2 Matches Won" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
