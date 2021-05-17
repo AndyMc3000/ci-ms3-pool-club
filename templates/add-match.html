@@ -30,10 +30,26 @@
                                                 <select id="referee" name="referee" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Choose Referee</option>
                                                 {% for referee in referee %}
-                                                    <option value="{{ referee.firstname }} {{ referee.surname }}">{{ referee.firstname }} {{ referee.surname }}</option>
+                                                    <option value="{{ referee.surname }}, {{ referee.firstname }} '{{ referee.nickname }}'">{{ referee.surname }}, {{ referee.firstname }} '{{ referee.nickname }}'</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="referee"></label>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please choose a Referee.
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-4">
+                                                <span class="input-group-text" id="playerone"><i class="fas fa-user-shield"></i></span>
+                                                <select id="playerone" name="playerone" class="validate form-control form-select" required>
+                                                    <option value="" disabled selected>Choose Player 1</option>
+                                                {% for playerone in playerone %}
+                                                    <option value="{{ playerone.surname }}, {{ playerone.firstname }} '{{ playerone.nickname }}'">{{ playerone.surname }}, {{ playerone.firstname }} '{{ playerone.nickname }}'</option>
+                                                {% endfor %}
+                                                </select>
+                                                <label for="player1"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>

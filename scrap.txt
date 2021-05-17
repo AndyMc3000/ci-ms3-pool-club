@@ -27,3 +27,9 @@ class="fa fa-fw fa-user"
         session["user"] = request.form.get("email")
         flash("Registration Successful!")
         return redirect(url_for("playerhome", firstname=session["user"]))
+
+
+@app.route("/add-match")
+def addmatch():
+    referee = mongo.db.user.find().sort("surname", 1)
+    return render_template("add-match.html", referee=referee)
