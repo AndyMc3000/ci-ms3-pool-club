@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/imgbin-magic-8-ball-80px-favicon.png') }}">
     {% block styles %}
     {% endblock %}
     <title>CPC | Something</title>
@@ -70,7 +71,7 @@
     </main>
         
         <footer class="bg-dark text-center text-lg-start">
-            <div class="text-center p-4 mt-5">
+            <div class="text-center">
                 <a class="navbar-brand px-2" href="{{ url_for('user') }}"> <img src="{{ url_for('static', filename='images/cpc-navbar-logo-4.png') }}" alt="CPC Logo"> </a>
             </div>
             <div class="text-center">

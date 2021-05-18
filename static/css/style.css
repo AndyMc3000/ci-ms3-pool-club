@@ -1,6 +1,9 @@
 body {
     background-color: #30363c;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .card {
@@ -56,4 +59,8 @@ body {
 .form-submit-button {
     text-align: center;
     margin: auto;
+}
+
+footer {
+   margin-top: auto;
 }
