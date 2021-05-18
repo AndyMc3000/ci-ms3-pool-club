@@ -140,6 +140,11 @@ def mymatchlist():
     return render_template("player-match-list.html")
 
 
+@app.route("/player-archive-results")
+def playerarchive():
+    return render_template("player-archive-results.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
