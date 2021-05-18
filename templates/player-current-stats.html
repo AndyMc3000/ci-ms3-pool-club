@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="contanier-fluid h-100 m-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-danger text-center w-75 my-4 mx-5 mx-auto">
+                    <div class="login-card-img-holder pt-5">
+                    <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                    </div>
+                    <div class="card-body top-50 start-50">
+                        <h2 class="card-title pt-4 pb-4">Player League Stats</h2>
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-10 text-center p-2">
+                                    <h3>
+                                        Current League: *Current League Name*
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-8 text-center p1.5">
+                                    <h5>
+                                        Rank: *X* 
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center p-1.5">
+                                <div class="col-8 text-center">
+                                    <h5>
+                                        Points: *X* 
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center p-1.5">
+                                <div class="col-8 text-center">
+                                    <h5>
+                                        Matches Played: *X* / 30
+                                    </h5>
+                                </div>
+                            </div>
+                             <div class="row justify-content-center p-1.5">
+                                <div class="col-8 text-center">
+                                    <h5>
+                                        Matches For: *X*
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center p-1.5">
+                                <div class="col-8 text-center">
+                                    <h5>
+                                        Matches Against: *X*
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center p-1.5">
+                                <div class="col-8 text-center">
+                                    <h5>
+                                        Games For: *X*
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center p-1.5">
+                                <div class="col-8 text-center">
+                                    <h5>
+                                        Games Against: *X*
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

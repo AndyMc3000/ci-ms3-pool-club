@@ -124,6 +124,22 @@ def addmatch():
         league=mongo.db.league.find().sort("name", 1), )
 
 
+@app.route("/player-contact-info")
+def playercontact():
+    return render_template("player-contact-info.html", 
+        playername=mongo.db.user.find().sort("surname", 1))
+
+
+@app.route("/player-active-results")
+def mystats():
+    return render_template("player-current-stats.html")
+
+
+@app.route("/player-match-list")
+def mymatchlist():
+    return render_template("player-match-list.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

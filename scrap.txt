@@ -33,3 +33,8 @@ class="fa fa-fw fa-user"
 def addmatch():
     referee = mongo.db.user.find().sort("surname", 1)
     return render_template("add-match.html", referee=referee)
+
+
+
+@app.route("/player-contact-info")
+def playercontact():
