@@ -145,6 +145,11 @@ def playerarchive():
     return render_template("player-archive-results.html")
 
 
+@app.route("/edit-player")
+def editplayer():
+    return render_template("edit-player.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

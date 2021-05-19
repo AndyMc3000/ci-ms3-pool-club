@@ -9,7 +9,7 @@
                     <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                     </div>
                     <div class="card-body top-50 start-50">
-                        <h2 class="card-title pt-4 pb-4">Player League Stats</h2>
+                        <h3 class="card-title pt-4 pb-4">*user.firstname*'s League Stats</h3>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-10 text-center p-3">
@@ -17,7 +17,7 @@
                                         Current League:
                                     </h4>
                                     <h4>
-                                        *Current League Name*
+                                        *league.name*
                                     </h4>
                                 </div>
                             </div>
@@ -28,33 +28,33 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">RANK</th>
-                                                    <th scope="col">*1*</th>
+                                                    <th scope="col">*league.player_id.rank*</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">POINTS</th>
-                                                    <td>*47*</td>
+                                                    <td>*league.player_id.points*</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">MATCHED PLAYED:</th>
-                                                    <td> *X* / 30</td>
+                                                    <td> *league.player_id.matches_played* / 30</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">MATCHES FOR:</th>
-                                                    <td>*X*</td>
+                                                    <td>*league.player_id.matches_won*</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">MATCHES AGAINST:</th>
-                                                    <td>*X*</td>
+                                                    <td>*league.player_id.matches_lost*</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">GAMES FOR:</th>
-                                                    <td>*X*</td>
+                                                    <td>*matches.user_id.games_won*</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">GAMES AGAINST:</th>
-                                                    <td>*X*</td>
+                                                    <td>*matches.user_id.gameswon*</td>
                                                 </tr>
                                             </tbody>
                                         </table>
