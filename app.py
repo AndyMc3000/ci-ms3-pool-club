@@ -147,7 +147,9 @@ def playerarchive():
 
 @app.route("/edit-player")
 def editplayer():
-    return render_template("edit-player.html")
+    player = mongo.db.user.find_one(
+        {"email": session["user"]})
+    return render_template("edit-player.html", user=player)
 
 
 if __name__ == "__main__":
