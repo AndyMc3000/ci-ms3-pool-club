@@ -85,11 +85,13 @@ def login():
 @app.route("/player-home/<firstname>", methods=["GET", "POST"])
 def playerhome(firstname):
     # Fetch the session user's first name from MongoDB
-    firstname = mongo.db.user.find_one(
+    user = mongo.db.user.find_one(
         {"email": session["user"]})['email']
+    player = mongo.db.user.find_one(
+        {"email": session["user"]})
     
     if session["user"]:
-        return render_template("player-home.html", firstname=firstname)
+        return render_template("player-home.html", user=user, player=player)
 
 
 @app.route("/logout")
@@ -132,7 +134,9 @@ def playercontact():
 
 @app.route("/player-active-results")
 def mystats():
-    return render_template("player-current-stats.html")
+    player = mongo.db.user.find_one(
+        {"email": session["user"]})
+    return render_template("player-current-stats.html", player=player)
 
 
 @app.route("/player-match-list")

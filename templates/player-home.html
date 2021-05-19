@@ -18,7 +18,8 @@
                     <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                     </div>
                     <div class="card-body top-50 start-50">
-                        <h3 class="card-title pt-4 pb-4">*user.firtsname*'s Home</h3>
+                        <h2>Player Home</h2>
+                        <h4 class="card-title pt-4 pb-4">{{ player.firstname }} "{{ player.nickname }}" {{ player.surname }} </h4>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
