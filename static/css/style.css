@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@300&family=Orbitron:wght@400;600&display=swap');
 
 /* -- Google Fonts -- */
-body h1, h2, h3, h4, h5, h6 {
+/* -- body h1, h2, h3, h4, h5, h6 {
     font-family: 'Audiowide', sans-serif;
-}
+} -- */
 
-body p, button, nav, form, .btn {
+body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
     font-family: 'Comfortaa', sans-serif;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .hero-div img {
-    border-radius: 2%;
+    border-radius: 15%;
 }
 
 .card {
