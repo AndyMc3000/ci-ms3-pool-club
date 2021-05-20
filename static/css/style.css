@@ -5,7 +5,11 @@ body h1, h2, h3, h4, h5, h6 {
     font-family: 'Audiowide', sans-serif;
 }
 
-body p, button, nav, form {
+body p, button, nav, form, .btn {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.table-font {
     font-family: 'Comfortaa', sans-serif;
 }
 /* -- END of Google Fonts -- */
@@ -16,6 +20,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.hero-div {
+    background-color: #212529;
+}
+
+.hero-div img {
+    border-radius: 2%;
 }
 
 .card {
