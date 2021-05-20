@@ -5,7 +5,7 @@ body h1, h2, h3, h4, h5, h6 {
     font-family: 'Audiowide', sans-serif;
 }
 
-body p, button, nav {
+body p, button, nav, form {
     font-family: 'Comfortaa', sans-serif;
 }
 /* -- END of Google Fonts -- */
