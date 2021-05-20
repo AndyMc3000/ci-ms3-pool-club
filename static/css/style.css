@@ -12,6 +12,12 @@ body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
 .table-font {
     font-family: 'Comfortaa', sans-serif;
 }
+
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* -- END of Google Fonts -- */
 
 body {
@@ -48,6 +54,25 @@ body {
     max-height: 250px;
     background-size: cover;
     background-color: #212529;
+}
+
+.carousel {
+    width: 100%;
+    padding: 0px;
+}
+
+.carousel-item img {
+    max-height: 500px;
+    width: auto;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    overflow: hidden;
+}
+
+.carousel-caption {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+    border-radius: 8px;
 }
 
 .login-card-img {
