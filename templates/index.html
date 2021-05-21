@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!-- Bootstrap Carousel photo gallery-->
+    <!-- Bootstrap Carousel for hero banners and messaging -->
     <div class="container-fluid">
         <div class="row">
             <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -30,7 +30,7 @@
                         <img height="100%" src="{{ url_for('static', filename='images/carousel/cpc-carousel-markus-winkler-Dtz_-wZV4Os-unsplash-1660x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
-                                <h1>Compete. <strong>WIN!</strong> Repeat.</h1>
+                                <h1>Compete. <strong>WIN.</strong> Repeat.</h1>
                                 <p>Some representative placeholder content for the first slide of the carousel.</p>
                                 <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
                             </div>
@@ -40,13 +40,17 @@
             </div>
         </div>
     </div>
-    <!-- Bootstrap hero container-->
+    <!-- END of Bootstrap Carousel for hero banners and messaging -->
+    <!-- Club introduction messaging -->
     <div class="container-fluid">
         <div class="row">
             <div class="px-3 py-4 text-center rounded shadow hero-div">
                 <h1 class="display-4 p-4 fw-bold">One Passion. One Family.</h1>
                 <div class="col-lg-8 mx-auto">
-                    <p class="mb-4 pb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <p class="mb-4 pb-4">Welcome to the Cill na Martra Pool Club website. Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Fugiat quas velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores eos inventore 
+                        corporis similique optio labore eius quibusdam sunt, sint quasi earum dicta ipsam expedita doloremque accusantium 
+                        blanditiis fuga esse. Debitis!</p>
                 <div class="d-grid gap-3 p-4 d-sm-flex justify-content-sm-center shadow">
                     <button type="button" class="btn btn-primary btn-lg px-4 shadow">Register Now!</button>
                 </div>
@@ -99,6 +103,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap Carousel for sponsor banners and messaging -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div id="sponsorCarousel" class="carousel sponsor-banner-carousel col-6 slide text-center p-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="{{ url_for('static', filename='images/banners/cpc-delta-banner-900x100.png') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000"">
+                        <img height="100%" src="{{ url_for('static', filename='images/carousel/cpc-carousel-carla-oliveira-21FqSKZQGzI-unsplash-1428x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000"">
+                        <img height="100%" src="{{ url_for('static', filename='images/carousel/cpc-carousel-markus-winkler-Dtz_-wZV4Os-unsplash-1660x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END of Bootstrap Carousel for sponsor banners and messaging -->
        
     <div class="container-fluid"w
         <div class="rox justify-content-center">

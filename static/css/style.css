@@ -79,6 +79,10 @@ body {
     bottom: auto;
 }
 
+.sponsor-banner-carousel {
+    max-width: 900px;
+}
+
 .login-card-img {
     width: 100%;
 }
