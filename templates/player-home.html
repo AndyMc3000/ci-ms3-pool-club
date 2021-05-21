@@ -57,5 +57,42 @@
             </div>
         </div>
     </div>
+    <!-- Bootstrap custom 'Club Features' cards-->
+    <div class="container px-4 pt-5" id="custom-cards">
+        <div class="col-12 text-center" >
+        <h2 class="pt-3 pb-2">Why Join?</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
+                    <div class="d-flex flex-column h-100 p-2 pb-3 text-white text-shadow-1 feature-cards-home">
+                        <i class="fas fa-scroll"></i>
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">My League Stats</h2>
+                        <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mystats') }}"> Get Stats</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
+                    <div class="d-flex flex-column h-100 p-1 pb-3 text-white text-shadow-1">
+                        <i class="fas fa-clipboard-list"></i>
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">My Match List</h2>
+                        <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mymatchlist') }}"> Get List</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Meet new people</h2>
+                        <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END of Bootstrap custom 'Club Features' cards-->
     
 {% endblock %}

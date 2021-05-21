@@ -1,4 +1,12 @@
 /* 
+Bootstrap Table sorting
+*/
+
+$(document).ready(function() {
+    $('#myTable').DataTable();
+} );
+
+/* 
 Bootstrap validation
 */
 
