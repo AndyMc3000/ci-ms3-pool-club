@@ -204,10 +204,10 @@ def addplayer():
     return render_template("add-player.html")
 
 
-@app.route("/add-admin")
+@app.route("/add-admin", methods=["GET"])
 def addadmin():
-    return render_template("add-admin.html")
-
+    return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
+        
 
 @app.route("/edit-league")
 def editleague():
