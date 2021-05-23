@@ -1,5 +1,5 @@
 /* 
-Bootstrap Table sorting
+BDataTables.net Table sorting function
 */
 
 $(document).ready(function() {

@@ -158,9 +158,8 @@ def editaccount():
 
 @app.route("/admin-home")
 def adminhome():
-    player = mongo.db.user.find_one(
-        {"email": session["user"]})
-    return render_template("admin-home.html", user=player)
+    return render_template("admin-home.html")
+
 
 @app.route("/add-league", methods=["GET", "POST"])
 def addleague():
@@ -174,13 +173,34 @@ def addleague():
         }
         mongo.db.league.insert_one(league)
         flash("League Added Successfully")
-        return redirect(url_for("adminhome", firstname=session["user"]))
-    
+        return redirect(url_for("adminhome"))
+  
     return render_template("add-league.html")
 
 
-@app.route("/add-player")
+@app.route("/add-player", methods=["GET", "POST"])
 def addplayer():
+    if request.method == "POST":
+        # check if username already exists in db
+        current_user = mongo.db.user.find_one(
+            {"email": request.form.get("email")})
+
+        if current_user:
+            flash("That Email / Username already exists")
+            return redirect(url_for("addplayer"))
+
+        addplayer = {
+            "email": request.form.get("email"),
+            "password": generate_password_hash(request.form.get("password")),
+            "firstname": request.form.get("firstname"),
+            "surname": request.form.get("surname"),
+            "nickname": request.form.get("nickname"),
+            "telephone": request.form.get("telephone")     
+        }
+        mongo.db.user.insert_one(addplayer)
+        flash("Player Added Successfully")
+        return redirect(url_for("adminhome"))
+
     return render_template("add-player.html")
 
 
