@@ -209,9 +209,21 @@ def addadmin():
     return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
         
 
-@app.route("/edit-league")
+@app.route("/edit-league", methods=["GET", "POST"])
 def editleague():
     return render_template("edit-league.html")
+    # league = mongo.db.league.find().sort("name", 1))
+        # if request.method == "POST":
+            # update_league = {
+                # "name": request.form.get("name"),
+                # "description": request.form.get("description"),
+                # "start_date": request.form.get("startdate"),
+                # "end_date": request.form.get("enddate"),
+                # "participating_players": request.form.get("participants"),
+            # }
+            # mongo.db.league.update_one(update_league)
+            # flash("League Successfully Updated")
+            # return redirect(url_for("adminhome")
 
 
 @app.route("/edit-match")

@@ -12,7 +12,7 @@
                     <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                     </div>
                     <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Add and Admin</h3>
+                        <h3 class="card-title pb-4">Add an Administrator</h3>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
@@ -35,7 +35,7 @@
                                                 </div>
                                             </div>
                                             <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Find Player Info</button>
+                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Select Player</button>
                                             </div>
                                         </div>
                                     </form>
@@ -45,79 +45,14 @@
                                 <div class="row justify-content-center">
                                     <div class="col-10 text-center p-2 pt-4">
                                         <h4>
-                                            Contact Info For:
+                                            Selected Player:
                                         </h4>
                                         <h4>
-                                            *Player Name*
+                                            *user.firstname + "(user.nickname)" + user.surname*
                                         </h4>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-12 text-center p-4">
-                                        <table class="table table-dark table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">MOBILE NUMBER</th>
-                                                    <th scope="col">*087-6530297</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">EMAIL</th>
-                                                    <td>*jimmybarry@murphy.com*</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="container-fluid">
-                                <div class="row justify-content-center">
-                                    <div class="col-10 text-center p-2 pt-4">
-                                        <h4>
-                                            League Stats For:
-                                        </h4>
-                                        <h4>
-                                            *Player Name*
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="col-12 p-4">
-                                        <table class="table table-dark table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">RANK</th>
-                                                    <th scope="col">*1*</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">POINTS</th>
-                                                    <td>*47*</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">MATCHES PLAYED:</th>
-                                                    <td> *X* / 30</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">MATCHES FOR:</th>
-                                                    <td>*X*</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">MATCHES AGAINST:</th>
-                                                    <td>*X*</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">GAMES FOR:</th>
-                                                    <td>*X*</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">GAMES AGAINST:</th>
-                                                    <td>*X*</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                        <div class="input-group m-auto text-center">
+                                            <button type="submit" class="btn btn-primary mb-3 mt-2 form-submit-button">Create Admin</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
