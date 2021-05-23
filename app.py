@@ -162,6 +162,34 @@ def adminhome():
         {"email": session["user"]})
     return render_template("admin-home.html", user=player)
 
+@app.route("/add-league")
+def addleague():
+    return render_template("add-league.html")
+
+
+@app.route("/add-player")
+def addplayer():
+    return render_template("add-player.html")
+
+
+@app.route("/add-admin")
+def addadmin():
+    return render_template("add-admin.html")
+
+
+@app.route("/edit-league")
+def editleague():
+    return render_template("edit-league.html")
+
+
+@app.route("/edit-match")
+def editmatch():
+    return render_template("edit-match.html")
+
+
+@app.route("/edit-player")
+def editplayer():
+    return render_template("edit-player.html")
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
