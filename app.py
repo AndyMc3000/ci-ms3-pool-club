@@ -162,8 +162,20 @@ def adminhome():
         {"email": session["user"]})
     return render_template("admin-home.html", user=player)
 
-@app.route("/add-league")
+@app.route("/add-league", methods=["GET", "POST"])
 def addleague():
+    if request.method == "POST":
+        league = {
+            "name": request.form.get("name"),
+            "description": request.form.get("description"),
+            "start_date": request.form.get("startdate"),
+            "end_date": request.form.get("enddate"),
+            "participating_players": request.form.get("participants"),
+        }
+        mongo.db.league.insert_one(league)
+        flash("League Added Successfully")
+        return redirect(url_for("adminhome", firstname=session["user"]))
+    
     return render_template("add-league.html")
 
 
@@ -189,7 +201,10 @@ def editmatch():
 
 @app.route("/edit-player")
 def editplayer():
-    return render_template("edit-player.html")
+    player = mongo.db.user.find_one(
+        {"email": session["user"]})
+    return render_template("edit-player.html", user=player)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
