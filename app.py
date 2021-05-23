@@ -156,6 +156,13 @@ def editplayer():
     return render_template("edit-player.html", user=player)
 
 
+@app.route("/admin-home")
+def adminhome():
+    player = mongo.db.user.find_one(
+        {"email": session["user"]})
+    return render_template("admin-home.html", user=player)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
