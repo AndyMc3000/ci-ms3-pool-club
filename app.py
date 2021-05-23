@@ -149,11 +149,11 @@ def playerarchive():
     return render_template("player-archive-results.html")
 
 
-@app.route("/edit-player")
-def editplayer():
+@app.route("/player-edit-account")
+def editaccount():
     player = mongo.db.user.find_one(
         {"email": session["user"]})
-    return render_template("edit-player.html", user=player)
+    return render_template("player-edit-account.html", user=player)
 
 
 @app.route("/admin-home")
