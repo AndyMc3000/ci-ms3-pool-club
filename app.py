@@ -129,7 +129,7 @@ def addmatch():
 @app.route("/player-contact-info")
 def playercontact():
     return render_template("player-contact-info.html", 
-        playername=mongo.db.user.find().sort("surname", 1))
+        playername=mongo.db.user.find().sort("surname", 1) )
 
 
 @app.route("/player-active-results")
@@ -211,7 +211,10 @@ def addadmin():
 
 @app.route("/edit-league", methods=["GET", "POST"])
 def editleague():
-    return render_template("edit-league.html")
+    league = mongo.db.league.find()
+        # if request.method == "GET":
+            # selected_league = 
+    return render_template("edit-league.html", league=league)
     # league = mongo.db.league.find().sort("name", 1))
         # if request.method == "POST":
             # update_league = {
@@ -233,9 +236,8 @@ def editmatch():
 
 @app.route("/edit-player")
 def editplayer():
-    player = mongo.db.user.find_one(
-        {"email": session["user"]})
-    return render_template("edit-player.html", user=player)
+    player = mongo.db.user.find().sort("surname", 1)
+    return render_template("edit-player.html", player=player)
 
 
 if __name__ == "__main__":

@@ -125,19 +125,21 @@
         </div>
     </div>
     <!-- END of Bootstrap Carousel for sponsor banners and messaging -->
-       
-    <div class="container-fluid"w
+
+    <div class="container-fluid">
         <div class="rox justify-content-center">
             <div class="col-12 text-center">
                 {% for user in user %}
                     <p>{{ user.firstname }} <strong> "{{ user.nickname }}" </strong> {{ user.surname }}<br>
                     Email: {{ user.email }}<br>
                     Mobile Phone: {{ user.telephone }}<br>
+                    Admin: {{ user.admin }}<br>
                     <hr>
                     </p>
                 {% endfor %}
             </div>
         </div>
     </div>
+   
     
 {% endblock %}

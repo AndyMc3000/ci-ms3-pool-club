@@ -100,6 +100,10 @@ body {
     top: 40px;
 }
 
+.two-button {
+    margin: 0px; 
+}
+
 .form-div {
     display: block;
     text-align: center;
