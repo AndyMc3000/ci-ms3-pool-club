@@ -229,15 +229,16 @@ def editleague():
             # return redirect(url_for("adminhome")
 
 
-@app.route("/edit-match")
-def editmatch():
-    return render_template("edit-match.html")
-
-
 @app.route("/edit-player")
 def editplayer():
     player = mongo.db.user.find().sort("surname", 1)
     return render_template("edit-player.html", player=player)
+
+
+@app.route("/edit-match")
+def editmatch():
+    matches = mongo.db.matches.find().sort("surname", 1)
+    return render_template("edit-match.html", matches=matches)
 
 
 if __name__ == "__main__":

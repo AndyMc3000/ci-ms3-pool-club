@@ -50,7 +50,7 @@
                                                 <select id="referee" name="referee" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Choose Referee</option>
                                                 {% for referee in referee %}
-                                                    <option value="{{ referee.surname }}, {{ referee.firstname }} '{{ referee.nickname }}'">{{ referee.surname }}, {{ referee.firstname }} '{{ referee.nickname }}'</option>
+                                                    <option value="{{ referee.firstname }} '{{ referee.nickname }}' {{ referee.surname }}">{{ referee.firstname }} '{{ referee.nickname }}' {{ referee.surname }}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="referee"></label>
@@ -66,7 +66,7 @@
                                                 <select id="playerone" name="playerone" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Choose Player 1</option>
                                                 {% for playerone in playerone %}
-                                                    <option value="{{ playerone.surname }}, {{ playerone.firstname }} '{{ playerone.nickname }}'">{{ playerone.surname }}, {{ playerone.firstname }} '{{ playerone.nickname }}'</option>
+                                                    <option value="{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}">{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="playerone"></label>
@@ -99,7 +99,7 @@
                                                 <select id="playertwo" name="playertwo" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Choose Player 2</option>
                                                 {% for playertwo in playertwo %}
-                                                    <option value="{{ playertwo.surname }}, {{ playertwo.firstname }} '{{ playertwo.nickname }}'">{{ playertwo.surname }}, {{ playertwo.firstname }} '{{ playertwo.nickname }}'</option>
+                                                    <option value="{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}">{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="playertwo"></label>
