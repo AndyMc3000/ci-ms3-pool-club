@@ -88,7 +88,28 @@
         {% block content %}
         {% endblock %}
     </main>
-        
+        <!-- Bootstrap Carousel for sponsor banners and messaging -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center" >
+                <h2 class="pt-3 pb-2">Visit our Sponsors</h2>
+            </div>
+            <div id="sponsorCarousel" class="carousel sponsor-banner-carousel col-6 slide text-center p-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <a href="https://www.delta.com/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-delta-banner-900x100.png') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"></a> 
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000"">
+                        <img height="100%" src="{{ url_for('static', filename='images/carousel/cpc-carousel-carla-oliveira-21FqSKZQGzI-unsplash-1428x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000"">
+                        <img height="100%" src="{{ url_for('static', filename='images/carousel/cpc-carousel-markus-winkler-Dtz_-wZV4Os-unsplash-1660x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END of Bootstrap Carousel for sponsor banners and messaging -->
         <footer class="bg-dark text-center text-lg-start">
             <div class="text-center">
                 <a class="navbar-brand px-2" href="{{ url_for('user') }}"> <img src="{{ url_for('static', filename='images/cpc-navbar-logo-4.png') }}" alt="CPC Logo"> </a>
