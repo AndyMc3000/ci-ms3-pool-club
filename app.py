@@ -24,9 +24,14 @@ def user():
     return render_template("index.html", user=user)
 
 
-@app.route("/index")
+@app.route("/league")
 def league():
     return render_template("league.html")
+
+
+@app.route("/archive")
+def archive():
+    return render_template("archive.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
