@@ -24,6 +24,11 @@ def user():
     return render_template("index.html", user=user)
 
 
+@app.route("/index")
+def league():
+    return render_template("league.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
