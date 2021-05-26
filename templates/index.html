@@ -60,7 +60,7 @@
     </div>
     <!-- END of introduction messaging -->
     <!-- Bootstrap club Features cards-->
-    <div class="container px-4 pt-5" id="custom-cards">
+    <div class="container px-4 pt-4" id="custom-cards">
         <div class="col-12 text-center" >
             <h2 class="pt-3 pb-2">Why Join?</h2>
         </div>
@@ -78,8 +78,8 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 pt-3 pb-4">
+            <div class="col text-center">
                 <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 feature-cards-home" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/features-cards/cpc-features-card-mohamed-m-xZgMujtsbS4-unsplash.jpg') }}); background-size: cover; background-position: center;">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Play the game you Love</h2>
@@ -87,15 +87,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/cpc-hero-apa-pool-players.png') }}); background-size: contain; background-repeat: no-repeat; background-position: center;">
+            <div class="col text-center">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/cpc-hero-apa-pool-players.png') }}); background-size: contain; background-repeat: no-repeat; background-position: top;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Play to Win!</h2>
                         <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col text-center">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/features-cards/cpc-feature-yrki-nieminen-90D0inZiIBo-unsplash-550.jpeg') }}); background-size: cover; background-position: center;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Meet new people</h2>
@@ -107,7 +107,7 @@
     </div>
     <!-- END of Bootstrap club features cards -->
     <!-- Bootstrap League tables cards -->
-    <div class="container px-4 pt-5" id="custom-cards">
+    <div class="container px-4 pt-2" id="custom-cards">
         <div class="col-12 text-center" >
             <h2 class="pt-3 pb-2">League Stats</h2>
         </div>
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-md-1 row-cols-lg-2 align-items-stretch justify-content-center g-4 py-5">
+        <div class="row row-cols-md-1 row-cols-lg-2 align-items-stretch justify-content-center g-4 py-4">
             <div class="col-12 col-md-6">
                 <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 feature-cards-home" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/features-cards/giorgio-trovato-_XTY6lD8jgM-unsplash-500px.jpeg') }}); background-size: cover;  background-position: top;">
@@ -140,7 +140,7 @@
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-2 mt-2 mb-2 display-7 lh-1 fw-bold text-center">Past League Tables</h2>
                         <p class="lead text-center">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-lg btn-primary mb-3 form-submit-button" href="{{ url_for('league') }}">League Archive</a>
+                        <a class="btn btn-lg btn-primary mb-3 form-submit-button" href="{{ url_for('archive') }}">League Archive</a>
                     </div>
                 </div>
             </div>
@@ -230,7 +230,7 @@
             </div>
         </div>
     </div>
-
+<!-- test code for retrieving user collection
     <div class="container-fluid">
         <div class="rox justify-content-center">
             <div class="col-12 text-center">
@@ -244,7 +244,7 @@
                 {% endfor %}
             </div>
         </div>
-    </div>
+    </div> -->
    
     
 {% endblock %}

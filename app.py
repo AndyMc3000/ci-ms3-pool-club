@@ -20,7 +20,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def user():
-    user=mongo.db.user.find()
+    user = mongo.db.user.find()
     return render_template("index.html", user=user)
 
 
@@ -31,7 +31,8 @@ def league():
 
 @app.route("/archive")
 def archive():
-    return render_template("archive.html")
+    league = mongo.db.league.find()
+    return render_template("archive.html", league=league)
 
 
 @app.route("/register", methods=["GET", "POST"])
