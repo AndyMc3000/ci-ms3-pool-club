@@ -34,6 +34,7 @@ Bootstrap validation
 /*
  * EmailJS code for sending a user query from the contact form on index.html by email
  */
+
 $(document).ready(function () {
     const btn = document.getElementById('contact-us-submit-btn');
 
@@ -50,11 +51,11 @@ $(document).ready(function () {
 
             // This assigns form field id's to EmailJS email template parameters
             let templateParams = {
-                from_name: document.getElementById('from_name').value,
-                surname: document.getElementById('surname').value,
-                tel_number: document.getElementById('tel_number').value,
-                from_email: document.getElementById('from_email').value,
-                message: document.getElementById('message').value,
+                from_first_name: document.getElementById('from_first_name').value,
+                lastname: document.getElementById('lastname').value,
+                telephone_number: document.getElementById('telephone_number').value,
+                from_email_address: document.getElementById('from_email_address').value,
+                from_message: document.getElementById('from_message').value,
             };
 
             emailjs.send('gmail', 'template_mee2ja9', templateParams)

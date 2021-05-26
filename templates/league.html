@@ -1,6 +1,81 @@
 {% extends "base.html" %}
 {% block content %}
 
-   
+   <div class="contanier-fluid h-100 m-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="pt-1 text-center">
+                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                </div>
+                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                    <div class="login-card-img-holder p-5 pb-3">
+                    <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                    </div>
+                    <div class="card-body top-50 start-50">
+                        <h1 class="card-title pb-4">League Table</h1>
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-12 form-div">
+                                    <h4>
+                                        Current League:
+                                    </h4>
+                                    <h4>
+                                        *league.name*
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 form-div">
+                                    <table class="table table-font table-dark table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">RANK</th>
+                                                    <th scope="col">Player</th>
+                                                    <th scope="col">Points</th>
+                                                    <th scope="col">MW</th>
+                                                    <th scope="col">ML</th>
+                                                    <th scope="col">MR</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>*league.player_id.points*</td>
+                                                    <td>*league.player_id.points*</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td> *league.player_id.matches_played* / 30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>*league.player_id.matches_won*</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">MATCHES AGAINST:</th>
+                                                    <td>*league.player_id.matches_lost*</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">GAMES FOR:</th>
+                                                    <td>*matches.user_id.games_won*</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">GAMES AGAINST:</th>
+                                                    <td>*matches.user_id.gameswon*</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-1 text-center">
+                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                </div>
+            </div>
+        </div>
+    </div>
     
 {% endblock %}
