@@ -28,6 +28,11 @@ body {
     min-height: 100vh;
 }
 
+.navbar-logo {
+    width: 100%;
+    height: auto;
+}
+
 .hero-div {
     background-color: #212529;
 }
