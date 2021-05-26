@@ -164,11 +164,12 @@
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
-                                    <form action="" class="form w-75 needs-validation" method="POST" novalidate>
+                                    <form id="contact-us-form" class="form w-75 needs-validation" method="POST" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="firstname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="firstname" class="form-control" placeholder="Enter First Name" aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
+                                                <label for="from_name">from_name</label>
+                                                <span class="input-group-text" id="from_name"><i class="fas fa-user"></i></span>
+                                                <input type="text" name="from_name" class="form-control" placeholder="Enter First Name" aria-label="from_name" aria-describedby="from_name" autocomplete="given-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -177,8 +178,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="surname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="surname" class="form-control" placeholder="Ente Last Name" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
+                                                <span class="input-group-text" id="surname"><i class="far fa-user"></i></span>
+                                                <input type="text" name="surname" class="form-control" placeholder="Enter Surname" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -187,8 +188,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
-                                                <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="email" aria-describedby="email" autocomplete="email" required>
+                                                <span class="input-group-text" id="from_email"><i class="fas fa-at"></i></span>
+                                                <input type="email" name="from_email" class="form-control" placeholder="Email Address" aria-label="from_email" aria-describedby="from_email" autocomplete="email" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -197,8 +198,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="telephone"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="tel" name="telephone" class="form-control" placeholder="Mobile Number" aria-label="telephone" aria-describedby="telephone" autocomplete="tel-national" required>
+                                                <span class="input-group-text" id="tel_number"><i class="fas fa-mobile-alt"></i></span>
+                                                <input type="tel" name="tel_number" class="form-control" placeholder="Mobile Number" aria-label="tel_number" aria-describedby="tel_name" autocomplete="tel-national" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -207,8 +208,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Choose a Password" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <span class="input-group-text" id="message"><i class="far fa-file-alt"></i></span>
+                                                <textarea class="form-control" id="message" name="message" placeholder="Type your Message here.." rows="5" aria-label="message" aria-describedby="message" required></textarea>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -216,19 +217,8 @@
                                                     Please choose a Password.
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password2"><i class="fas fa-lock"></i></span>
-                                                <input type="password2" name="password2" class="form-control" placeholder="Confirm Password" aria-label="password2"" aria-describedby="password2" autocomplete="new-password">
-                                                <span>*Passwords must be 5-15 charachters and contain only letters and numbers</span>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Those Passwords do not match.
-                                                </div>
-                                            </div>
                                             <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Register</button>
+                                                <button type="submit" id="contact-us-submit-btn" value="Send" class="btn btn-primary mb-3 form-submit-button">Send Message</button>
                                             </div>
                                         </div>
                                     </form>
