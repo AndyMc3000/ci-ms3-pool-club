@@ -54,7 +54,4 @@ The below shows the key:value pairs associated with the MongoDB Collections used
                 date: Date
             }
             
-            archive 
-            {
-                ????????????????
-            }
+        
