@@ -6,42 +6,55 @@ The below shows the key:value pairs associated with the MongoDB Collections used
 
             league
             {
-                _id:
-                name:
-                description:
-                start_date:
-                end_date:
-                participating_players: [ObjectId(user_id),..ObjectId(user_id)] (list of all object id's in collection 'user')
+                _id: ObjectId
+                name: String
+                description: String
+                start_date: Date
+                end_date: Date                                                  
+                participating_players: Array [        # (this value contains a list of all object id's in the collection 'user')
+                        ObjectId(user_id),
+                        .....
+                        ObjectId(user_id),
+                        ] 
             }
 
             user
             {
-                _id:
-                firstname:
-                lastname:
-                nickname:
-                email:
-                telephone:
-                password:
-                admin:
-                rank:
-                matches_played:
-                matches_won:
-                matches_lost:
-                games_won:
-                games_lost:
-                entered_leagues: [Object(league_id),..Object(league_id)] (list of object id's of the leagues)
+                _id: ObjectId
+                firstname: String
+                lastname: String
+                nickname: String
+                email: String
+                telephone: Integer
+                password: String
+                admin: Boolean
+                rank: Integer
+                matches_played: Integer
+                matches_won: Integer
+                matches_lost: Integer
+                games_won: Integer
+                games_lost: Integer
+                entered_leagues: Array [              # (this value contains a list of all object id's in the collection 'league')
+                        Object(league_id),
+                        .....
+                        Object(league_id)],
+                        ]
             }
 
             matches
             {
-                _id
-                referee:
-                createdby:
-                playerone: Object(_id)
-                playeronewon:
-                playertwo: Object(_id)
-                playertwowon:
-                league: Object(_id)
-                date:
+                _id: ObjectId
+                referee: ObjectId(user_id)
+                createdby: ObjectId(user_id)
+                playerone: Object(user_id)
+                playeronewon: Integer
+                playertwo: Object(user_id)
+                playertwowon: Integer
+                league: Object(league_id)
+                date: Date
+            }
+            
+            archive 
+            {
+                ????????????????
             }
