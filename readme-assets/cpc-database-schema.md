@@ -11,8 +11,8 @@ The below shows the key:value pairs associated with the MongoDB Collections used
                 description: String
                 start_date: Date
                 end_date: Date                                                  
-                participating_players: Array [        # (this value contains a list of all object id's in the collection 'user')
-                        ObjectId(user_id),
+                participating_players: Array [        # (this value contains a list of all object id's 
+                        ObjectId(user_id),                  in the collection 'user')
                         .....
                         ObjectId(user_id),
                         ] 
@@ -34,8 +34,8 @@ The below shows the key:value pairs associated with the MongoDB Collections used
                 matches_lost: Integer
                 games_won: Integer
                 games_lost: Integer
-                entered_leagues: Array [              # (this value contains a list of all object id's in the collection 'league')
-                        Object(league_id),
+                entered_leagues: Array [              # (this value contains a list of all object id's 
+                        Object(league_id),                  in the collection 'league')
                         .....
                         Object(league_id)],
                         ]
