@@ -17,6 +17,8 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
+# homepage view
 @app.route("/")
 @app.route("/index")
 def user():
@@ -24,17 +26,20 @@ def user():
     return render_template("index.html", user=user)
 
 
+# current/active League table view
 @app.route("/league")
 def league():
     return render_template("league.html")
 
 
+# historical/archive League tables view
 @app.route("/archive")
 def archive():
     league = mongo.db.league.find()
     return render_template("archive.html", league=league)
 
 
+# club sign up page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -64,6 +69,7 @@ def register():
     return render_template("register.html")
 
 
+# login page view
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -93,6 +99,7 @@ def login():
     return render_template("login.html")
 
 
+# player home page
 @app.route("/player-home/<firstname>", methods=["GET", "POST"])
 def playerhome(firstname):
     # Fetch the session user's first name from MongoDB
@@ -105,6 +112,7 @@ def playerhome(firstname):
         return render_template("player-home.html", user=user, player=player)
 
 
+# logout page view
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -113,6 +121,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# add match view
 @app.route("/add-match", methods=["GET", "POST"])
 def addmatch():
     if request.method == "POST":
@@ -137,12 +146,14 @@ def addmatch():
         league=mongo.db.league.find().sort("name", 1), )
 
 
+# find contact details and league stats for another player
 @app.route("/player-contact-info")
 def playercontact():
     return render_template("player-contact-info.html", 
         playername=mongo.db.user.find().sort("surname", 1) )
 
 
+# view player league statistics
 @app.route("/player-active-results")
 def mystats():
     player = mongo.db.user.find_one(
@@ -150,16 +161,19 @@ def mystats():
     return render_template("player-current-stats.html", player=player)
 
 
+# view player match list
 @app.route("/player-match-list")
 def mymatchlist():
     return render_template("player-match-list.html")
 
 
+# view player league statistics for past leagues
 @app.route("/player-archive-results")
 def playerarchive():
     return render_template("player-archive-results.html")
 
 
+# edit player account details
 @app.route("/player-edit-account")
 def editaccount():
     player = mongo.db.user.find_one(
@@ -167,11 +181,13 @@ def editaccount():
     return render_template("player-edit-account.html", user=player)
 
 
+# admin home page
 @app.route("/admin-home")
 def adminhome():
     return render_template("admin-home.html")
 
 
+# add new league (admin view)
 @app.route("/add-league", methods=["GET", "POST"])
 def addleague():
     if request.method == "POST":
@@ -189,6 +205,7 @@ def addleague():
     return render_template("add-league.html")
 
 
+# add new player (admin view)
 @app.route("/add-player", methods=["GET", "POST"])
 def addplayer():
     if request.method == "POST":
@@ -215,11 +232,13 @@ def addplayer():
     return render_template("add-player.html")
 
 
+# make a player an admin
 @app.route("/add-admin", methods=["GET"])
 def addadmin():
     return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
         
 
+# edit/delete active league details (admin view)
 @app.route("/edit-league", methods=["GET", "POST"])
 def editleague():
     league = mongo.db.league.find()
@@ -240,12 +259,14 @@ def editleague():
             # return redirect(url_for("adminhome")
 
 
+# edit/delete player details (admin view)
 @app.route("/edit-player")
 def editplayer():
     player = mongo.db.user.find().sort("surname", 1)
     return render_template("edit-player.html", player=player)
 
 
+# edit/delete match details (admin view)
 @app.route("/edit-match")
 def editmatch():
     matches = mongo.db.matches.find().sort("surname", 1)
