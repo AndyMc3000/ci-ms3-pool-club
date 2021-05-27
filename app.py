@@ -57,7 +57,15 @@ def register():
             "firstname": request.form.get("firstname"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
-            "telephone": request.form.get("telephone")     
+            "telephone": request.form.get("telephone"), 
+            "admin": request.form.get("admin"),    
+            "rank": request.form.get("rank"),    
+            "matches_played": request.form.get("matches_played"),    
+            "matches_won": request.form.get("matches_won"),    
+            "matches_lost": request.form.get("matches_lost"),    
+            "games_won": request.form.get("games_won"),    
+            "games_lost": request.form.get("games_lost"), 
+            "entered_leagues": request.form.get("entered_leagues")    
         }
         mongo.db.user.insert_one(register)
 
