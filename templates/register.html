@@ -84,7 +84,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password2"><i class="fas fa-lock"></i></span>
-                                                <input type="password2" name="password2" class="form-control" placeholder="Confirm Password" aria-label="password2"" aria-describedby="password2" autocomplete="new-password">
+                                                <input type="password" name="password2" class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Confirm Password" aria-label="password2"" aria-describedby="password2" autocomplete="new-password" required>
                                                 <span>*Passwords must be 5-15 charachters and contain only letters and numbers</span>
                                                 <div class="valid-feedback">
                                                     Looks good!
@@ -96,28 +96,31 @@
                                             <div class="input-group m-auto text-center">
                                                 <button type="submit" class="btn btn-primary mb-3 form-submit-button">Register</button>
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="admin" id="admin" value="False" >
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="rank" id="rank" value="N/A">
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="matches_played" id="matches_played" value="0">
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="matches_won" id="matches_won" value="0">
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="matches_lost" id="matches_lost" value="0">
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="games_won" id="games_won" value="0">
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="games_lost" id="games_lost" value="0">
                                             </div>
-                                            <div class="input-group mb-4">
+                                            <div class="input-group hidden-field">
+                                                <input type="hidden" name="points" id="points" value="0">
+                                            </div>
+                                            <div class="input-group hidden-field">
                                                 <input type="hidden" name="entered_leagues" id="entered_leagues" value="current">
                                             </div>
                                         </div>

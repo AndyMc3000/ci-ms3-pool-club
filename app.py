@@ -18,6 +18,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# -------------- HELPER FUNCTIONS --------------
+def is_logged_in():
+    """
+    This returns the user stored in the session or None
+    """
+    return session.get("user")
+
 # homepage view
 @app.route("/")
 @app.route("/index")
@@ -58,18 +65,20 @@ def register():
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
             "telephone": request.form.get("telephone"), 
-            "admin": request.form.get("admin"),    
-            "rank": request.form.get("rank"),    
-            "matches_played": request.form.get("matches_played"),    
-            "matches_won": request.form.get("matches_won"),    
-            "matches_lost": request.form.get("matches_lost"),    
-            "games_won": request.form.get("games_won"),    
-            "games_lost": request.form.get("games_lost"), 
-            "entered_leagues": request.form.get("entered_leagues")    
+            # Default user values 
+            "admin": False,    
+            "rank": "N/A",
+            "points": 0,    
+            "matches_played": 0,    
+            "matches_won": 0,    
+            "matches_lost": 0,    
+            "games_won": 0,    
+            "games_lost": 0 , 
+            "entered_leagues": [] 
         }
         mongo.db.user.insert_one(register)
 
-        # put the new user into 'session' cookie
+        # Put the new user into 'session' cookie
         session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
         return redirect(url_for("playerhome", firstname=session["user"]))
@@ -110,14 +119,12 @@ def login():
 # player home page
 @app.route("/player-home/<firstname>", methods=["GET", "POST"])
 def playerhome(firstname):
-    # Fetch the session user's first name from MongoDB
-    user = mongo.db.user.find_one(
-        {"email": session["user"]})['email']
-    player = mongo.db.user.find_one(
-        {"email": session["user"]})
-    
-    if session["user"]:
-        return render_template("player-home.html", user=user, player=player)
+    user_email = is_logged_in()
+    if user_email:
+        # Fetch the session user's first name from MongoDB
+        user = mongo.db.user.find_one({"email": user_email})
+        return render_template("player-home.html", user=user)
+    return redirect(url_for("login"))
 
 
 # logout page view
@@ -191,8 +198,14 @@ def editaccount():
 
 # admin home page
 @app.route("/admin-home")
+@app.route("/admin-home")
 def adminhome():
+    # user_email = is_logged_in()
+    # if user_email:
+        # player = mongo.db.user.find_one({"email": user_email})
+        # if player.admin:
     return render_template("admin-home.html")
+    # return redirect(url_for("playerhome"))
 
 
 # add new league (admin view)

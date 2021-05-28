@@ -29,8 +29,9 @@
                                                     Please add a valid Date.
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="league"><i class="fas fa-scroll"></i></span>
+                                            <div class="input-group hidden-field">
+                                                <input type="hidden" id="league" name="league" value="Current League">
+                                                <!-- <span class="input-group-text" id="league"><i class="fas fa-scroll"></i></span>
                                                 <select id="league" name="league" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Pick a League</option>
                                                 {% for league in league %}
@@ -43,7 +44,7 @@
                                                 </div>
                                                 <div class="invalid-feedback">
                                                     Please select a League.
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="referee"><i class="far fa-eye"></i></span>
@@ -84,7 +85,7 @@
                                                     <option value="0">0 Frames</option>
                                                     <option value="1">1 Frame</option>
                                                     <option value="2">2 Frames</option>
-                                                    <option value="2">3 Frames</option>
+                                                    <option value="3">3 Frames</option>
                                                 </select>
                                                 <label for="playeronewon"></label>
                                                 <div class="valid-feedback">
@@ -117,7 +118,7 @@
                                                     <option value="0">0 Frames</option>
                                                     <option value="1">1 Frame</option>
                                                     <option value="2">2 Frames</option>
-                                                    <option value="2">3 Frames</option>
+                                                    <option value="3">3 Frames</option>
                                                 </select>
                                                 <label for="playertwowon"></label>
                                                 <div class="valid-feedback">

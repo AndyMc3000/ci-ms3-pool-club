@@ -60,19 +60,8 @@
                                                     Please add a valid Date.
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="participants"><i class="fas fa-user-plus"></i></span>
-                                                <select id="participants" name="participants" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Select Players</option>
-                                                    <option value="All Players">All Players</option>
-                                                </select>
-                                                <label for="lparticipants"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please select a League.
-                                                </div>
+                                            <div class="input-group mb-4 hidden-field">
+                                                <input type="hidden" name="participants" value="All users in user">
                                             </div>
                                             <div class="input-group m-auto text-center">
                                                 <button type="submit" class="btn btn-primary mb-3 form-submit-button">Add League</button>
