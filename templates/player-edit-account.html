@@ -12,7 +12,7 @@
                         <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                     </div>
                     <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Edit {{ user.firstname }} {{ user.surname }}'s Account</h3>
+                        <h3 class="card-title pb-4">Edit Your Account</h3>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
@@ -20,7 +20,7 @@
                                         <div class="form-group">
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="firstname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="firstname" class="form-control" placeholder=" {{ user.firstname }} " aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
+                                                <input type="text" name="firstname" class="form-control" value="{{ user.firstname }}" aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -30,7 +30,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="nickname"><i class="far fa-user"></i></span>
-                                                <input type="text" name="nickname" class="form-control" placeholder="{{ user.nickname }}" aria-label="nickname" aria-describedby="nickname" autocomplete="nickname" required>
+                                                <input type="text" name="nickname" class="form-control" value="{{ user.nickname }}" aria-label="nickname" aria-describedby="nickname" autocomplete="nickname" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -40,7 +40,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="surname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="surname" class="form-control" placeholder="{{ user.surname }}" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
+                                                <input type="text" name="surname" class="form-control" value="{{ user.surname }}" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -50,7 +50,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
-                                                <input type="email" name="email" class="form-control" placeholder="{{ user.email }}" aria-label="email" aria-describedby="email" autocomplete="email" required>
+                                                <input type="email" name="email" class="form-control" value="{{ user.email }}" aria-label="email" aria-describedby="email" autocomplete="email" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -60,7 +60,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="telephone"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="tel" name="telephone" class="form-control" placeholder="{{ user.telephone }}" aria-label="telephone" aria-describedby="telephone" autocomplete="tel-national" required>
+                                                <input type="tel" name="telephone" class="form-control" value="{{ user.telephone }}" aria-label="telephone" aria-describedby="telephone" autocomplete="tel-national" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -70,7 +70,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="{{ user.password }}" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
+                                                <input type="password" name="password" class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Enter your Password" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -80,8 +80,8 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="password2"><i class="fas fa-lock"></i></span>
-                                                <input type="password2" name="password2" class="form-control" placeholder="{{ user.password }}" aria-label="password2"" aria-describedby="password2" autocomplete="new-password">
-                                                <span>*Passwords must be 5-15 charachters and contain only letters and numbers</span>
+                                                <input type="password2" name="password2" class="form-control" placeholder="Confirm your Password" aria-label="password2"" aria-describedby="password2" autocomplete="new-password">
+                                                <span class="py-1 px-2 text-center"><small class="px-3 text-center">*Passwords must be 5-15 charachters and contain only letters and numbers</small></span>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>

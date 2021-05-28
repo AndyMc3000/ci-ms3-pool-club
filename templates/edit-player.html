@@ -12,21 +12,21 @@
                     <img src="{{ url_for('static', filename='images/www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                     </div>
                     <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Edit Player</h3>
+                        <h3 class="card-title pb-4">Edit Player Account</h3>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
                                     <form action="{{ url_for('editplayer') }}" class="form w-75 needs-validation" method="GET" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playerone"><i class="fas fa-user-shield"></i></span>
-                                                <select id="playerone" name="playerone" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="user"><i class="fas fa-user-shield"></i></span>
+                                                <select id="user" name="player" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Select Player</option>
                                                 {% for player in player %}
                                                     <option value="{{ player.surname }}, {{ player.firstname }} '{{ player.nickname }}'">{{ player.surname }}, {{ player.firstname }} '{{ player.nickname }}'</option>
                                                 {% endfor %}
                                                 </select>
-                                                <label for="playerone"></label>
+                                                <label for="user"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -47,7 +47,7 @@
                                         <div class="form-group">
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="firstname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="firstname" class="form-control" placeholder="Player First Name" aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
+                                                <input type="text" name="firstname" class="form-control" value="{{ user.firstname }}" aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>

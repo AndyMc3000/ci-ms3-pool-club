@@ -281,10 +281,16 @@ def editleague():
 
 
 # edit/delete player details (admin view)
-@app.route("/edit-player")
+@app.route("/edit-player", methods=["GET", "POST"])
 def editplayer():
     player = mongo.db.user.find().sort("surname", 1)
-    return render_template("edit-player.html", player=player)
+    if request.method == "GET":
+        selection = {
+            "user": request.form.get("user"),
+        }
+        mongo.db.user.find(selection)
+
+    return render_template("edit-player.html", user=selection, player=player)
 
 
 # edit/delete match details (admin view)
