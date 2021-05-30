@@ -189,10 +189,24 @@ def playerarchive():
 
 
 # edit player account details
-@app.route("/player-edit-account")
+@app.route("/player-edit-account", methods=["GET", "POST"])
 def editaccount():
-    player = mongo.db.user.find_one(
-        {"email": session["user"]})
+    player = mongo.db.user.find_one({"email": session["user"]})
+    # if request.method == "POST":
+        # update_player = {
+            # "firstname": request.form.get("firstname"),
+            # "surname": request.form.get("surname"),
+            # "nickname": request.form.get("nickname"),
+            # "email": request.form.get("email"),
+            # "telephone": request.form.get("telephone"),
+            # "password": request.form.get("password"),
+            # "password2": request.form.get("password2")
+        # }
+        # mongo.db.matches.update({"_id": ObjectId(player)}, update_player)
+        # flash("Account Successfully Updated")
+        # return redirect(url_for("playerhome", firstname=session["user"]))
+    
+    # player_info = mongo.db.tasks.find_one({"_id": ObjectId(player)})
     return render_template("player-edit-account.html", user=player)
 
 
@@ -298,6 +312,23 @@ def editplayer():
 def editmatch():
     matches = mongo.db.matches.find().sort("surname", 1)
     return render_template("edit-match.html", matches=matches)
+
+
+# -------------- EXCEPTION HANDLING --------------
+@app.errorhandler(404)
+def not_found_exception_handler(e):
+    """
+    Catch 404 not found
+    """
+    return render_template("error-404.html")
+
+
+@app.errorhandler(Exception)
+def generic_exception_handler(e):
+    """
+    Catch ANY other exception
+    """
+    return render_template("error-exception.html")
 
 
 if __name__ == "__main__":
