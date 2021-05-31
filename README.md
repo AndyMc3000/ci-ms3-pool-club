@@ -102,7 +102,13 @@ Based on the outcomes from the Strategy Plane, The Scope Plane determines what f
 
 #### Functional Specifications: ####
 * Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. Each of these pages should have a selection of 'feature views'/pages linked from them. The Homepage should have 3 page views linked from it, those being; 'Current League Table' 'League Archive', and 'Register'. The Player Homepage should have 6 page views linked from it, those being; 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'. The Admin Homepage should have 6 page views linked from it, those being; 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.    
-* * Include a Navigation bar to highlight the currently accessed page. The Navigation bar should also show 3 different views; One for a non-logged in user, one for a logged in registered player, and one for an Admin user.
+* All pages should include a Navigation bar to highlight the currently accessed page. The Navigation bar should have 3 different views; One for a non-logged in user, one for a logged in registered player, and one for an Admin user.
+* The Homepage should include a carousel of 3 x 'hero' images and messaging to include link buttons to the registration page.
+* The Homepage should include and introduction section and a 'why join us?' section, which should introduce the club and promote the benefits of joining it. 
+* The Homepage should also have an 'Our Leagues' which describes what the Leagues are and how often they are run. This section should also include button links to pages to view; 1. The current/active League Table, and 2. Archived League Tables.
+* The Homepage should include a Contact Us section to show name, telephone, and email contact infromation for the CPC organisers, as well a contact form.
+* All pages should include a carousel with scrolling banners adverts for CPC sponsors at the bottom of the page.
+* All pages should include a Footer section which simply has a CPC logo which links to the Homepage, and copyright information. 
 
 
 * Both pages should have a Jumbotron at the top of the page with relevant call-out messaging. The Homepage Jumbotron to include link to contact page in order to allow a user to find Party Chef contact details, and to send a query via a contact form.
