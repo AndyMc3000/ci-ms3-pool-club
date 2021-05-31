@@ -25,6 +25,7 @@ def is_logged_in():
     """
     return session.get("user")
 
+
 # homepage view
 @app.route("/")
 @app.route("/index")
@@ -65,15 +66,15 @@ def register():
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
             "telephone": request.form.get("telephone"), 
-            # Default user values 
-            "admin": False,    
+            # Default user values
+            "admin": False,   
             "rank": "N/A",
-            "points": 0,    
-            "matches_played": 0,    
-            "matches_won": 0,    
-            "matches_lost": 0,    
-            "games_won": 0,    
-            "games_lost": 0 , 
+            "points": 0,   
+            "matches_played": 0,
+            "matches_won": 0, 
+            "matches_lost": 0,
+            "games_won": 0, 
+            "games_lost": 0,
             "entered_leagues": [] 
         }
         mongo.db.user.insert_one(register)
@@ -154,11 +155,11 @@ def addmatch():
         flash("Match Successfully Added")
         return redirect(url_for("playerhome", firstname=session["user"]))
 
-    return render_template("add-match.html", 
-        referee=mongo.db.user.find().sort("surname", 1),
-        playerone=mongo.db.user.find().sort("surname", 1),
-        playertwo=mongo.db.user.find().sort("surname", 1),
-        league=mongo.db.league.find().sort("name", 1), )
+    return render_template("add-match.html",
+                referee=mongo.db.user.find().sort("surname", 1),
+                playerone=mongo.db.user.find().sort("surname", 1),
+                playertwo=mongo.db.user.find().sort("surname", 1),
+                league=mongo.db.league.find().sort("name", 1), )
 
 
 # find contact details and league stats for another player
