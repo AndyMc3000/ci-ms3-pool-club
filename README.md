@@ -4,9 +4,9 @@
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
 ### Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ###
 ### Developer: Andrew McDonald - Contact me on GitHub :octocat: @ <a href="https://github.com/AndyMc3000"><strong>AndyMc3000</strong></a> ###
-### Website deployed to an Heroku App: [UPDATE ME](https://andymc3000.github.io/ci-ms2-party-chef/) ###
+### Website deployed on an Heroku App: [Click Here](https://pool-club.herokuapp.com/) ###
 <hr>
-<img src="assets/readme-assets/party-chef-am-i-responsive-screenshot.png" width="900">
+<img src="/readme-assets/cpc-am-i-responsive-readme-screenshot.png" width="1100">
 <hr>
 
 # Table of Contents #
@@ -61,40 +61,50 @@ The design of the CPC website was determined by assessing and quantifying the go
 
 The Strategy Plane, as defined by Jesse James Garrett "..incorporates not only what the people running the site want to get out of it but what the users want to get out of the site as well." 
 
-Please see below details of the 'Client Stories' to detail the requirements of the Pary Chef business owner, and the 'User Stories' which highlight the requiremnts of end users of the Party Chef website.
+Please see below details of the 'Client Stories' to detail the requirements of the CPC, and the 'User Stories' which highlight the requiremnts of club members/players.
 
 #### Client Stories ####
-> - [x] “The main goal of the website is to attract new business for Party Chef, and provide value to visitors in the information is provides.”
-> - [x] “The website must show and promote the services which Party Chef provides.”
-> - [x] “The website must detail the various menu's on offer, and the cost of food/drink items on each menu.” 
-> - [x] “The website must allow people to easily contact Party Chef.”
-> - [x] “The website must allow users to create their own menu from the menu items available, in order to get an idea of food/drinks costs for their party.”
-> - [x] “The website must also allow users to request a quote, based on their MyMenu items and other relevant information about their event (Party Date, Party Location). The quote request information (including items in the active MyMenu list of menu items) should be sent by email to the business owner. A copy of the quote request should also be sent to the user.”
-> - [x] “The website must allow users to find contact details for their local kitchen/office using an interactive Google Map (offices are called 'kitchens' on the site).”
-> - [x] “The website must promote links to Party Chef's social media channels.”
-> - [x] “The website must show photos of previous events.” 
-> - [x] “The website must show customer testimonial quotes.”
+> - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.”
+> - [x] “The website must also give Club organisers a one-stop-shop to create and manage Pool Leagues, League Matches, and Players/Members.”
+> - [x] “The website must allow users on the site to view both current and archived League Tables.” 
+> - [x] “The website must allow new members to register and join the Club.” 
+> - [x] “The website must provide an area where club members can view their current League statistics/progress.”
+> - [x] “The website must provide an area where club members can view a list of the current League Matches they have played, and which matches are yet to be played (depending on active membership numbers, a player can expect they will need to play each other player twice in a given League).”
+> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee.”
+> - [x] “The website must provide an area where club members can find contact details of another Player in order to arrange a Match date/time/venue.”
+> - [x] “The website must provide an area where club members can view their League statistics for previous (archived) Leagues.”
+> - [x] “The website must provide an area where club members can edit and update their Account information.”
+> - [x] “The website must provide an area where site Admininstrators can add a new League."
+> - [x] “The website must provide an area where site Admininstrators can add a new Player/Member."
+> - [x] “The website must provide an area where site Admininstrators can make a Player/Member an Administrator."
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a League."
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a Player."
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a Match."
+> - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.”
+> - [x] “The website must have a section showing banner adverts for CPC sponsors.”
 > - [x] “The website must be mobile-friendly.”
+> - [x] “The website colours must be dark. The website will be used by Players at Match events on their mobile phones, and so a dark colour scheme will ensure that viewing the website while near a pool table will reduce the risk of Player distraction.”
 
 #### User Stories ####
-> - [x] “I want to see what kind of services Party Chef offers.”
-> - [x] “I want to see what kind of menu's (food & drink) Party Chef offer.”
-> - [x] “I want to find out where their 'kitchens' (offices) are located, and which is the closest office to me.”
-> - [x] “I want to see photos of the dishes in Party Chef menu's.”
-> - [x] “I want to see photos of previous events serviced by Party Chef.”
-> - [x] “I want to be able to see pricing for menu items.”
-> - [x] “I want to be able to create my own menu from the menu's of items offerred.”
-> - [x] “I want to be able to send my menu along with details about my planned event to the Party Chef team in order to confirm their availability to service my event, and to get a detailed quote inclusive of all costs."
-> - [x] “I want to be able to find links to the Party Chef social media channels.”
-
+> - [x] “I want to learn about what the CPC is.”
+> - [x] “I want to be able to view current and archived CPC League Tables.”
+> - [x] “I want to be able to register and sign-up to join the CPC.”
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - current League Rank, current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
+> - [x] “I want to be able to view my personal League statistics - League Rank, League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
+> - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
+> - [x] “I want to be able to view my list of Leagues Matches, both those Matches Played and those Matches yet to be played."
+> - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."
+> - [x] “I want to be able to edit and update my Account information."
 
 ### 2. The Scope Plane ###
 
-Based on the outcomes from the Strategy Plane, The Scope Plane determines what features, functionality, and types of content should be included within the scope of the project. Listed below are the functional specifications and content requirements decided upon for the Party Chef website. 
+Based on the outcomes from the Strategy Plane, The Scope Plane determines what features, functionality, and types of content should be included within the scope of the project. Listed below are the functional specifications and content requirements decided upon for the CPC website. 
 
 #### Functional Specifications: ####
-* Build a responsive Website with 2 pages - a Homepage and a Contact page.
-* Include a Navigation bar to highlight currently accessed page.
+* Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. Each of these pages should have a selection of 'feature views'/pages linked from them. The Homepage should have 3 page views linked from it, those being; 'Current League Table' 'League Archive', and 'Register'. The Player Homepage should have 6 page views linked from it, those being; 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'. The Admin Homepage should have 6 page views linked from it, those being; 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.    
+* * Include a Navigation bar to highlight the currently accessed page. The Navigation bar should also show 3 different views; One for a non-logged in user, one for a logged in registered player, and one for an Admin user.
+
+
 * Both pages should have a Jumbotron at the top of the page with relevant call-out messaging. The Homepage Jumbotron to include link to contact page in order to allow a user to find Party Chef contact details, and to send a query via a contact form.
 * The Homepage should include a 'Features' section highlighting the Party Chef services.
 * The Homepage should show various menu's (canpapes, starters, main course, something sweet, and drinks menus) each showing menu items listed within an accordian. 
