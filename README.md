@@ -1,5 +1,5 @@
 ##### <br> #####
-<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/readme-heading-logo.png)</a>
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/cpcp-logo-readme-header.png)</a>
 ##### <br> #####
 # Cill na Martra Pool Club (CPC) :8ball: #
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
