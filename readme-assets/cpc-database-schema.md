@@ -54,4 +54,18 @@ The below shows the key:value pairs associated with the MongoDB Collections used
                 date: Date
             }
             
+            archive
+            {
+                _id: ObjectId
+                league_name: ObjectId(league_id)
+                league_decription: ObjectId(league_id)
+                start_date: Object(league_id)
+                end_date: Object(league_id)
+                participating_players: Array [          # (this value contains a list of all object id's 
+                        Object(user_id),                  in the collection 'league')
+                        .....
+                        Object(league_id)],
+                        ]
+            }
+            
         
