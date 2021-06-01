@@ -147,32 +147,43 @@ Based on the outcomes from the Strategy Plane, The Scope Plane determines what f
 
 Interaction design is defined as the "..development of application flows to facilitate user tasks, defining how the user interacts with site functionality". Inline with this principle, the pages were designed as follows;
 
-#### The Homepage; ####
+* The Homepage and linked pages/views;
 * It should have a navigation bar with individual links to the Registration and Login pages. The navigation bar should also be fixed to the top of the page view.
 * The 'hero' carousel banners at the top of the Homepage should include a link button linking to the Registration page.
 * The 'Why Join' section should also contain a link button linking to the Registration page.
 * The 'Our Leagues' section should contain two link buttons. One button should link a user to the current League Tabel page, and the other should link a user to the Archived League Tables page.
 * On completion and submission the Contact Form should send an email (cc'ing the user) to a CPC organiser using the EmailJS email service. 
 * The sponsor carousel banners in the 'Visit our Sponsor' section should be clickable and link a user to an external sponsor website, where that page opens in a new browser window/tab.
+* The Current League page should have back buttons above and below the League Table container and link a user back to the Homepage.
+* The Login page should have back buttons above and below the Log In form container and link a user back to the Homepage.
 
-#### The Player Homepage; ####
+* The Player Homepage and linked pages/views;
+* Once a Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), and Log Out (rerouting a user to the Login page).  
+* The Player Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
+* Each function listed on the Player Homepage should have its own page.
+* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning a Player to their Player Homepage. The function pages to be included are: 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'.
 
-
+* The Admin Homepage and linked pages/views;
+* If a Player is also an Admin, and once that Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), Admin (Admin Homepage) and Log Out (rerouting a user to the Login page). 
+* The Admin Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
+* Each function listed on the Admin Homepage should have its own page.
+* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning an Admin to their Player Homepage. The function pages to be included are: 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.
 
 #### Information Architecture: ####
 
-Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett). As such Party Chef was designed to allows a user to find the information they need easily. For example, the navigation bar is fixed to the top of the page view so is always immediately accessible, and buttons and links are clearly visible and communicate their purpose in an unambiguous way.
+Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett). As such, the CPC website was designed to allows a user to find the information they need easily, intuitively, and quickly. For example, the navigation bar is fixed to the top of the page view so is always immediately accessible, and buttons and links are clearly visible and communicate their purpose in an unambiguous way.
 
-The structure of the website is outlined in the Sitemap. Click the link to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
+The structure of the website is outlined in the Sitemap. Click this link to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
 
 
 ### 4. The Skeleton Plane ###
 
 Following on from the tasks decided upon in the Structure Plane, the Skeleton Plane is defined as follows; ".. The skeleton is designed to optimize the arrangement of these elements (such as the placement of buttons, tabs, photos's and blocks of text) for maximum effect and efficiency..".
 
-With this in mind the following wireframes were created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
+With this in mind the following wireframe was created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
 
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Large Screen Wireframes</strong></a>
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Mobile Devices</strong></a
 
 ### 5. The Surface Plane ###
 
