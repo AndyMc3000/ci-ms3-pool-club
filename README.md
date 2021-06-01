@@ -171,9 +171,32 @@ Interaction design is defined as the "..development of application flows to faci
 
 #### Information Architecture: ####
 
-Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett). As such, the CPC website was designed to allows a user to find the information they need easily, intuitively, and quickly. For example, the navigation bar is fixed to the top of the page view so is always immediately accessible, and buttons and links are clearly visible and communicate their purpose in an unambiguous way.
+Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett).
 
-The structure of the website is outlined in the Sitemap. Click this link to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
+##### Data #####
+The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', 'matches', and 'archive'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
+
+* The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
+  * 'firstname', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'rank', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues' 
+
+* The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
+  * 'name', 'description', 'start_date', 'end_date', and 'participating_players' 
+  
+* The 'matches' collection should store information relating to individual matches played. The keys in this collection are;
+  * 'player_one', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee' 
+ 
+* The 'archive' collection should store information relating to leagues with an end date in the past. The keys in this collection are;
+  * 'league_id', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee'
+  
+The Data Types for each value in the Collections can be seen in the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
+
+##### Navigation & Security #####
+* The CPC website should also be designed to allow users to easily and securely navigate throughout the site. For example, the navigation bar should be fixed to the top of the page view so that it is always immediately accessible. 
+* Buttons and links should be clearly visible and communicate their purpose in an unambiguous way. 
+* Function pages should have 2 'Back' buttons situated at the top and bottom of the page view to allow for an easy back and forth between pages.
+* The site should not all users to access areas without privileges. For example, a user should not be able to access another users Player Homepage or be able to edit another players account details. Or, A non-Admin should not be able to edit matches or access the Admin Homepage.
+* MongoDB Atlas access credentials should not be visible anywhere on the site.
+* A user should be able to access another users password. 
 
 
 ### 4. The Skeleton Plane ###
@@ -183,14 +206,14 @@ Following on from the tasks decided upon in the Structure Plane, the Skeleton Pl
 With this in mind the following wireframe was created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
 
 1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Mobile Devices</strong></a
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Mobile Devices</strong></a>
 
 ### 5. The Surface Plane ###
 
 Having completed the previous 4 stages in the UX design process, I moved on to making decisions around the design and styling of the website. The Surface Plane focuses on the styling of images, backgrounds, fonts, and colours used on a website. The details of these decisions are listed here;
 
 1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. The color schemes chosen, along with their HEX values, is shown here;
-<img src="assets/readme-assets/party-chef-coolors-pallette.png" width="450">
+<img src="readme-assets/cpc-coolors-colour-pallette.png" width="450">
 
 1. Font - I used the Google Fonts website to help me decide on a font to use. I wanted something simple yet modern at the same time - not too bold, and something a little different. I decided upon a font called 'Blinker' for headings, and the 'Montserrat' font for paragraph texts. An example of these fonts can be seen here;   
 <img src="assets/readme-assets/party-chef-google-fonts-blinker.png" width="220">
