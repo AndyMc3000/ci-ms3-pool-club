@@ -1,3 +1,5 @@
+##### <br> #####
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/cpcp-logo-readme-header.png)</a>
 # Cill na Martra Pool Club (CPC) - Database Schema :floppy_disk: #
 
 ## MongoDB Database Collections Schema ## 
