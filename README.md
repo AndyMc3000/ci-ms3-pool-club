@@ -173,6 +173,9 @@ Interaction design is defined as the "..development of application flows to faci
 
 Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett).
 
+##### Sitemap #####
+The structure of the website is outlined in the Sitemap. Click here to view the <a href="assets/readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
+
 ##### Data #####
 The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', 'matches', and 'archive'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
 
@@ -196,17 +199,28 @@ The Data Types for each value in the Collections can be seen in the Database Sch
 * Function pages should have 2 'Back' buttons situated at the top and bottom of the page view to allow for an easy back and forth between pages.
 * The site should not all users to access areas without privileges. For example, a user should not be able to access another users Player Homepage or be able to edit another players account details. Or, A non-Admin should not be able to edit matches or access the Admin Homepage.
 * MongoDB Atlas access credentials should not be visible anywhere on the site.
-* A user should be able to access another users password. 
+* A user should not be able to access another users password. 
 
 
 ### 4. The Skeleton Plane ###
 
 Following on from the tasks decided upon in the Structure Plane, the Skeleton Plane is defined as follows; ".. The skeleton is designed to optimize the arrangement of these elements (such as the placement of buttons, tabs, photos's and blocks of text) for maximum effect and efficiency..".
 
-With this in mind the following wireframe was created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
+With this in mind the following wireframes were created to detail the layout of the website pages and individual sections/containers. Please click the following links to view these wireframes.
 
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Wireframe for Mobile Devices</strong></a>
+##### Wireframes #####
+* Wireframes for the Homepage and related pages;
+1. <a href="readme-assets/cpc-homepage-and-linked-pages-wireframes-large.png"><strong>Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-homepage-and-related-pages-wireframes-mobile.png"><strong>Homepage on Mobile Devices</strong></a>
+
+* Wireframes for the Player Homepage and related pages;
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Player Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Player Homepage on Mobile Devices</strong></a>
+
+* Wireframes for the Admin Homepage and related pages;
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-wireframes.png"><strong>Admin Homepage on Mobile Devices</strong></a>
+
 
 ### 5. The Surface Plane ###
 
