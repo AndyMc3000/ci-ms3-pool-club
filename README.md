@@ -214,8 +214,8 @@ With this in mind the following wireframes were created to detail the layout of 
 1. <a href="readme-assets/cpc-homepage-and-related-pages-wireframes-mobile.png"><strong>Homepage on Mobile Devices</strong></a>
 
 * Wireframes for the Player Homepage and related pages;
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Player Homepage on Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Player Homepage on Mobile Devices</strong></a>
+1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-large.png"><strong>Player Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-mobile.png"><strong>Player Homepage on Mobile Devices</strong></a>
 
 * Wireframes for the Admin Homepage and related pages;
 1. <a href="readme-assets/cpc-wireframes.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
