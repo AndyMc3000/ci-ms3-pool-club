@@ -173,10 +173,11 @@ Interaction design is defined as the "..development of application flows to faci
 
 Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett).
 
-##### Sitemap #####
+With this in mind, please see details below about the sites sitemap, how data is stored and managed, and about navigation and security considerations.
+* ##### Sitemap #####
 The structure of the website is outlined in the Sitemap. Click here to view the <a href="assets/readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
 
-##### Data #####
+* ##### Data #####
 The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', 'matches', and 'archive'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
 
 * The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
@@ -185,15 +186,16 @@ The CPC website should be designed to allow a user to create, read, update, and 
 * The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
   * 'name', 'description', 'start_date', 'end_date', and 'participating_players' 
   
-* The 'matches' collection should store information relating to individual matches played. The keys in this collection are;
+* The 'matches' collection should store information relating to individual matches played. The keys in the documents of this collection will be;
   * 'player_one', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee' 
  
-* The 'archive' collection should store information relating to leagues with an end date in the past. The keys in this collection are;
-  * 'league_id', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee'
+# TO DO #
+* The 'archive' collection should store information relating to leagues with an end date in the past. This collection will store a list of leagues. The keys in each list item in this collection will be;
+  * 'league_id', 'league_name', 'end_date', 'start_date', ' 'player_two_won', 'date', 'league', 'created_by', and 'referee'
   
 The Data Types for each value in the Collections can be seen in the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
 
-##### Navigation & Security #####
+* ##### Navigation & Security #####
 * The CPC website should also be designed to allow users to easily and securely navigate throughout the site. For example, the navigation bar should be fixed to the top of the page view so that it is always immediately accessible. 
 * Buttons and links should be clearly visible and communicate their purpose in an unambiguous way. 
 * Function pages should have 2 'Back' buttons situated at the top and bottom of the page view to allow for an easy back and forth between pages.
@@ -206,7 +208,7 @@ The Data Types for each value in the Collections can be seen in the Database Sch
 
 Following on from the tasks decided upon in the Structure Plane, the Skeleton Plane is defined as follows; ".. The skeleton is designed to optimize the arrangement of these elements (such as the placement of buttons, tabs, photos's and blocks of text) for maximum effect and efficiency..".
 
-With this in mind the following wireframes were created to detail the layout of the website pages and individual sections/containers. Please click the following links to view these wireframes.
+With this in mind I created the below wireframes, to detail the layout of the website pages and individual sections/containers etc. Due to the number of pages involved, I created multiple and split them into groups. I created 2 wireframes for the Homepage and the pages directly linked from the Homapgae. I created 2 wireframes for the Player Homepage and the pages directly linked from the Player Homepage. And I created 2 wireframes for the Admin Homepage and the pages directly linked from the Admin Homepage. Please click on the the links below to view these wireframes.
 
 ##### Wireframes #####
 * Wireframes for the Homepage and related pages;
@@ -218,20 +220,19 @@ With this in mind the following wireframes were created to detail the layout of 
 1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-mobile.png"><strong>Player Homepage on Mobile Devices</strong></a>
 
 * Wireframes for the Admin Homepage and related pages;
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Admin Homepage on Mobile Devices</strong></a>
+1. <a href="readme-assets/cpc-admin-homepage-and-linked-pages-wireframes-large.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-admin-homepage-and-linkeded-pages-wireframes-mobile.png"><strong>Admin Homepage on Mobile Devices</strong></a>
 
 
 ### 5. The Surface Plane ###
 
 Having completed the previous 4 stages in the UX design process, I moved on to making decisions around the design and styling of the website. The Surface Plane focuses on the styling of images, backgrounds, fonts, and colours used on a website. The details of these decisions are listed here;
 
-1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. The color schemes chosen, along with their HEX values, is shown here;
+1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. I only used 2 dark site colours in order to meet the requirement that the site have dark backgrounds colours. I found a suitable dark colour and the found a tint of that colour to use for the background colours of Bootstrap cards which are used extensively on the site.The colours chosen, along with their HEX values, are shown here;
 <img src="readme-assets/cpc-coolors-colour-pallette.png" width="450">
 
-1. Font - I used the Google Fonts website to help me decide on a font to use. I wanted something simple yet modern at the same time - not too bold, and something a little different. I decided upon a font called 'Blinker' for headings, and the 'Montserrat' font for paragraph texts. An example of these fonts can be seen here;   
-<img src="assets/readme-assets/party-chef-google-fonts-blinker.png" width="220">
-<img src="assets/readme-assets/party-chef-google-fonts-montserrat.png" width="220">
+1. Font - I used the Google Fonts website to help me decide on a font to use for site texts. I decided on a font called 'Audiowide' for all texts. I also used the Canva.com free trial service to help me find a font for my logo (I sourced the image part of the logo elswhere). On Canva I found and used a font called ARCHIVE (Designed by Slava Kirilenko – a graphic designer from Almaty, Kazakhstan) for the logo.   
+<img src="assets/readme-assets/cpc-fonts.png" width="450">
 
 1. Logo Design - I created the Party Chef logo using tools on [FreeLogoDesign.com](https://www.freelogodesign.org/).
 
