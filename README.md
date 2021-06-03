@@ -232,20 +232,17 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 <img src="readme-assets/cpc-coolors-colour-pallette.png" width="450">
 
 1. Font - I used the Google Fonts website to help me decide on a font to use for site texts. I decided on a font called 'Audiowide' for all texts. I also used the Canva.com free trial service to help me find a font for my logo (I sourced the image part of the logo elswhere). On Canva I found and used a font called ARCHIVE (Designed by Slava Kirilenko – a graphic designer from Almaty, Kazakhstan) for the logo.   
-<img src="assets/readme-assets/cpc-fonts.png" width="450">
+<img src="readme-assets/cpc-fonts.png" width="450">
 
-1. Logo Design - I created the Party Chef logo using tools on [FreeLogoDesign.com](https://www.freelogodesign.org/).
+1. Logo Design - I created the CPC logo using tools on [Canva.com](https://www.canva.com/). The logo contains an image and some text. I got the image from Clipart.com and then uploaded it to Canva where I added the text to produce the final logo.
 
 1. Images - I mainly used photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name.
 
-1. Icons;
-    * I used [Font Awesome](https://fontawesome.com/) icons to add icons to section headings. 
-    * I created and added a Party Chef Favicon to the page headers.
-    * I used [Flaticon](https://favicon.io/) icons for the social media section on contact.html.
+1. Icons - I used [Font Awesome](https://fontawesome.com/) icons to add icons to section headings. 
 
-1. Gallery - I decided to use a Bootstrap Modal as a container for my Carousel Gallery.
+1. Favicons - I use the Real Favicon Generator online service to create browser, desktop, and mobile favicons for the site. I uploaded a single favicon image to the Real Favison Generator service, and it generated a package of individual files which I downloaded. I then uplodaed these files to a favicon directory, and added a list of links to the header of my base.html page. These links then served the correct favicon to the appropriate device or browser. Learn more about this service here [RealFaviconGenerator](https://realfavicongenerator.net/)
 
-#### [Back To Top ^ ](#top-of-page) ####
+#### [Back To Top ^ ](#top-of-page) #### 
 
 <hr>
 
@@ -254,16 +251,18 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 #### <br> ####
 <hr>
 
-I drew up a process to follow for developing the Party Chef website. This is listed in sequence below.
+I drew up a process to follow for developing the CPC website. This is listed in sequence below.
 
-1. Design - I firstly designed the site based on the Client/User Stories requirements, and by creating wireframes/sketches.
-2. Structure - I then wrote the HTML code for all pages including; navigation, footers, sections, modal gallery, forms, and Google Maps section.
-3. Interactive Functionality - I added in any JavaScript elements to the site. Those being; the Google Maps API for a map with custom markers and 'infoWindows'.    A JavaScript Shopping Cart plugin. JavaScript to send form data via email using the EmailJS service. And Bootstrap JavaScript to manage form validation.
-4. Content - I then added text content to sections (lorem ipsum/placeholder text), and images to galleries. 
-5. Style - I then added colours and fonts and wrote CSS rule sets and media queries in order to style the website and make it responsive.
-6. Responsive - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as:        mobile phones, tablets, laptops, large screen PC's, and large TV's. 
-7. Review - I did a last review of all code (formatting, beautifying etc) and content, fixing anys bugs/typo's etc as I did so.
-8. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
+1. Design - I firstly designed the site based on the Client/User Stories requirements, and by creating wireframes/sketches etc.
+2. Setup - I then setup my GitPod IDE by installing Flask, PyMongo, flask-pymongo, and dnspython. I then created a new Database on MongoDB and added my Collections. I also created a new app on Heroku. I then created an env.py file for my sensitive environment variables, and listed that in my .gitignore file so that it would not be pushed to GitHub. And I created a requirements.txt file so that Heroku would understand what the site/app requirements are. 
+
+# TO DO #
+4. Interactive Functionality - I added in any JavaScript elements to the site. Those being; the Google Maps API for a map with custom markers and 'infoWindows'.    A JavaScript Shopping Cart plugin. JavaScript to send form data via email using the EmailJS service. And Bootstrap JavaScript to manage form validation.
+5. Content - I then added text content to sections (lorem ipsum/placeholder text), and images to galleries. 
+6. Style - I then added colours and fonts and wrote CSS rule sets and media queries in order to style the website and make it responsive.
+7. Responsive - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as:        mobile phones, tablets, laptops, large screen PC's, and large TV's. 
+8. Review - I did a last review of all code (formatting, beautifying etc) and content, fixing anys bugs/typo's etc as I did so.
+9. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -277,13 +276,14 @@ I drew up a process to follow for developing the Party Chef website. This is lis
 
 The site employs the following features/functionality;
 
-* Bootstrap Navigation Bar on index.html and contact.html.
-* Bootstrap Jumbotron on index.html and contact.html. 
-* Bootstrap Accordions for menus.
+* Bootstrap Navigation Bar on all pages.
+* Bootstrap Carousel on index.html.
+* Bootstrap Cards on all pages to contain content sections.
 * Bootstrap Responsive Grid system.
-* JavaScript shopping cart used for MyMenu system.
-* EmailJS code for sending form and MyMenu data by email.
-* Bootstrap Carousel Slider Modal Gallery.
+* JavaScript for Bootstrap validation.
+* EmailJS JavaScript code and links for sending contact form data by email.
+
+# TO DO #
 * Google Map with custom markers and infoWindow's.
 * Bootrap Forms for MyMenu Modal on index.html and Contact Form on contact.html.
 * Bootstrap Form validation code.
