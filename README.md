@@ -1,5 +1,5 @@
 ##### <br> #####
-<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/cpcp-logo-readme-header.png)</a>
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using Canva.com and Clipart.com](/readme-assets/cpcp-logo-readme-header.png)</a>
 # Cill na Martra Pool Club (CPC) :8ball: #
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
 ### Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ###
@@ -230,10 +230,10 @@ With this in mind I created the below wireframes, to detail the layout of the we
 Having completed the previous 4 stages in the UX design process, I moved on to making decisions around the design and styling of the website. The Surface Plane focuses on the styling of images, backgrounds, fonts, and colours used on a website. The details of these decisions are listed here;
 
 1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. I only used 2 dark site colours in order to meet the requirement that the site have dark backgrounds colours. I found a suitable dark colour and the found a tint of that colour to use for the background colours of Bootstrap cards which are used extensively on the site.The colours chosen, along with their HEX values, are shown here;
-<img src="readme-assets/cpc-coolors-colour-pallette.png" width="450">
+<img src="readme-assets/cpc-coolors-colour-pallette.png" width="500">
 
 1. Font - I used the Google Fonts website to help me decide on a font to use for site texts. I decided on a font called 'Audiowide' for all texts. I also used the Canva.com free trial service to help me find a font for my logo (I sourced the image part of the logo elswhere). On Canva I found and used a font called ARCHIVE (Designed by Slava Kirilenko – a graphic designer from Almaty, Kazakhstan) for the logo.   
-<img src="readme-assets/cpc-fonts.png" width="450">
+<img src="readme-assets/cpc-fonts.png" width="600">
 
 1. Logo Design - I created the CPC logo using tools on [Canva.com](https://www.canva.com/). The logo contains an image and some text. I got the image from Clipart.com and then uploaded it to Canva where I added the text to produce the final logo.
 
@@ -301,7 +301,7 @@ The CPC site employs the following features/functionality;
 #### <br> ####
 <hr>
 
-<img src="assets/readme-assets/technologies-used-logos-readme.png" width="330">
+<img src="readme-assets/cpc-technologies-used-logos.png" width="630">
 
 I used the following technologies, services, and devices to develop, style, deploy, and test the CPC website;
 <br>
