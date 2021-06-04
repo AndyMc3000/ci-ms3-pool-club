@@ -1,6 +1,7 @@
-<a name="top-of-page">![Party Chef Logo created using FreeLogoDesign.org](/assets/readme-assets/party-chef-logo-readme.png)</a>
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using Canva.com and Clipart.com](/readme-assets/cpcp-logo-readme-header.png)</a>
 
-# Party Chef - Testing Document #
+
+# Cill na Martra Pool Club - Testing Document #
 
 
 
@@ -49,62 +50,38 @@ During the development process I manually tested elements and components after I
 
 ## 2. User & Client Stories Testing ##
 
-### Client Stories ###
+#### Client Stories ####
+> - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.”
+> - [x] “The website must also give Club organisers a one-stop-shop to create and manage Pool Leagues, League Matches, and Players/Members.”
+> - [x] “The website must allow users on the site to view both current and archived League Tables.” 
+> - [x] “The website must allow new members to register and join the Club.” 
+> - [x] “The website must provide an area where club members can view their current League statistics/progress.”
+> - [x] “The website must provide an area where club members can view a list of the current League Matches they have played, and which matches are yet to be played (depending on active membership numbers, a player can expect they will need to play each other player twice in a given League).”
+> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee.”
+> - [x] “The website must provide an area where club members can find contact details of another Player in order to arrange a Match date/time/venue.”
+> - [x] “The website must provide an area where club members can view their League statistics for previous (archived) Leagues.”
+> - [x] “The website must provide an area where club members can edit and update their Account information.”
+> - [x] “The website must provide an area where site Admininstrators can add a new League."
+> - [x] “The website must provide an area where site Admininstrators can add a new Player/Member."
+> - [x] “The website must provide an area where site Admininstrators can make a Player/Member an Administrator."
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a League."
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a Player."
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a Match."
+> - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.”
+> - [x] “The website must have a section showing banner adverts for CPC sponsors.”
+> - [x] “The website must be mobile-friendly.”
+> - [x] “The website colours must be dark. The website will be used by Players at Match events on their mobile phones, and so a dark colour scheme will ensure that viewing the website while near a pool table will reduce the risk of Player distraction.”
 
-1. “The main goal of the website is to attract new business, and provide value to visitors in the information is provides.”
-      * The website offers details about what Party Chef does at the top of index.html.
-      * The website allows users to look through the different menus of food which Party Chef offers.
-      * The website allows users to calculate the cost of their preferred list of menu items.
-      * The website allows users to identify their local Party Chef kitchen/office and get its contact details easily.
-      * The website details testimonial quotes from past customers.
-      * The website aloows users to easily connect with the Party Chef social media channels and mentions the party planning tips and tricks which those                 channels offer.
-1. “The website must show and promote the services which Party Chef provides.”  
-      * The website describes its services in the 'What We Do' section at the top of the homepage.
-1. “The website must detail the various menu's on offer, and the cost of food/drink items on each menu.” 
-      * The website shows 5 menu types in accordions on index.html - a Canapés menu, a Starters menu, a Main Course menu, a Desserts menu, and a Drinks menu.
-1. “The website must allow people to easily contact Party Chef to arrange a party planning consultation.”
-      * The website has a map which shows the contact details for all kitchens/offices. Each map location marker gives the address, email, and telephone number for a specific kitchen when clicked.
-      * The website shows the contact details of the Party Chef head office - address, telephone and email.
-      * The website highlights links to its social media channels.
-      * The website allows a user to requat a quote by completing a form on the MyMenu modal.
-      * The website allows a user to send a question or query via a contact form on contact.html.
-1. “The website must allow users to create their own menu from the items available, in order to get an idea of food/drinks costs for their party.”
-      * The website allows user to pick items from the food & drink menus and add them to a 'MyMenu modal where they can calculate costs for their menu                   choices based on the quantity of guets that are attending their party.   
-1. “The website must also allow users to request a quote, based on their menu, having supplied further relevant information about their event. The quote             request information should be sent by email to the business owner. A copy of the quote request should also be sent to the user.”
-      * The website allows a user to request a quote by answering questions on a form on the MyMenu modal.
-3. “The website must allow users to find contact details for their local kitchen/office using an interactive Google Map (offices are called a 'kitchens'             on the website).”
-      * The website has a Google Map with custom markers. When clicked the InfoWindows display the contact details (address, email, and telephone number)                 for a specific kitchen/office.     
-4. “The website must promote Party Chef's social media channels.”
-      * The website has social media links in the footer of index.html and contact.html. 
-      * The website has social media links in a specific social media section on contact.html.
-5. “The website must show photos of previous events.” 
-      * The website has a modal carousel gallery on index.html which shows picture of past Party Chef events and food dishes.
-6. “The website must show customer testimonial quotes.”
-      * The website has a testimonial section on index.html highlighting two quotes from previous customers.
-7. “The website must be mobile-friendly.”
-      * The website has a responsive design. Most of the section are made responsive by using the Bootstrap framework.
-
-### User Stories ###
-
-1. “I want to see what kind of services Party Chef offers.”
-      * The website has a Features section on index.html. This details what Party Chef offers.   
-1. “I want to see what kind of menu's (food & drink) Party Chef offer.”
-      * The website has five menu sections on index.html - Canapés, Starters, Main Course, Something Sweet, and Drinks.   
-1. “I want to find out where they are located, and which is the closest office to me.”
-      * The website has a Google map which shows the locations of all Party Chef kitchen/office locations.    
-1. “I want to see photo's of the dishes in Party Chef menu's.”
-      * The website has a gallery section on index.html which shows picture of the food dishes they offer.
-1. “I want to see photo's of previous events serviced by Party Chef.”
-      * The website has a gallery section on index.html which shows picture of previous events.
-1. “I want to be able to see pricing for menu items.”
-      * The website has a list of menus on index.html. These menus include per-person pricing for each item."
-1. “I want to be able to create my own menu from the menu's of items offerred.”
-      * The website allows user to create their own menu within the MyMenu modal.
-5. “I want to be able to send my menu, along with details about my planned event, to the Party Chef team in order to confirm their availability to service my         event, and to get a detailed quote inclusive of all costs”.
-      * The website includes the ability to request a quote based on questions answered on a form on the MyMenu form. The request will also include all items in the users MyMenu list.
-7. “I want to find the Party Chef social media channels.”
-      * The website has links to the Party Chef social media channels in the footer of index.html and contact.html.
-      * The website has links to the Party Chef socia media channels in a specific section on contact.html.
+#### User Stories ####
+> - [x] “I want to learn about what the CPC is.”
+> - [x] “I want to be able to view current and archived CPC League Tables.”
+> - [x] “I want to be able to register and sign-up to join the CPC.”
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - current League Rank, current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
+> - [x] “I want to be able to view my personal League statistics - League Rank, League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
+> - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
+> - [x] “I want to be able to view my list of Leagues Matches, both those Matches Played and those Matches yet to be played."
+> - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."
+> - [x] “I want to be able to edit and update my Account information."
 
 
 ## 3. Code Validation ##
