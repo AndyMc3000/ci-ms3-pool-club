@@ -173,7 +173,8 @@ Interaction design is defined as the "..development of application flows to faci
 
 Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett).
 
-With this in mind, please see details below about the sites sitemap, how data is stored and managed, and about navigation and security considerations.
+With this in mind, please see details below about the CPC sitemap, how data is stored and managed, and about navigation and security considerations.
+
 * ##### Sitemap #####
 The structure of the website is outlined in the Sitemap. Click here to view the <a href="assets/readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
 
@@ -236,7 +237,7 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 
 1. Logo Design - I created the CPC logo using tools on [Canva.com](https://www.canva.com/). The logo contains an image and some text. I got the image from Clipart.com and then uploaded it to Canva where I added the text to produce the final logo.
 
-1. Images - I mainly used photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name.
+1. Images - I mainly used free photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name.
 
 1. Icons - I used [Font Awesome](https://fontawesome.com/) icons to add icons to section headings. 
 
@@ -254,16 +255,16 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 I drew up a process to follow for developing the CPC website. This is listed in sequence below.
 
 1. Design - I firstly designed the site based on the Client/User Stories requirements, and by creating wireframes/sketches etc.
-2. Setup - I then setup my GitPod IDE by installing Flask, PyMongo, flask-pymongo, and dnspython. I then created a new Database on MongoDB and added my Collections. I also created a new app on Heroku. I then created an env.py file for my sensitive environment variables, and listed that in my .gitignore file so that it would not be pushed to GitHub. And I created a requirements.txt file so that Heroku would understand what the site/app requirements are. 
+2. Setup - I then setup my GitPod IDE by creating a python (.py) file, and then by installing Flask, PyMongo, flask-pymongo, and dnspython. I then created a new Database on MongoDB and added my Collections to it. I also created a new app on Heroku. I then created an env.py file for my sensitive environment variables, and listed that file in my .gitignore file so that it would not be pushed to GitHub. And I created a requirements.txt file so that Heroku would understand what the site/app requirements are.I added my environment variables to Heroku, and integrated Heroku with my GitHub repository (so that when I push changes to GitHub, these are also automatically picked up by Heroku too.  
+3. HTML & CSS - I then used Flask and Jinja to create template pages for the site. I then added HTML to a base.html template page, and then all other pages for the site. I also add CSS styling as I went along.
+4. Python & JavaScript & JQuery - I then added Python view and functions to my app.py to create relevant functionality for each page. Mainly functionality revolves around CRUD operations with my MondoDB Atlas database. I also added JavaScript to my script.js file for fynctions such as Bootstrap Form Validation, Bootstrap Data Table sorting functionality, and for the EMailJS email service functionality for the Contact Us form.
+5. Resonsiveness - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as: mobile phones, tablets, laptops, large screen PC's, and large TV's. 
 
 # TO DO #
-4. Interactive Functionality - I added in any JavaScript elements to the site. Those being; the Google Maps API for a map with custom markers and 'infoWindows'.    A JavaScript Shopping Cart plugin. JavaScript to send form data via email using the EmailJS service. And Bootstrap JavaScript to manage form validation.
-5. Content - I then added text content to sections (lorem ipsum/placeholder text), and images to galleries. 
-6. Style - I then added colours and fonts and wrote CSS rule sets and media queries in order to style the website and make it responsive.
-7. Responsive - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as:        mobile phones, tablets, laptops, large screen PC's, and large TV's. 
-8. Review - I did a last review of all code (formatting, beautifying etc) and content, fixing anys bugs/typo's etc as I did so.
-9. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
 
+7. Code validation - 
+8. Documentation - README
+9. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -274,24 +275,22 @@ I drew up a process to follow for developing the CPC website. This is listed in 
 #### <br> ####
 <hr>
 
-The site employs the following features/functionality;
+The CPC site employs the following features/functionality;
 
 * Bootstrap Navigation Bar on all pages.
 * Bootstrap Carousel on index.html.
 * Bootstrap Cards on all pages to contain content sections.
 * Bootstrap Responsive Grid system.
 * JavaScript for Bootstrap validation.
-* EmailJS JavaScript code and links for sending contact form data by email.
-
-# TO DO #
-* Google Map with custom markers and infoWindow's.
-* Bootrap Forms for MyMenu Modal on index.html and Contact Form on contact.html.
-* Bootstrap Form validation code.
-* Social Links in Footers.
-* Navigation links in Footers.
+* JavaScript for EmailJS for sending contact form data by email.
+* JQuery code for resetting the contact form following submission.
+* Python CRUD operations with the MongoDB Atlas database.
+* Page Footer on all pages.
 
 #### Future Features ####
-* An End user could be able to book and pay for an event online. This would require the integration of a booking system and a billing system.
+* The Club may decide it wants to charge members an annual membership fee. The CPC site could be used to collect this fee from members. This would require the integration of a billing system.
+* The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues at particular times, e.g an Xmas Pool Championship. The site could be updated to add a Championship bracket system.
+* The Club may want to sell merchandise in order to raise funds for prizes and tours. The site could be updated to add a shop selling Club themed merchandise. 
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -304,25 +303,29 @@ The site employs the following features/functionality;
 
 <img src="assets/readme-assets/technologies-used-logos-readme.png" width="330">
 
-I used the following technologies, services, and devices to develop, style, deploy, and test the Pary Chef website;
+I used the following technologies, services, and devices to develop, style, deploy, and test the CPC website;
 <br>
-* HTML5 - The site was developed using HTML5 markup language.
+* HTML5 - The site pages were developed using HTML5 markup language.
 * CSS3 - The site was styled and in some cases made responsive using CSS3.
-* JavaScript - Used for MyMenu functionality, Google Map, and EmailJS service.
-* Bootstrap - I used the Bootstrap framework for implementing some sections and features of the website.
-* EmailJS - I used the EmailJS email service to send Form and MyMenu list data by email to users and to Party Chef.
+* Python - CRUD functionaiity with a MongoDB Atlas database was done using Python functions.
+* Flask - I used the Flask framework along with the Jinja template engine and the Werkzeug toolkit to develop the CPC web app.
+* JavaScript - I used JavaScript for functioonality around Bootstrap validation, the EMailJS email service, and the Bootstrap Data Tables table sorting functionality.
+* Bootstrap - I used the Bootstrap framework for many of the HTML elements, including the Navbars, container Cards, the Carousels, the Forms, and the Tables. 
+* EmailJS - I used the EmailJS email service to send Contact Us Form data by email to the CPC organisers and the user.
 * GitHub - I set up a free repository on GitHub.com to maintain a master of all website files, content, and resources.
 * GitPod - I used the free GitPod.io Integrated Development Environment to write and develop the code for the website.
-* Github Pages - I used the free GitHub Pages hosting service to deploy/publish the live website on the internet.
-* Balsamiq - I used the Balsamiq application to create the website sitemap and webpage wireframes.
+* MongoDB Atlas - All data is stored in a MongoDB Atlas database. The Pythons functions used to create site operations/functionality interact with the Collections in the MongoDB Atlas database. The functions complete one of four database operations; Create documents in a Collection, Read documents in a Collection, Update documents in a Collection, or Delete documents in a Collections.    
+* Heroku - I used the Heroku cloud-based and container-based platform-as-a-service to host and deploy the CPC web app.
+* Balsamiq - I used the Balsamiq application to create the website sitemap and page wireframes for PC, Tablet, and Mobile views.
 * W3C validators - I used the W3C HTML5 and CSS3 code validators to validate my HTML and CSS.
 * JSHint - I used jshint.com to validate my JavaScript code.
+* PEP8Online.com - I used the PEP8 checker at Pep8online.com to check my Python code for errors.
 * Responsive Viewer - I used a Chrome Browser Extension called Responsive Viewer to emulate the presentation of the website on multiple device sizes and types.
 * AmIResponsive - I used the [AmIResponsive](http://ami.responsivedesign.is/) webpage to view site responsiveness across devices.
-* Apple Preview - I used the Apple Preview image editor application to crop and resize photo's and images. 
+* Apple Preview - I used the Apple Preview image editor application to crop and resize photo's and images, and to create some of the readme assets. 
 * Apple Pages - I used the Apple Pages word processor to manage and edit text content for the website. 
 * Apple Keynote - I used Apple Keynote as a sketch pad to test content and review/edit content/images.
-* Apple Hardware - I used a MacBook Pro to develop the site. I also used an Apple iPhone, Apple TV, and Apple iPad for testing the website.
+* Apple Hardware - I used a MacBook Pro to develop the site. I also used an Apple iPhone, Apple TV, iPad and iPad Mini for testing the website.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -333,7 +336,7 @@ I used the following technologies, services, and devices to develop, style, depl
 #### <br> ####
 <hr>
 
-Testing was completed under the below headings. A detailed testing document can be seen <a href="https://github.com/AndyMc3000/ci-ms3-pool-club/blob/49f7ec47dd7b7c3f485164d843033c1753617dd5/testing.md"><strong>Here - testing.md.</strong></a>
+Testing was completed under the below headings. A detailed testing document can be seen <a href="readme-assets/testing.md"><strong>Here</strong></a>
 
 #### Testing Headings ####
 1. Development Testing
