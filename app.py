@@ -37,7 +37,9 @@ def user():
 # current/active League table view
 @app.route("/league")
 def league():
-    return render_template("league.html")
+    league = mongo.db.league.find()
+    user = mongo.db.user.find()
+    return render_template("league.html", league=league, user=user)
 
 
 # historical/archive League tables view
