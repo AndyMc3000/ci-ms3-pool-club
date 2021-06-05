@@ -1,3 +1,5 @@
+##### <br> #####
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/cpcp-logo-readme-header.png)</a>
 # Cill na Martra Pool Club (CPC) - Database Schema :floppy_disk: #
 
 ## MongoDB Database Collections Schema ## 
@@ -52,6 +54,20 @@ The below shows the key:value pairs associated with the MongoDB Collections used
                 playertwowon: Integer
                 league: Object(league_id)
                 date: Date
+            }
+            
+            archive
+            {
+                _id: ObjectId
+                league_name: ObjectId(league_id)
+                league_decription: ObjectId(league_id)
+                start_date: Object(league_id)
+                end_date: Object(league_id)
+                participating_players: Array [          # (this value contains a list of all object id's 
+                        Object(user_id),                  in the collection 'league')
+                        .....
+                        Object(league_id)],
+                        ]
             }
             
         

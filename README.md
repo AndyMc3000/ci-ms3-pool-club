@@ -1,5 +1,5 @@
 ##### <br> #####
-<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using PinClipArt.com https://www.pinclipart.com/](/readme-assets/cpcp-logo-readme-header.png)</a>
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using Canva.com and Clipart.com](/readme-assets/cpcp-logo-readme-header.png)</a>
 # Cill na Martra Pool Club (CPC) :8ball: #
 ## A web application for managing the members and leagues of a fictional Pool Club ## 
 ### Purpose: Backend Development Project (Milestone Project 3) for the Diploma in Software Development course at [Code Institute](https://codeinstitute.net/) ###
@@ -101,33 +101,44 @@ Please see below details of the 'Client Stories' to detail the requirements of t
 Based on the outcomes from the Strategy Plane, The Scope Plane determines what features, functionality, and types of content should be included within the scope of the project. Listed below are the functional specifications and content requirements decided upon for the CPC website. 
 
 #### Functional Specifications: ####
-* Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. Each of these pages should have a selection of 'feature views'/pages linked from them. The Homepage should have 3 page views linked from it, those being; 'Current League Table' 'League Archive', and 'Register'. The Player Homepage should have 6 page views linked from it, those being; 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'. The Admin Homepage should have 6 page views linked from it, those being; 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.    
-* All pages should include a Navigation bar to highlight the currently accessed page. The Navigation bar should have 3 different views; One for a non-logged in user, one for a logged in registered player, and one for an Admin user.
-* The Homepage should include a carousel of 3 x 'hero' images and messaging to include link buttons to the registration page.
-* The Homepage should include and introduction section and a 'why join us?' section, which should introduce the club and promote the benefits of joining it. 
-* The Homepage should also have an 'Our Leagues' which describes what the Leagues are and how often they are run. This section should also include button links to pages to view; 1. The current/active League Table, and 2. Archived League Tables.
-* The Homepage should include a Contact Us section to show name, telephone, and email contact infromation for the CPC organisers, as well a contact form.
-* All pages should include a carousel with scrolling banners adverts for CPC sponsors at the bottom of the page.
-* All pages should include a Footer section which simply has a CPC logo which links to the Homepage, and copyright information. 
+* Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. Each of these pages should have a selection of 'feature views'/pages linked from them. The Homepage should have 4 page views linked from it, those being; 'Login', 'Current League Table' 'League Archive', and 'Register'. The Player Homepage should have 6 page views linked from it, those being; 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'. The Admin Homepage should have 6 page views linked from it, those being; 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.  
 
-
-* Both pages should have a Jumbotron at the top of the page with relevant call-out messaging. The Homepage Jumbotron to include link to contact page in order to allow a user to find Party Chef contact details, and to send a query via a contact form.
-* The Homepage should include a 'Features' section highlighting the Party Chef services.
-* The Homepage should show various menu's (canpapes, starters, main course, something sweet, and drinks menus) each showing menu items listed within an accordian. 
-* Shopping cart functionality should be built in so that menu items can be added to a 'MyMenu' list of items. The MyMenu should then be accessed via a button in the homepage Nav bar. Once clicked, the MyMenu list of items appears on a modal. Users can ammend quantites of the items they have selected in the MyMenu to get a total price for their food/drink selection. 
-* The MyMenu should also have the facility to request a quote for an event/party. The request should include the food/drink items in a MyMenu list plus additional information about the event (date/time, location, etc.). The request will be sent to Party Chef by email. A copy of the request should also be sent to the user email address.
-* The Homepage should include a Photo Gallery using a carousel to show dishes and menu items in party settings.
-* The contact page must include all contact information for the Party Chef headquarters.
-* The contact page should include an interactive map showing all the kitchen locations across Ireland. By implementing features of the Google Maps API, a user should be able to select an individual kitchen marker to get a pop-up of contact information for that particular kitchen.
-* The contact page should also include a section highlighting social media channels.
-* The contact page should also include a contact form so a user can ask a specific question of the Party Chef team.
+* All Pages:  
+   * All pages should include a Navigation bar to highlight the currently accessed page. The Navigation bar should have 3 different views; One for a non-logged in user, one for a logged in registered player, and one for an Admin user.
+   * All pages should include a carousel with scrolling banners adverts for CPC sponsors at the bottom of the page.
+   * All pages should include a Footer section which simply has a CPC logo which links to the Homepage, and copyright information. 
+* Homepage, Registration page, Login page, and League Table pages:  
+   * The Homepage should include and introduction section and a 'why join us?' section, which should introduce the club and promote the benefits of joining it. 
+   * The Homepage should also have an 'Our Leagues' which describes what the Leagues are and how often they are run. This section should also include button links to pages to view; 1. The current/active League Table, and 2. Archived League Tables.
+   * The Homepage should include a Contact Us section to show name, telephone, and email contact infromation for the CPC organisers, as well a contact form.
+   * The Register page should have a form which allows a new member to input their; First Name, Nickname, Surname, Telephone Number, Email Address, a Password, and it should also include a Confirm Password field. On clicking a Register button, a user will create a new document in a 'user' collection of a MongoDB database.
+   * The Login page should have a form where a User can input their email address and password. On clicking a "log In' button, the user should be redirected to their Player Homepage.
+   * The Current League Table should show a table showing up-to-date data for all members in the current League. This table should include columns with headings for; Rank, Player Name, Points, Matches Won, Matches Lost, and Matches Remaining.
+   * The League Archive page should include a dropdown box where a user can select the name of a League which which has an end date in the past. On clicking a 'view League' button, the data for the League Table for that League will populate a table on the page (in the same format as the above 'Current League Table').
+* Player Homepage:
+   * The 'My League Stats' page should include a table which shows a Players individual current League statistics including their: Rank, Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
+   * The 'My Match List' page should include a table which shows a list of all a Players League fixtures. The table should include columns with headings for: Number, Player Name, Matches. All Players in the League should be listed, and the Matches column shoud show a 0, 1, or 2 to indicate the number of Matches played against an individual Player. Note: In a League, all Players will need to play to every other player twice.
+   * The 'Add Match Result' page should contain a form where a Player can results of a Match from the current League. The form should contain the following fields; Match Date, Match Referee, Player One, Player One Frames Won, Player Two, Player Two Frames Won. On clicking a 'Add Result' button, the Player would then create a new Match document in the Matches collection on a MongoDB database.
+   * Find a Playershould include a form where a player can add Match details to a Matches collection on a MongoDB database. A Player can pick a match date from a date picker field. Then they can select the following from a series of dropdowns; Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. On clicking a 'Add Result' button, they would then create a new document in the Matches collection. 
+   * The 'My League History' page should include a dropdown box where a Player can select an Archived League. On clicking 'View Stats' button, a table should be populated with a Players statistics from that League. This table should show their: Rank, Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
+   * The 'Edit My Account' page should include a form which pre-populates with a Players Account information. A Player can edit the details on the form. These details being; First Name, Nickname, Surname, Telephone Number, Email Address, and Password. On clicking a update details button, a user will update their document in the user collection on MongoDB.
+* Admin Homepage:
+   * The 'Add League' page should contain a form where an Admin can input; League Name, League Description, Start Date and End Date.
+   * The 'Add Player' page should contain the same form as in the Register page. This feature may be required when a person wants to join the club but is not computer savvy. And so an Admin can then register the user on their behalf. 
+   * The 'Add Admin' page should contain a dropdown where an Admin can select a Player. On clicking a 'Make Admin' button an Admin then updates the admin value in a user document on MongoDB. The value will be updated from 'false' (the default value) to 'true. 
+   * The 'Edit Player' page should contain a dropdown where an Admin can select a Player. On clicking a 'Select Player' button a form will be populated containing the same Player form data as in the 'Edit My Account' page. An Admin can then edit the account details of a player. On clicking a "Edit Player' button an Admin can then update a Players document in the user collection of a MongoDB database. Alternatively an Admin can also click a 'Delete Player' button which will delete a Player document from the user collection in a MongoDB database.  
+   * The 'Edit League' page should contain a dropdown where an Admin can select a League. On clicking a 'Select League' button a form will be populated containing the following data about that League; League Name, League Description, Start Date and End Date. An Admin can then edit the League details. On clicking a "Edit League' button an Admin can then update a Leagues document in the league collection of a MongoDB database. Alternatively an Admin can also click a 'Delete League' button which will delete a League document from the league collection in a MongoDB database.  
+   * The 'Edit Match' page should contain a dropdown where an Admin can select a Match from the current League. On clicking a 'Select Match' button a form will be populated containing the following data about that Match; Date, Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. An Admin can then edit the infromation contained in those fields. On clicking a 'Edit Match' button, they would then update the Match document in the Matches collection on a MongoDB database. Alternatively an Admin can also click a 'Delete Match' button which will delete a Match document from the Matches collection in a MongoDB database.  
 
 #### Content Requirements: ####
-* Both Jumbotrons should show images conveying people having fun at a party. Appropriate messaging should also be used to convey the key values of Party Chef.
-* The features section on the Homepage should briefly, but completely, convey what the main services are and the the benefits of using them.
-* Menu items should include a photo, a description, and the price per single serving of each item on the menus.
-* Both photo galleries should show quality photos of impressive food layouts (Homepage Gallery) and recent events (Contact page gallery).
-* Homepage should show the most glowing but brief Testimonial quotes along with the customer details.
+* The images used on the Homepage Carousel should show people playing pool. The images should be colourful and 'exciting', in order to entice new members. 
+* The 'Why Join' section on the Homepage should briefly, but completely, convey what the benefits are of joining the Club. 
+* The 'Why Join' section should also contain appropriate images and texts contained within Bootstrap cards to reinforce the 'Why Join' messaging.
+* The 'Our Leagues' section on the Homepage should briefly, but completely, describe what the Club Leagues are and how often they are. 
+* This 'Our Leagues' section should also contain Bootstrap cards which contain images, texts, and link buttons which link to the Current League Table page, and the Archived League Tables page.
+* The Contact Us section should include text to describe how the Club can be contacted, and this should be placed above a Contact Form.
+* The 'Visit our Sponsors' scrolling carousel section should contain a selection of attractive sponsor marketing banners, and include links to the external sponsor websites.
+* The Footer section should contain a single CPC logo which also serves as a link to the Homepage.
 
 
 ### 3. The Structure Plane ###
@@ -136,62 +147,103 @@ Based on the outcomes from the Strategy Plane, The Scope Plane determines what f
 
 Interaction design is defined as the "..development of application flows to facilitate user tasks, defining how the user interacts with site functionality". Inline with this principle, the pages were designed as follows;
 
-1. The Homepage;
-* It should have a navigation bar with individual links to each page and a 'MyMenu' modal. The navigation bar should also be fixed to the top of the page view.
-* It should contain a call-to-action and button to allow a user to contact Party Chef. This should link to the contact page.
-* It should contain a features/benefits section containing 4 principle features under the following rough heading titles; 'Who We Are', 'Our Services', 'Our Menu's', and 'What people say about us'.
-* It should contain a list of menu's (each within its own accordion) under the following headings; 'Canapés', 'Starters', 'Main Course', 'Something Sweet', and 'Drinks'. 
-* The menu accordions should contain a list of menu item to include a photo, description, and an 'Add to MyMenu' button. When the 'Add to MyMenu' button is clicked, an item is added to the users MyMenu (i.e. a shopping cart modal). 
-* The users MyMenu (a modal) can be accessed by clicking on the MyModal button in the Nav bar. Within the MyMenu modal, a user can change the quantity of an item or remove an item.
-* A user can also send a copy of the menu to Party Chef, along with additional information which must be included, in order to request a quote and confirm availablity. The extra information will come from a form in the MyMenu modal which a user must complete. The form will ask for; Name, Email, Telephone number, Party date, Party start time, Location, Service Type. A copy of the quote request will also be sent to the user by email.
-* It should contain a gallery of photographs highlighting recent events and food displays.
-* It should contain a section to show Testimonial quotes.
-* It should have a further navigation section in the footer. The footer will also contain links to all Party Chef's social media channels.
+* The Homepage and linked pages/views;
+* It should have a navigation bar with individual links to the Registration and Login pages. The navigation bar should also be fixed to the top of the page view.
+* The 'hero' carousel banners at the top of the Homepage should include a link button linking to the Registration page.
+* The 'Why Join' section should also contain a link button linking to the Registration page.
+* The 'Our Leagues' section should contain two link buttons. One button should link a user to the current League Tabel page, and the other should link a user to the Archived League Tables page.
+* On completion and submission the Contact Form should send an email (cc'ing the user) to a CPC organiser using the EmailJS email service. 
+* The sponsor carousel banners in the 'Visit our Sponsor' section should be clickable and link a user to an external sponsor website, where that page opens in a new browser window/tab.
+* The Current League page should have back buttons above and below the League Table container and link a user back to the Homepage.
+* The Login page should have back buttons above and below the Log In form container and link a user back to the Homepage.
 
-2. The Contact page;
-* It should have a navigation bar with individual links to each site page.
-* It should contain a section to show the address and phone number of the Party Chef Headquarters.
-* It should include a Google Map with markers to show the individual Party Chef offices around the country. And when a user clicks on a marker, and 'info window' should popup to show the contacts details and address for that office.
-* It should also contain a contact form to allow a user to submit a query to Party Chef.
+* The Player Homepage and linked pages/views;
+* Once a Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), and Log Out (rerouting a user to the Login page).  
+* The Player Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
+* Each function listed on the Player Homepage should have its own page.
+* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning a Player to their Player Homepage. The function pages to be included are: 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'.
+
+* The Admin Homepage and linked pages/views;
+* If a Player is also an Admin, and once that Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), Admin (Admin Homepage) and Log Out (rerouting a user to the Login page). 
+* The Admin Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
+* Each function listed on the Admin Homepage should have its own page.
+* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning an Admin to their Player Homepage. The function pages to be included are: 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.
 
 #### Information Architecture: ####
 
-Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett). As such Party Chef was designed to allows a user to find the information they need easily. For example, the navigation bar is fixed to the top of the page view so is always immediately accessible, and buttons and links are clearly visible and communicate their purpose in an unambiguous way.
+Information Architechture is defined as; "The structural design of the information space to facilitate intuitive access to content" (Copyright 2000 James Garrett).
 
-The structure of the website is outlined in the Sitemap. Click the link to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
+With this in mind, please see details below about the CPC sitemap, how data is stored and managed, and about navigation and security considerations.
+
+* ##### Sitemap #####
+The structure of the website is outlined in the Sitemap. Click here to view the <a href="assets/readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
+
+* ##### Data #####
+The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', 'matches', and 'archive'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
+
+* The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
+  * 'firstname', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'rank', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues' 
+
+* The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
+  * 'name', 'description', 'start_date', 'end_date', and 'participating_players' 
+  
+* The 'matches' collection should store information relating to individual matches played. The keys in the documents of this collection will be;
+  * 'player_one', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee' 
+ 
+# TO DO #
+* The 'archive' collection should store information relating to leagues with an end date in the past. This collection will store a list of leagues. The keys in each list item in this collection will be;
+  * 'league_id', 'league_name', 'end_date', 'start_date', ' 'player_two_won', 'date', 'league', 'created_by', and 'referee'
+  
+The Data Types for each value in the Collections can be seen in the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
+
+* ##### Navigation & Security #####
+* The CPC website should also be designed to allow users to easily and securely navigate throughout the site. For example, the navigation bar should be fixed to the top of the page view so that it is always immediately accessible. 
+* Buttons and links should be clearly visible and communicate their purpose in an unambiguous way. 
+* Function pages should have 2 'Back' buttons situated at the top and bottom of the page view to allow for an easy back and forth between pages.
+* The site should not all users to access areas without privileges. For example, a user should not be able to access another users Player Homepage or be able to edit another players account details. Or, A non-Admin should not be able to edit matches or access the Admin Homepage.
+* MongoDB Atlas access credentials should not be visible anywhere on the site.
+* A user should not be able to access another users password. 
 
 
 ### 4. The Skeleton Plane ###
 
 Following on from the tasks decided upon in the Structure Plane, the Skeleton Plane is defined as follows; ".. The skeleton is designed to optimize the arrangement of these elements (such as the placement of buttons, tabs, photos's and blocks of text) for maximum effect and efficiency..".
 
-With this in mind the following wireframes were created to detail the layput of the website pages and individual sections/containers. Please click the following links to view these wireframes.
+With this in mind I created the below wireframes, to detail the layout of the website pages and individual sections/containers etc. Due to the number of pages involved, I created multiple and split them into groups. I created 2 wireframes for the Homepage and the pages directly linked from the Homapgae. I created 2 wireframes for the Player Homepage and the pages directly linked from the Player Homepage. And I created 2 wireframes for the Admin Homepage and the pages directly linked from the Admin Homepage. Please click on the the links below to view these wireframes.
 
-1. <a href="readme-assets/cpc-wireframes.png"><strong>Large Screen Wireframes</strong></a>
+##### Wireframes #####
+* Wireframes for the Homepage and related pages;
+1. <a href="readme-assets/cpc-homepage-and-linked-pages-wireframes-large.png"><strong>Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-homepage-and-related-pages-wireframes-mobile.png"><strong>Homepage on Mobile Devices</strong></a>
+
+* Wireframes for the Player Homepage and related pages;
+1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-large.png"><strong>Player Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-mobile.png"><strong>Player Homepage on Mobile Devices</strong></a>
+
+* Wireframes for the Admin Homepage and related pages;
+1. <a href="readme-assets/cpc-admin-homepage-and-linked-pages-wireframes-large.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
+1. <a href="readme-assets/cpc-admin-homepage-and-linkeded-pages-wireframes-mobile.png"><strong>Admin Homepage on Mobile Devices</strong></a>
+
 
 ### 5. The Surface Plane ###
 
 Having completed the previous 4 stages in the UX design process, I moved on to making decisions around the design and styling of the website. The Surface Plane focuses on the styling of images, backgrounds, fonts, and colours used on a website. The details of these decisions are listed here;
 
-1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. The color schemes chosen, along with their HEX values, is shown here;
-<img src="assets/readme-assets/party-chef-coolors-pallette.png" width="450">
+1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. I only used 2 dark site colours in order to meet the requirement that the site have dark backgrounds colours. I found a suitable dark colour and the found a tint of that colour to use for the background colours of Bootstrap cards which are used extensively on the site.The colours chosen, along with their HEX values, are shown here;
+<img src="readme-assets/cpc-coolors-colour-pallette.png" width="500">
 
-1. Font - I used the Google Fonts website to help me decide on a font to use. I wanted something simple yet modern at the same time - not too bold, and something a little different. I decided upon a font called 'Blinker' for headings, and the 'Montserrat' font for paragraph texts. An example of these fonts can be seen here;   
-<img src="assets/readme-assets/party-chef-google-fonts-blinker.png" width="220">
-<img src="assets/readme-assets/party-chef-google-fonts-montserrat.png" width="220">
+1. Font - I used the Google Fonts website to help me decide on a font to use for site texts. I decided on a font called 'Audiowide' for all texts. I also used the Canva.com free trial service to help me find a font for my logo (I sourced the image part of the logo elswhere). On Canva I found and used a font called ARCHIVE (Designed by Slava Kirilenko – a graphic designer from Almaty, Kazakhstan) for the logo.   
+<img src="readme-assets/cpc-fonts.png" width="600">
 
-1. Logo Design - I created the Party Chef logo using tools on [FreeLogoDesign.com](https://www.freelogodesign.org/).
+1. Logo Design - I created the CPC logo using tools on [Canva.com](https://www.canva.com/). The logo contains an image and some text. I got the image from Clipart.com and then uploaded it to Canva where I added the text to produce the final logo.
 
-1. Images - I mainly used photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name.
+1. Images - I mainly used free photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name.
 
-1. Icons;
-    * I used [Font Awesome](https://fontawesome.com/) icons to add icons to section headings. 
-    * I created and added a Party Chef Favicon to the page headers.
-    * I used [Flaticon](https://favicon.io/) icons for the social media section on contact.html.
+1. Icons - I used [Font Awesome](https://fontawesome.com/) icons to add icons to section headings. 
 
-1. Gallery - I decided to use a Bootstrap Modal as a container for my Carousel Gallery.
+1. Favicons - I use the Real Favicon Generator online service to create browser, desktop, and mobile favicons for the site. I uploaded a single favicon image to the Real Favison Generator service, and it generated a package of individual files which I downloaded. I then uplodaed these files to a favicon directory, and added a list of links to the header of my base.html page. These links then served the correct favicon to the appropriate device or browser. Learn more about this service here [RealFaviconGenerator](https://realfavicongenerator.net/)
 
-#### [Back To Top ^ ](#top-of-page) ####
+#### [Back To Top ^ ](#top-of-page) #### 
 
 <hr>
 
@@ -200,17 +252,19 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 #### <br> ####
 <hr>
 
-I drew up a process to follow for developing the Party Chef website. This is listed in sequence below.
+I drew up a process to follow for developing the CPC website. This is listed in sequence below.
 
-1. Design - I firstly designed the site based on the Client/User Stories requirements, and by creating wireframes/sketches.
-2. Structure - I then wrote the HTML code for all pages including; navigation, footers, sections, modal gallery, forms, and Google Maps section.
-3. Interactive Functionality - I added in any JavaScript elements to the site. Those being; the Google Maps API for a map with custom markers and 'infoWindows'.    A JavaScript Shopping Cart plugin. JavaScript to send form data via email using the EmailJS service. And Bootstrap JavaScript to manage form validation.
-4. Content - I then added text content to sections (lorem ipsum/placeholder text), and images to galleries. 
-5. Style - I then added colours and fonts and wrote CSS rule sets and media queries in order to style the website and make it responsive.
-6. Responsive - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as:        mobile phones, tablets, laptops, large screen PC's, and large TV's. 
-7. Review - I did a last review of all code (formatting, beautifying etc) and content, fixing anys bugs/typo's etc as I did so.
-8. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
+1. Design - I firstly designed the site based on the Client/User Stories requirements, and by creating wireframes/sketches etc.
+2. Setup - I then setup my GitPod IDE by creating a python (.py) file, and then by installing Flask, PyMongo, flask-pymongo, and dnspython. I then created a new Database on MongoDB and added my Collections to it. I also created a new app on Heroku. I then created an env.py file for my sensitive environment variables, and listed that file in my .gitignore file so that it would not be pushed to GitHub. And I created a requirements.txt file so that Heroku would understand what the site/app requirements are.I added my environment variables to Heroku, and integrated Heroku with my GitHub repository (so that when I push changes to GitHub, these are also automatically picked up by Heroku too.  
+3. HTML & CSS - I then used Flask and Jinja to create template pages for the site. I then added HTML to a base.html template page, and then all other pages for the site. I also add CSS styling as I went along.
+4. Python & JavaScript & JQuery - I then added Python view and functions to my app.py to create relevant functionality for each page. Mainly functionality revolves around CRUD operations with my MondoDB Atlas database. I also added JavaScript to my script.js file for fynctions such as Bootstrap Form Validation, Bootstrap Data Table sorting functionality, and for the EMailJS email service functionality for the Contact Us form.
+5. Resonsiveness - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as: mobile phones, tablets, laptops, large screen PC's, and large TV's. 
 
+# TO DO #
+
+7. Code validation - 
+8. Documentation - README
+9. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -221,23 +275,22 @@ I drew up a process to follow for developing the Party Chef website. This is lis
 #### <br> ####
 <hr>
 
-The site employs the following features/functionality;
+The CPC site employs the following features/functionality;
 
-* Bootstrap Navigation Bar on index.html and contact.html.
-* Bootstrap Jumbotron on index.html and contact.html. 
-* Bootstrap Accordions for menus.
+* Bootstrap Navigation Bar on all pages.
+* Bootstrap Carousel on index.html.
+* Bootstrap Cards on all pages to contain content sections.
 * Bootstrap Responsive Grid system.
-* JavaScript shopping cart used for MyMenu system.
-* EmailJS code for sending form and MyMenu data by email.
-* Bootstrap Carousel Slider Modal Gallery.
-* Google Map with custom markers and infoWindow's.
-* Bootrap Forms for MyMenu Modal on index.html and Contact Form on contact.html.
-* Bootstrap Form validation code.
-* Social Links in Footers.
-* Navigation links in Footers.
+* JavaScript for Bootstrap validation.
+* JavaScript for EmailJS for sending contact form data by email.
+* JQuery code for resetting the contact form following submission.
+* Python CRUD operations with the MongoDB Atlas database.
+* Page Footer on all pages.
 
 #### Future Features ####
-* An End user could be able to book and pay for an event online. This would require the integration of a booking system and a billing system.
+* The Club may decide it wants to charge members an annual membership fee. The CPC site could be used to collect this fee from members. This would require the integration of a billing system.
+* The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues at particular times, e.g an Xmas Pool Championship. The site could be updated to add a Championship bracket system.
+* The Club may want to sell merchandise in order to raise funds for prizes and tours. The site could be updated to add a shop selling Club themed merchandise. 
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -248,27 +301,31 @@ The site employs the following features/functionality;
 #### <br> ####
 <hr>
 
-<img src="assets/readme-assets/technologies-used-logos-readme.png" width="330">
+<img src="readme-assets/cpc-technologies-used-logos.png" width="630">
 
-I used the following technologies, services, and devices to develop, style, deploy, and test the Pary Chef website;
+I used the following technologies, services, and devices to develop, style, deploy, and test the CPC website;
 <br>
-* HTML5 - The site was developed using HTML5 markup language.
+* HTML5 - The site pages were developed using HTML5 markup language.
 * CSS3 - The site was styled and in some cases made responsive using CSS3.
-* JavaScript - Used for MyMenu functionality, Google Map, and EmailJS service.
-* Bootstrap - I used the Bootstrap framework for implementing some sections and features of the website.
-* EmailJS - I used the EmailJS email service to send Form and MyMenu list data by email to users and to Party Chef.
+* Python - CRUD functionaiity with a MongoDB Atlas database was done using Python functions.
+* Flask - I used the Flask framework along with the Jinja template engine and the Werkzeug toolkit to develop the CPC web app.
+* JavaScript - I used JavaScript for functioonality around Bootstrap validation, the EMailJS email service, and the Bootstrap Data Tables table sorting functionality.
+* Bootstrap - I used the Bootstrap framework for many of the HTML elements, including the Navbars, container Cards, the Carousels, the Forms, and the Tables. 
+* EmailJS - I used the EmailJS email service to send Contact Us Form data by email to the CPC organisers and the user.
 * GitHub - I set up a free repository on GitHub.com to maintain a master of all website files, content, and resources.
 * GitPod - I used the free GitPod.io Integrated Development Environment to write and develop the code for the website.
-* Github Pages - I used the free GitHub Pages hosting service to deploy/publish the live website on the internet.
-* Balsamiq - I used the Balsamiq application to create the website sitemap and webpage wireframes.
+* MongoDB Atlas - All data is stored in a MongoDB Atlas database. The Pythons functions used to create site operations/functionality interact with the Collections in the MongoDB Atlas database. The functions complete one of four database operations; Create documents in a Collection, Read documents in a Collection, Update documents in a Collection, or Delete documents in a Collections.    
+* Heroku - I used the Heroku cloud-based and container-based platform-as-a-service to host and deploy the CPC web app.
+* Balsamiq - I used the Balsamiq application to create the website sitemap and page wireframes for PC, Tablet, and Mobile views.
 * W3C validators - I used the W3C HTML5 and CSS3 code validators to validate my HTML and CSS.
 * JSHint - I used jshint.com to validate my JavaScript code.
+* PEP8Online.com - I used the PEP8 checker at Pep8online.com to check my Python code for errors.
 * Responsive Viewer - I used a Chrome Browser Extension called Responsive Viewer to emulate the presentation of the website on multiple device sizes and types.
 * AmIResponsive - I used the [AmIResponsive](http://ami.responsivedesign.is/) webpage to view site responsiveness across devices.
-* Apple Preview - I used the Apple Preview image editor application to crop and resize photo's and images. 
+* Apple Preview - I used the Apple Preview image editor application to crop and resize photo's and images, and to create some of the readme assets. 
 * Apple Pages - I used the Apple Pages word processor to manage and edit text content for the website. 
 * Apple Keynote - I used Apple Keynote as a sketch pad to test content and review/edit content/images.
-* Apple Hardware - I used a MacBook Pro to develop the site. I also used an Apple iPhone, Apple TV, and Apple iPad for testing the website.
+* Apple Hardware - I used a MacBook Pro to develop the site. I also used an Apple iPhone, Apple TV, iPad and iPad Mini for testing the website.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -279,7 +336,7 @@ I used the following technologies, services, and devices to develop, style, depl
 #### <br> ####
 <hr>
 
-Testing was completed under the below headings. A detailed testing document can be seen <a href="https://github.com/AndyMc3000/ci-ms3-pool-club/blob/49f7ec47dd7b7c3f485164d843033c1753617dd5/testing.md"><strong>Here - testing.md.</strong></a>
+Testing was completed under the below headings. A detailed testing document can be seen <a href="readme-assets/testing.md"><strong>Here</strong></a>
 
 #### Testing Headings ####
 1. Development Testing
