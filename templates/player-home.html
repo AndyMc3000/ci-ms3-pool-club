@@ -28,7 +28,7 @@
     <!-- Player options - Bootstrap custom cards-->
     <div class="container px-4 pt-2" id="custom-cards">
         <div>
-            <h3 class=" skadow-lg text-center pt-1 pb-2">{{ user.firstname }} "{{ user.nickname }}" {{ user.surname }} </h3>
+            <h4 class="shadow-lg text-center pt-1 pb-2">Player: {{ user.firstname }} "{{ user.nickname }}" {{ user.surname }}</h4>
         </div>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
             <div class="col card-group">
@@ -36,8 +36,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-star text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My League Stats</h4>
-                        <p>Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mystats') }}"> Get Stats</a>
+                        <p>Click the button the view your current League stats including your current rank and points tally</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mystats') }}">Get My Stats</a>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-clipboard-list card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My Match List</h4>
-                        <p>Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mymatchlist') }}"> Get List</a>
+                        <p>Click the button to view your match list including matches played and unplayed</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mymatchlist') }}">Get My List</a>
                     </div>
                 </div>
             </div>
@@ -56,8 +56,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-poll card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add Match Result</h4>
-                        <p>Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('addmatch') }}"> Add Result</a>
+                        <p>Click the button if you acted as a referee and want to record a match result and update the current League Table</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('addmatch') }}">Add Match Result</a>
                     </div>
                 </div>
             </div>
@@ -67,9 +67,9 @@
                 <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-id-badge text-center card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Find a Player</h4>
-                        <p>Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('playercontact') }}"> Find Player</a>
+                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Find A Player</h4>
+                        <p>Click the button to find contact details of another player and to see their current league stats</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('playercontact') }}">Find A Player</a>
                     </div>
                 </div>
             </div>
@@ -78,8 +78,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-history card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My League History</h4>
-                        <p>Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('playerarchive') }}"> View History</a>
+                        <p>Click the button to select a previous League, and to view your stats for that League</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('playerarchive') }}">View My Archive</a>
                     </div>
                 </div>
             </div>
@@ -88,8 +88,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-user-edit card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit My Account</h4>
-                        <p>Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('editaccount') }}"> Edit Account</a>
+                        <p>Click the button below to view and edit your account information</p>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('editaccount') }}">Edit My Account</a>
                     </div>
                 </div>
             </div>
