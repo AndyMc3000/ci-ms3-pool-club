@@ -89,8 +89,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playerone"><i class="fas fa-user-shield"></i></span>
-                                                <select id="playerone" name="playerone" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="player_one"><i class="fas fa-user-shield"></i></span>
+                                                <select id="player_one" name="player_one" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Player 1</option>
                                                 {% for playerone in playerone %}
                                                     <option value="{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}">{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}</option>
@@ -105,15 +105,15 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playeronewon"><i class="fas fa-trophy"></i></span>
-                                                <select id="playeronewon" name="playeronewon" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="player_one_games_won"><i class="fas fa-trophy"></i></span>
+                                                <select id="player_one_games_won" name="player_one_games_won" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Player 1 Frames Won</option>
                                                     <option value="0">0 Frames</option>
                                                     <option value="1">1 Frame</option>
                                                     <option value="2">2 Frames</option>
                                                     <option value="2">3 Frames</option>
                                                 </select>
-                                                <label for="playeronewon"></label>
+                                                <label for="player_one_games_won"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -122,14 +122,14 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playertwo"><i class="fas fa-user-shield"></i></span>
-                                                <select id="playertwo" name="playertwo" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="player_two"><i class="fas fa-user-shield"></i></span>
+                                                <select id="player_two" name="player_two" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Player 2</option>
                                                 {% for playertwo in playertwo %}
                                                     <option value="{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}">{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}</option>
                                                 {% endfor %}
                                                 </select>
-                                                <label for="playertwo"></label>
+                                                <label for="player_two"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -138,15 +138,15 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playertwowon"><i class="fas fa-trophy"></i></span>
-                                                <select id="playertwowon" name="playertwowon" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="player_two_games_won"><i class="fas fa-trophy"></i></span>
+                                                <select id="player_two_games_won" name="player_two_games_won" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Player 2 Frames Won</option>
                                                     <option value="0">0 Frames</option>
                                                     <option value="1">1 Frame</option>
                                                     <option value="2">2 Frames</option>
                                                     <option value="2">3 Frames</option>
                                                 </select>
-                                                <label for="playertwowon"></label>
+                                                <label for="player_two_games_won"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
