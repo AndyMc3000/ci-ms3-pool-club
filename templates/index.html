@@ -196,8 +196,8 @@
                                     <form id="contact-us-form" class="form w-75 needs-validation" method="POST" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="from_first_name"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="from_first_name" class="form-control" placeholder="Enter First Name" aria-label="from_first_name" aria-describedby="from_first_name" autocomplete="given-name" required>
+                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                <input type="text" id="from_first_name" name="from_first_name" class="form-control" placeholder="Enter First Name" aria-label="from_first_name" aria-describedby="from_first_name" autocomplete="given-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -206,8 +206,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="surname"><i class="far fa-user"></i></span>
-                                                <input type="text" name="surname" class="form-control" placeholder="Enter Surname" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
+                                                <span class="input-group-text"><i class="far fa-user"></i></span>
+                                                <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter Surname" aria-label="lastname" aria-describedby="lastname" autocomplete="family-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -216,8 +216,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="from_email"><i class="fas fa-at"></i></span>
-                                                <input type="email" name="from_email" class="form-control" placeholder="Email Address" aria-label="from_email" aria-describedby="from_email" autocomplete="email" required>
+                                                <span class="input-group-text"><i class="fas fa-at"></i></span>
+                                                <input type="email" id="from_email_address" name="from_email_address" class="form-control" placeholder="Email Address" aria-label="from_email_address" aria-describedby="from_email_address" autocomplete="email" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -226,8 +226,8 @@
                                                 </div>
                                             </div>
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="tel_number"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="tel" name="tel_number" class="form-control" placeholder="Mobile Number" aria-label="tel_number" aria-describedby="tel_number" required>
+                                                <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+                                                <input type="tel" id="telephone_number" name="telephone_number" class="form-control" placeholder="Telephone Number" aria-label="telephone_number" aria-describedby="telephone_number" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -237,7 +237,7 @@
                                             </div>
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text"><i class="far fa-file-alt"></i></span>
-                                                <textarea class="form-control" id="message" name="message" placeholder="Type your Message here.." rows="5" aria-label="message" aria-describedby="message" required></textarea>
+                                                <textarea class="form-control" id="from_message" name="message" placeholder="Type your Message here.." rows="5" aria-label="from_message" aria-describedby="from_message" required></textarea>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -246,7 +246,7 @@
                                                 </div>
                                             </div>
                                             <div class="input-group m-auto text-center pb-5">
-                                                <button type="submit" id="contact-us-submit-btn" value="Send" class="btn btn-primary mb-3 form-submit-button">Send Message</button>
+                                                <button type="submit" id="contact-us-submit-btn" value="Send Email" class="btn btn-primary mb-3 form-submit-button">Send Message</button>
                                             </div>
                                         </div>
                                     </form>

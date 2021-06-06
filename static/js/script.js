@@ -34,7 +34,6 @@ Bootstrap form validation
 /*
  * EmailJS code for sending a user query from the contact form on index.html by email
  */
-
 $(document).ready(function () {
     const btn = document.getElementById('contact-us-submit-btn');
 
@@ -58,7 +57,7 @@ $(document).ready(function () {
                 from_message: document.getElementById('from_message').value,
             };
 
-            emailjs.send('gmail', 'template_mee2ja9', templateParams)
+            emailjs.send('default_service', 'template_mee2ja9', templateParams)
                 .then(function (response) {
                     // This code resets the form and stops the form from validating again on submit
                     // The jQuery code below used to achieve this was copied from Cina Saffary's GitHub issue thread relating to Bootstrap validation
