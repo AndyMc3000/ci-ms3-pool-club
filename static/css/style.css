@@ -28,11 +28,6 @@ body {
     min-height: 100vh;
 }
 
-.navbar-logo {
-    width: 100%;
-    height: auto;
-}
-
 .hero-div {
     background-color: #212529;
 }
@@ -53,6 +48,10 @@ body {
 .card-body {
     background-color: #212529;
 }
+
+.card {
+        background-color: #212529;
+    }
 
 .card-img-top {
     width: 100%;
@@ -138,3 +137,61 @@ body {
 footer {
    margin-top: auto;
 }
+
+/* -- Media Queries: -- */
+
+/* -- Media Query 1.  -- */
+
+@media screen and (max-width: 1000px) {
+    .carousel-item {
+        min-height: 450px;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+        min-height: 450px;
+    }
+
+    .carousel-caption {
+        right: 10%;
+        left: 10%;
+    }
+
+    .navbar-logo {
+        max-height: 45px;
+    }
+
+    .navbar-brand {
+        margin: 0px;
+    }
+
+    .introduction {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-intro {
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+
+    .form {
+        width: 90%!important;
+    }
+
+    .form-div {
+        padding-left: 0px!important;
+        padding-right: 0px!important;
+    }
+
+    .card {
+        margin-left: 5px!important;
+        margin-right: 5px!important;
+        width: 100%!important;
+        background-color: #212529;
+    }
+}
+
+/* -- /END of Media Query 1 -- */

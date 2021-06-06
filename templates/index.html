@@ -8,7 +8,7 @@
             <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="4500">
-                        <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-kenneth-john-dela-vega-IxhEXghSWEA-unsplash-1428x600.png') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                        <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-kenneth-john-dela-vega-IxhEXghSWEA-unsplash-1428x600.png') }}" class="d-block w-100" alt="Kenneth John Dela Vega Pool Table Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1><strong>SHARKS</strong> need apply..</h1>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="4500">
-                        <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-carla-oliveira-21FqSKZQGzI-unsplash-1428x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                        <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-carla-oliveira-21FqSKZQGzI-unsplash-1428x600.jpeg') }}" class="d-block w-100" alt="Carla Oliviera Pool Table Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Take a <strong>BREAK</strong> with us..</h1>
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="4500">
-                        <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-markus-winkler-Dtz_-wZV4Os-unsplash-1428x600.png') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
+                        <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-markus-winkler-Dtz_-wZV4Os-unsplash-1428x600.png') }}" class="d-block w-100" alt="Markus Winkler Pool Table Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Compete. <strong>WIN.</strong> Repeat.</h1>
@@ -48,7 +48,7 @@
             <div class="px-3 py-4 text-center rounded shadow hero-div">
                 <h1 class="display-4 p-4 fw-bold">One Passion. One Family.</h1>
                 <div class="col-lg-8 mx-auto mb">
-                    <p class="mb-2 pb-2">Welcome to the Cill na Martra Pool Club website. Our Pool Club 
+                    <p class="introduction mb-2 pb-2">Welcome to the Cill na Martra Pool Club website. Our Pool Club 
                         was setup in 2012, when a group of 6 pool players began meeting for an evening of 
                         pool and banter on Friday evenings at O'Murchu's Bar in Cill na Martra. Since then our membership has grown to over 30 
                         players, who now play in 2 pool leagues each year. We run a Summer league and a Winter 
@@ -160,96 +160,98 @@
     <!-- END of Bootstrap League tables cards -->
     <!-- Bootstrap contact form -->
     <div class="contanier-fluid h-100 m-2">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 text-center" >
                 <h2 class="pt-3 pb-2">Got a Question?</h2>
             </div>    
-            <div class="col-12">
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="card-body top-50 start-50 pt-4">
-                        <div class="mt-3">
-                        <i class="far fa-comments card-icons"></i>
-                        </div>
-                        <div class="mx-5 p-4 py-5">
-                        <p>Feel free to get in touch by calling the telephone number below, sending us an email, or by completing the contact form.</p>
-                        </div>
-                        <div class="mx-4 py-2">
-                            <table class="table table-font table-dark table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Telephone</th>
-                                        <th scope="col">087 - 5436 2312</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Email</th>
-                                        <td>andy@cpc.ie</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <h5 class="card-title py-4">Contact Form</h5>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form id="contact-us-form" class="form w-75 needs-validation" method="POST" novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                                <input type="text" id="from_first_name" name="from_first_name" class="form-control" placeholder="Enter First Name" aria-label="from_first_name" aria-describedby="from_first_name" autocomplete="given-name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-12 card text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="card-body pt-4">
+                            <div class="mt-3">
+                            <i class="far fa-comments card-icons"></i>
+                            </div>
+                            <div class="contact-intro mx-5 p-4 py-5">
+                            <p>Feel free to get in touch by calling the telephone number below, sending us an email, or by completing the contact form.</p>
+                            </div>
+                            <div class="mx-4 py-2">
+                                <table class="table table-font table-dark table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Telephone</th>
+                                            <th scope="col">087 - 5436 2312</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Email</th>
+                                            <td>andy@cpc.ie</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h5 class="card-title py-4">Contact Form</h5>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div text-center">
+                                        <form id="contact-us-form" class="form w-75 needs-validation" method="POST" novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                    <input type="text" id="from_first_name" name="from_first_name" class="form-control" placeholder="Enter First Name" aria-label="from_first_name" aria-describedby="from_first_name" autocomplete="given-name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your First Name.
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your First Name.
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text"><i class="far fa-user"></i></span>
+                                                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter Surname" aria-label="lastname" aria-describedby="lastname" autocomplete="family-name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your Surname.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                                                    <input type="email" id="from_email_address" name="from_email_address" class="form-control" placeholder="Email Address" aria-label="from_email_address" aria-describedby="from_email_address" autocomplete="email" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a valid Email Address.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+                                                    <input type="tel" id="telephone_number" name="telephone_number" class="form-control" placeholder="Telephone Number" aria-label="telephone_number" aria-describedby="telephone_number" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a Mobile Number.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text"><i class="far fa-file-alt"></i></span>
+                                                    <textarea class="form-control" id="from_message" name="message" placeholder="Type your Message here.." rows="5" aria-label="from_message" aria-describedby="from_message" required></textarea>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose a Password.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group m-auto text-center pb-5">
+                                                    <button type="submit" id="contact-us-submit-btn" value="Send Email" class="btn btn-primary mb-3 form-submit-button">Send Message</button>
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text"><i class="far fa-user"></i></span>
-                                                <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter Surname" aria-label="lastname" aria-describedby="lastname" autocomplete="family-name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your Surname.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text"><i class="fas fa-at"></i></span>
-                                                <input type="email" id="from_email_address" name="from_email_address" class="form-control" placeholder="Email Address" aria-label="from_email_address" aria-describedby="from_email_address" autocomplete="email" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a valid Email Address.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="tel" id="telephone_number" name="telephone_number" class="form-control" placeholder="Telephone Number" aria-label="telephone_number" aria-describedby="telephone_number" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a Mobile Number.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text"><i class="far fa-file-alt"></i></span>
-                                                <textarea class="form-control" id="from_message" name="message" placeholder="Type your Message here.." rows="5" aria-label="from_message" aria-describedby="from_message" required></textarea>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose a Password.
-                                                </div>
-                                            </div>
-                                            <div class="input-group m-auto text-center pb-5">
-                                                <button type="submit" id="contact-us-submit-btn" value="Send Email" class="btn btn-primary mb-3 form-submit-button">Send Message</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
