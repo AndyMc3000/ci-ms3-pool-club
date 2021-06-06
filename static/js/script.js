@@ -72,3 +72,17 @@ $(document).ready(function () {
                 });
         });
 });
+
+/*
+ * Code for displaying selected Archive league data on archive.html table
+ */
+
+<script>
+  function displayArchive() {
+    let archive = document.getElementById('archive');
+    var archiveData = archive.options[archive.selectedIndex].getAttribute("size");
+    }
+    document.getElementById('display').value = archiveData;
+  }
+  displayArchive()
+</script>

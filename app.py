@@ -46,7 +46,9 @@ def league():
 @app.route("/archive")
 def archive():
     league = mongo.db.league.find()
-    return render_template("archive.html", league=league)
+    archive = mongo.db.archive.find()
+    if request.method == 'GET':
+        return render_template("archive.html", league=league)
 
 
 # club sign up page
@@ -119,6 +121,15 @@ def login():
     return render_template("login.html")
 
 
+# logout page view
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 # player home page
 @app.route("/player-home/<firstname>", methods=["GET", "POST"])
 def playerhome(firstname):
@@ -130,24 +141,15 @@ def playerhome(firstname):
     return redirect(url_for("login"))
 
 
-# logout page view
-@app.route("/logout")
-def logout():
-    # remove user from session cookie
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("login"))
-
-
 # add match view
 @app.route("/add-match", methods=["GET", "POST"])
 def addmatch():
     if request.method == "POST":
         match = {
-            "playerone": request.form.get("playerone"),
-            "playertwo": request.form.get("playertwo"),
-            "playeronewon": request.form.get("playeronewon"),
-            "playertwowon": request.form.get("playertwowon"),
+            "player_one": request.form.get("player_one"),
+            "player_two": request.form.get("player_two"),
+            "player_one_games_won": request.form.get("player_one_games_won"),
+            "player_two_games_won": request.form.get("player_two_games_won"),
             "date": request.form.get("date"),
             "league": request.form.get("league"),
             "referee": request.form.get("referee"),
@@ -214,7 +216,6 @@ def editaccount():
 
 
 # admin home page
-@app.route("/admin-home")
 @app.route("/admin-home")
 def adminhome():
     # user_email = is_logged_in()
@@ -313,7 +314,7 @@ def editplayer():
 # edit/delete match details (admin view)
 @app.route("/edit-match")
 def editmatch():
-    matches = mongo.db.matches.find().sort("surname", 1)
+    matches = mongo.db.matches.find().sort("date", 1)
     return render_template("edit-match.html", matches=matches)
 
 
