@@ -7,33 +7,33 @@
         <div class="row">
             <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
+                    <div class="carousel-item active" data-bs-interval="4500">
                         <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-kenneth-john-dela-vega-IxhEXghSWEA-unsplash-1428x600.png') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1><strong>SHARKS</strong> need apply..</h1>
-                                <p>Join the action for fun, competition, and sharks!</p>
-                                <p><a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Sign Up Here</a></p>
+                                <p class="lead">Join the action for fun, competition, and sharks!</p>
+                                <p><a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Sign Me Up!</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-item" data-bs-interval="4500">
                         <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-carla-oliveira-21FqSKZQGzI-unsplash-1428x600.jpeg') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Take a <strong>BREAK</strong> with us..</h1>
-                                <p>Make new friends and enjoy some friendly competition</p>
-                                <p><a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Sign Up Here</a></p>
+                                <p class="lead">Make new friends and enjoy some friendly competition</p>
+                                <p><a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Sign Me Up!</a></p>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="3000">
+                    <div class="carousel-item" data-bs-interval="4500">
                         <img src="{{ url_for('static', filename='images/carousel/cpc-carousel-markus-winkler-Dtz_-wZV4Os-unsplash-1428x600.png') }}" class="d-block w-100" alt="Emy Unsplash Food Photo"> 
                         <div class="container">
                             <div class="carousel-caption">
                                 <h1>Compete. <strong>WIN.</strong> Repeat.</h1>
-                                <p>Come for the craic and stay for the competition</p>
-                                <p><a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Sign Up Here</a></p>
+                                <p class="lead">Come for the craic and stay for the competition</p>
+                                <p><a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Sign Me Up!</a></p>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                 <div class="col-lg-8 mx-auto mb">
                     <p class="mb-2 pb-2">Welcome to the Cill na Martra Pool Club website. Our Pool Club 
                         was setup in 2012, when a group of 6 pool players began meeting for an evening of 
-                        pool and banter on Friday evenings. Since then our membership has grown to over 30 
+                        pool and banter on Friday evenings at O'Murchu's Bar in Cill na Martra. Since then our membership has grown to over 30 
                         players, who now play in 2 pool leagues each year. We run a Summer league and a Winter 
                         league. Club members enjoy being part of a Club where they can meet new people, improve 
                         their pool skills, all while enjoying a healthy dose of fun. Players of all shapes, 
@@ -64,30 +64,12 @@
     <!-- END of introduction messaging -->
     <!-- Bootstrap club Features cards-->
     <div class="container px-4 pt-4">
-        <div class="col-12 text-center" >
-            <h2 class="pt-3 pb-2">Why Join?</h2>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="px-3 py-4 my-4 text-center rounded shadow hero-div">
-                    <div class="col-lg-8 mx-auto">
-                        <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio possimus, a necessitatibus 
-                            doloribus dolorum quaerat expedita in, praesentium repudiandae modi ipsam, voluptates adipisci voluptatibus 
-                            numquam dicta maxime fuga et molestiae.
-                        </p>
-                        <div class="d-grid gap-3 p-4 d-sm-flex justify-content-sm-center shadow">
-                            <a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Join Today!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 pt-3 pb-4">
             <div class="col text-center">
                 <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 feature-cards-home" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/features-cards/cpc-features-card-mohamed-m-xZgMujtsbS4-unsplash.jpg') }}); background-size: cover; background-position: center;">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Play the game you Love</h2>
-                        <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <p class="lead">Enjoy a great sport whether you're a seasoned shark or an absolute beginner.</p>
                     </div>
                 </div>
             </div>
@@ -95,7 +77,7 @@
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/cpc-hero-apa-pool-players.png') }}); background-size: contain; background-repeat: no-repeat; background-position: top;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Play to Win!</h2>
-                        <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <p class="lead">Feel the heat of League matches</p>
                     </div>
                 </div>
             </div>
@@ -103,7 +85,30 @@
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/features-cards/cpc-feature-yrki-nieminen-90D0inZiIBo-unsplash-550.jpeg') }}); background-size: cover; background-position: center;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-7 lh-1 fw-bold">Meet new people</h2>
-                        <p class="lead">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <p class="lead">Make new friends or meet old ones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center" >
+            <h2 class="pt-3 pb-2">Why Join?</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="px-3 py-4 my-4 text-center rounded shadow hero-div">
+                    <div class="col-lg-8 mx-auto">
+                        <i class="fas fa-star-of-life card-icons"></i>
+                        <p class=" my-4">Pool is as much a social sport as competitive one. Members have a place where they can meet friends and make 
+                            new ones. In addition Pool is healthy and benefical sport. You will burn calories and buidl musle tone as you are walking, bending, 
+                            and strtching at the table. It improves critical thinking, builds your ability to focus, and sharpens your mind. Once a new rack is 
+                            broken, there an infinite number of possibilities for how best to play your game. The best pool players are the ones who make wise 
+                            shot decisions, as opposed to those with great cueing skills.  
+                        </p>
+                        <p class=" my-4">And at our Club we do it all with a healthy doe of good craic. Feel free to come along on a Friday night to see for yourself how enjoyable a few frames of Pool can be.
+                        </p>
+                        <div class="d-grid gap-3 p-4 d-sm-flex justify-content-sm-center shadow">
+                            <a class="btn btn-lg btn-primary" href="{{ url_for('register') }}">Join Today!</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,9 +124,13 @@
             <div class="row">
                 <div class="px-3 py-4 my-4 text-center rounded shadow hero-div">
                     <div class="col-lg-8 mx-auto">
-                        <p class=" my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio possimus, a necessitatibus 
-                            doloribus dolorum quaerat expedita in, praesentium repudiandae modi ipsam, voluptates adipisci voluptatibus 
-                            numquam dicta maxime fuga et molestiae.
+                        <i class="fas fa-folder-plus text-center card-icons"></i>
+                        <p class=" my-4">Once you sign up and join our Club, you will automatically be entered into 
+                            our Pool Leagues. Leagues run twice a year. Each player must play a match against every other player twice.
+                            A player wins a match once they win 3 games (or the best of 5 games). Points are given for winning zero games 
+                            (1 point), winning 1 game (2 points), winning 2 games (3 points), and winning 3 games (4 points).
+                        </p>
+                        <p class=" my-4">Click on the buttons below to see the current league table, and to view previous league tables.
                         </p>
                     </div>
                 </div>
@@ -132,7 +141,7 @@
                 <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 feature-cards-home" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/features-cards/giorgio-trovato-_XTY6lD8jgM-unsplash-500px.jpeg') }}); background-size: cover;  background-position: top;">
                         <h2 class="pt-2 mt-2 mb-2 display-7 lh-1 fw-bold text-center">Current League Table</h2>
-                        <p class="lead text-center">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <p class="lead text-center">Click the button below to view the current League Table</p>
                         <a class="btn btn-lg btn-primary mb-3 form-submit-button" href="{{ url_for('league') }}">League Table</a>
                     </div>
                 </div>
@@ -140,8 +149,8 @@
             <div class="col-12 col-md-6">
                 <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url({{ url_for('static', filename='images/cpc-hero-apa-pool-players.png') }}); background-size: contain; background-repeat: no-repeat; background-position: center;">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-2 mt-2 mb-2 display-7 lh-1 fw-bold text-center">Past League Tables</h2>
-                        <p class="lead text-center">Improve your Pool skills, as well as yu hand-eye coordination and concentration skills</p>
+                        <h2 class="pt-2 mt-2 mb-2 display-7 lh-1 fw-bold text-center">League Archive</h2>
+                        <p class="lead text-center">Click the button below to view Archived League Tables</p>
                         <a class="btn btn-lg btn-primary mb-3 form-submit-button" href="{{ url_for('archive') }}">League Archive</a>
                     </div>
                 </div>
@@ -157,12 +166,24 @@
             </div>    
             <div class="col-12">
                 <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <i class="far fa-comments card-icons"></i>
-                    </div>
-                    <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Contact Us</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ex velit quam quisquam animi alias pariatur laudantium tenetur adipisci, iusto aut, at necessitatibus, exercitationem molestias iure dolores voluptates ipsa magni.</p>
+                    <div class="card-body top-50 start-50 pt-4">
+                        <i class="far fa-comments card-icons"></i>
+                        <p class="m-4">Feel free to get in touch by calling the telephone number below, sending us an email, or by completing the contact form.</p>
+                        <table class="table table-font table-dark table-striped table-bordered p-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Telephone</th>
+                                    <th scope="col">087 - 5436 2312</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Email</th>
+                                    <td>andy@cpc.ie</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h5 class="card-title p-2">Contact Form</h5>
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">

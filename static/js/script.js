@@ -7,29 +7,29 @@ $(document).ready(function() {
 } );
 
 /* 
-Bootstrap validation
+Bootstrap form validation
 */
 
-// JavaScript for disabling form submissions if there are invalid fields
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
-  'use strict';
+  'use strict'
 
-  // Fetch all forms to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation');
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
 
-  // Loop over forms and prevent submission
+  // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
         if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
+          event.preventDefault()
+          event.stopPropagation()
         }
 
-        form.classList.add('was-validated');
-      }, false);
-    });
-})();
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 
 /*
  * EmailJS code for sending a user query from the contact form on index.html by email
@@ -66,23 +66,9 @@ $(document).ready(function () {
                     $(form).removeClass('was-validated');
                     form.reset();
                     console.log('SUCCESS!', response.status, response.text);
-                    alert('Message Sent Successfully. Thank you for contacting us!');
+                    alert('Message Sent Successfully. Thanks for getting in touch!');
                 }, function (error) {
                     console.log('FAILED...', error);
                 });
         });
 });
-
-/*
- * Code for displaying selected Archive league data on archive.html table
- */
-
-<script>
-  function displayArchive() {
-    let archive = document.getElementById('archive');
-    var archiveData = archive.options[archive.selectedIndex].getAttribute("size");
-    }
-    document.getElementById('display').value = archiveData;
-  }
-  displayArchive()
-</script>
