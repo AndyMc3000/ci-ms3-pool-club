@@ -66,7 +66,7 @@ The below shows the key:value pairs associated with the MongoDB Collections used
                 participating_players: Array [          # (this value contains a list of all object id's 
                         Object(user_id),                  in the collection 'league')
                         .....
-                        Object(league_id)],
+                        Object(user_id)],
                         ]
             }
             
