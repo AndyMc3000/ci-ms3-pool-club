@@ -37,4 +37,4 @@ def add_match():
 
 
 @app.route("/player-contact-info")
-def playercontact():
+def player_contact():

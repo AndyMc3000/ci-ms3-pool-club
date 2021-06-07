@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('adminhome') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
                 <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
                     <div class="login-card-img-holder p-5 pb-3">
@@ -16,7 +16,7 @@
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
-                                    <form action="{{ url_for('addplayer') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
+                                    <form action="{{ url_for('admin_register_user') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="first_name"><i class="fas fa-user"></i></span>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('adminhome') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
             </div>
         </div>

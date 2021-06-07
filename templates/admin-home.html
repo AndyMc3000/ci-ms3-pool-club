@@ -34,7 +34,7 @@
                         <i class="fas fa-folder-plus text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add A League</h4>
                         <p>Click on the button below to add details for a new upcoming League</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('addleague') }}">Add A League</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('add_league') }}">Add A League</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <i class="fas fa-user-plus card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add A Player</h4>
                         <p>Click on the button below to register the details of a new Club member</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('addplayer') }}">Add A Player</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('admin_register_user') }}">Add A Player</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                         <i class="fas fa-user-cog card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add Admin</h4>
                         <p>Click on the button below to select a member and make them an Admin for this site</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('addadmin') }}">Add Admin</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('add_admin') }}">Add Admin</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <i class="fas fa-wrench text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A League</h4>
                         <p>Click on the button below to edit the details of a league or to delete a league</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('editleague') }}"> Edit A League</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('edit_league') }}"> Edit A League</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                         <i class="fas fa-user-edit card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Player</h4>
                         <p>Click on the button below to select a member and edit their account details or delete their account</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('editplayer') }}"> Edit Account</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('admin_edit_user') }}"> Edit Account</a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                         <i class="fas fa-tasks card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Match</h4>
                         <p>Click on the button below to select a Match and edit its details or delete a match</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('editmatch') }}">Edit A Match</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('edit_match') }}">Edit A Match</a>
                     </div>
                 </div>
             </div>

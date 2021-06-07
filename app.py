@@ -183,14 +183,13 @@ def add_match():
 
 # find contact details and league stats for another player
 @app.route("/player-contact-info")
-def playercontact():
-    return render_template("player-contact-info.html", 
-        playername=mongo.db.user.find().sort("surname", 1) )
+def player_contact():
+    return render_template("player-contact-info.html", playername=mongo.db.user.find().sort("surname", 1) )
 
 
 # view player league statistics
 @app.route("/player-active-results")
-def mystats():
+def player_stats():
     player = mongo.db.user.find_one(
         {"email": session["user"]})
     return render_template("player-current-stats.html", player=player)
@@ -198,19 +197,19 @@ def mystats():
 
 # view player match list
 @app.route("/player-match-list")
-def mymatchlist():
+def player_match_list():
     return render_template("player-match-list.html")
 
 
 # view player league statistics for past leagues
 @app.route("/player-archive-results")
-def playerarchive():
+def player_archive_stats():
     return render_template("player-archive-results.html")
 
 
 # edit player account details
 @app.route("/player-edit-account", methods=["GET", "POST"])
-def editaccount():
+def player_edit_account():
     player = mongo.db.user.find_one({"email": session["user"]})
     # if request.method == "POST":
         # update_player = {
@@ -232,7 +231,7 @@ def editaccount():
 
 # admin home page
 @app.route("/admin-home")
-def adminhome():
+def admin_home():
     # user_email = is_logged_in()
     # if user_email:
         # player = mongo.db.user.find_one({"email": user_email})
@@ -243,7 +242,7 @@ def adminhome():
 
 # add new league (admin view)
 @app.route("/add-league", methods=["GET", "POST"])
-def addleague():
+def add_league():
     if request.method == "POST":
         league = {
             "name": request.form.get("name"),
@@ -254,14 +253,14 @@ def addleague():
         }
         mongo.db.league.insert_one(league)
         flash("League Added Successfully")
-        return redirect(url_for("adminhome"))
+        return redirect(url_for("admin_home"))
   
     return render_template("add-league.html")
 
 
 # add new player (admin view)
 @app.route("/add-player", methods=["GET", "POST"])
-def addplayer():
+def admin_register_user():
     if request.method == "POST":
         # check if username already exists in db
         current_user = mongo.db.user.find_one(
@@ -269,9 +268,9 @@ def addplayer():
 
         if current_user:
             flash("That Email / Username already exists")
-            return redirect(url_for("addplayer"))
+            return redirect(url_for("admin_register_user"))
 
-        addplayer = {
+        admin_register_user = {
             "email": request.form.get("email"),
             "password": generate_password_hash(request.form.get("password")),
             "first_name": request.form.get("first_name"),
@@ -279,22 +278,22 @@ def addplayer():
             "nickname": request.form.get("nickname"),
             "telephone": request.form.get("telephone")     
         }
-        mongo.db.user.insert_one(addplayer)
+        mongo.db.user.insert_one(admin_register_user)
         flash("Player Added Successfully")
-        return redirect(url_for("adminhome"))
+        return redirect(url_for("admin_home"))
 
     return render_template("add-player.html")
 
 
 # make a player an admin
 @app.route("/add-admin", methods=["GET"])
-def addadmin():
+def add_admin():
     return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
         
 
 # edit/delete active league details (admin view)
 @app.route("/edit-league", methods=["GET", "POST"])
-def editleague():
+def edit_league():
     league = mongo.db.league.find()
         # if request.method == "GET":
             # selected_league = 
@@ -310,12 +309,12 @@ def editleague():
             # }
             # mongo.db.league.update_one(update_league)
             # flash("League Successfully Updated")
-            # return redirect(url_for("adminhome")
+            # return redirect(url_for("admin_home")
 
 
 # edit/delete player details (admin view)
 @app.route("/edit-player", methods=["GET", "POST"])
-def editplayer():
+def admin_edit_user():
     player = mongo.db.user.find().sort("surname", 1)
     if request.method == "GET":
         selection = {
@@ -328,7 +327,7 @@ def editplayer():
 
 # edit/delete match details (admin view)
 @app.route("/edit-match")
-def editmatch():
+def edit_match():
     matches = mongo.db.matches.find().sort("date", 1)
     return render_template("edit-match.html", matches=matches)
 

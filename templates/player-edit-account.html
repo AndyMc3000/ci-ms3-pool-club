@@ -16,7 +16,7 @@
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
-                                    <form action="{{ url_for('editaccount') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
+                                    <form action="{{ url_for('player_edit_account') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="first_name"><i class="fas fa-user"></i></span>

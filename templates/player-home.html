@@ -37,7 +37,7 @@
                         <i class="fas fa-star text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My League Stats</h4>
                         <p>Click the button the view your current League stats including your current points tally</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mystats') }}">Get My Stats</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('player_stats') }}">Get My Stats</a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                         <i class="fas fa-clipboard-list card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My Match List</h4>
                         <p>Click the button to view your match list including matches played and unplayed</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mymatchlist') }}">Get My List</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('player_match_list') }}">Get My List</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                         <i class="fas fa-id-badge text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Find A Player</h4>
                         <p>Click the button to find contact details of another player and to see their current league stats</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('playercontact') }}">Find A Player</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('player_contact') }}">Find A Player</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                         <i class="fas fa-history card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My League History</h4>
                         <p>Click the button to select a previous League, and to view your stats for that League</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('playerarchive') }}">View My Archive</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('player_archive_stats') }}">View My Archive</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                         <i class="fas fa-user-edit card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit My Account</h4>
                         <p>Click the button below to view and edit your account information</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('editaccount') }}">Edit My Account</a>
+                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('player_edit_account') }}">Edit My Account</a>
                     </div>
                 </div>
             </div>
