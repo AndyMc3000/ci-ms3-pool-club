@@ -19,14 +19,14 @@
                                     <form action="{{ url_for('editleague') }}" class="form w-75 needs-validation" method="GET" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playerone"><i class="fas fa-user-shield"></i></span>
-                                                <select id="playerone" name="playerone" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="player_one"><i class="fas fa-user-shield"></i></span>
+                                                <select id="player_one" name="player_one" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Select League</option>
                                                 {% for league in league %}
                                                     <option value="{{ league.name }}">{{ league.name }}</option>
                                                 {% endfor %}
                                                 </select>
-                                                <label for="playerone"></label>
+                                                <label for="player_one"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>

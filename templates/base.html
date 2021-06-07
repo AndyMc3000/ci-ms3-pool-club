@@ -42,7 +42,7 @@
                                     <a class="nav-link px-3 {{ 'active' if active_page == 'menu3' else '' }}" aria-current="page" href="{{ url_for('user') }}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link px-3 {{ 'active' if active_page == 'menu4' else '' }}" href="{{ url_for('player_home', firstname=session['user']) }}">MyHome</a>
+                                    <a class="nav-link px-3 {{ 'active' if active_page == 'menu4' else '' }}" href="{{ url_for('player_home', first_name=session['user']) }}">MyHome</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-3 {{ 'active' if active_page == 'menu5' else '' }}" href="{{ url_for('logout') }}">Log Out <i class="fas fa-sign-out-alt"></i> </a>

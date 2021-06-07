@@ -26,7 +26,7 @@ class="fa fa-fw fa-user"
     # put the new user into 'session' cookie
         session["user"] = request.form.get("email")
         flash("Registration Successful!")
-        return redirect(url_for("player_home", firstname=session["user"]))
+        return redirect(url_for("player_home", first_name=session["user"]))
 
 
 @app.route("/add-match")

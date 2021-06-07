@@ -19,14 +19,14 @@
                                     <form action="{{ url_for('addadmin') }}" class="form w-75 needs-validation" method="GET" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="playerone"><i class="fas fa-user-shield"></i></span>
-                                                <select id="playerone" name="playerone" class="validate form-control form-select" required>
+                                                <span class="input-group-text" id="player_one"><i class="fas fa-user-shield"></i></span>
+                                                <select id="player_one" name="player_one" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Select Player</option>
                                                 {% for playername in playername %}
-                                                    <option value="{{ playername.surname }}, {{ playername.firstname }} '{{ playername.nickname }}'">{{ playername.surname }}, {{ playername.firstname }} '{{ playername.nickname }}'</option>
+                                                    <option value="{{ playername.surname }}, {{ playername.first_name }} '{{ playername.nickname }}'">{{ playername.surname }}, {{ playername.first_name }} '{{ playername.nickname }}'</option>
                                                 {% endfor %}
                                                 </select>
-                                                <label for="playerone"></label>
+                                                <label for="player_one"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -48,7 +48,7 @@
                                             Selected Player:
                                         </h4>
                                         <h4>
-                                            *user.firstname + "(user.nickname)" + user.surname*
+                                            *user.first_name + "(user.nickname)" + user.surname*
                                         </h4>
                                         <div class="input-group m-auto text-center">
                                             <button type="submit" class="btn btn-primary mb-3 mt-2 form-submit-button">Create Admin</button>

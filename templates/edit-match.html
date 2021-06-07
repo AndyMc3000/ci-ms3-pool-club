@@ -23,7 +23,7 @@
                                                 <select id="matches" name="matches" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Select Match</option>
                                                 {% for matches in matches %}
-                                                    <option value="{{ matches.date }}{{ matches.playerone}}{{matches.playertwo}}">{{ matches.date }}: {{ matches.playerone}} <strong>V's</strong> {{matches.playertwo}}</option>
+                                                    <option value="{{ matches.date }}{{ matches.player_one}}{{matches.player_two}}">{{ matches.date }}: {{ matches.player_one}} <strong>V's</strong> {{matches.player_two}}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="matches"></label>
@@ -77,7 +77,7 @@
                                                 <select id="referee" name="referee" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Referee</option>
                                                 {% for referee in referee %}
-                                                    <option value="{{ referee.firstname }} '{{ referee.nickname }}' {{ referee.surname }}">{{ referee.firstname }} '{{ referee.nickname }}' {{ referee.surname }}"</option>
+                                                    <option value="{{ referee.first_name }} '{{ referee.nickname }}' {{ referee.surname }}">{{ referee.first_name }} '{{ referee.nickname }}' {{ referee.surname }}"</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="referee"></label>
@@ -92,11 +92,11 @@
                                                 <span class="input-group-text" id="player_one"><i class="fas fa-user-shield"></i></span>
                                                 <select id="player_one" name="player_one" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Player 1</option>
-                                                {% for playerone in playerone %}
-                                                    <option value="{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}">{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}</option>
+                                                {% for player_one in player_one %}
+                                                    <option value="{{ player_one.first_name }} '{{ player_one.nickname }}' {{ player_one.surname }}">{{ player_one.first_name }} '{{ player_one.nickname }}' {{ player_one.surname }}</option>
                                                 {% endfor %}
                                                 </select>
-                                                <label for="playerone"></label>
+                                                <label for="player_one"></label>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -125,8 +125,8 @@
                                                 <span class="input-group-text" id="player_two"><i class="fas fa-user-shield"></i></span>
                                                 <select id="player_two" name="player_two" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Edit Player 2</option>
-                                                {% for playertwo in playertwo %}
-                                                    <option value="{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}">{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}</option>
+                                                {% for player_two in player_two %}
+                                                    <option value="{{ player_two.first_name }} '{{ player_two.nickname }}' {{ player_two.surname }}">{{ player_two.first_name }} '{{ player_two.nickname }}' {{ player_two.surname }}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="player_two"></label>

@@ -28,7 +28,7 @@
     <!-- Player options - Bootstrap custom cards-->
     <div class="container px-4 pt-2" id="custom-cards">
         <div>
-            <h4 class="shadow-lg text-center pt-1 pb-2">Player: {{ user.firstname }} "{{ user.nickname }}" {{ user.surname }}</h4>
+            <h4 class="shadow-lg text-center pt-1 pb-2">Player: {{ user.first_name }} "{{ user.nickname }}" {{ user.surname }}</h4>
         </div>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
             <div class="col card-group">
@@ -36,7 +36,7 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-star text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">My League Stats</h4>
-                        <p>Click the button the view your current League stats including your current rank and points tally</p>
+                        <p>Click the button the view your current League stats including your current points tally</p>
                         <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('mystats') }}">Get My Stats</a>
                     </div>
                 </div>

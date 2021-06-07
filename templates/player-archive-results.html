@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('player_home', firstname=session['user']) }}> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
                 <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
                     <div class="login-card-img-holder p-5 pb-3">
@@ -46,99 +46,19 @@
                                     <table class="table table-font table-dark table-striped table-bordered" data-toggle="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">RANK</th>
-                                                    <th scope="col">PLAYER</th>
                                                     <th scope="col">POINTS</th>
+                                                    <th scope="col">PLAYER</th>
                                                     <th scope="col">MW</th>
                                                     <th scope="col">ML</th>
-                                                    <th scope="col">MR</th>
+                                                    <th scope="col">GW</th>
+                                                    <th scope="col">GL</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">5</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">6</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">7</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">8</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">9</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">10</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
-                                                    <td>*12*</td>
-                                                    <td>*3*</td>                                                    
-                                                    <td>*15*</td>                                                   
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">11</th>
-                                                    <td>*user.firstname + nickname + surname</td>
-                                                    <td>*65*</td>
+                                                    <th scope="row">24</th>
+                                                    <td>*user.first_name + nickname + surname</td>
+                                                    <td>*18*</td>
                                                     <td>*12*</td>
                                                     <td>*3*</td>                                                    
                                                     <td>*15*</td>                                                   
@@ -152,7 +72,7 @@
                     </div>
                 </div>
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('player_home', firstname=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
             </div>
         </div>

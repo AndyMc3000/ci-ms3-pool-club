@@ -31,23 +31,25 @@
                                     <table class="table table-font table-dark table-striped table-bordered" data-toggle="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">RANK</th>
-                                                    <th scope="col">PLAYER</th>
                                                     <th scope="col">POINTS</th>
+                                                    <th scope="col">PLAYER</th>
                                                     <th scope="col">MW</th>
                                                     <th scope="col">ML</th>
                                                     <th scope="col">MR</th>
+                                                    <th scope="col">GW</th>
+                                                    <th scope="col">GL</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             {% for user in user %}
                                                 <tr>
-                                                    <th scope="row">{{ user.rank }}</th>
+                                                    <th scope="row">{{ user.points }}</th>
                                                     <td>{{ user.name }} {{ user.nickname }} {{ user.surname }}</td>
-                                                    <td>{{ user.points }}</td>
                                                     <td>{{ user.matches_won }}</td>
-                                                    <td>{{ user.matches_lost }}</td>                                                    
-                                                    <td>{{ user.matches_remaining }}</td>                                                   
+                                                    <td>{{ user.matches_lost }}</td>
+                                                    <td>{{ user.matches_remaining }}</td>                                                      
+                                                    <td>{{ user.games_won }}</td>                                                    
+                                                    <td>{{ user.games_lost }}</td>                                                                                                     
                                                 </tr>
                                             {% endfor %}
                                             </tbody>

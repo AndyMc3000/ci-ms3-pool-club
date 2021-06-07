@@ -51,7 +51,7 @@ $(document).ready(function () {
             // This assigns form field id's to EmailJS email template parameters
             let templateParams = {
                 from_first_name: document.getElementById('from_first_name').value,
-                lastname: document.getElementById('lastname').value,
+                last_name: document.getElementById('last_name').value,
                 telephone_number: document.getElementById('telephone_number').value,
                 from_email_address: document.getElementById('from_email_address').value,
                 from_message: document.getElementById('from_message').value,

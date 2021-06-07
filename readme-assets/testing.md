@@ -76,8 +76,8 @@ During the development process I manually tested elements and components after I
 > - [x] “I want to learn about what the CPC is.”
 > - [x] “I want to be able to view current and archived CPC League Tables.”
 > - [x] “I want to be able to register and sign-up to join the CPC.”
-> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - current League Rank, current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
-> - [x] “I want to be able to view my personal League statistics - League Rank, League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - current League  current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
+> - [x] “I want to be able to view my personal League statistics - League  League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
 > - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
 > - [x] “I want to be able to view my list of Leagues Matches, both those Matches Played and those Matches yet to be played."
 > - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."

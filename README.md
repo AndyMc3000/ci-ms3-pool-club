@@ -89,8 +89,8 @@ Please see below details of the 'Client Stories' to detail the requirements of t
 > - [x] “I want to learn about what the CPC is.”
 > - [x] “I want to be able to view current and archived CPC League Tables.”
 > - [x] “I want to be able to register and sign-up to join the CPC.”
-> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - current League Rank, current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
-> - [x] “I want to be able to view my personal League statistics - League Rank, League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - Current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
+> - [x] “I want to be able to view my personal League statistics - League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
 > - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
 > - [x] “I want to be able to view my list of Leagues Matches, both those Matches Played and those Matches yet to be played."
 > - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."
@@ -113,14 +113,14 @@ Based on the outcomes from the Strategy Plane, The Scope Plane determines what f
    * The Homepage should include a Contact Us section to show name, telephone, and email contact infromation for the CPC organisers, as well a contact form.
    * The Register page should have a form which allows a new member to input their; First Name, Nickname, Surname, Telephone Number, Email Address, a Password, and it should also include a Confirm Password field. On clicking a Register button, a user will create a new document in a 'user' collection of a MongoDB database.
    * The Login page should have a form where a User can input their email address and password. On clicking a "log In' button, the user should be redirected to their Player Homepage.
-   * The Current League Table should show a table showing up-to-date data for all members in the current League. This table should include columns with headings for; Rank, Player Name, Points, Matches Won, Matches Lost, and Matches Remaining.
+   * The Current League Table should show a table showing up-to-date data for all members in the current League. This table should include columns with headings for; Player Name, Points, Matches Won, Matches Lost, and Matches Remaining.
    * The League Archive page should include a dropdown box where a user can select the name of a League which which has an end date in the past. On clicking a 'view League' button, the data for the League Table for that League will populate a table on the page (in the same format as the above 'Current League Table').
 * Player Homepage:
-   * The 'My League Stats' page should include a table which shows a Players individual current League statistics including their: Rank, Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
+   * The 'My League Stats' page should include a table which shows a Players individual current League statistics including their: Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
    * The 'My Match List' page should include a table which shows a list of all a Players League fixtures. The table should include columns with headings for: Number, Player Name, Matches. All Players in the League should be listed, and the Matches column shoud show a 0, 1, or 2 to indicate the number of Matches played against an individual Player. Note: In a League, all Players will need to play to every other player twice.
    * The 'Add Match Result' page should contain a form where a Player can results of a Match from the current League. The form should contain the following fields; Match Date, Match Referee, Player One, Player One Frames Won, Player Two, Player Two Frames Won. On clicking a 'Add Result' button, the Player would then create a new Match document in the Matches collection on a MongoDB database.
    * Find a Playershould include a form where a player can add Match details to a Matches collection on a MongoDB database. A Player can pick a match date from a date picker field. Then they can select the following from a series of dropdowns; Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. On clicking a 'Add Result' button, they would then create a new document in the Matches collection. 
-   * The 'My League History' page should include a dropdown box where a Player can select an Archived League. On clicking 'View Stats' button, a table should be populated with a Players statistics from that League. This table should show their: Rank, Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
+   * The 'My League History' page should include a dropdown box where a Player can select an Archived League. On clicking 'View Stats' button, a table should be populated with a Players statistics from that League. This table should show their: Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
    * The 'Edit My Account' page should include a form which pre-populates with a Players Account information. A Player can edit the details on the form. These details being; First Name, Nickname, Surname, Telephone Number, Email Address, and Password. On clicking a update details button, a user will update their document in the user collection on MongoDB.
 * Admin Homepage:
    * The 'Add League' page should contain a form where an Admin can input; League Name, League Description, Start Date and End Date.
@@ -182,7 +182,7 @@ The structure of the website is outlined in the Sitemap. Click here to view the 
 The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', 'matches', and 'archive'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
 
 * The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
-  * 'firstname', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'rank', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues' 
+  * 'first_name', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues' 
 
 * The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
   * 'name', 'description', 'start_date', 'end_date', and 'participating_players' 

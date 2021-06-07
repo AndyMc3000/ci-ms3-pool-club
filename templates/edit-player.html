@@ -23,7 +23,7 @@
                                                 <select id="user" name="player" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Select Player</option>
                                                 {% for player in player %}
-                                                    <option value="{{ player.surname }}, {{ player.firstname }} '{{ player.nickname }}'">{{ player.surname }}, {{ player.firstname }} '{{ player.nickname }}'</option>
+                                                    <option value="{{ player.surname }}, {{ player.first_name }} '{{ player.nickname }}'">{{ player.surname }}, {{ player.first_name }} '{{ player.nickname }}'</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="user"></label>
@@ -46,8 +46,8 @@
                                     <form action="{{ url_for('editplayer') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="firstname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="firstname" class="form-control" value="{{ user.firstname }}" aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
+                                                <span class="input-group-text" id="first_name"><i class="fas fa-user"></i></span>
+                                                <input type="text" name="first_name" class="form-control" value="{{ user.first_name }}" aria-label="first_name" aria-describedby="first_name" autocomplete="given-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>

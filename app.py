@@ -66,13 +66,12 @@ def register():
         register = {
             "email": request.form.get("email"),
             "password": generate_password_hash(request.form.get("password")),
-            "firstname": request.form.get("firstname"),
+            "first_name": request.form.get("first_name"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
             "telephone": request.form.get("telephone"), 
             # Default user values
-            "admin": False,   
-            "rank": "N/A",
+            "admin": False,
             "points": 0,   
             "matches_played": 0,
             "matches_won": 0, 
@@ -86,7 +85,7 @@ def register():
         # Put the new user into 'session' cookie
         session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
-        return redirect(url_for("player_home", firstname=session["user"]))
+        return redirect(url_for("player_home", first_name=session["user"]))
 
     return render_template("register.html")
 
@@ -106,7 +105,7 @@ def login():
                     session["user"] = request.form.get("email")
                     flash("Welcome, {}".format(request.form.get("email")))
                     return redirect(url_for(
-                        "player_home", firstname=session["user"]))
+                        "player_home", first_name=session["user"]))
         
             else:
                 # invalid password match
@@ -173,12 +172,12 @@ def add_match():
         post_save_match(match, is_player_1=True)
         post_save_match(match, is_player_1=False)
         flash("Match Successfully Added")
-        return redirect(url_for("player_home", firstname=session["user"]))
+        return redirect(url_for("player_home", first_name=session["user"]))
 
     return render_template("add-match.html",
                 referee=mongo.db.user.find().sort("surname", 1),
-                playerone=mongo.db.user.find().sort("surname", 1),
-                playertwo=mongo.db.user.find().sort("surname", 1),
+                player_one=mongo.db.user.find().sort("surname", 1),
+                player_two=mongo.db.user.find().sort("surname", 1),
                 league=mongo.db.league.find().sort("name", 1), )
 
 
@@ -215,7 +214,7 @@ def editaccount():
     player = mongo.db.user.find_one({"email": session["user"]})
     # if request.method == "POST":
         # update_player = {
-            # "firstname": request.form.get("firstname"),
+            # "first_name": request.form.get("first_name"),
             # "surname": request.form.get("surname"),
             # "nickname": request.form.get("nickname"),
             # "email": request.form.get("email"),
@@ -225,7 +224,7 @@ def editaccount():
         # }
         # mongo.db.matches.update({"_id": ObjectId(player)}, update_player)
         # flash("Account Successfully Updated")
-        # return redirect(url_for("player_home", firstname=session["user"]))
+        # return redirect(url_for("player_home", first_name=session["user"]))
     
     # player_info = mongo.db.tasks.find_one({"_id": ObjectId(player)})
     return render_template("player-edit-account.html", user=player)
@@ -275,7 +274,7 @@ def addplayer():
         addplayer = {
             "email": request.form.get("email"),
             "password": generate_password_hash(request.form.get("password")),
-            "firstname": request.form.get("firstname"),
+            "first_name": request.form.get("first_name"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
             "telephone": request.form.get("telephone")     

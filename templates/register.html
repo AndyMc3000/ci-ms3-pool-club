@@ -23,8 +23,8 @@
                                     <form action="{{ url_for('register') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
-                                                <span class="input-group-text" id="firstname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="firstname" class="form-control" placeholder="First Name" aria-label="firstname" aria-describedby="firstname" autocomplete="given-name" required>
+                                                <span class="input-group-text" id="first_name"><i class="fas fa-user"></i></span>
+                                                <input type="text" name="first_name" class="form-control" placeholder="First Name" aria-label="first_name" aria-describedby="first_name" autocomplete="given-name" required>
                                                 <div class="valid-feedback">
                                                     Looks good!
                                                 </div>
@@ -98,9 +98,6 @@
                                             </div>
                                             <div class="input-group hidden-field">
                                                 <input type="hidden" name="admin" id="admin" value="False" >
-                                            </div>
-                                            <div class="input-group hidden-field">
-                                                <input type="hidden" name="rank" id="rank" value="N/A">
                                             </div>
                                             <div class="input-group hidden-field">
                                                 <input type="hidden" name="matches_played" id="matches_played" value="0">
