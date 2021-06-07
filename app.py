@@ -165,7 +165,7 @@ def add_match():
             "date": request.form.get("date"),
             "league": request.form.get("league"),
             "referee": request.form.get("referee"),
-            "createdby": session["user"]
+            "created_by": session["user"]
         }
         mongo.db.matches.insert_one(match)
         # Post save logic
@@ -232,12 +232,9 @@ def player_edit_account():
 # admin home page
 @app.route("/admin-home")
 def admin_home():
-    # user_email = is_logged_in()
-    # if user_email:
-        # player = mongo.db.user.find_one({"email": user_email})
-        # if player.admin:
-    return render_template("admin-home.html")
-    # return redirect(url_for("player_home"))
+    user = mongo.db.user.find_one({"email": session["user"]})
+    print(user)
+    return render_template("admin-home.html", user=user)
 
 
 # add new league (admin view)
@@ -247,8 +244,8 @@ def add_league():
         league = {
             "name": request.form.get("name"),
             "description": request.form.get("description"),
-            "start_date": request.form.get("startdate"),
-            "end_date": request.form.get("enddate"),
+            "start_date": request.form.get("start_date"),
+            "end_date": request.form.get("end_date"),
             "participating_players": request.form.get("participants"),
         }
         mongo.db.league.insert_one(league)

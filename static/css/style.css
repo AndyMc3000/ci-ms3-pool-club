@@ -44,7 +44,27 @@ body {
         background-color: #212529;
 }
 
+.pulsate {
+    -webkit-animation: pulsate 4s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.6;
+}
+
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.6;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.6;
+    }
+}
+
 /* -- END of Global Styles -- */
+
+
 
 /* -- Introduction section on index.html -- */
 

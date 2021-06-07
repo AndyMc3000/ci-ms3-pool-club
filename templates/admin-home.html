@@ -27,6 +27,9 @@
     </div>
     <!-- Admin options - Bootstrap custom cards-->
     <div class="container px-4 pt-2" id="custom-cards">
+        <div>
+            <h4 class="shadow-lg text-center pt-1 pb-2">Admin: {{ user.first_name }} {{ user.surname }}</h4>
+        </div>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
             <div class="col card-group">
                 <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
@@ -65,8 +68,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-wrench text-center card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A League</h4>
-                        <p>Click on the button below to edit the details of a league or to delete a league</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('edit_league') }}"> Edit A League</a>
+                        <h3 class="pulsate pt-2"><strong>Coming soon!</strong></h3>
+                        <a class="btn btn-warning mb-3 form-submit-button" href=""> Coming Soon..</a>
                     </div>
                 </div>
             </div>
@@ -75,8 +78,8 @@
                     <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
                         <i class="fas fa-user-edit card-icons"></i>
                         <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Player</h4>
-                        <p>Click on the button below to select a member and edit their account details or delete their account</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('admin_edit_user') }}"> Edit Account</a>
+                        <h3 class="pulsate pt-2"><strong>Coming soon!</strong></h3>
+                        <a class="btn btn-warning mb-3 form-submit-button" href=""> Coming Soon..</a>
                     </div>
                 </div>
             </div>
