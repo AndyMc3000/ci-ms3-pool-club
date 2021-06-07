@@ -273,7 +273,16 @@ def admin_register_user():
             "first_name": request.form.get("first_name"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
-            "telephone": request.form.get("telephone")     
+            "telephone": request.form.get("telephone"),
+            # Default user values
+            "admin": False,
+            "points": 0,   
+            "matches_played": 0,
+            "matches_won": 0, 
+            "matches_lost": 0,
+            "games_won": 0, 
+            "games_lost": 0,
+            "entered_leagues": []      
         }
         mongo.db.user.insert_one(admin_register_user)
         flash("Player Added Successfully")
