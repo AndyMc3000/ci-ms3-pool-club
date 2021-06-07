@@ -48,7 +48,7 @@ def archive():
     league = mongo.db.league.find()
     archive = mongo.db.archive.find()
     if request.method == 'GET':
-        return render_template("archive.html", league=league)
+        return render_template("archive.html", league=league, archive=archive)
 
 
 # club sign up page

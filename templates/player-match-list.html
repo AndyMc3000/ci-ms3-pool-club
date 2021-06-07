@@ -35,13 +35,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        {{ for user in user}}
+                                        {% for user in user %}
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>{{ user.first_name }} "{{nickname}}" {{surname}}</td>
+                                                <td>{{ user.first_name }} "{{ user.nickname }}" {{ user.surname }}</td>
                                                 <td>*1*</td>
                                             </tr>
-                                        {{ endfor }}
+                                        {% endfor %}
                                             <tr>
                                                 <th scope="row">2</th>
                                                 <td>First + Nickname + Surname*</td>
