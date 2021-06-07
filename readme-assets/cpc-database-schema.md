@@ -4,7 +4,7 @@
 
 ## MongoDB Database Collections Schema ## 
 
-The below shows the key:value pairs associated with the MongoDB Collections used for the CPC site. Those Collesctions are; 'league, 'user', and 'matches'.
+The below shows the key:value pairs associated with the MongoDB Collections used for the CPC site. Those Collesctions are; 'league, 'user', and 'matches', and 'archive'.
 
             league
             {
