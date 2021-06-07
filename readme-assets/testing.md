@@ -1,11 +1,20 @@
 <a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using Canva.com and Clipart.com](/readme-assets/cpcp-logo-readme-header.png)</a>
 
 
-# Cill na Martra Pool Club - Testing Document #
+# Cill na Martra Pool Club - Testing Document :microscope: #  
 
+<br>
 
+## Table of Contents ##
+1. [Development Testing](#development-testing)
+1. [User & Client Stories Testing](#user-client-stories-testing)
+1. [Code Validation](#code-validation)
+1. [Manual Testing](#manual-testing)
+1. [Browser Testing](#browser-testing)
 
-## 1. Development Testing ##
+<br>
+
+## 1. <a name="development-testing">Development Testing</a> ##
 
 During the development process I manually tested elements and components after I added them to the website. If I encountered an issue or bug in most cases I worked to resolve it straight away. I have listed the tests I did including those where I encountered bugs here;
 
@@ -35,8 +44,7 @@ During the development process I manually tested elements and components after I
 * Added EmailJS Contact Form send functionality. Tested it and it worked as expected.
 * Added MyMenu cart item indicator to MyMenu button in navbar. Tested it and it worked as expected. 
 
-
-#### Tests with Bugs ####
+#### Bugs Found ####
 
 * Added Bootstrap menu accordions to index.html. Found a bug where all accordions open and close at the same time. I realised I needed to give each accordion * unique control ID’s. That fixed the bug.
 * On one occassion I had an issue with launching the project master instance on GitPod. It wasn't loading completely (see screenshot). When trying to resolve the issue I somehow ended up working on a branch of my Master. I found that the simplest course of action was to delete my GitPod instances (branch & master) and create an new instance by launching the site afresh from GitPod.
@@ -47,8 +55,11 @@ During the development process I manually tested elements and components after I
 * I had a bug with form submission where Bootstrap validated the form again after 'submit' and 'reset'. As the form had been reset, this resulted in validation errors appearing on the blank form. This may have given a user the impression that their message/form had not been sent, even though an Alert was sent to the browser to confirm the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub issues thread which fixed the problem. When I added the code to my EmailJS JavaScript file it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).  
 * I had an issue on the MyModal form with here I couldn't put a placeholder in for the 'options' dropdown input (the last form field). The first option in the list, 'Choose and option', was acting as the placeholder but was also selectable, which doesn't make sense. I eventually found a solution on StackOverflow which allowed me to add a class to the first option so that it would not be selectable.
 
+#### [Back To Top ^ ](#top-of-page) ####
 
-## 2. User & Client Stories Testing ##
+<br>
+
+## 2. <a name="user-client-stories-testing">User & Client Stories Testing</a> ##
 
 #### Client Stories ####
 > - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.”
@@ -83,8 +94,9 @@ During the development process I manually tested elements and components after I
 > - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."
 > - [x] “I want to be able to edit and update my Account information."
 
+#### [Back To Top ^ ](#top-of-page) ####
 
-## 3. Code Validation ##
+## 3. <a name="code-validation">Code Validation</a> ##
 
 I ran the website through the W3C validators for HTML and CSS. I also ran my JavaScript code through the JSHint.com code validator.
 
@@ -130,13 +142,18 @@ bootstrap-form-validation.js
 
 Once I configued the validator to accept jQuery and JavaScript ES6, no Errors were listed.
 
-## 3. Manual Testing ##
+#### Python ####
+......
+
+#### [Back To Top ^ ](#top-of-page) ####
+
+## 4. <a name="manual-testing">Manual Testing</a> ##
 
 I manually tested all website elements/components under the following headings;
 
 ### Homepage ###
 
-#### Navbar ****
+#### Navbar ####
 * When I click on the party Chef Logo in the navbar it loads index.html as expected.
 * The Home link button on the navbar shows an active status (button border) as expected.
 * When I hover over the Contact button in the navabr it changes color as expected.
@@ -193,7 +210,6 @@ I manually tested all website elements/components under the following headings;
 * When I hover on the 'Lets Party' button it changes color and grows as expected.
 * When I enter details in all fields correctly and hit the 'Send Request' button on the form, the Bootstrap validation highlights the fields in green as           expected.
 * When I enter details in all fields correctly and hit the 'Send Request' button on the form, an Alert appears to notfy me my message has been sent.
-* 
 
 ### Contact Page ###
 #### Navbar ####
@@ -223,9 +239,11 @@ I manually tested all website elements/components under the following headings;
 * When I click on the Contact Us button it reloads contact.html and sends me to the top of the page as expected.
 * When I hover over the social media icons they grow as expected.
 
-## 5. Browser Testing ##
+#### [Back To Top ^ ](#top-of-page) ####
 
-I completed the above manual testing on the following browsers;
+## 5. <a name="browser-testing">Browser Testing</a> ##
+
+I completed the above manual testing on the following browsers. Please see results below.
 
 ### Chrome ###
 * All tests ran OK.
@@ -236,5 +254,6 @@ I completed the above manual testing on the following browsers;
 ### Safari ###
 * All tests ran OK. 
 
+#### [Back To Top ^ ](#top-of-page) ####
 
 
