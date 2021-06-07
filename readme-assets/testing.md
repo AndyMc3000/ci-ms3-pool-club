@@ -16,50 +16,48 @@
 
 ## 1. <a name="development-testing">Development Testing</a> ##
 
-During the development process I manually tested elements and components after I added them to the website. If I encountered an issue or bug in most cases I worked to resolve it straight away. I have listed the tests I did including those where I encountered bugs here;
+During the development process I manually tested elements, components, and functions after I added them to the website. If I encountered an issue or bug, in most cases I worked to resolve it straight away. 
+
+I have listed the tests I did including those where I encountered bugs here (mostly these are in date order, but some tests would have been done at several different times during development;
 
 #### Tests ####
 
-* Added Bootstrap Navbar to index.html and contact.html. Tested navigation links - Home, Contact, and Logo. All worked as expected. 
-* Tested Sticky Navbar functionality. I had to add a large image to the body to test this, and once done it worked as expected.
-* Added Jumbotron to index.html and contact.html. Tested button on index.html jumbotron. It worked as expected and directed me to contact.html.
-* Added photo gallery section and bootstrap modal gallery. Tested ‘Open Gallery’ button (I removed this button subsequently), and tested clicking on photo to open the modal gallery. Both opened the modal carousel gallery as expected. The carousel controls on the modal gallery also worked as expected.
-* Added Testimonial and Footer sections. Tested responsiveness of both and they reacted as expected.
-* Add Google Map using Google Maps API. Map worked as expected.
-* Added test marker to Google Map. Marker worked as expected.
-* Added second test marker to Google Map in order to test marker clustering functionality. Clustering worked as expected. I subsequently removed clustering as I decided to use custome markers with InfoWindows, and I could not find a way to cluster custom markers.
-* Added Google Maps ‘Info Window’ functionality. So if a user clicks on a marker an Info Window will pop-up to show contact details for a local Party Chef kitchen/office. This worked as expected.
-* Added custom markers to Google Maps. They worked as expected (however as mentioned above, I could not find a solution to cluster these markers).
-* Added code for Info Window so that if a second marker is clicked on, the previous Info Window will close and the new one will open. Tested this and it worked as expected.
-* Styled content appearing in InfoWindow on Google Map. Tested this and it rendered as expected.
-* Added additional locations to Google Maps. Tested each location marker as I saved the location data to maps.js.
-* Tested Email links on InfoWindows on Google Map to check if they opened my desktop email client once clicked. They all worked as expected.
-* Created a modal to contain the MyMenu 'shopping cart' system. That opened as expected.
-* Added ‘Add to cart’ button to index.html to test WebDevSimplified JavaScript shopping cart code. I then added a store.js file to contain JavaScript code from the plugin. I then added a div with an ID to call the JS code to the modal. I then tested adding an item to the MyMenu modal/cart and it worked as expected.
-* Tested increasing/decreasing quantities of items in the MyMenu, and removing items from MyMenu. Both worked as expected.
-* Added EmailJS javascript file for 'Request a quote' form code on MyMenu/Cart. Tested it and it worked as expected.
-* Added Bootstrap form validation to form on MyMenu. Tested it and it worked as expected.
-* Added content to menu items. I tested ‘Add to MyMenu’ button functionality for each item as I added items. All worked as expected.
-* Added images to Bootsrap gallery. I tested calling the gallery and the modal controls. All worked as expected.
-* Added EmailJS Contact Form send functionality. Tested it and it worked as expected.
-* Added MyMenu cart item indicator to MyMenu button in navbar. Tested it and it worked as expected. 
+* Tested deployed app. The first thing I did was to setup my development environment and deploy an app on Heroku. To do this I created a GitHub repository using the Code Institute template. I then used GitPod as my IDE for the project. I created the following files; index.html, app.py, env.py, requirements.txt and a Procfile on GitPod. I then installed Flask, PyMongo, and dnspython. I then created a new database in MongoDB Atlas, created a collection in that, and connected that database to my main application file (app.py). I then created a new app on Heroku adding my environment variables, while also setting up automatic deployment when updates were pushed to my GitHub repository. I then used Flask to create a base.html file, along with a new template/view (index.html). I also added a python function to that view to call data from my test collection on MongoDB. When I commited and pushed my changes, and refreshed my Heroku app url, the required data was listed on the page as expected. 
+* README links and images test. I also began writing up my README.md file around this time, and over time would update my README with content and files etc. I created a folder called readme-assets and added any images or files I wanted to include in my README to it. These files included a header logo, an image showing a screenshot of the site on multiple devices, and images showing the site colours, site fonts, and logo's for the technologies used. The README also contains links to a Sitemap image, and six different wireframe images. It also contains a link to this testing document. Once I added any files or links to my README I tested them to ensure that they presented or worked as expected. All worked as expected.
+* Added a Bootstrap Navigation bar to base.html, complete with Club logo linking to index.html, along with navigation links to Home (index.html), Log In (login.html), and Register (register.html). I tested all links and they worked as expected.
+* Created a footer on base.html to include a club logo linking to index.html. I tested it and it worked as expected.
+* Added Bootstrap (CSS and JavaScript), FontAwesome, and jQuery CDN links, as well as static files for my JavaScript and CSS files. I tested that the stylesheets are being target corrected by adding content etc. They worked as expected.
+* Added a carousel at the bottom of base.html for sponsor banners. Each banner links to an external website. I tested that functionality and it worked as expected.
+* Added a login.html page, and added login functionality in app.py. Once logged in a user should be taken to thier Player Homepage. I tested this and it worked as expected.
+* Added additional Nav bar links to navbar on base.html. These new links link to 'MyHome' (player-home.html), 'Log Out' (I added a logout function in app.py), and 'Admin' (admin-home.html. Using Jinja2 I restricted the visibility of these links to registered users, and/or those users who are also site Admin's. I tested this but couldn't hide the Admin link from non-Admin users. I tested the Log Out link and it functioned as expected (I was redirected to the login.html with a flash message to say I had successfully been logged out).
+* Added a carousel to the top of index.html for 'hero images' and promotional messaging. The carousel slides include a button which link to the registration page using the Jinja2 tempalting language(register.html). I tested the carousel functionality and the button links and all worked as expected.
+* Added a button to the introduction section on index.html which links a user to the registration page. I tested it and it worked as expcted.
+* Added 'Current League' and 'League Archive' buttons to the introduction section on index.html which links a user to the registration page. I tested it and it worked as expcted. 
+* Added 'Contact Us' form to index.html. Using the EmailJS email service, this form can be used to send a message to Club organisers. A user would also receive an email by way of confirmation that their message had been received by the club. I setup an EmailJS template and added the required JavaScript to my script.js file. I also added Bottstrap form validation JavaScript for all forms to script.js. Once everything was in place I tested the system and it worked as expected.
+* Created templates for 'Player Home' and 'Admin Home' and added cards for each view linked from those pages. Each card has a button which links to the relevant template view. I tested these and all worked as expected.
+* Created templates for all required pages. Added 'Back' buttons to the top and bottom of these pages. Tested all and all worked as expected.
+* 
+* 
+* Added functions for the following views;
+* * Test
+* * Test 2
+* 
 
 #### Bugs Found ####
 
-* Added Bootstrap menu accordions to index.html. Found a bug where all accordions open and close at the same time. I realised I needed to give each accordion * unique control ID’s. That fixed the bug.
-* On one occassion I had an issue with launching the project master instance on GitPod. It wasn't loading completely (see screenshot). When trying to resolve the issue I somehow ended up working on a branch of my Master. I found that the simplest course of action was to delete my GitPod instances (branch & master) and create an new instance by launching the site afresh from GitPod.
-     <img src="/assets/readme-assets/gitpod-error-instance-not-loading.png">
+* Floating Footer
+* Bootstrap validation Vs JSHint
+* Admin link visibility
+* On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).  
 
-* I tried implementing a Javascript shopping cart plugin for the MyMenu system but couldn’t get it to work. See GitHub and the following repository for that code: [Asraf-Uddin-Ahmed /jquery.mycart](https://github.com/Asraf-Uddin-Ahmed/jquery.mycart). I decided to use a simpler alternative solution instead. See the following for that code: [Introduction to JavaScript Lesson 1](https://github.com/WebDevSimplified/Introduction-to-Web-Development/tree/master/Introduction%20to%20JavaScript/Lesson%201). 
-* I had a bug with form submission. The EmailJS code was executing (sending an email) before Bootstrap validation was taking place. I got help from Tutor support to resolve this.
-* I had a bug with form submission where Bootstrap validated the form again after 'submit' and 'reset'. As the form had been reset, this resulted in validation errors appearing on the blank form. This may have given a user the impression that their message/form had not been sent, even though an Alert was sent to the browser to confirm the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub issues thread which fixed the problem. When I added the code to my EmailJS JavaScript file it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).  
-* I had an issue on the MyModal form with here I couldn't put a placeholder in for the 'options' dropdown input (the last form field). The first option in the list, 'Choose and option', was acting as the placeholder but was also selectable, which doesn't make sense. I eventually found a solution on StackOverflow which allowed me to add a class to the first option so that it would not be selectable.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
 <br>
 
 ## 2. <a name="user-client-stories-testing">User & Client Stories Testing</a> ##
+
+I tested each of the Client and User stories which were used to determine the features, functions and styling of the CPC website. See the results of these tests here; 
 
 #### Client Stories ####
 > - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.”
@@ -96,9 +94,11 @@ During the development process I manually tested elements and components after I
 
 #### [Back To Top ^ ](#top-of-page) ####
 
+<br>
+
 ## 3. <a name="code-validation">Code Validation</a> ##
 
-I ran the website through the W3C validators for HTML and CSS. I also ran my JavaScript code through the JSHint.com code validator.
+I ran the website through the W3C validators for [HTML](https://validator.w3.org/) and [CSS](https://jigsaw.w3.org/css-validator/). I also ran my JavaScript code through the [JSHint.com](https://jshint.com/) code checker, and used the PEP8 checker at [PEP8online.com](http://pep8online.com/) to check my Python code for PEP8 compliance.  
 
 #### HTML ####
 
@@ -146,6 +146,8 @@ Once I configued the validator to accept jQuery and JavaScript ES6, no Errors we
 ......
 
 #### [Back To Top ^ ](#top-of-page) ####
+
+<br>
 
 ## 4. <a name="manual-testing">Manual Testing</a> ##
 
@@ -240,6 +242,8 @@ I manually tested all website elements/components under the following headings;
 * When I hover over the social media icons they grow as expected.
 
 #### [Back To Top ^ ](#top-of-page) ####
+
+<br>
 
 ## 5. <a name="browser-testing">Browser Testing</a> ##
 
