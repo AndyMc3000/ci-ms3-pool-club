@@ -23,14 +23,14 @@ The below shows the key:value pairs associated with the MongoDB Collections used
             user
             {
                 _id: ObjectId
-                firstname: String
-                lastname: String
+                first_name: String
+                last_name: String
                 nickname: String
                 email: String
                 telephone: Integer
                 password: String
                 admin: Boolean
-                rank: Integer
+                points: Integer
                 matches_played: Integer
                 matches_won: Integer
                 matches_lost: Integer
@@ -47,11 +47,11 @@ The below shows the key:value pairs associated with the MongoDB Collections used
             {
                 _id: ObjectId
                 referee: ObjectId(user_id)
-                createdby: ObjectId(user_id)
-                playerone: Object(user_id)
-                playeronewon: Integer
-                playertwo: Object(user_id)
-                playertwowon: Integer
+                created_by: ObjectId(user_id)
+                player_one: Object(user_id)
+                player_one_won: Integer
+                player_two: Object(user_id)
+                player_two_won: Integer
                 league: Object(league_id)
                 date: Date
             }
