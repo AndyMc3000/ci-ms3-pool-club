@@ -26,11 +26,11 @@ class="fa fa-fw fa-user"
     # put the new user into 'session' cookie
         session["user"] = request.form.get("email")
         flash("Registration Successful!")
-        return redirect(url_for("playerhome", firstname=session["user"]))
+        return redirect(url_for("player_home", firstname=session["user"]))
 
 
 @app.route("/add-match")
-def addmatch():
+def add_match():
     referee = mongo.db.user.find().sort("surname", 1)
     return render_template("add-match.html", referee=referee)
 

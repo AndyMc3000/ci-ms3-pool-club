@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('playerhome', firstname=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('player_home', firstname=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
                 <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
                     <div class="login-card-img-holder p-5 pb-3">
@@ -16,7 +16,7 @@
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div">
-                                    <form action="{{ url_for('addmatch') }}" class="form w-75 needs-validation" method="POST" novalidate>
+                                    <form action="{{ url_for('add_match') }}" class="form w-75 needs-validation" method="POST" novalidate>
                                         <div class="form-group">
                                             <div class="input-group mb-4">
                                                 <span class="input-group-text" id="date"><i class="far fa-calendar-alt"></i></span>
@@ -67,7 +67,7 @@
                                                 <select id="player_one" name="player_one" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Choose Player 1</option>
                                                 {% for playerone in playerone %}
-                                                    <option value="{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}">{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}</option>
+                                                    <option value="{{ playerone._id }}">{{ playerone.firstname }} '{{ playerone.nickname }}' {{ playerone.surname }}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="player_one"></label>
@@ -100,7 +100,7 @@
                                                 <select id="player_two" name="player_two" class="validate form-control form-select" required>
                                                     <option value="" disabled selected>Choose Player 2</option>
                                                 {% for playertwo in playertwo %}
-                                                    <option value="{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}">{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}</option>
+                                                    <option value="{{ playertwo._id }}">{{ playertwo.firstname }} '{{ playertwo.nickname }}' {{ playertwo.surname }}</option>
                                                 {% endfor %}
                                                 </select>
                                                 <label for="playertwo"></label>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('playerhome', firstname=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('player_home', firstname=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
             </div>
         </div>

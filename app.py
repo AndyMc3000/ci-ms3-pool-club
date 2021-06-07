@@ -86,7 +86,7 @@ def register():
         # Put the new user into 'session' cookie
         session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
-        return redirect(url_for("playerhome", firstname=session["user"]))
+        return redirect(url_for("player_home", firstname=session["user"]))
 
     return render_template("register.html")
 
@@ -106,7 +106,7 @@ def login():
                     session["user"] = request.form.get("email")
                     flash("Welcome, {}".format(request.form.get("email")))
                     return redirect(url_for(
-                        "playerhome", firstname=session["user"]))
+                        "player_home", firstname=session["user"]))
         
             else:
                 # invalid password match
@@ -120,7 +120,6 @@ def login():
 
     return render_template("login.html")
 
-
 # logout page view
 @app.route("/logout")
 def logout():
@@ -131,23 +130,37 @@ def logout():
 
 
 # player home page
-@app.route("/player-home/<firstname>", methods=["GET", "POST"])
-def playerhome(firstname):
-    user_email = is_logged_in()
-    if user_email:
-        # Fetch the session user's first name from MongoDB
-        user = mongo.db.user.find_one({"email": user_email})
-        return render_template("player-home.html", user=user)
-    return redirect(url_for("login"))
+@app.route("/player-home", methods=["GET", "POST"])
+def player_home():
+    # Fetch the session user's first name from MongoDB
+    user = mongo.db.user.find_one({"email": session["user"]})
+    print(user)
+    return render_template("player-home.html", user=user)
+
+
+def post_save_match(match: dict, is_player_1: bool):
+    player = "player_one" if is_player_1 else "player_two"
+    # Updating for player
+    if is_player_1:
+        games_won = int(request.form.get("player_one_games_won"))
+        games_lost = int(request.form.get("player_two_games_won"))
+    else:
+        games_won = int(request.form.get("player_two_games_won"))
+        games_lost = int(request.form.get("player_one_games_won"))
+    update_data = {}
+    update_data["$inc"] = {"matches_won" if games_won == 3 else "matches_lost": 1,
+                           "points": games_won + 1}
+    # update_data["$set"] = {"matches_won": 1} # If you want to set data instead of update
+    mongo.db.user.update_one({"_id": ObjectId(match[player])}, update_data)
 
 
 # add match view
 @app.route("/add-match", methods=["GET", "POST"])
-def addmatch():
+def add_match():
     if request.method == "POST":
         match = {
-            "player_one": request.form.get("player_one"),
-            "player_two": request.form.get("player_two"),
+            "player_one": request.form.get("player_one"), # this represents the ObjectId
+            "player_two": request.form.get("player_two"), # this represents the ObjectId
             "player_one_games_won": request.form.get("player_one_games_won"),
             "player_two_games_won": request.form.get("player_two_games_won"),
             "date": request.form.get("date"),
@@ -156,8 +169,11 @@ def addmatch():
             "createdby": session["user"]
         }
         mongo.db.matches.insert_one(match)
+        # Post save logic
+        post_save_match(match, is_player_1=True)
+        post_save_match(match, is_player_1=False)
         flash("Match Successfully Added")
-        return redirect(url_for("playerhome", firstname=session["user"]))
+        return redirect(url_for("player_home", firstname=session["user"]))
 
     return render_template("add-match.html",
                 referee=mongo.db.user.find().sort("surname", 1),
@@ -209,7 +225,7 @@ def editaccount():
         # }
         # mongo.db.matches.update({"_id": ObjectId(player)}, update_player)
         # flash("Account Successfully Updated")
-        # return redirect(url_for("playerhome", firstname=session["user"]))
+        # return redirect(url_for("player_home", firstname=session["user"]))
     
     # player_info = mongo.db.tasks.find_one({"_id": ObjectId(player)})
     return render_template("player-edit-account.html", user=player)
@@ -223,7 +239,7 @@ def adminhome():
         # player = mongo.db.user.find_one({"email": user_email})
         # if player.admin:
     return render_template("admin-home.html")
-    # return redirect(url_for("playerhome"))
+    # return redirect(url_for("player_home"))
 
 
 # add new league (admin view)
@@ -324,6 +340,7 @@ def not_found_exception_handler(e):
     """
     Catch 404 not found
     """
+    print(e)
     return render_template("error-404.html")
 
 
@@ -332,6 +349,7 @@ def generic_exception_handler(e):
     """
     Catch ANY other exception
     """
+    print(e)
     return render_template("error-exception.html")
 
 

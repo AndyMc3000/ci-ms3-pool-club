@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@300&family=Orbitron:wght@400;600&display=swap');
 
 /* -- Google Fonts -- */
-/* -- body h1, h2, h3, h4, h5, h6 {
-    font-family: 'Audiowide', sans-serif;
-} -- */
 
 body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
     font-family: 'Comfortaa', sans-serif;
@@ -13,12 +10,14 @@ body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
     font-family: 'Comfortaa', sans-serif;
 }
 
+/* -- END of Google Fonts -- */
+
+/* -- Global Styles -- */
+
 .container-fluid {
     margin: 0px;
     padding: 0px;
 }
-
-/* -- END of Google Fonts -- */
 
 body {
     background-color: #30363c;
@@ -26,14 +25,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.hero-div {
-    background-color: #212529;
-}
-
-.hero-div img {
-    border-radius: 15%;
 }
 
 .card {
@@ -51,7 +42,19 @@ body {
 
 .card {
         background-color: #212529;
-    }
+}
+
+/* -- END of Global Styles -- */
+
+/* -- Introduction section on index.html -- */
+
+.hero-div {
+    background-color: #212529;
+}
+
+.hero-div img {
+    border-radius: 15%;
+}
 
 .card-img-top {
     width: 100%;
@@ -140,7 +143,7 @@ footer {
 
 /* -- Media Queries: -- */
 
-/* -- Media Query 1.  -- */
+/* -- Media Query 1. For devices with a screen below 1000px wide  -- */
 
 @media screen and (max-width: 1000px) {
     #homeCarousel .carousel-item {
