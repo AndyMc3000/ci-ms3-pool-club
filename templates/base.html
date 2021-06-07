@@ -91,29 +91,32 @@
         {% endblock %}
     </main>
         <!-- Bootstrap Carousel for sponsor banners and messaging -->
-    <div class="container-fluid">
-        <div class="row justify-content-center mb-3">
-            <div class="col-12 mt-5 text-center" >
-                <h2>Visit our Sponsors</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div id="sponsorCarousel" class="carousel sponsor-banner-carousel slide text-center p-2 pb-4" data-bs-ride="carousel">
-                    <div class="carousel-inner justify-content-center m-auto">
-                        <div class="carousel-item text-center active" data-bs-interval="3000">
-                            <a href="https://www.delta.com/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-delta-banner-900x100.png') }}" class="d-block w-100" alt="Delta Airlines banner"></a> 
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <a href="https://www.audible.co.uk/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-audible-banner-900x100px.png') }}" class="d-block w-100" alt="Audible banner"></a> 
-                        </div>
-                        <div class="carousel-item" data-bs-interval="3000">
-                            <a href="https://www.lenovo.com/ie/en/windows10/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-windows10-banner-900x100px.png') }}" class="d-block w-100" alt="Windows 10 banner"></a> 
+    <section>
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-3">
+                <div class="col-12 mt-5 text-center" >
+                    <h2>Visit our Sponsors</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div id="sponsorCarousel" class="carousel sponsor-banner-carousel slide text-center p-2 pb-4" data-bs-ride="carousel">
+                        <div class="carousel-inner justify-content-center m-auto">
+                            <div class="carousel-item text-center active" data-bs-interval="3000">
+                                <a href="https://www.delta.com/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-delta-banner-900x100.png') }}" class="d-block w-100" alt="Delta Airlines banner"></a> 
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <a href="https://www.audible.co.uk/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-audible-banner-900x100px.png') }}" class="d-block w-100" alt="Audible banner"></a> 
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <a href="https://www.lenovo.com/ie/en/windows10/" target=”_blank”><img src="{{ url_for('static', filename='images/banners/cpc-windows10-banner-900x100px.png') }}" class="d-block w-100" alt="Windows 10 banner"></a> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- END of Bootstrap Carousel for sponsor banners and messaging -->
+    <!-- Footer -->
     <footer class="bg-dark text-center text-lg-start">
         <div class="text-center py-3">
             <a class="navbar-logo px-2" href="{{ url_for('user') }}"> <img src="{{ url_for('static', filename='images/navbar-logo/cpc-navbar-logo-new.png') }}" alt="CPC Logo"> </a>
@@ -122,6 +125,7 @@
             <i class="far fa-copyright"></i> 2021
         </div>
     </footer>
+    <!-- END of Footer -->
     
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

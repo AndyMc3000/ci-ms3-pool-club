@@ -188,17 +188,19 @@ def player_contact():
 
 
 # view player league statistics
-@app.route("/player-active-results")
+@app.route("/player-current-stats")
 def player_stats():
+    league = mongo.db.league.find()
     player = mongo.db.user.find_one(
         {"email": session["user"]})
-    return render_template("player-current-stats.html", player=player)
+    return render_template("player-current-stats.html", player=player, league=league)
 
 
 # view player match list
 @app.route("/player-match-list")
 def player_match_list():
-    return render_template("player-match-list.html")
+    user = mongo.db.user.find()
+    return render_template("player-match-list.html", user=user)
 
 
 # view player league statistics for past leagues
