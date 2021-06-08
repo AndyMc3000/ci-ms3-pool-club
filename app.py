@@ -152,7 +152,6 @@ def post_save_match(match: dict, is_player_1: bool):
     # update_data["$set"] = {"matches_won": 1} # If you want to set data instead of update
     mongo.db.user.update_one({"_id": ObjectId(match[player])}, update_data)
 
-
 # add match view
 @app.route("/add-match", methods=["GET", "POST"])
 def add_match():

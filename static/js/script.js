@@ -4,7 +4,23 @@ BDataTables.net Table sorting function
 
 $(document).ready(function() {
     $('#myTable').DataTable();
+    $('#league').DataTable( {
+        "order": [[ 0, "desc" ]]
+    } );
 } );
+
+/* 
+Bootstrap table sort
+*/
+<script>
+  $(function() {
+    $('#sortable').change(function () {
+      $('#table').bootstrapTable('refreshOptions', {
+        sortable: $('#sortable').prop('checked')
+      })
+    })
+  })
+</script>
 
 /* 
 Bootstrap form validation

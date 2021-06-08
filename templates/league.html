@@ -28,7 +28,7 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div mb-5 mx-2">
-                                    <table class="table table-font table-dark table-striped table-bordered" data-toggle="table">
+                                    <table id="league" class="table table-font table-dark table-striped table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">POINTS</th>
@@ -44,7 +44,7 @@
                                             {% for user in user %}
                                                 <tr>
                                                     <th scope="row">{{ user.points }}</th>
-                                                    <td>{{ user.name }} {{ user.nickname }} {{ user.surname }}</td>
+                                                    <td>{{ user.first_name }} "{{ user.nickname }}" {{ user.surname }}</td>
                                                     <td>{{ user.matches_won }}</td>
                                                     <td>{{ user.matches_lost }}</td>
                                                     <td>{{ user.matches_remaining }}</td>                                                      
