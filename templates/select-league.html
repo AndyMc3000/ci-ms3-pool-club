@@ -10,7 +10,7 @@
                     </div>
                     <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
                         <div class="login-card-img-holder p-5 pb-3">
-                        <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
                         </div>
                         <div class="card-body top-50 start-50">
                             <h3 class="card-title pb-4">Select League To Edit</h3>
@@ -23,16 +23,16 @@
                                                     <span class="input-group-text" id="matches"><i class="fas fa-user-shield"></i></span>
                                                     <select id="matches" name="matches" class="validate form-control form-select" required>
                                                         <option value="" disabled selected>Select Match</option>
-                                                    {% for league in league %}
-                                                        <option value="{{ league.end_date }}{{ league.name }}">End Date:{{ league.end_date }} Name:{{ league.name }}</option>
-                                                    {% endfor %}
+                                                {% for league in league %}
+                                                        <option value="{{ league.end_date }}{{ league.name }}">League Name: {{ league.name }}</option>
+                                                {% endfor %}
                                                     </select>
                                                     <label for="matches"></label>
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
                                                     <div class="invalid-feedback">
-                                                        Please choose Player 1
+                                                        Please choose a League
                                                     </div>
                                                 </div>
                                                 <div class="input-group m-auto text-center">
@@ -53,4 +53,5 @@
         </div>
     </section>
    
+    
 {% endblock %}

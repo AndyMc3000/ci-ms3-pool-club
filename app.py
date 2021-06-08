@@ -297,7 +297,14 @@ def admin_register_user():
 @app.route("/add-admin", methods=["GET"])
 def add_admin():
     return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
-        
+    
+
+# select a league from a dropdown box 
+@app.route("/select-league")
+def select_league():
+    league = mongo.db.league.find().sort("date", 1)
+    return render_template("select-league.html", league=league)
+
 
 # edit/delete active league details (admin view)
 @app.route("/edit-league", methods=["GET", "POST"])
@@ -305,8 +312,6 @@ def edit_league():
     league = mongo.db.league.find()
         # if request.method == "GET":
             # selected_league = 
-    return render_template("edit-league.html", league=league)
-    # league = mongo.db.league.find().sort("name", 1))
         # if request.method == "POST":
             # update_league = {
                 # "name": request.form.get("name"),
@@ -315,12 +320,12 @@ def edit_league():
                 # "end_date": request.form.get("enddate"),
                 # "participating_players": request.form.get("participants"),
             # }
-            # mongo.db.league.update_one(update_league)
+            # mongo.db.league.update_one({"_id": ObjectId(league)}, update_league)
             # flash("League Successfully Updated")
             # return redirect(url_for("admin_home")
+    return render_template("edit-league.html", league=league)
 
-
-# edit/delete player details (admin view)
+# REMOVE ? edit/delete player details (admin view)
 @app.route("/edit-player", methods=["GET", "POST"])
 def admin_edit_user():
     player = mongo.db.user.find().sort("surname", 1)
@@ -333,14 +338,14 @@ def admin_edit_user():
     return render_template("edit-player.html", user=selection, player=player)
 
 
-# slect a match for editing (admin view)
+# REMOVE ? select a match for editing (admin view)
 @app.route("/select-match")
 def select_match():
     matches = mongo.db.matches.find().sort("date", 1)
     return render_template("select-match.html", matches=matches)
 
 
-# edit/delete match details (admin view)
+# REMOVE ? edit/delete match details (admin view)
 @app.route("/edit-match")
 def edit_match():
     return render_template("edit-match.html",)
