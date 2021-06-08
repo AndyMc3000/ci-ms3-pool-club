@@ -299,14 +299,14 @@ def add_admin():
     return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
     
 
-# select a league from a dropdown box 
+# select a league from a dropdown box
 @app.route("/select-league")
 def select_league():
     league = mongo.db.league.find().sort("date", 1)
     return render_template("select-league.html", league=league)
 
 
-# edit/delete active league details (admin view)
+# edit active league details (admin view)
 @app.route("/edit-league", methods=["GET", "POST"])
 def edit_league():
     league = mongo.db.league.find()
@@ -324,6 +324,15 @@ def edit_league():
             # flash("League Successfully Updated")
             # return redirect(url_for("admin_home")
     return render_template("edit-league.html", league=league)
+
+
+# edit/delete active league details (admin view)
+@app.route("/delete_league/<league_id>")
+def delete_league(league_id):
+    mongo.db.league.remove({"_id": ObjectId(league_id)})
+    flash("League Successfully Deleted")
+    return redirect(url_for("admin_home"))
+
 
 # REMOVE ? edit/delete player details (admin view)
 @app.route("/edit-player", methods=["GET", "POST"])
