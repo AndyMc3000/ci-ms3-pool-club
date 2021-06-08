@@ -333,11 +333,17 @@ def admin_edit_user():
     return render_template("edit-player.html", user=selection, player=player)
 
 
+# slect a match for editing (admin view)
+@app.route("/select-match")
+def select_match():
+    matches = mongo.db.matches.find().sort("date", 1)
+    return render_template("select-match.html", matches=matches)
+
+
 # edit/delete match details (admin view)
 @app.route("/edit-match")
 def edit_match():
-    matches = mongo.db.matches.find().sort("date", 1)
-    return render_template("edit-match.html", matches=matches)
+    return render_template("edit-match.html",)
 
 
 # -------------- EXCEPTION HANDLING --------------
