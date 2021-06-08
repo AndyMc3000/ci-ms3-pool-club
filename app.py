@@ -181,7 +181,7 @@ def add_match():
                 league=mongo.db.league.find().sort("name", 1), )
 
 
-# find contact details and league stats for another player
+# REMOVE ? find contact details and league stats for another player
 @app.route("/player-contact-info")
 def player_contact():
     return render_template("player-contact-info.html", playername=mongo.db.user.find().sort("surname", 1) )
@@ -203,7 +203,7 @@ def player_match_list():
     return render_template("player-match-list.html", user=user)
 
 
-# view player league statistics for past leagues
+# REMOVE ? view player league statistics for past leagues
 @app.route("/player-archive-results")
 def player_archive_stats():
     return render_template("player-archive-results.html")
@@ -213,21 +213,20 @@ def player_archive_stats():
 @app.route("/player-edit-account", methods=["GET", "POST"])
 def player_edit_account():
     player = mongo.db.user.find_one({"email": session["user"]})
-    # if request.method == "POST":
-        # update_player = {
-            # "first_name": request.form.get("first_name"),
-            # "surname": request.form.get("surname"),
-            # "nickname": request.form.get("nickname"),
-            # "email": request.form.get("email"),
-            # "telephone": request.form.get("telephone"),
-            # "password": request.form.get("password"),
-            # "password2": request.form.get("password2")
-        # }
-        # mongo.db.matches.update({"_id": ObjectId(player)}, update_player)
-        # flash("Account Successfully Updated")
-        # return redirect(url_for("player_home", first_name=session["user"]))
+    if request.method == "POST":
+        update_player = {
+            "first_name": request.form.get("first_name"),
+            "surname": request.form.get("surname"),
+            "nickname": request.form.get("nickname"),
+            "email": request.form.get("email"),
+            "telephone": request.form.get("telephone"),
+            "password": request.form.get("password"),
+            "password2": request.form.get("password2")
+        }
+        mongo.db.user.update({"_id": ObjectId(player)}, update_player)
+        flash("Account Successfully Updated")
+        return redirect(url_for("player_home", first_name=session["user"]))
     
-    # player_info = mongo.db.tasks.find_one({"_id": ObjectId(player)})
     return render_template("player-edit-account.html", user=player)
 
 
@@ -293,10 +292,26 @@ def admin_register_user():
     return render_template("add-player.html")
 
 
+
+# select a player to make an admin
+@app.route("/select-admin")
+def select_admin():
+    user = mongo.db.user.find().sort("first_name", 1)
+    return render_template("select-admin.html", user=user)
+
+
 # make a player an admin
-@app.route("/add-admin", methods=["GET"])
+@app.route("/add-admin", methods=["POST"])
 def add_admin():
-    return render_template("add-admin.html", playername=mongo.db.user.find().sort("surname", 1))
+    #user = mongo.db.user.find()
+    #if request.method == "POST":
+        #make_admin = {
+            #"admin": request.form.get("admin"),
+        #}
+        #mongo.db.user.update({"_id": ObjectId(user)}, make_admin)
+        #flash("Site Admin Added Sucessfully")
+        #return redirect(url_for("admin_home")
+    return render_template("add-admin.html")
     
 
 # select a league from a dropdown box
@@ -326,12 +341,12 @@ def edit_league():
     return render_template("edit-league.html", league=league)
 
 
-# edit/delete active league details (admin view)
+# delete a selected league
 @app.route("/delete_league/<league_id>")
 def delete_league(league_id):
-    mongo.db.league.remove({"_id": ObjectId(league_id)})
-    flash("League Successfully Deleted")
-    return redirect(url_for("admin_home"))
+    mongo.db.league.remove({"_id": ObjectId(league_id)}) # remove league based on its _id
+    flash("League Successfully Deleted") # flash message when league is deleted
+    return redirect(url_for("admin_home")) # redirects user to Admin Homepage
 
 
 # REMOVE ? edit/delete player details (admin view)
