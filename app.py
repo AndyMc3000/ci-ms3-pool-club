@@ -103,8 +103,8 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """
-    Function allows a registered to user to login, while checking 
-    that its email address and password match user values in MongoDB 
+    Function allows a registered to user to login, while checking
+    that its email address and password match user values in MongoDB
     """
     if request.method == "POST":
         # Check to see if the user email exists in MongoDB
@@ -172,14 +172,19 @@ def post_save_match(match: dict, is_player_1: bool):
         # games_lost user values in MongoDB;
         # games_lost = int(request.form.get("player_two_games_won"))
     update_data = {}
-    update_data["$inc"] = {"matches_won" if games_won == 3
-            else "matches_lost": 1, "points": games_won + 1}
+    update_data["$inc"] = {
+        "matches_won" if games_won == 3 else
+        "matches_lost": 1, "points": games_won + 1}
     # Update the player statistics in MongoDB user document
     mongo.db.user.update_one({"_id": ObjectId(match[player])}, update_data)
 
 
 @app.route("/add-match", methods=["GET", "POST"])
 def add_match():
+    """
+    Function allows a registered user to CREATE a new match
+    result
+    """
     if request.method == "POST":
         match = {
             # player_one and player_two represent the user ObjectId's
@@ -199,27 +204,24 @@ def add_match():
         flash("Match Successfully Added")
         return redirect(url_for("player_home", first_name=session["user"]))
 
-    return render_template("add-match.html", user=user,
+    return render_template(
+            "add-match.html", user=user,
             referee=mongo.db.user.find().sort("surname", 1),
             player_one=mongo.db.user.find().sort("surname", 1),
             player_two=mongo.db.user.find().sort("surname", 1),
             league=mongo.db.league.find().sort("name", 1), )
 
 
-# view player league statistics
 @app.route("/player-current-stats")
 def player_stats():
+    """
+    Function allows a registered user to READ their
+    personal league statistics
+    """
     league = mongo.db.league.find()
     player = mongo.db.user.find_one(
         {"email": session["user"]})
     return render_template("player-current-stats.html", player=player, league=league, user=user)
-
-
-# view player match list
-@app.route("/player-match-list")
-def player_match_list():
-    user = mongo.db.user.find()
-    return render_template("player-match-list.html", user=user)
 
 
 # REMOVE ? view player league statistics for past leagues
@@ -311,31 +313,13 @@ def admin_register_user():
     return render_template("add-player.html", user=user)
 
 
-
-# select a player to make an admin
-@app.route("/select-admin")
-def select_admin():
-    user = mongo.db.user.find().sort("first_name", 1)
-    return render_template("select-admin.html", user=user)
-
-
-# make a player an admin
-@app.route("/add-admin", methods=["POST"])
-def add_admin():
-    #user = mongo.db.user.find()
-    #if request.method == "POST":
-        #make_admin = {
-            #"admin": request.form.get("admin"),
-        #}
-        #mongo.db.user.update({"_id": ObjectId(user)}, make_admin)
-        #flash("Site Admin Added Sucessfully")
-        #return redirect(url_for("admin_home")
-    return render_template("add-admin.html", user=user)
-    
-
-# select a league from a dropdown box
 @app.route("/select-league")
 def select_league():
+    """
+    Function allows a user to select a league from a
+    dropdown list so that the league can be edited
+    using the edit_league function (see below)
+    """
     league = mongo.db.league.find().sort("date", 1)
     return render_template("select-league.html", league=league, user=user)
 
@@ -343,7 +327,7 @@ def select_league():
 @app.route("/edit_league/<league_id>", methods=["GET", "POST"])
 def edit_league(league_id):
     """
-    Edit active league details (admin view)
+    Function will UPDATE active league details (feature in admin view)
     """
     if request.method == "POST":
         league_update_data = {
@@ -353,19 +337,46 @@ def edit_league(league_id):
             "end_date": request.form.get("end_date"),
             "participating_players": request.form.get("participants"),
         }
-        mongo.db.league.update_one({"_id": ObjectId(league_id)}, {"$set": league_update_data})
+        mongo.db.league.update_one(
+            {"_id": ObjectId(league_id)},
+            {"$set": league_update_data})
         flash("League Successfully Updated")
         return redirect(url_for("admin_home"))
     league = mongo.db.league.find_one({"_id": ObjectId(league_id)})
     return render_template("edit-league.html", league=league, user=user)
 
-# delete a selected league
+
 @app.route("/delete_league/<league_id>")
 def delete_league(league_id):
-    # TODO: Reset user stats when the league is deleted (comment left here intentionally)
-    mongo.db.league.remove({"_id": ObjectId(league_id)}) # remove league based on its _id
-    flash("League Successfully Deleted") # flash message when league is deleted
-    return redirect(url_for("admin_home")) # redirects user to Admin Homepage
+    """
+    Function DELETE's a selected league from the league MongoDB collection
+    """
+    # TODO: Reset user stats when the league is deleted
+    # (comment left here intentionally)
+    mongo.db.league.remove({"_id": ObjectId(league_id)})
+    # flash message when league is deleted
+    flash("League Successfully Deleted")
+    # redirects user to Admin Homepage
+    return redirect(url_for("admin_home"))
+
+
+# -------------- EXCEPTION HANDLING --------------
+@app.errorhandler(404)
+def not_found_exception_handler(e):
+    """
+    Catches 404 page not found errors
+    """
+    print(e)
+    return render_template("error-404.html")
+
+
+@app.errorhandler(Exception)
+def generic_exception_handler(e):
+    """
+    Catchs ANY other exception
+    """
+    print(e)
+    return render_template("error-exception.html")
 
 
 # FUTURE RELEASE ONLY - Edit Player (Admin view);
@@ -427,7 +438,8 @@ def archive():
     archive = mongo.db.archive.find()
     # Retrieve selected archived league
     if request.method == 'GET':
-        return render_template("archive.html", league=league, 
+        return render_template(
+            "archive.html", league=league,
             archive=archive, user=user)
 
 
@@ -439,29 +451,63 @@ def player_contact():
     and current league stats
     """
     # TODO: READ contact details and league stats for a player
-    # from MongoDB and display in table on page 
+    # from MongoDB and display in table on page
     # (comment left intentionally)
-    return render_template("player-contact-info.html",
-        playername=mongo.db.user.find().sort("surname", 1) )
+    return render_template(
+        "player-contact-info.html",
+        playername=mongo.db.user.find().sort("surname", 1))
 
 
-# -------------- EXCEPTION HANDLING --------------
-@app.errorhandler(404)
-def not_found_exception_handler(e):
+# FUTURE RELEASE ONLY - Player Match List;
+@app.route("/player-match-list")
+def player_match_list():
     """
-    Catchs 404 page not found
+    Function allows a registered user to READ their
+    personal match list, and view how many matches they have
+    played against other players
     """
-    print(e)
-    return render_template("error-404.html")
+    # TODO: Add function to calculate how many matches a
+    # player has played against all other players, and
+    # show that number (0 matches, 1 match, or 2 matches)
+    # in table on page
+    user = mongo.db.user.find()
+    return render_template("player-match-list.html", user=user)
 
 
-@app.errorhandler(Exception)
-def generic_exception_handler(e):
+# FUTURE RELEASE ONLY - Select an Admin;
+@app.route("/select-admin")
+def select_admin():
     """
-    Catchs ANY other exception
+    Function will allow an Admin to select
+    a user and open the add_admin view
     """
-    print(e)
-    return render_template("error-exception.html")
+    # TODO: On button select add_admin page will
+    # open add-admin.html and pass the
+    # selected user _id
+    user = mongo.db.user.find().sort("first_name", 1)
+    return render_template("select-admin.html", user=user)
+
+
+# FUTURE RELEASE ONLY - Add an Admin;
+@app.route("/add-admin", methods=["POST"])
+def add_admin():
+    """
+    Function will allow an Admin to UPDATE
+    the the Admin value for the selected users
+    MongoDB document, giving them access to Admin
+    Home
+    """
+    # TODO: Create function to allow an Admin to set the
+    # selected users admn vaue to be 'true';
+    # user = mongo.db.user.find()
+    # if request.method == "POST":
+    # make_admin = {
+    # "admin": request.form.get("admin"),
+    # }
+    # mongo.db.user.update({"_id": ObjectId(user)}, make_admin)
+    # flash("Site Admin Added Sucessfully")
+    # return redirect(url_for("admin_home")
+    return render_template("add-admin.html", user=user)
 
 
 if __name__ == "__main__":
