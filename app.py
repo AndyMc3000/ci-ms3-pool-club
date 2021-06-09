@@ -19,36 +19,45 @@ mongo = PyMongo(app)
 
 
 # -------------- HELPER FUNCTIONS --------------
-def is_logged_in():
-    """
-    This returns the user stored in the session or None
-    """
-    return session.get("user")
+#def is_logged_in():
+    #"""
+    #This returns the user stored in the session or None
+    #"""
+    #return session.get("user")
 
 
-# homepage view
 @app.route("/")
 @app.route("/index")
 def user():
-    user = mongo.db.user.find()
-    return render_template("index.html", user=user)
+    """
+    Function returns the Homepage view
+    """
+    user = mongo.db.user.find() # finds all users in the user collection 
+    return render_template("index.html", user=user)  # homepage view
 
 
-# current/active League table view
 @app.route("/league")
 def league():
-    league = mongo.db.league.find()
-    user = mongo.db.user.find()
-    return render_template("league.html", league=league, user=user)
+    """
+    Function returns the current League Table view and League Table statistics for all users
+    """
+    league = mongo.db.league.find()  # finds all Leagues in the league collection
+    user = mongo.db.user.find()  # finds all users in the user collection
+    return render_template("league.html", league=league, user=user)  # current League table view
 
 
-# historical/archive League tables view
+# FUTURE RELEASE
 @app.route("/archive")
 def archive():
-    league = mongo.db.league.find()
-    archive = mongo.db.archive.find()
-    if request.method == 'GET':
-        return render_template("archive.html", league=league, archive=archive)
+    """
+    Function returns the Archived League view
+    """
+    # TODO: Select archived league from dropdown list and present league stats in table (comment left here intentionally)
+    league = mongo.db.league.find()  # finds all leagues in the league collection
+    archive = mongo.db.archive.find()  # finds all Leagues in the league collection
+    if request.method == 'GET':  # retrieve selected archived league
+        return render_template("archive.html", league=league, 
+        archive=archive, user=user) # historical/archive League tables view
 
 
 # club sign up page
@@ -87,7 +96,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("player_home", first_name=session["user"]))
 
-    return render_template("register.html")
+    return render_template("register.html", user=user)
 
 
 # login page view
@@ -117,7 +126,7 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("login.html", user=user)
 
 # logout page view
 @app.route("/logout")
@@ -173,7 +182,7 @@ def add_match():
         flash("Match Successfully Added")
         return redirect(url_for("player_home", first_name=session["user"]))
 
-    return render_template("add-match.html",
+    return render_template("add-match.html", user=user,
                 referee=mongo.db.user.find().sort("surname", 1),
                 player_one=mongo.db.user.find().sort("surname", 1),
                 player_two=mongo.db.user.find().sort("surname", 1),
@@ -192,7 +201,7 @@ def player_stats():
     league = mongo.db.league.find()
     player = mongo.db.user.find_one(
         {"email": session["user"]})
-    return render_template("player-current-stats.html", player=player, league=league)
+    return render_template("player-current-stats.html", player=player, league=league, user=user)
 
 
 # view player match list
@@ -226,7 +235,7 @@ def player_edit_account():
         flash("Account Successfully Updated")
         return redirect(url_for("player_home", first_name=session["user"]))
     
-    return render_template("player-edit-account.html", user=player)
+    return render_template("player-edit-account.html", player=user)
 
 
 # admin home page
@@ -252,7 +261,7 @@ def add_league():
         flash("League Added Successfully")
         return redirect(url_for("admin_home"))
   
-    return render_template("add-league.html")
+    return render_template("add-league.html", user=user)
 
 
 # add new player (admin view)
@@ -288,7 +297,7 @@ def admin_register_user():
         flash("Player Added Successfully")
         return redirect(url_for("admin_home"))
 
-    return render_template("add-player.html")
+    return render_template("add-player.html", user=user)
 
 
 
@@ -310,7 +319,7 @@ def add_admin():
         #mongo.db.user.update({"_id": ObjectId(user)}, make_admin)
         #flash("Site Admin Added Sucessfully")
         #return redirect(url_for("admin_home")
-    return render_template("add-admin.html")
+    return render_template("add-admin.html", user=user)
     
 
 # select a league from a dropdown box
@@ -378,7 +387,7 @@ def edit_match():
 @app.errorhandler(404)
 def not_found_exception_handler(e):
     """
-    Catch 404 not found
+    Catchs 404 page not found
     """
     print(e)
     return render_template("error-404.html")
@@ -387,7 +396,7 @@ def not_found_exception_handler(e):
 @app.errorhandler(Exception)
 def generic_exception_handler(e):
     """
-    Catch ANY other exception
+    Catchs ANY other exception
     """
     print(e)
     return render_template("error-exception.html")
