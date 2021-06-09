@@ -18,14 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# -------------- HELPER FUNCTIONS --------------
-# def is_logged_in():
-# """
-# This returns the user stored in the session or None
-# """
-# return session.get("user")
-
-
 @app.route("/")
 @app.route("/index")
 def user():
@@ -41,7 +33,7 @@ def user():
 @app.route("/league")
 def league():
     """
-    Function returns the current League Table view and League Table 
+    Function returns the current League Table view and League Table
     statistics for all users
     """
     # Finds all Leagues in the league collection
@@ -55,7 +47,7 @@ def league():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
-    Function allows a site user to register to become a club 
+    Function allows a site user to register to become a club
     member/registered user
     """
     if request.method == "POST":
@@ -77,14 +69,14 @@ def register():
             "first_name": request.form.get("first_name"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
-            "telephone": request.form.get("telephone"), 
+            "telephone": request.form.get("telephone"),
             # list of default user values for league statistics
             "admin": False,
-            "points": 0,   
+            "points": 0,
             "matches_played": 0,
-            "matches_won": 0, 
+            "matches_won": 0,
             "matches_lost": 0,
-            "games_won": 0, 
+            "games_won": 0,
             "games_lost": 0,
             "entered_leagues": []
         }
@@ -120,8 +112,8 @@ def login():
                 flash("You have logged in as: {}".format(
                     request.form.get("email")))
                 return redirect(url_for(
-                        "player_home", first_name=session["user"]))
-        
+                    "player_home", first_name=session["user"]))
+
             else:
                 # Returns message if password incorrect
                 flash("Incorrect Username and/or Password")
@@ -205,11 +197,11 @@ def add_match():
         return redirect(url_for("player_home", first_name=session["user"]))
 
     return render_template(
-            "add-match.html", user=user,
-            referee=mongo.db.user.find().sort("surname", 1),
-            player_one=mongo.db.user.find().sort("surname", 1),
-            player_two=mongo.db.user.find().sort("surname", 1),
-            league=mongo.db.league.find().sort("name", 1), )
+        "add-match.html", user=user,
+        referee=mongo.db.user.find().sort("surname", 1),
+        player_one=mongo.db.user.find().sort("surname", 1),
+        player_two=mongo.db.user.find().sort("surname", 1),
+        league=mongo.db.league.find().sort("name", 1), )
 
 
 @app.route("/player-current-stats")
@@ -221,7 +213,9 @@ def player_stats():
     league = mongo.db.league.find()
     player = mongo.db.user.find_one(
         {"email": session["user"]})
-    return render_template("player-current-stats.html", player=player, league=league, user=user)
+    return render_template(
+        "player-current-stats.html", player=player,
+        league=league, user=user)
 
 
 # REMOVE ? view player league statistics for past leagues
@@ -247,7 +241,7 @@ def player_edit_account():
         mongo.db.user.update({"_id": ObjectId(player)}, update_player)
         flash("Account Successfully Updated")
         return redirect(url_for("player_home", first_name=session["user"]))
-    
+
     return render_template("player-edit-account.html", player=user)
 
 
@@ -273,7 +267,7 @@ def add_league():
         mongo.db.league.insert_one(league)
         flash("League Added Successfully")
         return redirect(url_for("admin_home"))
-  
+
     return render_template("add-league.html", user=user)
 
 
@@ -298,13 +292,13 @@ def admin_register_user():
             "telephone": request.form.get("telephone"),
             # Default user values
             "admin": False,
-            "points": 0,   
+            "points": 0,
             "matches_played": 0,
-            "matches_won": 0, 
+            "matches_won": 0,
             "matches_lost": 0,
-            "games_won": 0, 
+            "games_won": 0,
             "games_lost": 0,
-            "entered_leagues": []      
+            "entered_leagues": []
         }
         mongo.db.user.insert_one(admin_register_user)
         flash("Player Added Successfully")
