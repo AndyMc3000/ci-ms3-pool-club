@@ -32,46 +32,45 @@ def user():
     """
     Function returns the Homepage view
     """
-    user = mongo.db.user.find() # finds all users in the user collection 
-    return render_template("index.html", user=user)  # homepage view
+    # Finds all users in the user collection
+    user = mongo.db.user.find()
+    # Returns Homepage view
+    return render_template("index.html", user=user)
 
 
 @app.route("/league")
 def league():
     """
-    Function returns the current League Table view and League Table statistics for all users
+    Function returns the current League Table view and League Table 
+    statistics for all users
     """
-    league = mongo.db.league.find()  # finds all Leagues in the league collection
-    user = mongo.db.user.find()  # finds all users in the user collection
-    return render_template("league.html", league=league, user=user)  # current League table view
+    # Finds all Leagues in the league collection
+    league = mongo.db.league.find()
+    # Finds all users in the user collection
+    user = mongo.db.user.find()
+    # Renders league table page view
+    return render_template("league.html", league=league, user=user)
 
 
-# FUTURE RELEASE
-@app.route("/archive")
-def archive():
-    """
-    Function returns the Archived League view
-    """
-    # TODO: Select archived league from dropdown list and present league stats in table (comment left here intentionally)
-    league = mongo.db.league.find()  # finds all leagues in the league collection
-    archive = mongo.db.archive.find()  # finds all Leagues in the league collection
-    if request.method == 'GET':  # retrieve selected archived league
-        return render_template("archive.html", league=league, 
-        archive=archive, user=user) # historical/archive League tables view
-
-
-# club sign up page
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Function allows a site user to register to become a club 
+    member/registered user
+    """
     if request.method == "POST":
-        # check if username already exists in db
+        # Check if the users email address already exists
+        # in MongoDB
         existing_user = mongo.db.user.find_one(
             {"email": request.form.get("email")})
 
         if existing_user:
             flash("That Email / Username already exists")
+            # Redirects user to registration page if user email
+            # already exists
             return redirect(url_for("register"))
-
+        # list of values retrieved from registration form for
+        # a new MongoDB user document
         register = {
             "email": request.form.get("email"),
             "password": generate_password_hash(request.form.get("password")),
@@ -79,7 +78,7 @@ def register():
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
             "telephone": request.form.get("telephone"), 
-            # Default user values
+            # list of default user values for league statistics
             "admin": False,
             "points": 0,   
             "matches_played": 0,
@@ -87,11 +86,13 @@ def register():
             "matches_lost": 0,
             "games_won": 0, 
             "games_lost": 0,
-            "entered_leagues": [] 
+            "entered_leagues": []
         }
+        # Creates new document in MongoDB user collection
         mongo.db.user.insert_one(register)
 
-        # Put the new user into 'session' cookie
+        # Puts the new user into a 'session' cookie, where the
+        # session user is the user with the same email as the current user
         session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
         return redirect(url_for("player_home", first_name=session["user"]))
@@ -99,75 +100,91 @@ def register():
     return render_template("register.html", user=user)
 
 
-# login page view
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Function allows a registered to user to login, while checking 
+    that its email address and password match user values in MongoDB 
+    """
     if request.method == "POST":
-        # check if the user email exists in the db
+        # Check to see if the user email exists in MongoDB
         existing_user = mongo.db.user.find_one(
             {"email": request.form.get("email")})
 
         if existing_user:
-            # ensures hashed password for the user matches the user input
+            # Ensures the hashed password for the user in MongoDB
+            # matches the user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("email")
-                    flash("Welcome, {}".format(request.form.get("email")))
-                    return redirect(url_for(
+                session["user"] = request.form.get("email")
+                flash("You have logged in as: {}".format
+                    (request.form.get("email")))
+                return redirect(url_for(
                         "player_home", first_name=session["user"]))
         
             else:
-                # invalid password match
+                # Returns message if password incorrect
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
-        else:
-            # username doesn't exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
-
     return render_template("login.html", user=user)
 
-# logout page view
+
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    """
+    Function allows a registered to logout
+    """
+    # Remove a user from session cookie
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
 
 
-# player home page
 @app.route("/player-home", methods=["GET", "POST"])
 def player_home():
-    # Fetch the session user's first name from MongoDB
+    """
+    Function directs a logged in user to their Player Homepage
+    """
+    # Fetch the session user's data from MongoDB
     user = mongo.db.user.find_one({"email": session["user"]})
     print(user)
     return render_template("player-home.html", user=user)
 
 
 def post_save_match(match: dict, is_player_1: bool):
+    """
+    After the below add_match function is run, this function collects
+    inputs from the Add Match Result form, calculates the points and
+    match scores, and updates the players statistics in MongoDB
+    (user) collection
+    """
     player = "player_one" if is_player_1 else "player_two"
-    # Updating for player
+    # if statement calculates how player stats will be updated
     if is_player_1:
         games_won = int(request.form.get("player_one_games_won"))
-        games_lost = int(request.form.get("player_two_games_won"))
+        # TODO: Add function to also update games_won and
+        # games_lost user values in MongoDB;
+        # games_lost = int(request.form.get("player_two_games_won"))
     else:
         games_won = int(request.form.get("player_two_games_won"))
-        games_lost = int(request.form.get("player_one_games_won"))
+        # TODO: Add function to also update games_won and
+        # games_lost user values in MongoDB;
+        # games_lost = int(request.form.get("player_two_games_won"))
     update_data = {}
     update_data["$inc"] = {"matches_won" if games_won == 3 else "matches_lost": 1,
                            "points": games_won + 1}
-    # update_data["$set"] = {"matches_won": 1} # If you want to set data instead of update
+    # Update the player statistics in MongoDB user document
     mongo.db.user.update_one({"_id": ObjectId(match[player])}, update_data)
 
-# add match view
+
 @app.route("/add-match", methods=["GET", "POST"])
 def add_match():
     if request.method == "POST":
         match = {
-            "player_one": request.form.get("player_one"), # this represents the ObjectId
-            "player_two": request.form.get("player_two"), # this represents the ObjectId
+            # player_one and player_two represent the user ObjectId's
+            "player_one": request.form.get("player_one"),
+            "player_two": request.form.get("player_two"),
             "player_one_games_won": request.form.get("player_one_games_won"),
             "player_two_games_won": request.form.get("player_two_games_won"),
             "date": request.form.get("date"),
@@ -176,23 +193,20 @@ def add_match():
             "created_by": session["user"]
         }
         mongo.db.matches.insert_one(match)
-        # Post save logic
+        # Calls the post save logic (see post_save_match) function above
         post_save_match(match, is_player_1=True)
         post_save_match(match, is_player_1=False)
         flash("Match Successfully Added")
         return redirect(url_for("player_home", first_name=session["user"]))
 
     return render_template("add-match.html", user=user,
-                referee=mongo.db.user.find().sort("surname", 1),
-                player_one=mongo.db.user.find().sort("surname", 1),
-                player_two=mongo.db.user.find().sort("surname", 1),
-                league=mongo.db.league.find().sort("name", 1), )
+            referee=mongo.db.user.find().sort("surname", 1),
+            player_one=mongo.db.user.find().sort("surname", 1),
+            player_two=mongo.db.user.find().sort("surname", 1),
+            league=mongo.db.league.find().sort("name", 1), )
 
 
-# REMOVE ? find contact details and league stats for another player
-@app.route("/player-contact-info")
-def player_contact():
-    return render_template("player-contact-info.html", playername=mongo.db.user.find().sort("surname", 1) )
+
 
 
 # view player league statistics
@@ -381,6 +395,35 @@ def select_match():
 @app.route("/edit-match")
 def edit_match():
     return render_template("edit-match.html",)
+
+
+# FUTURE RELEASE ONLY - Archive;
+@app.route("/archive")
+def archive():
+    """
+    Function returns the Archived League view
+    """
+    # TODO: Select archived league from dropdown list and present 
+    # league stats in table (comment left here intentionally)
+    league = mongo.db.league.find()  # finds all leagues in the league collection
+    # Finds all Leagues in the league collection
+    archive = mongo.db.archive.find()
+    # Retrieve selected archived league
+    if request.method == 'GET':
+        return render_template("archive.html", league=league, 
+            archive=archive, user=user)
+
+
+# FUTURE RELEASE ONLY - Player Details;
+@app.route("/player-contact-info")
+def player_contact():
+    """
+    Function selects a player from a dropdown and returns contact info
+    and current league stats
+    """
+    # TODO: Read contact details and league stats for a player
+    return render_template("player-contact-info.html",
+        playername=mongo.db.user.find().sort("surname", 1) )
 
 
 # -------------- EXCEPTION HANDLING --------------
