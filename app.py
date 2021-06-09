@@ -19,11 +19,11 @@ mongo = PyMongo(app)
 
 
 # -------------- HELPER FUNCTIONS --------------
-#def is_logged_in():
-    #"""
-    #This returns the user stored in the session or None
-    #"""
-    #return session.get("user")
+# def is_logged_in():
+# """
+# This returns the user stored in the session or None
+# """
+# return session.get("user")
 
 
 @app.route("/")
@@ -115,10 +115,10 @@ def login():
             # Ensures the hashed password for the user in MongoDB
             # matches the user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("email")
-                flash("You have logged in as: {}".format
-                    (request.form.get("email")))
+                flash("You have logged in as: {}".format(
+                    request.form.get("email")))
                 return redirect(url_for(
                         "player_home", first_name=session["user"]))
         
@@ -172,8 +172,8 @@ def post_save_match(match: dict, is_player_1: bool):
         # games_lost user values in MongoDB;
         # games_lost = int(request.form.get("player_two_games_won"))
     update_data = {}
-    update_data["$inc"] = {"matches_won" if games_won == 3 else "matches_lost": 1,
-                           "points": games_won + 1}
+    update_data["$inc"] = {"matches_won" if games_won == 3
+            else "matches_lost": 1, "points": games_won + 1}
     # Update the player statistics in MongoDB user document
     mongo.db.user.update_one({"_id": ObjectId(match[player])}, update_data)
 
@@ -204,9 +204,6 @@ def add_match():
             player_one=mongo.db.user.find().sort("surname", 1),
             player_two=mongo.db.user.find().sort("surname", 1),
             league=mongo.db.league.find().sort("name", 1), )
-
-
-
 
 
 # view player league statistics
@@ -371,9 +368,15 @@ def delete_league(league_id):
     return redirect(url_for("admin_home")) # redirects user to Admin Homepage
 
 
-# REMOVE ? edit/delete player details (admin view)
+# FUTURE RELEASE ONLY - Edit Player (Admin view);
 @app.route("/edit-player", methods=["GET", "POST"])
 def admin_edit_user():
+    """
+    Function allows an Admin to select a user from a dropdown
+    box and then UPDATE user values, or DELETE the user
+    """
+    # TODO: READ user values and display in table on page. Add
+    # function to allow and Admin to UDPATE the user values or DELETE the user
     player = mongo.db.user.find().sort("surname", 1)
     if request.method == "GET":
         selection = {
@@ -384,16 +387,28 @@ def admin_edit_user():
     return render_template("edit-player.html", user=selection, player=player)
 
 
-# REMOVE ? select a match for editing (admin view)
+# FUTURE RELEASE ONLY - Select a Match;
 @app.route("/select-match")
 def select_match():
+    """
+    Function returns the Select Match page view so
+    that a user can select a match for editing on
+    the Edit Match page (see below)
+    """
     matches = mongo.db.matches.find().sort("date", 1)
     return render_template("select-match.html", matches=matches)
 
 
-# REMOVE ? edit/delete match details (admin view)
+# FUTURE RELEASE ONLY - Edit a Match;
 @app.route("/edit-match")
 def edit_match():
+    """
+    Function returns the Edit Match page view and allows
+    an Admin to edit the details of a Match
+    """
+    # TODO: Read selected Match data and present
+    # in a form. A user can then UPDATE the values of a League
+    # or DELETE a League.
     return render_template("edit-match.html",)
 
 
@@ -401,11 +416,13 @@ def edit_match():
 @app.route("/archive")
 def archive():
     """
-    Function returns the Archived League view
+    Function returns the Archived League page view and
+    allows a user to select an archive to view the
+    League stats for that League
     """
-    # TODO: Select archived league from dropdown list and present 
+    # TODO: Select archived league from dropdown list and present
     # league stats in table (comment left here intentionally)
-    league = mongo.db.league.find()  # finds all leagues in the league collection
+    league = mongo.db.league.find()
     # Finds all Leagues in the league collection
     archive = mongo.db.archive.find()
     # Retrieve selected archived league
@@ -421,7 +438,9 @@ def player_contact():
     Function selects a player from a dropdown and returns contact info
     and current league stats
     """
-    # TODO: Read contact details and league stats for a player
+    # TODO: READ contact details and league stats for a player
+    # from MongoDB and display in table on page 
+    # (comment left intentionally)
     return render_template("player-contact-info.html",
         playername=mongo.db.user.find().sort("surname", 1) )
 
