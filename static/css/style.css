@@ -12,6 +12,23 @@ body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
 
 /* -- END of Google Fonts -- */
 
+.leagueTable
+{
+    counter-reset: rowNumber;
+}
+
+.leagueTable tr > td:first-child
+{
+    counter-increment: rowNumber;
+}
+
+.leagueTable tr td:first-child::before
+{
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
 /* -- Global Styles -- */
 
 .container-fluid {

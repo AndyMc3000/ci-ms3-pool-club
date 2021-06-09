@@ -28,9 +28,10 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-12 form-div mb-5 mx-2">
-                                    <table class="table table-font table-dark table-striped table-bordered" data-toggle="table" data-sort-name="points" data-sort-order="desc">
+                                    <table class="table leagueTable table-font table-dark table-striped table-bordered" data-toggle="table" data-sort-name="points" data-sort-order="desc">
                                             <thead>
                                                 <tr>
+                                                    <th scope="col">RANK</th>
                                                     <th data-field="points" scope="col">POINTS</th>
                                                     <th scope="col">PLAYER</th>
                                                     <th scope="col">MW</th>
@@ -43,6 +44,7 @@
                                             <tbody>
                                             {% for user in user %}
                                                 <tr>
+                                                    <th scope="row"></th>
                                                     <th scope="row">{{ user.points }}</th>
                                                     <td>{{ user.first_name }} "{{ user.nickname }}" {{ user.surname }}</td>
                                                     <td>{{ user.matches_won }}</td>
