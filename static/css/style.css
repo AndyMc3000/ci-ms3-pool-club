@@ -12,6 +12,8 @@ body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
 
 /* -- END of Google Fonts -- */
 
+/* -- League Table numbering for Rank column. Code snippet copied from StackOverflow -- */
+
 .leagueTable
 {
     counter-reset: rowNumber;
@@ -28,6 +30,8 @@ body h1, h2, h3, h4, h5, h6, p, button, nav, form, .btn {
     min-width: 1em;
     margin-right: 0.5em;
 }
+
+/* -- END League Table numbering for Rank column -- */
 
 /* -- Global Styles -- */
 
@@ -80,8 +84,6 @@ body {
 }
 
 /* -- END of Global Styles -- */
-
-
 
 /* -- Introduction section on index.html -- */
 

@@ -12,15 +12,6 @@ $(document).ready(function() {
 /* 
 Bootstrap table sort
 */
-<script>
-  $(function() {
-    $('#sortable').change(function () {
-      $('#table').bootstrapTable('refreshOptions', {
-        sortable: $('#sortable').prop('checked')
-      })
-    })
-  })
-</script>
 
 /* 
 Bootstrap form validation

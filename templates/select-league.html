@@ -17,17 +17,17 @@
                             <div class="container-fluid">
                                 <div class="row justify-content-center">
                                     <div class="col-12 form-div">
-                                        <form action="{{ url_for('select_league') }}" class="form w-75 needs-validation" method="GET" novalidate>
+                                        <form id="league-select-form" action="" class="form w-75 needs-validation" method="GET" novalidate>
                                             <div class="form-group">
                                                 <div class="input-group mb-4">
-                                                    <span class="input-group-text" id="matches"><i class="fas fa-user-shield"></i></span>
-                                                    <select id="matches" name="matches" class="validate form-control form-select" required>
-                                                        <option value="" disabled selected>Select Match</option>
+                                                    <span class="input-group-text"><i class="fas fa-user-shield"></i></span>
+                                                    <select id="leagues-select" name="leagues" class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Select League</option>
                                                 {% for league in league %}
-                                                        <option value="{{ league.end_date }}{{ league.name }}">League Name: {{ league.name }}</option>
+                                                        <option value="{{ url_for('edit_league', league_id=league._id) }}">League Name: {{ league.name }}</option>
                                                 {% endfor %}
                                                     </select>
-                                                    <label for="matches"></label>
+                                                    <label for="leagues"></label>
                                                     <div class="valid-feedback">
                                                         Looks good!
                                                     </div>
@@ -36,7 +36,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="input-group m-auto text-center">
-                                                    <a type="submit" class="btn btn-primary mb-5 form-submit-button" href="{{ url_for('edit_league') }}">Select Match</a>
+                                                    <button id="form-submit-btn" type="submit" class="btn btn-primary mb-5 form-submit-button">Select League</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -52,6 +52,12 @@
             </div>
         </div>
     </section>
-   
-    
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $('#leagues-select').on("change", function(e){
+        $('#league-select-form').attr("action", this.value);
+    })
+</script>
 {% endblock %}

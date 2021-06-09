@@ -317,32 +317,32 @@ def add_admin():
 @app.route("/select-league")
 def select_league():
     league = mongo.db.league.find().sort("date", 1)
-    return render_template("select-league.html", league=league)
+    return render_template("select-league.html", league=league, user=user)
 
 
-# edit active league details (admin view)
-@app.route("/edit-league", methods=["GET", "POST"])
-def edit_league():
-    league = mongo.db.league.find()
-        # if request.method == "GET":
-            # selected_league = 
-        # if request.method == "POST":
-            # update_league = {
-                # "name": request.form.get("name"),
-                # "description": request.form.get("description"),
-                # "start_date": request.form.get("startdate"),
-                # "end_date": request.form.get("enddate"),
-                # "participating_players": request.form.get("participants"),
-            # }
-            # mongo.db.league.update_one({"_id": ObjectId(league)}, update_league)
-            # flash("League Successfully Updated")
-            # return redirect(url_for("admin_home")
-    return render_template("edit-league.html", league=league)
-
+@app.route("/edit_league/<league_id>", methods=["GET", "POST"])
+def edit_league(league_id):
+    """
+    Edit active league details (admin view)
+    """
+    if request.method == "POST":
+        league_update_data = {
+            "name": request.form.get("name"),
+            "description": request.form.get("description"),
+            "start_date": request.form.get("start_date"),
+            "end_date": request.form.get("end_date"),
+            "participating_players": request.form.get("participants"),
+        }
+        mongo.db.league.update_one({"_id": ObjectId(league_id)}, {"$set": league_update_data})
+        flash("League Successfully Updated")
+        return redirect(url_for("admin_home"))
+    league = mongo.db.league.find_one({"_id": ObjectId(league_id)})
+    return render_template("edit-league.html", league=league, user=user)
 
 # delete a selected league
 @app.route("/delete_league/<league_id>")
 def delete_league(league_id):
+    # TODO: Reset user stats when the league is deleted (comment left here intentionally)
     mongo.db.league.remove({"_id": ObjectId(league_id)}) # remove league based on its _id
     flash("League Successfully Deleted") # flash message when league is deleted
     return redirect(url_for("admin_home")) # redirects user to Admin Homepage

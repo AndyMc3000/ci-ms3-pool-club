@@ -47,10 +47,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link px-3 {{ 'active' if active_page == 'menu5' else '' }}" href="{{ url_for('logout') }}">Log Out <i class="fas fa-sign-out-alt"></i> </a>
                                 </li>
+                                {% if user.admin %}
                                 <li class="nav-item">
                                     <a class="nav-link px-3 {{ 'active' if active_page == 'menu6' else '' }}" href="{{ url_for('admin_home') }}">Admin <i class="fas fa-cog"></i> </a>
                                 </li>
-                                {% else %}
+                            {% else %}
                                 <li class="nav-item">
                                     <a class="nav-link px-3 {{ 'active' if active_page == 'menu3' else '' }}" aria-current="page" href="{{ url_for('user') }}">Home</a>
                                 </li>
