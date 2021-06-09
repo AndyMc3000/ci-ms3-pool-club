@@ -1,74 +1,76 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-4 mx-5 mx-auto">
-                    <div class="login-card-img-holder pt-5">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- Player League Stats page view -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h1 class="card-title pt-4 pb-4">My League Stats</h1>
-                        <h4>{{ player.first_name }} "{{ player.nickname }}" {{ player.surname }}</h4>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-10 text-center p-3">
-                                    <h4>
-                                        Current League:
-                                    </h4>
-                                    <h4>
-                                        *league.name*
-                                    </h4>
-                                </div>
-                            </div>
+                    <!-- END of Back button -->
+                    <!-- League Stats card and table -->
+                    <div class="card border-danger text-center w-75 my-4 mx-5 mx-auto">
+                        <div class="login-card-img-holder pt-5">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h1 class="card-title pt-4 pb-4">My League Stats</h1>
+                            <h4>{{ player.first_name }} "{{ player.nickname }}" {{ player.surname }}</h4>
                             <div class="container-fluid">
-                                <div class="row justify-content-center">
-                                    <div class="col-8 p-2 pt-3">
-                                        <table class="table table-font table-dark table-striped table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="row">POINTS</th>
-                                                    <th scope="col">{{ player.points }}</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">MATCHED PLAYED:</th>
-                                                    <td> {{ player.matches_played }} / 30</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">MATCHES FOR:</th>
-                                                    <td>{{ player.matches_won }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">MATCHES AGAINST:</th>
-                                                    <td>{{ player.matches_lost }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">GAMES FOR:</th>
-                                                    <td>{{ player.games_won }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">GAMES AGAINST:</th>
-                                                    <td>{{ player.games_lost }}</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <div class="container-fluid">
+                                    <div class="row justify-content-center">
+                                        <div class="col-8 p-2 pt-3">
+                                            <table class="table table-font table-dark table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="row">POINTS</th>
+                                                        <th scope="col">{{ player.points }}</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">MATCHED PLAYED:</th>
+                                                        <td> {{ player.matches_played }} / 30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">MATCHES FOR:</th>
+                                                        <td>{{ player.matches_won }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">MATCHES AGAINST:</th>
+                                                        <td>{{ player.matches_lost }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GAMES FOR:</th>
+                                                        <td>{{ player.games_won }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">GAMES AGAINST:</th>
+                                                        <td>{{ player.games_lost }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <!-- END of League Stats card and table -->
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    </div>
+                    <!-- Back button -->
                 </div>
             </div>
         </div>
-    </div>
-    
+    </section>
+<!-- END of Player League Stats page view -->
 {% endblock %}

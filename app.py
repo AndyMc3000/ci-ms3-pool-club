@@ -24,8 +24,6 @@ def user():
     """
     Function returns the Homepage view
     """
-    # Finds all users in the user collection
-    user = mongo.db.user.find()
     # Returns Homepage view
     return render_template("index.html", user=user)
 
@@ -140,7 +138,6 @@ def player_home():
     """
     # Fetch the session user's data from MongoDB
     user = mongo.db.user.find_one({"email": session["user"]})
-    print(user)
     return render_template("player-home.html", user=user)
 
 
@@ -218,12 +215,6 @@ def player_stats():
         league=league, user=user)
 
 
-# REMOVE ? view player league statistics for past leagues
-@app.route("/player-archive-results")
-def player_archive_stats():
-    return render_template("player-archive-results.html")
-
-
 # edit player account details
 @app.route("/player-edit-account", methods=["GET", "POST"])
 def player_edit_account():
@@ -242,7 +233,8 @@ def player_edit_account():
         flash("Account Successfully Updated")
         return redirect(url_for("player_home", first_name=session["user"]))
 
-    return render_template("player-edit-account.html", player=user)
+    return render_template(
+        "player-edit-account.html", user=user, player=player)
 
 
 # admin home page
@@ -503,6 +495,21 @@ def add_admin():
     # flash("Site Admin Added Sucessfully")
     # return redirect(url_for("admin_home")
     return render_template("add-admin.html", user=user)
+
+
+# FUTURE RELEASE ONLY - Player Archived Stats;
+@app.route("/player-archive-results")
+def player_archive_stats():
+    """
+    Function will allow a registered user to view
+    their stats from a selected archived league
+    """
+    # TODO: Create function to READ and display
+    # stats from an archived league selected from a
+    # dropdown list of archived leagues on a yet to be created
+    # select-archive-league.html. Stats should then be displayed
+    # in a table on this page
+    return render_template("player-archive-results.html")
 
 
 if __name__ == "__main__":

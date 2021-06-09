@@ -1,72 +1,63 @@
 {% extends "base.html" %}
 {% block content %}
 
-   <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- League Table page view -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h1 class="card-title pb-4">League Table</h1>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 pb-5 form-div">
-                                    <h4>
-                                        Current League:
-                                    </h4>
-                                    {% for league in league %}
-                                    <h4>
-                                        {{ league.name }}
-                                    </h4>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div mb-5 mx-2">
-                                    <table class="table leagueTable table-font table-dark table-striped table-bordered" data-toggle="table" data-sort-name="points" data-sort-order="desc">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">RANK</th>
-                                                    <th data-field="points" scope="col">POINTS</th>
-                                                    <th scope="col">PLAYER</th>
-                                                    <th scope="col">MW</th>
-                                                    <th scope="col">ML</th>
-                                                    <th scope="col">MR</th>
-                                                    <th scope="col">GW</th>
-                                                    <th scope="col">GL</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            {% for user in user %}
-                                                <tr>
-                                                    <th scope="row"></th>
-                                                    <th>{{ user.points }}</th>
-                                                    <td>{{ user.first_name }} "{{ user.nickname }}" {{ user.surname }}</td>
-                                                    <td>{{ user.matches_won }}</td>
-                                                    <td>{{ user.matches_lost }}</td>
-                                                    <td>{{ user.matches_remaining }}</td>                                                      
-                                                    <td>{{ user.games_won }}</td>                                                    
-                                                    <td>{{ user.games_lost }}</td>                                                                                                     
-                                                </tr>
-                                            {% endfor %}
-                                            </tbody>
-                                        </table>
+                    <!-- END of Back button -->
+                    <!-- League Table card and table -->
+                    <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                        <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h1 class="card-title pb-4">League Table</h1>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div mb-5 mx-2">
+                                        <table class="table leagueTable table-font table-dark table-striped table-bordered" data-toggle="table" data-sort-name="points" data-sort-order="desc">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">RANK</th>
+                                                        <th scope="col">PLAYER</th>
+                                                        <th data-field="points" scope="col">POINTS</th>
+                                                        <th scope="col">MW</th>
+                                                        <th scope="col">ML</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                {% for user in user %}
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>{{ user.first_name }} "{{ user.nickname }}" {{ user.surname }}</td>
+                                                        <th>{{ user.points }}</th>
+                                                        <td>{{ user.matches_won }}</td>
+                                                        <td>{{ user.matches_lost }}</td>                                                                                                    
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <!-- END of League Table card and table -->
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    </div>
+                    <!-- END of Back button -->
                 </div>
             </div>
         </div>
-    </div>
-    
+    </section>
+    <!-- END of League Table page view -->
 {% endblock %}
