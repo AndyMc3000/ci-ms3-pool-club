@@ -2,99 +2,100 @@
 {% set active_page = "menu6" %}
 {% block content %}
 
-   <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <div class="card-panel">
-                <h4 class="text-center">
-                    {{ player_home }}
-                </h4>
-            </div>
-        </div>
-    </div>
-    <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="card border-danger text-center rounded-5 shadow-lg w-75 my-4 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/stick-png-580b585b2edbce24c47b2-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
-                    </div>
-                    <div class="card-body top-50 start-50 text-shadow-1 pb-5">
-                        <h1>Admin Home</h1>
+    <!-- Admin Homepage title card -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card border-danger text-center rounded-5 shadow-lg w-75 my-4 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                            <img src="{{ url_for('static', filename='images/template-header/stick-png-580b585b2edbce24c47b2-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50 text-shadow-1 pb-5">
+                            <h1>Admin Home</h1>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Admin options - Bootstrap custom cards-->
-    <div class="container px-4 pt-2" id="custom-cards">
-        <div>
-            <h4 class="text-center pt-1 pb-2">Admin: {{ user.first_name }} {{ user.surname }}</h4>
+    </section>
+    <!-- END of Admin Homepage title card -->
+    <!-- Admin functions - Bootstrap custom cards -->
+    <section>
+        <div class="container px-4 pt-2" id="custom-cards">
+            <div>
+                <h4 class="text-center pt-1 pb-2">Admin: {{ user.first_name }} {{ user.surname }}</h4>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
+                <div class="col card-group">
+                    <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
+                            <i class="fas fa-folder-plus text-center card-icons"></i>
+                            <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add A League</h4>
+                            <p>Click on the button below to add details for a new upcoming League</p>
+                            <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('add_league') }}">Add A
+                                League</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
+                            <i class="fas fa-user-plus card-icons"></i>
+                            <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add A Player</h4>
+                            <p>Click on the button below to register the details of a new Club member</p>
+                            <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('admin_register_user') }}">Add A
+                                Player</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
+                            <i class="fas fa-user-cog card-icons"></i>
+                            <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add Admin</h4>
+                            <p>Click on the button below to select a member and make them an Admin for this site</p>
+                            <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('select_admin') }}">Add
+                                Admin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 pb-5">
+                <div class="col card-group">
+                    <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
+                            <i class="fas fa-wrench text-center card-icons"></i>
+                            <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A League</h4>
+                            <p>Click on the button below to select and edit a league, or to delete a league</p>
+                            <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('select_league') }}"> Edit
+                                League</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
+                            <i class="fas fa-tasks card-icons"></i>
+                            <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Match</h4>
+                            <h3 class="pulsate pt-2"><strong>Coming soon!</strong></h3>
+                            <a class="btn btn-warning mb-3 form-submit-button" href=""> Coming Soon..</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+                        <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
+                            <i class="fas fa-user-edit card-icons"></i>
+                            <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Player</h4>
+                            <h3 class="pulsate pt-2"><strong>Coming soon!</strong></h3>
+                            <a class="btn btn-warning mb-3 form-submit-button" href=""> Coming Soon..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
-            <div class="col card-group">
-                <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
-                    <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
-                        <i class="fas fa-folder-plus text-center card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add A League</h4>
-                        <p>Click on the button below to add details for a new upcoming League</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('add_league') }}">Add A League</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
-                    <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
-                        <i class="fas fa-user-plus card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add A Player</h4>
-                        <p>Click on the button below to register the details of a new Club member</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('admin_register_user') }}">Add A Player</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
-                    <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
-                        <i class="fas fa-user-cog card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Add Admin</h4>
-                        <p>Click on the button below to select a member and make them an Admin for this site</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('select_admin') }}">Add Admin</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 pb-5">
-             <div class="col card-group">
-                <div class="card card-cover text-white bg-dark rounded-5 shadow-lg">
-                    <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
-                        <i class="fas fa-wrench text-center card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A League</h4>
-                        <p>Click on the button below to select and edit a league, or to delete a league</p>
-                        <a class="btn btn-primary mb-3 form-submit-button" href="{{ url_for('select_league') }}"> Edit League</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
-                    <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
-                        <i class="fas fa-tasks card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Match</h4>
-                        <h3 class="pulsate pt-2"><strong>Coming soon!</strong></h3>
-                        <a class="btn btn-warning mb-3 form-submit-button" href=""> Coming Soon..</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
-                    <div class="d-flex flex-column h-100 p-4 pb-3 text-white text-shadow-3 feature-cards-home text-center">
-                        <i class="fas fa-user-edit card-icons"></i>
-                        <h4 class="p-2 mt-3 mb-4 display-7 lh-1 fw-bold">Edit A Player</h4>
-                        <h3 class="pulsate pt-2"><strong>Coming soon!</strong></h3>
-                        <a class="btn btn-warning mb-3 form-submit-button" href=""> Coming Soon..</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END of Bootstrap custom 'Club Features' cards-->
-    
+    </section>
+    <!-- END of Admin functions - Bootstrap custom cards -->
 {% endblock %}

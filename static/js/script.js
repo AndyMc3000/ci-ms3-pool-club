@@ -1,19 +1,4 @@
 /* 
-BDataTables.net Table sorting function
-*/
-
-$(document).ready(function() {
-    $('#myTable').DataTable();
-    $('#league').DataTable( {
-        "order": [[ 0, "desc" ]]
-    } );
-} );
-
-/* 
-Bootstrap table sort
-*/
-
-/* 
 Bootstrap form validation
 */
 

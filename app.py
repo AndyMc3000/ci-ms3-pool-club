@@ -373,6 +373,7 @@ def generic_exception_handler(e):
     return render_template("error-exception.html")
 
 
+# -------------- FUTURE FUNCTIONS/FEATURES --------------
 # FUTURE RELEASE ONLY - Edit Player (Admin view);
 @app.route("/edit-player", methods=["GET", "POST"])
 def admin_edit_user():
