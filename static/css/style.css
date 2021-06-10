@@ -51,6 +51,7 @@ body {
 .card {
     max-width: 850px;
     border: 0px;
+    background-color: #212529;
 }
 
 .card-img-overlay .card-title {
@@ -61,26 +62,79 @@ body {
     background-color: #212529;
 }
 
-.card {
-        background-color: #212529;
+.sponsor-banner-carousel {
+    max-width: 900px;
+}
+
+.card-icons {
+    font-size: 40px;
 }
 
 .pulsate {
-    -webkit-animation: pulsate 3s ease-out;
-    -webkit-animation-iteration-count: infinite; 
-    opacity: 0.4;
+    -webkit-animation: pulsate 3s ease-out infinite; /* Safari 4+ */
+    -moz-animation:    pulsate 3s ease-out infinite; /* Fx 5+ */
+    -o-animation:      pulsate 3s ease-out infinite; /* Opera 12+ */
+    animation:         pulsate 3s ease-out infinite; /* IE 10+, Fx 29+ */
 }
 
 @-webkit-keyframes pulsate {
-    0% { 
-        opacity: 0.4;
-    }
-    50% { 
-        opacity: 1.0;
-    }
-    100% { 
-        opacity: 0.4;
-    }
+  0%   { opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+@-moz-keyframes pulsate {
+  0%   { opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+@-o-keyframes pulsate {
+  0%   { opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+@keyframes pulsate {
+  0%   { opacity: 0.4; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.card-img-overlay {
+    padding: 3rem;
+    top: 40px;
+}
+
+.two-button {
+    margin: 0px; 
+}
+
+.form-div {
+    display: block;
+    text-align: center;
+}
+
+.form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.hidden-field {
+    display: none;
+}
+
+.input-group-text {
+    color:white; 
+    background-color: #30363c
+}
+
+.form-submit-button {
+    text-align: center;
+    margin: auto;
+}
+
+footer {
+   margin-top: auto;
 }
 
 /* -- END of Global Styles -- */
@@ -125,13 +179,9 @@ body {
     bottom: auto;
 }
 
-.card-icons {
-    font-size: 40px;
-}
+/* -- END of Introduction section on index.html -- */
 
-.sponsor-banner-carousel {
-    max-width: 900px;
-}
+/* -- Login.html -- */
 
 .login-card-img {
     width: 100%;
@@ -141,44 +191,7 @@ body {
     background-color: #212529;
 }
 
-.card-img-overlay {
-    padding: 3rem;
-    top: 40px;
-}
-
-.two-button {
-    margin: 0px; 
-}
-
-.form-div {
-    display: block;
-    text-align: center;
-}
-
-.form {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-
-.hidden-field {
-    display: none;
-}
-
-.input-group-text {
-    color:white; 
-    background-color: #30363c
-}
-
-.form-submit-button {
-    text-align: center;
-    margin: auto;
-}
-
-footer {
-   margin-top: auto;
-}
+/* -- END of Login.html -- */
 
 /* -- Media Queries: -- */
 
@@ -229,8 +242,6 @@ footer {
     }
 
     .card {
-        margin-left: 5px!important;
-        margin-right: 5px!important;
         width: 100%!important;
         background-color: #212529;
     }

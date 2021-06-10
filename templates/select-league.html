@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <!-- Select a league to Edit/Delete page view -->
     <section>
         <div class="contanier-fluid h-100 m-2">
             <div class="row">
                 <div class="col-12">
+                    <!-- Back button -->
                     <div class="pt-1 text-center">
                         <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
+                    <!-- END of Back button -->
+                    <!-- Select a League card and dropdown box -->
                     <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
                         <div class="login-card-img-holder p-5 pb-3">
                             <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
@@ -45,19 +49,25 @@
                             </div>
                         </div>
                     </div>
+                    <!-- END of Select a League card and dropdown box -->
+                    <!-- Back button -->
                     <div class="pt-1 text-center">
                         <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
+                    <!-- END of Back button -->
                 </div>
             </div>
         </div>
     </section>
+    <!-- END of Select a league to Edit/Delete page view -->
 {% endblock %}
 
 {% block scripts %}
+<!-- jQuery used to identify selected league and make accessible to form on ed-league.html -->
 <script>
     $('#leagues-select').on("change", function(e){
         $('#league-select-form').attr("action", this.value);
     })
 </script>
+<!-- END of jQuery used to identify selected league and make accessible to form on ed-league.html -->
 {% endblock %}
