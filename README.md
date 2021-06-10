@@ -28,12 +28,12 @@
 
 The Cill na Martra Pool Club (hereafter called CPC) website is my Milestone 3 (MS3) project for the Diploma in Fullstack Software Development course at Code Institute. The underlying goal of the project is to meet and exceed the requirements laid out for the MS3 project by Code Institute. The high-level requirement of the MS3 project is to "..build a full-stack site that allows your users to manage a common dataset about a particular domain. Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members." 
 
-This README refers to CPC as a fictional client of mine, where I have been hired to develop a website for CPC to meet certain criteria (see the User Experience Design section below). CPC is a small Pool Club with members based around a number of parishes close to Cill na Martra in Co.Cork, Ireland. Club members meet weekly at a number of local pubs to play pool. Membership numbers fluctuate between roughly 25 to 50 players. CPC runs a Pool League twice yearly. Members arrange to meet at a venue to play league matches, which comprise of playing the best out of 5 games format. A Referee must also be present at league matches. Any other member can referee a match.
+This README refers to CPC as a fictional client of mine, where I have been hired to develop a website for CPC to meet certain criteria (see the User Experience Design section below). CPC is a small Pool Club with members based around a number of parishes close to Cill na Martra in Co.Cork, Ireland. Club members meet weekly at a number of local pubs to play pool. Membership numbers fluctuate between roughly 25 to 50 players. CPC runs a Pool League twice yearly. Members arrange to meet at a venue to play league matches, which comprise of playing a 'best of 5' games format. A Referee must also be present at league matches. Any other member can referee a match.
 
-Managing members and pool league data was traditionally paper-based, and was a headache for those members who were 'voluntold' to manage that job. The club want a simple web-based application to make it easy for members to; 
+Club member management and pool league data was traditionally paper-based, and was a headache for those members who were 'voluntold' to manage that job. The club want a simple web-based application to make it easy for members to; 
 * Manage a league table.
 * To allow members to get real-time match/league result information.
-* To allow members to easily get contact information for players for the purpose of scheduling matches.
+* To allow members to record match results and calulate league points in real-time for a league table hosted on the site.
 
 The principle languages used in the development of the site are; HTML5, CSS3, JavaScript, and Python.
 
@@ -88,9 +88,26 @@ Please see below details of the 'Client Stories' to detail the requirements of t
 > - [x] “I want to be able to edit and update my Account information."
 > - [x] “I want to be able to find contact infromation for the CPC, and be able to send a message to the CPC organisers."
 
+#### League Ranking & Points Calculations ####
+In order to complete the above requirements it is important to understand how the League ranking sytem works. When adding a Match Result to the CPC site, the below rules will determine how calculations should be made.
+
+1. A League Match consists of a series of games where the winner is the first to win three games ( a 'best of 5 games' format).
+1. The Rank of a Player in the League is determined by how many points they have accrued. Rank #1 is the Player with the most points, Rank #2 has the second most points, and so on. This ranking detemines how the League Table should be presented.
+1. When a Match is played, Players accrue points for winning games. Where;
+  * Winning 0 games in a Match scores 1 point
+  * Winning 1 game in a Match scores 2 points
+  * Winning 2 games in a Match scores 3 points
+  * Winning 3 games in a Match scores 4 points
+1. In addition to scoring points a Players statistics also include a Matches Won and Matches Lost record.
+1. When a Match is played, Players also increment their Matches Won or Matches Lost tally by 1. Where;
+  * Winning 0 games in a Match adds 1 to their Matches Lost tally
+  * Winning 1 games in a Match adds 1 to their Matches Lost tally
+  * Winning 2 games in a Match adds 1 to their Matches Lost tally
+  * Winning 3 games in a Match adds 1 to their Matches Won tally
+
 ### 2. The Scope Plane ###
 
-Based on the outcomes from the Strategy Plane, The Scope Plane determines what features, functionality, and types of content should be included within the scope of the project. Listed below are the functional specifications and content requirements decided upon for the CPC website. 
+Based on the outcomes from the Strategy Plane, The Scope Plane determines what features, functionality, and types of content should be included within the scope of the project. Listed below are the functional specifications and content requirements decided on for the CPC website. 
 
 #### Functional Specifications: ####
 * Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. 
@@ -174,7 +191,7 @@ The structure of the website is outlined in the Sitemap. Click here to view the 
 * MongoDB Atlas access credentials should not be visible anywhere on the site.
 * A user should not be able to access another users password. 
 
-#### Data & Schema ####
+#### Data & Database Schema ####
 The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', and 'matches'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
 
 * The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
@@ -271,15 +288,15 @@ The CPC site employs the following features/functionality;
 #### Future Features ####
 Unfortunately I ran out of time to implement all of the site features which I had planned to implement at the beginning of the project. These items can be seen in the site Wireframes, in routes/function in the app.py file, and in HTML pages in the Templates folder. These and other additional possible features are listed below. I wss advised to leave the HTML pages and Flask/Python code for these features in place to show the intended 'direction of travel' for the site.
 
-1. A League Archive which can be accessed from the Homepage. This would allow a user to select an historical League from a droppdown listand view the final Table for that League. An Archived League would be created when a current/active league is deleted from the edit-league.html page. It would capture all the league stats for the users in the current league and create a new document in a MongoDB 'archive' collection. There is a 'Coming Soon' section on index.html to show where this feature would be positioned/accessed from.
-1. Find a Player
-1. My Match List
-1. My League History
-1. Add Admin
-1. Edit a Match
-1. Edit a Player
+1. A 'League Archive' which can be accessed from the Homepage. This would allow a user to select an historical League from a droppdown listand view the final Table for that League. An Archived League would be created when a current/active league is deleted from the edit-league.html page. It would capture all the league stats for the users in the current league and create a new document in a MongoDB 'archive' collection. There is a 'Coming Soon' section on index.html to show where this feature would be positioned/accessed from.
+1. A 'Find a Player' feature. Accessible from the Player Homepage, this would allow a registered user to search for and find information about another player. This infromation would include a players contact details (telephone & email), and would also show the current League statistics for that user. This would enable to player to get in touch with another member in order to organise a league match, and to understand where that player sits in the League Table without having to search through the League Table on the Homepage. 
+1. A 'My Match List' feature. Accesible from the Player Homepage, this would allow a user to see a list of all League participants, along with the number of matches they have played against each player. 
+1. A 'My League History' feature. Acceesible from the Player Homepage, this would allow a user to select an Archived league and view what their final statistics were in that League.
+1. An 'Add Admin' feature. Accessible from the Admin Homepage, this would allow an Admin to select a member from a dropdown list, and enable them to make that memeber an Admin by updating a boolean Admin value in that members user document in MongoDB. 
+1. An 'Edit a Match' feature. Accessible from the Admin Homepage, this would allow an Admin to select a Match from a dropdown list and then edit and update the values of that Match document. It would also allow an Admin to delete a Match record.
+1. An 'Edit a Player' feature. Accessible from the Admin Homepage, this would allow an Admin to select a Player from a dropdown list and then edit and update the values of that Player document. It would also allow an Admin to delete a Player record.
 1. The Club may decide it wants to charge members an annual membership fee. The CPC site could be used to collect this fee from members. This would require the integration of a billing system.
-1. The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues at particular times, e.g an Xmas Pool Championship. The site could be updated to add a Championship bracket system.
+1. The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues, at particular times, e.g an Xmas Pool Championship. The site could be updated to add logic and a data schema for a Championship bracket system.
 1. The Club may want to sell merchandise in order to raise funds for prizes and tours. The site could be updated to add a shop selling Club themed merchandise. 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -299,14 +316,14 @@ I used the following technologies, services, and devices to develop, style, depl
 * CSS3 - The site was styled and in some cases made responsive using CSS3.
 * Python - CRUD functionaiity with a MongoDB Atlas database was done using Python functions.
 * Flask - I used the Flask framework along with the Jinja template engine and the Werkzeug toolkit to develop the CPC web app.
-* JavaScript - I used JavaScript for functioonality around Bootstrap validation, the EMailJS email service, and the Bootstrap Data Tables table sorting functionality.
+* JavaScript & jQuery - I used JavaScript and jQuery for functioonality around Bootstrap validation, the EMailJS email service, and the Bootstrap Data Tables table sorting functionality.
 * Bootstrap - I used the Bootstrap framework for many of the HTML elements, including the Navbars, container Cards, the Carousels, the Forms, and the Tables. 
 * EmailJS - I used the EmailJS email service to send Contact Us Form data by email to the CPC organisers and the user.
 * GitHub - I set up a free repository on GitHub.com to maintain a master of all website files, content, and resources.
 * GitPod - I used the free GitPod.io Integrated Development Environment to write and develop the code for the website.
-* MongoDB Atlas - All data is stored in a MongoDB Atlas database. The Pythons functions used to create site operations/functionality interact with the Collections in the MongoDB Atlas database. The functions complete one of four database operations; Create documents in a Collection, Read documents in a Collection, Update documents in a Collection, or Delete documents in a Collections.    
+* MongoDB Atlas - All data is stored in a MongoDB Atlas database. The Pythons functions used to create site operations/functionality interact with the Collections in the MongoDB Atlas database. The functions complete one of four database CRUD operations; Create documents in a Collection, Read documents in a Collection, Update documents in a Collection, or Delete documents in a Collection.    
 * Heroku - I used the Heroku cloud-based and container-based platform-as-a-service to host and deploy the CPC web app.
-* Balsamiq - I used the Balsamiq application to create the website sitemap and page wireframes for PC, Tablet, and Mobile views.
+* Balsamiq - I used the Balsamiq application to create the website sitemap, and to create the page wireframes for PC & Tablet/Mobile views.
 * W3C validators - I used the W3C HTML5 and CSS3 code validators to validate my HTML and CSS.
 * JSHint - I used jshint.com to validate my JavaScript code.
 * PEP8Online.com - I used the PEP8 checker at Pep8online.com to check my Python code for errors.
@@ -335,12 +352,13 @@ Testing was completed under the below headings. A detailed testing document can 
 1. Device Testing
 1. Browser Testing
 
+# TO DO #
+  
 #### Bugs Discovered / Remedies ####
-1. Issues remained with the functionality of forms when they are not completed in full. These validation erros have now been resolved with help from Tutor support.
-2. Issues remained with multiple alerts appearing when a product is removed from the MyMenu. This has now been resolved with help from my Mentor, Rueben Ferrante.
-3. The contact forms don't clear their contents once the send buttons are sent. This has now been resolved with help from my Mentor, Rueben Ferrante.
-4. The JavaScript code was not commented fully. This has been resolved.
-5. The Google Chrome Dev Tools console logs a warning which reads: 'Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.' I found from a thread on StackOverflow that this relates to a "new header used to block Google's new tracking technology called Federated Cohorts of Learning (FLoC)." I then found that GitHub has added this new permission policy header to all pages. As such the warning is not within my control to fix as my site is deployed on GitHub Pages.
+1. Bootstrap form validation
+1. CSS animation error
+1. console error
+...
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -351,7 +369,9 @@ Testing was completed under the below headings. A detailed testing document can 
 #### <br> ####
 <hr>
 
-This site was developed by firstly setting up a GitHub repository to store the website files. GitHub is a free online code hosting platform for websites or web applications, which enables version control and collaboration during the development of a project. A repository on GitHub containes all of a project's files and each file's revision history. You can learn more about GitHub and repositories here: [Click here to go to GitHub](https://docs.github.com/en/free-pro-team@latest/github)
+The deployment of the CPC site was dependent on the setup of, and integration between, a number of platforms/frameworks/tools and a NoSQL MongoDB database.
+  
+This site was deployed by firstly setting up a GitHub repository to store the website files. GitHub is a free online code hosting platform for websites or web applications, which enables version control and collaboration during the development of a project. A repository on GitHub containes all of a project's files and each file's revision history. You can learn more about GitHub and repositories here: [Click here to go to GitHub](https://docs.github.com/en/free-pro-team@latest/github)
 
 I then used the online GitPod Integrated Development Environment (or GitPod IDE) to write the code for the website. Once I was happy with a section of new code I commited or saved that to a staging area. Then, on a regular basis, I commited changes to the working version of the website on GitPod. These commits included a short description of what the changes do. I would then 'push' those changes from the GitPod IDE to my GitHub repository where the master set of files was updated. You can learn more about GitPod here: [Click here to go to GitPod](https://docs.github.com/en/free-pro-team@latest/github)
 
@@ -361,36 +381,47 @@ The CPC site uses the Flask Python framework, a MongoDB database, a GitHub repos
 
 Here are the steps I took to deploy the website on Heroku;
 
-**** Create a MongoDB Database ****
-
-1. Create free account
-1. Created new DB on MongoDB, and 
-1. added there collections - league, users, matches.
-1. Steps...
-
 **** Install Flask & add additional files ****
 
-1. Withiin The GitPod IDE terminal window Installed Flask
-1. added app.py and env.py files
-1. Added environment variable to app.py, 
-1. imported Flask and tested Flask app is working by outputting Hello World to GitPod preview browser. 
-1. Add requirements.txt
-1. Add Procfile for Heroku
+1. Added Python application file (app.py).
+1. Added environment variables file (env.py).
+1. Added env.py to .gitignore file so that it would not be pushed to my public repository (it was done by default when using the Code Institute GitHub template).
+1. Imported Flask and associated libraries (see requirements.txt file below for a list of requirements).
+1. Tested that Flask was working by outputting Hello World to GitPod preview browser. 
+1. Added requirements.txt to tell Heroku what tools, frameworks, and library versions the app requires to run. in this case, these requirements are;
+    * click==7.1.2
+    * dnspython==2.0.0
+    * Flask==1.1.2
+    * Flask-PyMongo==2.3.0
+    * itsdangerous==1.1.0
+    * pymongo==3.11.0
+    * Werkzeug==1.0.1
+1. Added Procfile to tell Heroku what command to run to operate the app.
+
+**** Create a MongoDB Database ****
+
+1. Created a free MongoDB Atlas account.
+1. Created a new database on MongoDB called pool_club. 
+1. Added three collections to the database - 'league', 'user', and 'matches' - see the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
+1. Manually added some test documents to the user collection.
 
 **** Create app on Heroku ****
 
-1. Created App on Heroku - added config vars, and enabled automatic deploys from my GitHub repository (the Master branch). Tested and got Hello World! as expected.
+1. Created a new App on Heroku.
+1. Added config variabless to the Heroku app.
+1. Enabled automatic deploys from my GitHub repository (the Master branch) to the Heroku app. 
+1. Tested the connection with Heroku and got Hello World! when I opened the Heroku app.
 
 **** Final Steps ****
+1. Connected app.py to Mongodb.
+1. Imported flask_pymongo and bson.objectid tools in order to be able to interact with MongoDB Objects. 
+1. Tested connections between App.py-MongoDB-Heroku by adding a Flask route and Python function to app.py. The function asked to find all the documents in th collection 'user' and return it to the index route (render the template index.html). 
+1. I then committed and pushed my changes to my GitHub repository. 
+1. When I refeshed my Heroku app url, the list of test user documents which I created previously displayed on the index.html page correctly.
 
-1. Connected app to Mongodb 
-1. Added flask_pymongo, bson.objectid 
-1. Tested connection by adding route and 
-2. code to add template for player_home.html, and which found the collection user and returned it to the page. Worked as expected.
+I deployed the website early on in the development process as it useful to be able to test examine developing features on the website and on various physical devices in its live state. Also, while the GitPod IDE has the ability to show a preview of real-time changes to a project, sometimes that does not pick up or display issues which would appear on the live site. By having the deployed site up and running during development, I was able to address and correct any bugs early in the development process.
 
-I deployed the website early on in the development process, as it useful to be able to examine the website on various physical devices in its live state. Also, while the GitPod IDE has the ability to show a preview of real-time changes to a project, sometimes that does not pick up or display issues which would appear on the live site. By having the deployed site up and running during development, I was able to address and correct any bugs early in the development process.
-
-The live version of the CPC website deployed via Heroku can be seen here: [UPDATE ME!](https://andymc3000.github.io/ci-ms2-party-chef/)
+The live version of the CPC website deployed via Heroku can be seen: [Here!](https://pool-club.herokuapp.com/)
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -401,23 +432,24 @@ The live version of the CPC website deployed via Heroku can be seen here: [UPDAT
 #### <br> ####
 <hr>
 
-1. Coding Websites - I regularly used website to help me learn how to code certain elements/features. I also copied code snippets from these sites in some cases. These websites include; 
+1. Coding Websites - I regularly used a number websites to help me learn how to code certain elements/features. These websites include; 
 * [GetBootstrap.com](https://getbootstrap.com/)
 * [W3Schools.com](https://www.w3schools.com/)
+* [Flask Documentation Website](https://flask.palletsprojects.com/en/1.1.x/)
 * [Mozilla MDN Web Docs](https://developer.mozilla.org/)
+* [YouTub.com](https://youtube.com/)
 * [GitHub.com](https://github.com/)
+* [EDUCBA Website](https://www.educba.com/)
 * [StackOverflow.com](https://stackoverflow.com/)
 * [CSSTricks.com](https://css-tricks.com/)
 
-1. Code Institute Course Material - I copied code snippets from some of the course material relating to Backend Development Mini-Project module.
-
-1. Javascript Shoping Cart Plugin -  I used a Javascript plugin for the MyMenu feature on Party Chef. This was copied from code supplied by a GitHub user called WebDevSimplified who offers online coding course on YouTube. See that users profile here: [WebDevSimplified](https://github.com/WebDevSimplified). See the code repository for this plugin here: [Introduction to JavaScript Lesson 1](https://github.com/WebDevSimplified/Introduction-to-Web-Development/tree/master/Introduction%20to%20JavaScript/Lesson%201).
+* TO DO *
+  
+1. Code Institute Course Material - I referred to and used Code Instiute course material
 
 1. jQuery code used to stop Bootstrap form validation after a form was submitted in emailjs-contact-page-contact-form.js - I had a bug with form submission where Bootstrap validated the form again after 'submit' and 'reset'. As the form had been reset, this resulted in validation errors appearing on the blank form. I found some jQuery code on a GitHub issues thread which fixed the problem when I applied the code to my EmailJS JavaScript file. This thread was owned by a GitHub user called Cina Saffary. See the GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).
 
-1. EmailJS code - I copied relevant JavaScript code from the EmailJS website in order to create my 2 JavaScript files which send the emails from the forms on inde.html and contact.html.
-
-1. Google Map with custom markers and InfoWindows - I used a YouTube video to help with implementing the Google Map API and adding custom markers and InfoWindows. That video was created by Pradip Debnath. See Pradips GitHub profile here: [Pradip Debnath](https://github.com/itzpradip). See the YouTube video here: [Google Maps API Tutorial | Custom Marker Icon | Multiple Info Window](https://www.youtube.com/watch?v=Xptz0GQ2DO4)
+1. EmailJS code - I copied relevant JavaScript code from the EmailJS website in order to send emails from my Contact Form on index.html.
 
 1. Colours - I used the Coolors.co website to help me decide on a colour scheme for the webite. This website allows you to create your own colour palettes or to use one of thiers. See more about the Coolors.co palette catalogue and tools here: [Coolors.co](https://coolors.co/). 
 
@@ -429,7 +461,6 @@ The live version of the CPC website deployed via Heroku can be seen here: [UPDAT
   
 1. Company Logo - The Party Chef logo was created using tools on the FreeLogoDesign.org website. See more at; [FreeLogoDesign.org](https://www.freelogodesign.org/)
 
-1. Wikimedia commons - Technology logo's.
 
 
 ### Acknowledgements ###
