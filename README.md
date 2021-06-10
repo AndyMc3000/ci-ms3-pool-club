@@ -269,21 +269,18 @@ The CPC site employs the following features/functionality;
 * Page Footer on all pages.
 
 #### Future Features ####
-Unfortunately I ran out of time to implement some features which I had planned to implemen at the beginning of the projects. These items can be seen in the site Wireframes and are documented below. Additional possible features are also listed here.
+Unfortunately I ran out of time to implement all of the site features which I had planned to implement at the beginning of the project. These items can be seen in the site Wireframes, in routes/function in the app.py file, and in HTML pages in the Templates folder. These and other additional possible features are listed below. I wss advised to leave the HTML pages and Flask/Python code for these features in place to show the intended 'direction of travel' for the site.
 
-My repository and the live CPC app includes evidence of work done toward future features. I wss advised to leave the pages and code in place for futre reference and to show the intended 'direction of travel'.
-  
-* TO DO *
-  
-* The 'Edit Match' page should contain a dropdown where an Admin can select a Match from the current League. On clicking a 'Select Match' button a form will be populated containing the following data about that Match; Date, Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. An Admin can then edit the infromation contained in those fields. On clicking a 'Edit Match' button, they would then update the Match document in the Matches collection on a MongoDB database. Alternatively an Admin can also click a 'Delete Match' button which will delete a Match document from the Matches collection in a MongoDB database. 
-* The 'Edit Player' page should contain a dropdown where an Admin can select a Player. On clicking a 'Select Player' button a form will be populated containing the same Player form data as in the 'Edit My Account' page. An Admin can then edit the account details of a player. On clicking a "Edit Player' button an Admin can then update a Players document in the user collection of a MongoDB database. Alternatively an Admin can also click a 'Delete Player' button which will delete a Player document from the user collection in a MongoDB database. 
-* The 'Add Admin' page should contain a dropdown where an Admin can select a Player. On clicking a 'Make Admin' button an Admin then updates the admin value in a user document on MongoDB. The value will be updated from 'false' (the default value) to 'true.
-* The 'My League History' page should include a dropdown box where a Player can select an Archived League. On clicking 'View Stats' button, a table should be populated with a Players statistics from that League. This table should show their: Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
-* Find a Playershould i
-* The 'My Match List' page should include a table which shows a list of all a Players League fixtures. The table should include columns with headings for: Number, Player Name, Matches. All Players in the League should be listed, and the Matches column shoud show a 0, 1, or 2 to indicate the number of Matches played against an individual Player. Note: In a League, all Players will need to play to every other player twice.
-* The Club may decide it wants to charge members an annual membership fee. The CPC site could be used to collect this fee from members. This would require the integration of a billing system.
-* The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues at particular times, e.g an Xmas Pool Championship. The site could be updated to add a Championship bracket system.
-* The Club may want to sell merchandise in order to raise funds for prizes and tours. The site could be updated to add a shop selling Club themed merchandise. 
+1. A League Archive which can be accessed from the Homepage. This would allow a user to select an historical League from a droppdown listand view the final Table for that League. An Archived League would be created when a current/active league is deleted from the edit-league.html page. It would capture all the league stats for the users in the current league and create a new document in a MongoDB 'archive' collection. There is a 'Coming Soon' section on index.html to show where this feature would be positioned/accessed from.
+1. Find a Player
+1. My Match List
+1. My League History
+1. Add Admin
+1. Edit a Match
+1. Edit a Player
+1. The Club may decide it wants to charge members an annual membership fee. The CPC site could be used to collect this fee from members. This would require the integration of a billing system.
+1. The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues at particular times, e.g an Xmas Pool Championship. The site could be updated to add a Championship bracket system.
+1. The Club may want to sell merchandise in order to raise funds for prizes and tours. The site could be updated to add a shop selling Club themed merchandise. 
 
 #### [Back To Top ^ ](#top-of-page) ####
 
