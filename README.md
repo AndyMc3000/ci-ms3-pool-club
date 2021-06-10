@@ -345,6 +345,8 @@ I used the following technologies, services, and devices to develop, style, depl
 
 Testing was completed under the below headings. A detailed testing document can be seen <a href="readme-assets/testing.md"><strong>Here</strong></a>
 
+Any bugs or issues discovered are also listed below along with remedies if applicable.
+
 #### Testing Headings ####
 1. Development Testing
 1. User & Client stories Testing
@@ -355,11 +357,12 @@ Testing was completed under the below headings. A detailed testing document can 
 # TO DO #
   
 #### Bugs Discovered / Remedies ####
-1. Bootstrap form validation
-1. CSS animation error
-1. console error
-1. Admin link visibility
-1. Floating Footer
+1. Bootstrap form validation - When I tried to validate the JavaScript code I got from Bootsrap on JSHint.com, it thrw back warnings saying the code was missing semi-colons. So, I added them to my code. However this stopped the vaidation so I had to revert to the original code.
+1. CSS animation error - I added the animation property to my style.css along with the required vendor prefixes and @keyframe syntax. When I ran my code through the W3 Jigsaw validator, it threw errors for my animation code. I did some research and it seems that W3/CSS specification don't yet recognise vendor prefixes. As such I removed the animation code to ensure I ran no errors.
+1. Bootstrap CSS errors. When I ran my site through the W3 Jigsaw CSS validator it through multiple warnings and erros for the Bootstrap CDN-linked CSS file in my base.html. I discussed this with Student Support and was advised that as it was a Bootstra file (and I have no control over it), it was acceptable to leave this as is. 
+1. EMailJS Console error - 
+1. HTML validator warning - 
+1. Floating Footer - When I initally created my base.html and index.html templates and added a navbar and footer, the footbar did not behave itself. It was 'floating' up from the bottom of the page and hugging the bottom of the last container on the page. I did some research and found that I could fix it by applying some CSS to it. I added the 'Margin-Top: auto' property and value and it fixed the issue.
 1. On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68). 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -444,30 +447,26 @@ The live version of the CPC website deployed via Heroku can be seen: [Here!](htt
 * [EDUCBA Website](https://www.educba.com/)
 * [StackOverflow.com](https://stackoverflow.com/)
 * [CSSTricks.com](https://css-tricks.com/)
-
-* TO DO *
   
-1. Code Institute Course Material - I referred to and used Code Instiute course material
+1. Code Institute Course Material - I referred to and used Code Instiute course material to help with this project.
 
-1. jQuery code used to stop Bootstrap form validation after a form was submitted in emailjs-contact-page-contact-form.js - I had a bug with form submission where Bootstrap validated the form again after 'submit' and 'reset'. As the form had been reset, this resulted in validation errors appearing on the blank form. I found some jQuery code on a GitHub issues thread which fixed the problem when I applied the code to my EmailJS JavaScript file. This thread was owned by a GitHub user called Cina Saffary. See the GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).
+1. I copied and used jQuery code to stop Bootstrap form validation from validating the Contact form on index.html again, after submission. I found some jQuery code on a GitHub issues thread which fixed the problem when I added the code to my EmailJS JavaScript code on script.js. This thread was owned by a GitHub user called Cina Saffary. See the GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).
 
 1. EmailJS code - I copied relevant JavaScript code from the EmailJS website in order to send emails from my Contact Form on index.html.
 
-1. Colours - I used the Coolors.co website to help me decide on a colour scheme for the webite. This website allows you to create your own colour palettes or to use one of thiers. See more about the Coolors.co palette catalogue and tools here: [Coolors.co](https://coolors.co/). 
+1. Colours - I used the Coolors.co website to help me decide on a colour scheme for the webite. This website allows you to create your own colour palettes or to use one of theirs. See more about the Coolors.co palette catalogue and tools here: [Coolors.co](https://coolors.co/). 
 
-1. Font - I used Google Fonts for the fonts on the website. See more at: [GoogleFonts.com](https://fonts.google.com/)
+1. Font - I used Google Fonts for the fonts on the website and Canva.com for the font in the logo. See more at: [GoogleFonts.com](https://fonts.google.com/) & [Canva.com](https://canva.com/)
 
-1. Icons - I used FontAwesome and Favicon for all icons on the website. See more at: [FontAwesome.com](https://fontawesome.com/)
+1. Icons - I used FontAwesome for all icons on the website. See more at: [FontAwesome.com](https://fontawesome.com/)
 
 1. Design Principles - The design of this website employed the principles of 'The 5 Planes of UX design', which was created by Jesse James Garrett in his book; The Elements of User Experience: User-centered Design for the Web (2002). See more at; [Jjg.net](http://www.jjg.net/elements/)
-  
-1. Company Logo - The Party Chef logo was created using tools on the FreeLogoDesign.org website. See more at; [FreeLogoDesign.org](https://www.freelogodesign.org/)
 
 
 
 ### Acknowledgements ###
 
-In order to get design ideas, I took inspiration from a number of industry relevant websites.
+In order to get design ideas, I took inspiration from a number of relevant websites.
 These websites are;
 
 No. | Business     | Website     | Description |
@@ -481,12 +480,12 @@ No. | Business     | Website     | Description |
 ### Additonal Support ###
 
 I also received help and support from;
-* Reuben Ferrante - Code Institute Mentor - Slack Username: [reubenfer_mentor](https://code-institute-room.slack.com/team/UKD9L615F) - Reuben is my new Mentor and was hugely helpful with helping me with my JavaScript code, having jumped in at a late stage in the project. Reuben also helped me with fixing issues for the resubmission of my project.
+* Reuben Ferrante - Code Institute Mentor - Slack Username: [reubenfer_mentor](https://code-institute-room.slack.com/team/UKD9L615F) - Reuben is my new Mentor and was hugely helpful (and patient).
 * Anna Greaves - Full Stack Developer and Content Developer at Code Institute - GitHub profile here: [@AJGreaves](https://github.com/AJGreaves)
  - I took inspiration from Anna's Family Hub project on GitHub. In particular I found Anne's README.md and Testing.md files very helpful. See that repository here: [FamilyHub](https://github.com/AJGreaves/familyhub)
 * The Student Support team at Code Institute.
-* The Tutor team at Code Institute.
+* The Tutor Team at Code Institute.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
-<a name="top-of-page">![Party Chef Logo created using FreeLogoDesign.org](/assets/readme-assets/party-chef-logo-readme.png)</a>
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using Canva.com and Clipart.com](/readme-assets/cpcp-logo-readme-header.png)</a>
