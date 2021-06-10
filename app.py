@@ -230,7 +230,7 @@ def player_edit_account():
             "email": request.form.get("email"),
             "telephone": request.form.get("telephone"),
             "password": request.form.get("password"),
-            "password2": request.form.get("password2")
+            "password": request.form.get("password")
         }
         mongo.db.user.update({"_id": ObjectId(player)}, update_player)
         flash("Account Successfully Updated")
