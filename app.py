@@ -134,7 +134,7 @@ def logout():
 @app.route("/player-home", methods=["GET", "POST"])
 def player_home():
     """
-    Function directs a logged in user to their Player Homepage
+    Function returns the Player Homepage
     """
     # Fetch the session user's data from MongoDB
     user = mongo.db.user.find_one({"email": session["user"]})
@@ -215,9 +215,12 @@ def player_stats():
         league=league, user=user)
 
 
-# edit player account details
 @app.route("/player-edit-account", methods=["GET", "POST"])
 def player_edit_account():
+    """
+    Function allows a registered user to edit and UPDATE
+    their account details
+    """
     player = mongo.db.user.find_one({"email": session["user"]})
     if request.method == "POST":
         update_player = {
@@ -234,20 +237,24 @@ def player_edit_account():
         return redirect(url_for("player_home", first_name=session["user"]))
 
     return render_template(
-        "player-edit-account.html", user=user, player=player)
+        "player-edit-account.html", player=player, user=user)
 
 
-# admin home page
 @app.route("/admin-home")
 def admin_home():
+    """
+    Function returns the Admin homepage
+    """
     user = mongo.db.user.find_one({"email": session["user"]})
-    print(user)
     return render_template("admin-home.html", user=user)
 
 
-# add new league (admin view)
 @app.route("/add-league", methods=["GET", "POST"])
 def add_league():
+    """
+    Function allows an Admin user to create a new
+    league
+    """
     if request.method == "POST":
         league = {
             "name": request.form.get("name"),
@@ -263,9 +270,12 @@ def add_league():
     return render_template("add-league.html", user=user)
 
 
-# add new player (admin view)
 @app.route("/add-player", methods=["GET", "POST"])
 def admin_register_user():
+    """
+    Function allows an Admin user to register a new
+    user/club member
+    """
     if request.method == "POST":
         # check if username already exists in db
         current_user = mongo.db.user.find_one(
@@ -350,7 +360,7 @@ def delete_league(league_id):
 @app.errorhandler(404)
 def not_found_exception_handler(e):
     """
-    Catches 404 page not found errors
+    Catches 404 Page Not Found errors
     """
     print(e)
     return render_template("error-404.html")
@@ -359,7 +369,7 @@ def not_found_exception_handler(e):
 @app.errorhandler(Exception)
 def generic_exception_handler(e):
     """
-    Catchs ANY other exception
+    Catches ANY other exception
     """
     print(e)
     return render_template("error-exception.html")
@@ -394,7 +404,7 @@ def select_match():
     the Edit Match page (see below)
     """
     matches = mongo.db.matches.find().sort("date", 1)
-    return render_template("select-match.html", matches=matches)
+    return render_template("select-match.html", user=user, matches=matches)
 
 
 # FUTURE RELEASE ONLY - Edit a Match;
@@ -407,7 +417,7 @@ def edit_match():
     # TODO: Read selected Match data and present
     # in a form. A user can then UPDATE the values of a League
     # or DELETE a League.
-    return render_template("edit-match.html",)
+    return render_template("edit-match.html", user=user)
 
 
 # FUTURE RELEASE ONLY - Archive;
@@ -441,7 +451,7 @@ def player_contact():
     # from MongoDB and display in table on page
     # (comment left intentionally)
     return render_template(
-        "player-contact-info.html",
+        "player-contact-info.html", user=user,
         playername=mongo.db.user.find().sort("surname", 1))
 
 
@@ -509,7 +519,7 @@ def player_archive_stats():
     # dropdown list of archived leagues on a yet to be created
     # select-archive-league.html. Stats should then be displayed
     # in a table on this page
-    return render_template("player-archive-results.html")
+    return render_template("player-archive-results.html", user=user)
 
 
 if __name__ == "__main__":
