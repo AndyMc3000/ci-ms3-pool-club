@@ -1,82 +1,111 @@
 {% extends "base.html" %}
 {% block content %}
 
-   <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- Add Admin card and form -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Edit League</h3>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form action="{{ url_for('edit_league', league_id=league._id) }}" class="form w-75 needs-validation" method="POST" novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="name"><i class="fas fa-folder-plus"></i></span>
-                                                <input type="text" name="name" value="{{ league.name }}" class="form-control" placeholder="Edit League Name" aria-label="name" aria-describedby="name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                    <!-- END of Back button -->
+                    <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h3 class="card-title pb-4">Edit League</h3>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div">
+                                        <form action="{{ url_for('edit_league', league_id=league._id) }}"
+                                            class="form w-75 needs-validation" method="POST" novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="name"><i
+                                                            class="fas fa-folder-plus"></i></span>
+                                                    <input type="text" name="name" value="{{ league.name }}"
+                                                        class="form-control" placeholder="Edit League Name" aria-label="name"
+                                                        aria-describedby="name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a Name for this League.
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a Name for this League.
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="description"><i
+                                                            class="fas fa-comment-alt"></i></span>
+                                                    <input type="text" name="description" class="form-control"
+                                                        placeholder="Edit League Description" aria-label="description"
+                                                        aria-describedby="description" value="{{ league.description }}"
+                                                        required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a Description for this League.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="start_date"><i
+                                                            class="far fa-calendar-alt"></i></span>
+                                                    <input type="date" name="start_date" class="form-control"
+                                                        placeholder="Enter Start Date" aria-label="start_date"
+                                                        aria-describedby="start_date" autocomplete="date"
+                                                        value="{{ league.start_date }}" required>
+                                                    <label for="start_date"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please add a valid Date.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="end_date"><i
+                                                            class="far fa-calendar-alt"></i></span>
+                                                    <input type="date" name="end_date" class="form-control"
+                                                        placeholder="Enter Start Date" aria-label="end_date"
+                                                        aria-describedby="end_date" autocomplete="date"
+                                                        value="{{ league.end_date }}" required>
+                                                    <label for="end_date"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please add a valid Date.
+                                                    </div>
+                                                </div>
+                                                <div class="text-center gap-1 justify-content-center">
+                                                    <button type="submit"
+                                                        class="btn btn-primary mb-4 mt-3 mx-1 form-submit-button">Update
+                                                        League</button>
+                                                    <a href="{{ url_for('delete_league', league_id=league._id) }}"
+                                                        class="btn btn-danger mb-4 mt-3 mx-1 form-submit-button">Delete
+                                                        League</a>
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="description"><i class="fas fa-comment-alt"></i></span>
-                                                <input type="text" name="description" class="form-control" placeholder="Edit League Description" aria-label="description" aria-describedby="description" value="{{ league.description }}" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a Description for this League.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="start_date"><i class="far fa-calendar-alt"></i></span>
-                                                <input type="date" name="start_date" class="form-control" placeholder="Enter Start Date" aria-label="start_date" aria-describedby="start_date" autocomplete="date" value="{{ league.start_date }}"required>
-                                                <label for="start_date"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please add a valid Date.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="end_date"><i class="far fa-calendar-alt"></i></span>
-                                                <input type="date" name="end_date" class="form-control" placeholder="Enter Start Date" aria-label="end_date" aria-describedby="end_date" autocomplete="date" value="{{ league.end_date }}"required>
-                                                <label for="end_date"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please add a valid Date.
-                                                </div>
-                                            </div>
-                                            <div class="text-center gap-1 justify-content-center">
-                                                <button type="submit" class="btn btn-primary mb-4 mt-3 mx-1 form-submit-button">Update League</button>
-                                                <a href="{{ url_for('delete_league', league_id=league._id) }}" class="btn btn-danger mb-4 mt-3 mx-1 form-submit-button">Delete League</a>
-                                            </div>
-                                            </div>
-                                        </div>
+                                    </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Back button -->
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i>
+                        Back </a>
                 </div>
+                <!-- END of Back button -->
             </div>
         </div>
-    </div>
-    
+    </section>
+    <!-- Add Admin card and form -->
 {% endblock %}

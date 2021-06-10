@@ -1,148 +1,180 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- Add Match page view -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Add Match Result</h3>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form action="{{ url_for('add_match') }}" class="form w-75 needs-validation" method="POST" novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="date"><i class="far fa-calendar-alt"></i></span>
-                                                <input type="date" name="date" class="form-control" placeholder="Enter Match Date" aria-label="date" aria-describedby="date" autocomplete="date" required>
-                                                <label for="date"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                    <!-- Back button -->
+                    <!-- Add Match card and form -->
+                    <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h3 class="card-title pb-4">Add Match Result</h3>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div">
+                                        <form action="{{ url_for('add_match') }}" class="form w-75 needs-validation"
+                                            method="POST" novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="date"><i
+                                                            class="far fa-calendar-alt"></i></span>
+                                                    <input type="date" name="date" class="form-control"
+                                                        placeholder="Enter Match Date" aria-label="date"
+                                                        aria-describedby="date" autocomplete="date" required>
+                                                    <label for="date"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please add a valid Date.
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please add a valid Date.
+                                                <div class="input-group hidden-field">
+                                                    <input type="hidden" id="league" name="league" value="Current League">
+                                                    <!-- <span class="input-group-text" id="league"><i class="fas fa-scroll"></i></span>
+                                                        <select id="league" name="league" class="validate form-control form-select" required>
+                                                            <option value="" disabled selected>Pick a League</option>
+                                                        {% for league in league %}
+                                                            <option value="{{ league.name }}">{{ league.name }}</option>
+                                                        {% endfor %}
+                                                        </select>
+                                                        <label for="league"></label>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                        <div class="invalid-feedback">
+                                                            Please select a League.
+                                                        </div> -->
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="referee"><i
+                                                            class="far fa-eye"></i></span>
+                                                    <select id="referee" name="referee"
+                                                        class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Choose Referee</option>
+                                                        {% for referee in referee %}
+                                                        <option
+                                                            value="{{ referee.first_name }} '{{ referee.nickname }}' {{ referee.surname }}">
+                                                            {{ referee.first_name }} '{{ referee.nickname }}'
+                                                            {{ referee.surname }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <label for="referee"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose a Referee.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="player_one"><i
+                                                            class="fas fa-user-shield"></i></span>
+                                                    <select id="player_one" name="player_one"
+                                                        class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Choose Player 1</option>
+                                                        {% for player_one in player_one %}
+                                                        <option value="{{ player_one._id }}">{{ player_one.first_name }}
+                                                            '{{ player_one.nickname }}' {{ player_one.surname }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <label for="player_one"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose Player 1
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="player_one_games_won"><i
+                                                            class="fas fa-trophy"></i></span>
+                                                    <select id="player_one_games_won" name="player_one_games_won"
+                                                        class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Pick Player 1 Frames Won</option>
+                                                        <option value="0">0 Frames</option>
+                                                        <option value="1">1 Frame</option>
+                                                        <option value="2">2 Frames</option>
+                                                        <option value="3">3 Frames</option>
+                                                    </select>
+                                                    <label for="player_one_games_won"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please make a selection
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="player_two"><i
+                                                            class="fas fa-user-shield"></i></span>
+                                                    <select id="player_two" name="player_two"
+                                                        class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Choose Player 2</option>
+                                                        {% for player_two in player_two %}
+                                                        <option value="{{ player_two._id }}">{{ player_two.first_name }}
+                                                            '{{ player_two.nickname }}' {{ player_two.surname }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <label for="player_two"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose Player 1
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="player_two_games_won"><i
+                                                            class="fas fa-trophy"></i></span>
+                                                    <select id="player_two_games_won" name="player_two_games_won"
+                                                        class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Pick Player 2 Frames Won</option>
+                                                        <option value="0">0 Frames</option>
+                                                        <option value="1">1 Frame</option>
+                                                        <option value="2">2 Frames</option>
+                                                        <option value="3">3 Frames</option>
+                                                    </select>
+                                                    <label for="player_two_games_won"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please make a selection
+                                                    </div>
+                                                </div>
+                                                <div class="input-group m-auto text-center">
+                                                    <button type="submit"
+                                                        class="btn btn-primary mb-3 form-submit-button">Add Result</button>
                                                 </div>
                                             </div>
-                                            <div class="input-group hidden-field">
-                                                <input type="hidden" id="league" name="league" value="Current League">
-                                                <!-- <span class="input-group-text" id="league"><i class="fas fa-scroll"></i></span>
-                                                <select id="league" name="league" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Pick a League</option>
-                                                {% for league in league %}
-                                                    <option value="{{ league.name }}">{{ league.name }}</option>
-                                                {% endfor %}
-                                                </select>
-                                                <label for="league"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please select a League.
-                                                </div> -->
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="referee"><i class="far fa-eye"></i></span>
-                                                <select id="referee" name="referee" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Choose Referee</option>
-                                                {% for referee in referee %}
-                                                    <option value="{{ referee.first_name }} '{{ referee.nickname }}' {{ referee.surname }}">{{ referee.first_name }} '{{ referee.nickname }}' {{ referee.surname }}</option>
-                                                {% endfor %}
-                                                </select>
-                                                <label for="referee"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose a Referee.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="player_one"><i class="fas fa-user-shield"></i></span>
-                                                <select id="player_one" name="player_one" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Choose Player 1</option>
-                                                {% for player_one in player_one %}
-                                                    <option value="{{ player_one._id }}">{{ player_one.first_name }} '{{ player_one.nickname }}' {{ player_one.surname }}</option>
-                                                {% endfor %}
-                                                </select>
-                                                <label for="player_one"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose Player 1
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="player_one_games_won"><i class="fas fa-trophy"></i></span>
-                                                <select id="player_one_games_won" name="player_one_games_won" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Pick Player 1 Frames Won</option>
-                                                    <option value="0">0 Frames</option>
-                                                    <option value="1">1 Frame</option>
-                                                    <option value="2">2 Frames</option>
-                                                    <option value="3">3 Frames</option>
-                                                </select>
-                                                <label for="player_one_games_won"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please make a selection
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="player_two"><i class="fas fa-user-shield"></i></span>
-                                                <select id="player_two" name="player_two" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Choose Player 2</option>
-                                                {% for player_two in player_two %}
-                                                    <option value="{{ player_two._id }}">{{ player_two.first_name }} '{{ player_two.nickname }}' {{ player_two.surname }}</option>
-                                                {% endfor %}
-                                                </select>
-                                                <label for="player_two"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose Player 1
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="player_two_games_won"><i class="fas fa-trophy"></i></span>
-                                                <select id="player_two_games_won" name="player_two_games_won" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Pick Player 2 Frames Won</option>
-                                                    <option value="0">0 Frames</option>
-                                                    <option value="1">1 Frame</option>
-                                                    <option value="2">2 Frames</option>
-                                                    <option value="3">3 Frames</option>
-                                                </select>
-                                                <label for="player_two_games_won"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please make a selection
-                                                </div>
-                                            </div>
-                                            <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Add Result</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <!-- END of Add Match card and form -->
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('player_home', first_name=session['user']) }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    </div>
+                    <!-- END of Back button -->
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
+    <!-- Add Match page view -->
 {% endblock %}

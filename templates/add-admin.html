@@ -1,89 +1,116 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- Add Admin page view -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Add an Administrator</h3>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form action="{{ url_for('add_admin') }}" class="form w-75 needs-validation" method="POST" novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="first_name"><i class="fas fa-user"></i></span>
-                                                <input type="text" readonly name="first_name" class="form-control" value="Read Only Value" aria-label="first_name" aria-describedby="first_name" autocomplete="given-name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                    <!-- END of Back button -->
+                    <!-- Add Admin card and form -->
+                    <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h3 class="card-title pb-4">Add an Administrator</h3>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div">
+                                        <form action="{{ url_for('add_admin') }}" class="form w-75 needs-validation"
+                                            method="POST" novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="first_name"><i
+                                                            class="fas fa-user"></i></span>
+                                                    <input type="text" readonly name="first_name" class="form-control"
+                                                        value="Read Only Value" aria-label="first_name"
+                                                        aria-describedby="first_name" autocomplete="given-name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your First Name.
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your First Name.
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="nickname"><i
+                                                            class="far fa-user"></i></span>
+                                                    <input type="text" name="nickname" class="form-control" value=""
+                                                        aria-label="nickname" aria-describedby="nickname"
+                                                        autocomplete="nickname" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your Nickname.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="surname"><i
+                                                            class="fas fa-user"></i></span>
+                                                    <input type="text" name="surname" class="form-control" value=""
+                                                        aria-label="surname" aria-describedby="surname"
+                                                        autocomplete="family-name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your Surname.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
+                                                    <input type="email" name="email" class="form-control" value=""
+                                                        aria-label="email" aria-describedby="email" autocomplete="email"
+                                                        required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a valid Email Address.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="telephone"><i
+                                                            class="fas fa-mobile-alt"></i></span>
+                                                    <input type="tel" name="telephone" class="form-control" value=""
+                                                        aria-label="telephone" aria-describedby="telephone" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a Mobile Number.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group m-auto text-center">
+                                                    <button type="submit" class="btn btn-primary mb-3 form-submit-button">Make
+                                                        Admin</button>
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="nickname"><i class="far fa-user"></i></span>
-                                                <input type="text" name="nickname" class="form-control" value="" aria-label="nickname" aria-describedby="nickname" autocomplete="nickname" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your Nickname.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="surname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="surname" class="form-control" value="" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your Surname.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
-                                                <input type="email" name="email" class="form-control" value="" aria-label="email" aria-describedby="email" autocomplete="email" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a valid Email Address.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="telephone"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="tel" name="telephone" class="form-control" value="" aria-label="telephone" aria-describedby="telephone" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a Mobile Number.
-                                                </div>
-                                            </div>
-                                            <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-3 form-submit-button">Make Admin</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <!-- Add Admin card and form -->
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    </div>
+                    <!-- END of Back button -->
                 </div>
             </div>
         </div>
-    </div>
-   
-    
+    </section>
+    <!-- END of Add Admin page view -->
+
 {% endblock %}
