@@ -65,21 +65,15 @@ Please see below details of the 'Client Stories' to detail the requirements of t
 
 #### Client Stories ####
 > - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.”
-> - [x] “The website must also give Club organisers a one-stop-shop to create and manage Pool Leagues, League Matches, and Players/Members.”
-> - [x] “The website must allow users on the site to view both current and archived League Tables.” 
+> - [x] “The website must give Club organisers a place to add new members and create and edit Leagues.
+> - [x] “The website must allow users on the site to view the current League Table.” 
 > - [x] “The website must allow new members to register and join the Club.” 
-> - [x] “The website must provide an area where club members can view their current League statistics/progress.”
-> - [x] “The website must provide an area where club members can view a list of the current League Matches they have played, and which matches are yet to be played (depending on active membership numbers, a player can expect they will need to play each other player twice in a given League).”
-> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee.”
-> - [x] “The website must provide an area where club members can find contact details of another Player in order to arrange a Match date/time/venue.”
-> - [x] “The website must provide an area where club members can view their League statistics for previous (archived) Leagues.”
+> - [x] “The website must provide an area where club members can view their current League statistics.”
+> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee. Adding a match must update the League Table and a members League statistics appropriately.”
 > - [x] “The website must provide an area where club members can edit and update their Account information.”
 > - [x] “The website must provide an area where site Admininstrators can add a new League."
 > - [x] “The website must provide an area where site Admininstrators can add a new Player/Member."
-> - [x] “The website must provide an area where site Admininstrators can make a Player/Member an Administrator."
 > - [x] “The website must provide an area where site Admininstrators can edit or delete a League."
-> - [x] “The website must provide an area where site Admininstrators can edit or delete a Player."
-> - [x] “The website must provide an area where site Admininstrators can edit or delete a Match."
 > - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.”
 > - [x] “The website must have a section showing banner adverts for CPC sponsors.”
 > - [x] “The website must be mobile-friendly.”
@@ -87,59 +81,52 @@ Please see below details of the 'Client Stories' to detail the requirements of t
 
 #### User Stories ####
 > - [x] “I want to learn about what the CPC is.”
-> - [x] “I want to be able to view current and archived CPC League Tables.”
+> - [x] “I want to be able to view the current League Table.”
 > - [x] “I want to be able to register and sign-up to join the CPC.”
-> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - Current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
-> - [x] “I want to be able to view my personal League statistics - League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - my League Points, and my Matches Won/Lost.
 > - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
-> - [x] “I want to be able to view my list of Leagues Matches, both those Matches Played and those Matches yet to be played."
-> - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."
 > - [x] “I want to be able to edit and update my Account information."
+> - [x] “I want to be able to find contact infromation for the CPC, and be able to send a message to the CPC organisers."
 
 ### 2. The Scope Plane ###
 
 Based on the outcomes from the Strategy Plane, The Scope Plane determines what features, functionality, and types of content should be included within the scope of the project. Listed below are the functional specifications and content requirements decided upon for the CPC website. 
 
 #### Functional Specifications: ####
-* Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. Each of these pages should have a selection of 'feature views'/pages linked from them. The Homepage should have 4 page views linked from it, those being; 'Login', 'Current League Table' 'League Archive', and 'Register'. The Player Homepage should have 6 page views linked from it, those being; 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'. The Admin Homepage should have 6 page views linked from it, those being; 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.  
+* Build a responsive Website with 3 main pages - a Homepage, a Player Homepage, and an Admin homepage. 
+* Each of these pages should have a selection of 'feature views'/pages linked from them. The Homepage should have 3 page views linked from it, those being; 'Login', 'Current League Table', and 'Register'. 
+* The Player Homepage should have 3 page views linked from it, those being; 'My League Stats', 'Add Match Result', and 'Edit My Account'. 
+* The Admin Homepage should have 6 page views linked from it, those being; 'Add League', 'Add Player', and 'Edit League'.  
 
 * All Pages:  
    * All pages should include a Navigation bar to highlight the currently accessed page. The Navigation bar should have 3 different views; One for a non-logged in user, one for a logged in registered player, and one for an Admin user.
    * All pages should include a carousel with scrolling banners adverts for CPC sponsors at the bottom of the page.
    * All pages should include a Footer section which simply has a CPC logo which links to the Homepage, and copyright information. 
-* Homepage, Registration page, Login page, and League Table pages:  
+* Homepage, Registration page, Login page, and League Table page:  
    * The Homepage should include and introduction section and a 'why join us?' section, which should introduce the club and promote the benefits of joining it. 
-   * The Homepage should also have an 'Our Leagues' which describes what the Leagues are and how often they are run. This section should also include button links to pages to view; 1. The current/active League Table, and 2. Archived League Tables.
-   * The Homepage should include a Contact Us section to show name, telephone, and email contact infromation for the CPC organisers, as well a contact form.
-   * The Register page should have a form which allows a new member to input their; First Name, Nickname, Surname, Telephone Number, Email Address, a Password, and it should also include a Confirm Password field. On clicking a Register button, a user will create a new document in a 'user' collection of a MongoDB database.
+   * The Homepage should also have an 'Our Leagues' which describes what the Leagues are and how often they are run. This section should also include a button linking to the current League Table.
+   * The Homepage should include a Contact Us section to show name, telephone, and email contact information for the CPC organisers, as well a contact form where user ccan send a message.
+   * The Register page should have a form which allows a new member to input their; First Name, Nickname, Surname, Telephone Number, Email Address, a Password, and it should also include a Confirm Password field. On clicking a Register button, a user will create a new document in a 'user' collection of a MongoDB database. This document will also contain default values (hidden from the form) for Points, Matches Won, Matches Lost, Games Won, Games Lost, Matches Remaining, and Leagues Entered.
    * The Login page should have a form where a User can input their email address and password. On clicking a "log In' button, the user should be redirected to their Player Homepage.
-   * The Current League Table should show a table showing up-to-date data for all members in the current League. This table should include columns with headings for; Player Name, Points, Matches Won, Matches Lost, and Matches Remaining.
-   * The League Archive page should include a dropdown box where a user can select the name of a League which which has an end date in the past. On clicking a 'view League' button, the data for the League Table for that League will populate a table on the page (in the same format as the above 'Current League Table').
+   * The Current League Table should show a table showing up-to-date data for all members in the current League. This table should include columns with headings for; Rank, Player Name, Points, Matches Won, and Matches Lost.
 * Player Homepage:
-   * The 'My League Stats' page should include a table which shows a Players individual current League statistics including their: Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
-   * The 'My Match List' page should include a table which shows a list of all a Players League fixtures. The table should include columns with headings for: Number, Player Name, Matches. All Players in the League should be listed, and the Matches column shoud show a 0, 1, or 2 to indicate the number of Matches played against an individual Player. Note: In a League, all Players will need to play to every other player twice.
-   * The 'Add Match Result' page should contain a form where a Player can results of a Match from the current League. The form should contain the following fields; Match Date, Match Referee, Player One, Player One Frames Won, Player Two, Player Two Frames Won. On clicking a 'Add Result' button, the Player would then create a new Match document in the Matches collection on a MongoDB database.
-   * Find a Playershould include a form where a player can add Match details to a Matches collection on a MongoDB database. A Player can pick a match date from a date picker field. Then they can select the following from a series of dropdowns; Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. On clicking a 'Add Result' button, they would then create a new document in the Matches collection. 
-   * The 'My League History' page should include a dropdown box where a Player can select an Archived League. On clicking 'View Stats' button, a table should be populated with a Players statistics from that League. This table should show their: Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
+   * The 'My League Stats' page should include a table which shows a Players individual current League statistics including their: Points, Matches For, and Matches Against.
+   * The 'Add Match Result' page should contain a form where a Player can record the results of a Match for the current League. The form should contain the following fields; Match Date, Match Referee, Player One, Player One Frames Won, Player Two, and Player Two Frames Won. On clicking a 'Add Result' button, the Player would then create a new Match document in the Matches collection on a MongoDB database. This action would also calculate the Points and Matches Won or Matches Lost for each Player. The League Table would should also be updated with the appropriate increase in Points and Matches Won/Lost for each Player.
    * The 'Edit My Account' page should include a form which pre-populates with a Players Account information. A Player can edit the details on the form. These details being; First Name, Nickname, Surname, Telephone Number, Email Address, and Password. On clicking a update details button, a user will update their document in the user collection on MongoDB.
 * Admin Homepage:
    * The 'Add League' page should contain a form where an Admin can input; League Name, League Description, Start Date and End Date.
-   * The 'Add Player' page should contain the same form as in the Register page. This feature may be required when a person wants to join the club but is not computer savvy. And so an Admin can then register the user on their behalf. 
-   * The 'Add Admin' page should contain a dropdown where an Admin can select a Player. On clicking a 'Make Admin' button an Admin then updates the admin value in a user document on MongoDB. The value will be updated from 'false' (the default value) to 'true. 
-   * The 'Edit Player' page should contain a dropdown where an Admin can select a Player. On clicking a 'Select Player' button a form will be populated containing the same Player form data as in the 'Edit My Account' page. An Admin can then edit the account details of a player. On clicking a "Edit Player' button an Admin can then update a Players document in the user collection of a MongoDB database. Alternatively an Admin can also click a 'Delete Player' button which will delete a Player document from the user collection in a MongoDB database.  
-   * The 'Edit League' page should contain a dropdown where an Admin can select a League. On clicking a 'Select League' button a form will be populated containing the following data about that League; League Name, League Description, Start Date and End Date. An Admin can then edit the League details. On clicking a "Edit League' button an Admin can then update a Leagues document in the league collection of a MongoDB database. Alternatively an Admin can also click a 'Delete League' button which will delete a League document from the league collection in a MongoDB database.  
-   * The 'Edit Match' page should contain a dropdown where an Admin can select a Match from the current League. On clicking a 'Select Match' button a form will be populated containing the following data about that Match; Date, Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. An Admin can then edit the infromation contained in those fields. On clicking a 'Edit Match' button, they would then update the Match document in the Matches collection on a MongoDB database. Alternatively an Admin can also click a 'Delete Match' button which will delete a Match document from the Matches collection in a MongoDB database.  
-
+   * The 'Add Player' page should contain the same form as in the Register page. This feature may be required when a person wants to join the club but is not computer savvy. And so an Admin can then register the user on their behalf.  
+   * The 'Select League' page should contain a dropdown where an Admin can select a League. After selecting a league by clicking a button, the Admin will be redirected to the Edit League page where a form will be populated containing the following data about that League; League Name, League Description, Start Date and End Date. An Admin can then edit the League details. On clicking a "Update League' button an Admin can then update a Leagues document in the league collection of a MongoDB database. Alternatively an Admin can also click a 'Delete League' button which will delete a League document from the league collection in a MongoDB database.  
+   
 #### Content Requirements: ####
-* The images used on the Homepage Carousel should show people playing pool. The images should be colourful and 'exciting', in order to entice new members. 
+* The images used on the Homepage Carousel should show people playing pool. The images should be colourful and 'exciting', in order to entice new members to join the club. 
 * The 'Why Join' section on the Homepage should briefly, but completely, convey what the benefits are of joining the Club. 
 * The 'Why Join' section should also contain appropriate images and texts contained within Bootstrap cards to reinforce the 'Why Join' messaging.
-* The 'Our Leagues' section on the Homepage should briefly, but completely, describe what the Club Leagues are and how often they are. 
-* This 'Our Leagues' section should also contain Bootstrap cards which contain images, texts, and link buttons which link to the Current League Table page, and the Archived League Tables page.
-* The Contact Us section should include text to describe how the Club can be contacted, and this should be placed above a Contact Form.
+* The 'Our Leagues' section on the Homepage should briefly, but completely, describe what the Club Leagues are and how often they are run. 
+* This 'Our Leagues' section should also contain Bootstrap cards which contain images, texts, and a link button which links to the current League Table page.
+* The Contact Us section should include text to describe how the Club can be contacted, including a telephone munber and an email address, which should be placed above a Contact Form.
 * The 'Visit our Sponsors' scrolling carousel section should contain a selection of attractive sponsor marketing banners, and include links to the external sponsor websites.
 * The Footer section should contain a single CPC logo which also serves as a link to the Homepage.
-
 
 ### 3. The Structure Plane ###
 
@@ -151,23 +138,24 @@ Interaction design is defined as the "..development of application flows to faci
 * It should have a navigation bar with individual links to the Registration and Login pages. The navigation bar should also be fixed to the top of the page view.
 * The 'hero' carousel banners at the top of the Homepage should include a link button linking to the Registration page.
 * The 'Why Join' section should also contain a link button linking to the Registration page.
-* The 'Our Leagues' section should contain two link buttons. One button should link a user to the current League Tabel page, and the other should link a user to the Archived League Tables page.
+* The 'Our Leagues' section should contain a button should linking a user to the current League Table page.
 * On completion and submission the Contact Form should send an email (cc'ing the user) to a CPC organiser using the EmailJS email service. 
 * The sponsor carousel banners in the 'Visit our Sponsor' section should be clickable and link a user to an external sponsor website, where that page opens in a new browser window/tab.
 * The Current League page should have back buttons above and below the League Table container and link a user back to the Homepage.
 * The Login page should have back buttons above and below the Log In form container and link a user back to the Homepage.
+* The Registration page should have back buttons above and below the Registration From container and link a user back to the Homepage.
 
 * The Player Homepage and linked pages/views;
-* Once a Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), and Log Out (rerouting a user to the Login page).  
+* Once a Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), and Log Out (which reroutes a user to the Login page).  
 * The Player Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
 * Each function listed on the Player Homepage should have its own page.
-* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning a Player to their Player Homepage. The function pages to be included are: 'My League Stats', 'My Match List', 'Add Match Result', 'Find A Player', 'My League History', and 'Edit My Account'.
+* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning a Player to their Player Homepage. The function pages to be included are: 'My League Stats', 'Add Match Result', and 'Edit My Account'.
 
 * The Admin Homepage and linked pages/views;
-* If a Player is also an Admin, and once that Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), Admin (Admin Homepage) and Log Out (rerouting a user to the Login page). 
+* If a Player is also an Admin, and once that Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), Admin (Admin Homepage) and Log Out (which should reroute a user to the Login page). 
 * The Admin Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
 * Each function listed on the Admin Homepage should have its own page.
-* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning an Admin to their Player Homepage. The function pages to be included are: 'Add League', 'Add Player', 'Add Admin', 'Edit League', 'Edit Player', and 'Edit Match'.
+* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning an Admin to their Player Homepage. The function pages to be included are: 'Add League', 'Add Player', and 'Edit League'.
 
 #### Information Architecture: ####
 
@@ -176,25 +164,7 @@ Information Architechture is defined as; "The structural design of the informati
 With this in mind, please see details below about the CPC sitemap, how data is stored and managed, and about navigation and security considerations.
 
 * ##### Sitemap #####
-The structure of the website is outlined in the Sitemap. Click here to view the <a href="assets/readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
-
-* ##### Data #####
-The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', 'matches', and 'archive'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
-
-* The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
-  * 'first_name', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues' 
-
-* The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
-  * 'name', 'description', 'start_date', 'end_date', and 'participating_players' 
-  
-* The 'matches' collection should store information relating to individual matches played. The keys in the documents of this collection will be;
-  * 'player_one', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee' 
- 
-# TO DO #
-* The 'archive' collection should store information relating to leagues with an end date in the past. This collection will store a list of leagues. The keys in each list item in this collection will be;
-  * 'league_id', 'league_name', 'end_date', 'start_date', ' 'player_two_won', 'date', 'league', 'created_by', and 'referee'
-  
-The Data Types for each value in the Collections can be seen in the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
+The structure of the website is outlined in the Sitemap. Click here to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
 
 * ##### Navigation & Security #####
 * The CPC website should also be designed to allow users to easily and securely navigate throughout the site. For example, the navigation bar should be fixed to the top of the page view so that it is always immediately accessible. 
@@ -204,12 +174,25 @@ The Data Types for each value in the Collections can be seen in the Database Sch
 * MongoDB Atlas access credentials should not be visible anywhere on the site.
 * A user should not be able to access another users password. 
 
+#### Data & Schema ####
+The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', and 'matches'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
+
+* The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
+  * 'first_name', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues'. * Please note that some keys will store data for future features - please see the future features section below for more details about future relases.  
+
+* The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
+  * 'name', 'description', 'start_date', 'end_date', and 'participating_players'. * Please note that some keys will store data for future features - please see the future features section below for more details about future relases.   
+  
+* The 'matches' collection should store information relating to individual matches played. The keys in the documents of this collection will be;
+  * 'player_one', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee'. * Please note that some keys will store data for future features - please see the future features section below for more details about future relases.  
+  
+The Data Types for each value in the Collections can be seen in the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
 
 ### 4. The Skeleton Plane ###
 
 Following on from the tasks decided upon in the Structure Plane, the Skeleton Plane is defined as follows; ".. The skeleton is designed to optimize the arrangement of these elements (such as the placement of buttons, tabs, photos's and blocks of text) for maximum effect and efficiency..".
 
-With this in mind I created the below wireframes, to detail the layout of the website pages and individual sections/containers etc. Due to the number of pages involved, I created multiple and split them into groups. I created 2 wireframes for the Homepage and the pages directly linked from the Homapgae. I created 2 wireframes for the Player Homepage and the pages directly linked from the Player Homepage. And I created 2 wireframes for the Admin Homepage and the pages directly linked from the Admin Homepage. Please click on the the links below to view these wireframes.
+With this in mind I created the below wireframes, to detail the layout of the website pages and individual sections/containers etc. Due to the number of pages involved, I created multiple and split them into groups. I created 2 wireframes for the Homepage and the pages directly linked from the Homapgae. I created 2 wireframes for the Player Homepage and the pages directly linked from the Player Homepage. And I created 2 wireframes for the Admin Homepage and the pages directly linked from the Admin Homepage. Please click on the the links below to view these wireframes. * Please note that these wireframes include references to features not yet available.
 
 ##### Wireframes #####
 * Wireframes for the Homepage and related pages;
@@ -229,19 +212,19 @@ With this in mind I created the below wireframes, to detail the layout of the we
 
 Having completed the previous 4 stages in the UX design process, I moved on to making decisions around the design and styling of the website. The Surface Plane focuses on the styling of images, backgrounds, fonts, and colours used on a website. The details of these decisions are listed here;
 
-1. Colours - The color scheme for the website was chosen from a selection of colours I considered using tools on the [Coolors.co](https://coolors.co/) website. I only used 2 dark site colours in order to meet the requirement that the site have dark backgrounds colours. I found a suitable dark colour and the found a tint of that colour to use for the background colours of Bootstrap cards which are used extensively on the site.The colours chosen, along with their HEX values, are shown here;
+1. Colours - The color scheme for the website was chosen from a selection of colours I considered when using the tools on the [Coolors.co](https://coolors.co/) website. I only used 2 dark site colours in order to meet the requirement that the site have dark background colours. I found a suitable dark colour and then found a related tint of that colour to use for the background colours. The colours chosen, along with their HEX values, are shown here;
 <img src="readme-assets/cpc-coolors-colour-pallette.png" width="500">
 
-1. Font - I used the Google Fonts website to help me decide on a font to use for site texts. I decided on a font called 'Audiowide' for all texts. I also used the Canva.com free trial service to help me find a font for my logo (I sourced the image part of the logo elswhere). On Canva I found and used a font called ARCHIVE (Designed by Slava Kirilenko – a graphic designer from Almaty, Kazakhstan) for the logo.   
+1. Font - I used the Google Fonts website to help me decide on a font to use for site texts. I decided on a font called 'Audiowide' for all texts. I also used the Canva.com free trial service to help me find a font for my logo (I sourced the image part of the logo elswhere). On Canva I found and used a font called ARCHIVE (Designed by Slava Kirilenko – a graphic designer from Almaty, Kazakhstan) for the logo. Please see an example of both fonts here;  
 <img src="readme-assets/cpc-fonts.png" width="600">
 
-1. Logo Design - I created the CPC logo using tools on [Canva.com](https://www.canva.com/). The logo contains an image and some text. I got the image from Clipart.com and then uploaded it to Canva where I added the text to produce the final logo.
+1. Logo Design - I created the CPC logo using tools on [Canva.com](https://www.canva.com/). The logo contains an image and some text. I got the image from Clipart.com and then uploaded it to Canva where I used its editor to add text and produce the final logo.
 
-1. Images - I mainly used free photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name.
+1. Images - I mainly used free photos taken from the [Unsplash.com](https://unsplash.com/) website. On Unspalsh.com I was able to create a collection of relevant phtotos. The naming convention for each photograph includes a referenece to the photographer name and the Unsplash item code. The Alt attribute for each photograph also includes the photographer name. All other images use the providers naming convention along with a CPC prefix, e.g. 'cpc-feature-<provider filename>.png.
 
 1. Icons - I used [Font Awesome](https://fontawesome.com/) icons to add icons to section headings. 
 
-1. Favicons - I use the Real Favicon Generator online service to create browser, desktop, and mobile favicons for the site. I uploaded a single favicon image to the Real Favison Generator service, and it generated a package of individual files which I downloaded. I then uplodaed these files to a favicon directory, and added a list of links to the header of my base.html page. These links then served the correct favicon to the appropriate device or browser. Learn more about this service here [RealFaviconGenerator](https://realfavicongenerator.net/)
+1. Favicons - I use the Real Favicon Generator online service to create browser, desktop, and mobile favicons for the site. I uploaded a single favicon image to the Real Favison Generator service, and it generated a package of individual files for different devices and browser which I then downloaded. I then uplodaed these files to a favicon directory in my repository, and added a list of links to the header of my base.html page. These links then served the correct favicon to the appropriate device or browser. You can learn more about this service here: [RealFaviconGenerator](https://realfavicongenerator.net/)
 
 #### [Back To Top ^ ](#top-of-page) #### 
 
@@ -255,16 +238,14 @@ Having completed the previous 4 stages in the UX design process, I moved on to m
 I drew up a process to follow for developing the CPC website. This is listed in sequence below.
 
 1. Design - I firstly designed the site based on the Client/User Stories requirements, and by creating wireframes/sketches etc.
-2. Setup - I then setup my GitPod IDE by creating a python (.py) file, and then by installing Flask, PyMongo, flask-pymongo, and dnspython. I then created a new Database on MongoDB and added my Collections to it. I also created a new app on Heroku. I then created an env.py file for my sensitive environment variables, and listed that file in my .gitignore file so that it would not be pushed to GitHub. And I created a requirements.txt file so that Heroku would understand what the site/app requirements are.I added my environment variables to Heroku, and integrated Heroku with my GitHub repository (so that when I push changes to GitHub, these are also automatically picked up by Heroku too.  
+2. Setup - I then setup my GitPod IDE by creating a python (.py) file, and by installing Flask, PyMongo, flask-pymongo, and dnspython. I then created a new Database on MongoDB and added new Collections to it. I also created a new app on Heroku. I then created an env.py file for my sensitive environment variables, and listed that file in my .gitignore file so that it would not be pushed(or published) to my public GitHub repository. I created a requirements.txt file so that Heroku would understand what the site/app requirements are. I also added my environment variables to Heroku, and integrated Heroku with my GitHub repository for automatic updates (so that when I push changes to GitHub, the changes are also automatically picked up and deployed by Heroku too.  
 3. HTML & CSS - I then used Flask and Jinja to create template pages for the site. I then added HTML to a base.html template page, and then all other pages for the site. I also add CSS styling as I went along.
-4. Python & JavaScript & JQuery - I then added Python view and functions to my app.py to create relevant functionality for each page. Mainly functionality revolves around CRUD operations with my MondoDB Atlas database. I also added JavaScript to my script.js file for fynctions such as Bootstrap Form Validation, Bootstrap Data Table sorting functionality, and for the EMailJS email service functionality for the Contact Us form.
+4. Flask & Python - I then added Flask routes and Python functions to my app.py file to create relevant functionality for each page. Site functionality mainly revolves around CRUD operations with my MondoDB Atlas database. 
+5. JavaScript/jQuery - I added JavaScript and jQuery to my script.js file for functions such as Bootstrap Form Validation, Bootstrap Data Table functionality, and for the EMailJS email service functionality for the Contact Us form. I also added a jQuery script to the select-league.html page.
 5. Resonsiveness - I made sure all texts/headings, images, and container elements transform approprately and look good when viewed on different devices such as: mobile phones, tablets, laptops, large screen PC's, and large TV's. 
-
-# TO DO #
-
-7. Code validation - 
-8. Documentation - README
-9. Testing - I validated my HTML, CSS, and JavaScript code, and tested functionality of site elements across a range of different devices and browsers. I then fixed any bugs found.
+7. Code validation - I validated all code using appropriate validators - W3.org validators, JSHint.com, and PEP8online.com
+8. Documentation - I added relevant documentation and information to my README.md file.
+9. Testing - I tested functionality of site elements across a range of different devices and browsers, and fixed any bugs found. I documented this activity in my Testinh.md file.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -278,7 +259,7 @@ I drew up a process to follow for developing the CPC website. This is listed in 
 The CPC site employs the following features/functionality;
 
 * Bootstrap Navigation Bar on all pages.
-* Bootstrap Carousel on index.html.
+* Bootstrap 'Hero' Carousel on index.html, and Carousels for sponsor banner adverts on all pages.
 * Bootstrap Cards on all pages to contain content sections.
 * Bootstrap Responsive Grid system.
 * JavaScript for Bootstrap validation.
@@ -288,6 +269,18 @@ The CPC site employs the following features/functionality;
 * Page Footer on all pages.
 
 #### Future Features ####
+Unfortunately I ran out of time to implement some features which I had planned to implemen at the beginning of the projects. These items can be seen in the site Wireframes and are documented below. Additional possible features are also listed here.
+
+My repository and the live CPC app includes evidence of work done toward future features. I wss advised to leave the pages and code in place for futre reference and to show the intended 'direction of travel'.
+  
+* TO DO *
+  
+* The 'Edit Match' page should contain a dropdown where an Admin can select a Match from the current League. On clicking a 'Select Match' button a form will be populated containing the following data about that Match; Date, Referee, Player One, Player On Frames Won, Player Two, Player Two Frames Won. An Admin can then edit the infromation contained in those fields. On clicking a 'Edit Match' button, they would then update the Match document in the Matches collection on a MongoDB database. Alternatively an Admin can also click a 'Delete Match' button which will delete a Match document from the Matches collection in a MongoDB database. 
+* The 'Edit Player' page should contain a dropdown where an Admin can select a Player. On clicking a 'Select Player' button a form will be populated containing the same Player form data as in the 'Edit My Account' page. An Admin can then edit the account details of a player. On clicking a "Edit Player' button an Admin can then update a Players document in the user collection of a MongoDB database. Alternatively an Admin can also click a 'Delete Player' button which will delete a Player document from the user collection in a MongoDB database. 
+* The 'Add Admin' page should contain a dropdown where an Admin can select a Player. On clicking a 'Make Admin' button an Admin then updates the admin value in a user document on MongoDB. The value will be updated from 'false' (the default value) to 'true.
+* The 'My League History' page should include a dropdown box where a Player can select an Archived League. On clicking 'View Stats' button, a table should be populated with a Players statistics from that League. This table should show their: Points, Matches Played, Matches For, Matches Against, Games For, and Games Against.
+* Find a Playershould i
+* The 'My Match List' page should include a table which shows a list of all a Players League fixtures. The table should include columns with headings for: Number, Player Name, Matches. All Players in the League should be listed, and the Matches column shoud show a 0, 1, or 2 to indicate the number of Matches played against an individual Player. Note: In a League, all Players will need to play to every other player twice.
 * The Club may decide it wants to charge members an annual membership fee. The CPC site could be used to collect this fee from members. This would require the integration of a billing system.
 * The Club may want to run a Pool Championship (a knockout tournament) in addition to Leagues at particular times, e.g an Xmas Pool Championship. The site could be updated to add a Championship bracket system.
 * The Club may want to sell merchandise in order to raise funds for prizes and tours. The site could be updated to add a shop selling Club themed merchandise. 
