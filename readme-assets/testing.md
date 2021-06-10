@@ -28,27 +28,14 @@ I have listed the tests I did including those where I encountered bugs here (mos
 * Created a footer on base.html to include a club logo linking to index.html. I tested it and it worked as expected.
 * Added Bootstrap (CSS and JavaScript), FontAwesome, and jQuery CDN links, as well as static files for my JavaScript and CSS files. I tested that the stylesheets are being target corrected by adding content etc. They worked as expected.
 * Added a carousel at the bottom of base.html for sponsor banners. Each banner links to an external website. I tested that functionality and it worked as expected.
-* Added a login.html page, and added login functionality in app.py. Once logged in a user should be taken to thier Player Homepage. I tested this and it worked as expected.
-* Added additional Nav bar links to navbar on base.html. These new links link to 'MyHome' (player-home.html), 'Log Out' (I added a logout function in app.py), and 'Admin' (admin-home.html. Using Jinja2 I restricted the visibility of these links to registered users, and/or those users who are also site Admin's. I tested this but couldn't hide the Admin link from non-Admin users. I tested the Log Out link and it functioned as expected (I was redirected to the login.html with a flash message to say I had successfully been logged out).
+* Added a login.html page, and added login functionality in app.py. Once logged in a user should be taken to their Player Homepage. I tested this and it worked as expected.
+* Added additional Nav bar links to navbar on base.html. These new links link to 'MyHome' (player-home.html), 'Log Out' (I added a logout function in app.py), and 'Admin' (admin-home.html. Using Jinja2 I restricted the visibility of these links to registered users. I tested the Log Out link and it functioned as expected (I was redirected to the login.html with a flash message to say I had successfully been logged out).
 * Added a carousel to the top of index.html for 'hero images' and promotional messaging. The carousel slides include a button which link to the registration page using the Jinja2 tempalting language(register.html). I tested the carousel functionality and the button links and all worked as expected.
-* Added a button to the introduction section on index.html which links a user to the registration page. I tested it and it worked as expcted.
-* Added 'Current League' and 'League Archive' buttons to the introduction section on index.html which links a user to the registration page. I tested it and it worked as expcted. 
+* Added a button to the introduction section on index.html which links a user to the registration page. I tested it and it worked as expected.
+* Added 'Current League' button to the 'Our Leagues' section on index.html which links a user to the active league Table. I tested it and it worked as expected
 * Added 'Contact Us' form to index.html. Using the EmailJS email service, this form can be used to send a message to Club organisers. A user would also receive an email by way of confirmation that their message had been received by the club. I setup an EmailJS template and added the required JavaScript to my script.js file. I also added Bottstrap form validation JavaScript for all forms to script.js. Once everything was in place I tested the system and it worked as expected.
 * Created templates for 'Player Home' and 'Admin Home' and added cards for each view linked from those pages. Each card has a button which links to the relevant template view. I tested these and all worked as expected.
 * Created templates for all required pages. Added 'Back' buttons to the top and bottom of these pages. Tested all and all worked as expected.
-* 
-* 
-* Added functions for the following views;
-* * Test
-* * Test 2
-* 
-
-#### Bugs Found ####
-
-* Floating Footer
-* Bootstrap validation Vs JSHint
-* Admin link visibility
-* On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).  
 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -60,22 +47,16 @@ I have listed the tests I did including those where I encountered bugs here (mos
 I tested each of the Client and User stories which were used to determine the features, functions and styling of the CPC website. See the results of these tests here; 
 
 #### Client Stories ####
-> - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.”
-> - [x] “The website must also give Club organisers a one-stop-shop to create and manage Pool Leagues, League Matches, and Players/Members.”
-> - [x] “The website must allow users on the site to view both current and archived League Tables.” 
+> - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.” - Result: The site describes what the club is, what the benefits are of being a member, and how leagues operate.
+> - [x] “The website must give Club organisers a place to add new members and create and edit Leagues.
+> - [x] “The website must allow users on the site to view the current League Table.” 
 > - [x] “The website must allow new members to register and join the Club.” 
-> - [x] “The website must provide an area where club members can view their current League statistics/progress.”
-> - [x] “The website must provide an area where club members can view a list of the current League Matches they have played, and which matches are yet to be played (depending on active membership numbers, a player can expect they will need to play each other player twice in a given League).”
-> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee.”
-> - [x] “The website must provide an area where club members can find contact details of another Player in order to arrange a Match date/time/venue.”
-> - [x] “The website must provide an area where club members can view their League statistics for previous (archived) Leagues.”
+> - [x] “The website must provide an area where club members can view their current League statistics.”
+> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee. Adding a match must update the League Table and a members League statistics appropriately.”
 > - [x] “The website must provide an area where club members can edit and update their Account information.”
 > - [x] “The website must provide an area where site Admininstrators can add a new League."
 > - [x] “The website must provide an area where site Admininstrators can add a new Player/Member."
-> - [x] “The website must provide an area where site Admininstrators can make a Player/Member an Administrator."
 > - [x] “The website must provide an area where site Admininstrators can edit or delete a League."
-> - [x] “The website must provide an area where site Admininstrators can edit or delete a Player."
-> - [x] “The website must provide an area where site Admininstrators can edit or delete a Match."
 > - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.”
 > - [x] “The website must have a section showing banner adverts for CPC sponsors.”
 > - [x] “The website must be mobile-friendly.”
@@ -83,14 +64,12 @@ I tested each of the Client and User stories which were used to determine the fe
 
 #### User Stories ####
 > - [x] “I want to learn about what the CPC is.”
-> - [x] “I want to be able to view current and archived CPC League Tables.”
+> - [x] “I want to be able to view the current League Table.”
 > - [x] “I want to be able to register and sign-up to join the CPC.”
-> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - current League  current League Points, current Matches won/lost, current Games won/lost, current Matches played, and Matches remaining.”
-> - [x] “I want to be able to view my personal League statistics - League  League Points, Matches won/lost, Games won/lost, Matches played, and Matches remaining.”
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - my League Points, and my Matches Won/Lost.
 > - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
-> - [x] “I want to be able to view my list of Leagues Matches, both those Matches Played and those Matches yet to be played."
-> - [x] “I want to be able to find contact details for other players so that I can arrange my Matches as/when required."
 > - [x] “I want to be able to edit and update my Account information."
+> - [x] “I want to be able to find contact infromation for the CPC, and be able to send a message to the CPC organisers."
 
 #### [Back To Top ^ ](#top-of-page) ####
 
