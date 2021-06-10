@@ -70,34 +70,6 @@ body {
     font-size: 40px;
 }
 
-.pulsate {
-    -webkit-animation: pulsate 3s ease-out infinite; /* Safari 4+ */
-    -moz-animation:    pulsate 3s ease-out infinite; /* Fx 5+ */
-    -o-animation:      pulsate 3s ease-out infinite; /* Opera 12+ */
-    animation:         pulsate 3s ease-out infinite; /* IE 10+, Fx 29+ */
-}
-
-@-webkit-keyframes pulsate {
-  0%   { opacity: 0.4; }
-  50%  { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-@-moz-keyframes pulsate {
-  0%   { opacity: 0.4; }
-  50%  { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-@-o-keyframes pulsate {
-  0%   { opacity: 0.4; }
-  50%  { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-@keyframes pulsate {
-  0%   { opacity: 0.4; }
-  50%  { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-
 .card-img-overlay {
     padding: 3rem;
     top: 40px;
