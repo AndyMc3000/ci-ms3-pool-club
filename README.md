@@ -358,7 +358,9 @@ Testing was completed under the below headings. A detailed testing document can 
 1. Bootstrap form validation
 1. CSS animation error
 1. console error
-...
+1. Admin link visibility
+1. Floating Footer
+1. On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68). 
 
 #### [Back To Top ^ ](#top-of-page) ####
 
