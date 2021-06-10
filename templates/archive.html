@@ -1,83 +1,71 @@
 {% extends "base.html" %}
 {% block content %}
 
-   <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- League Archives page view -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('user') }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h1 class="card-title pb-4">League Archive</h1>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form action="{{ url_for('archive') }}" class="form w-75 needs-validation" method="GET" novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="archive"><i class="fas fa-user-shield"></i></span>
-                                                <select onchange="displayArchive()" id="archive" name="archive" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Select League</option>
-                                                {% for league in league %}
-                                                    <option value="{{ league.name }}">{{ league.name }}</option>
-                                                {% endfor %}
-                                                </select>
-                                                <label for="archive"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                    <!-- END of Back button -->
+                    <!-- Archive card and dropdown box -->
+                    <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h1 class="card-title pb-4">League Archive</h1>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div">
+                                        <form action="{{ url_for('archive') }}" class="form w-75 needs-validation"
+                                            method="GET" novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="archive"><i
+                                                            class="fas fa-user-shield"></i></span>
+                                                    <select onchange="displayArchive()" id="archive" name="archive"
+                                                        class="validate form-control form-select" required>
+                                                        <option value="" disabled selected>Select League</option>
+                                                        {% for league in league %}
+                                                        <option value="{{ league.name }}">{{ league.name }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <label for="archive"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose a League
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose a League
+                                                <div class="input-group m-auto text-center">
+                                                    <button type="submit"
+                                                        class="btn btn-primary mb-5 form-submit-button">View
+                                                        League</button>
                                                 </div>
                                             </div>
-                                            <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-5 form-submit-button">View League</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div mb-5 mx-2">
-                                    <table class="table table-font table-dark table-striped table-bordered" data-toggle="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">POINTS</th>
-                                                    <th scope="col">PLAYER</th>
-                                                    <th scope="col">MW</th>
-                                                    <th scope="col">ML</th>
-                                                    <th scope="col">GW</th>
-                                                    <th scope="col">GL</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            {% for archive in archive %}
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>{{ archive.participating_players }}</td>
-                                                    <td>*18*</td>
-                                                    <td>*12*</td>
-                                                    <td>*78*</td>                                                                                                    
-                                                    <td>*23*</td>                                                                                                    
-                                                </tr>
-                                            {% endfor %}
-                                            </tbody>
-                                        </table>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- END of Archive card and dropdown box -->
                 </div>
+                <!-- Back button -->
                 <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i
+                            class="far fa-arrow-alt-circle-left"></i> Back </a>
                 </div>
+                <!-- END of Back button -->
             </div>
         </div>
-    </div>
-    
+    </section>
+    <!-- League Archives page view -->
 {% endblock %}

@@ -1,138 +1,186 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="contanier-fluid h-100 m-2">
-        <div class="row">
-            <div class="col-12">
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
-                </div>
-                <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
-                    <div class="login-card-img-holder p-5 pb-3">
-                    <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}" class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+    <!-- Edit Player page view (admin view) -->
+    <section>
+        <div class="contanier-fluid h-100 m-2">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
                     </div>
-                    <div class="card-body top-50 start-50">
-                        <h3 class="card-title pb-4">Edit Player Account</h3>
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form action="{{ url_for('admin_edit_user') }}" class="form w-75 needs-validation" method="GET" novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="user"><i class="fas fa-user-shield"></i></span>
-                                                <select id="user" name="player" class="validate form-control form-select" required>
-                                                    <option value="" disabled selected>Select Player</option>
-                                                {% for player in player %}
-                                                    <option value="{{ player.surname }}, {{ player.first_name }} '{{ player.nickname }}'">{{ player.surname }}, {{ player.first_name }} '{{ player.nickname }}'</option>
-                                                {% endfor %}
-                                                </select>
-                                                <label for="user"></label>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                    <!-- END of Back button -->
+                    <!-- Edit Player card and form -->
+                    <div class="card border-danger text-center w-75 my-3 mx-5 mx-auto">
+                        <div class="login-card-img-holder p-5 pb-3">
+                            <img src="{{ url_for('static', filename='images/template-header/cpc-8ball-www-vhv-rs-Daco_5283638-100px.png') }}"
+                                class="" alt="VHV-RS Daco-5283638 Pool Ball Photo">
+                        </div>
+                        <div class="card-body top-50 start-50">
+                            <h3 class="card-title pb-4">Edit Player Account</h3>
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div">
+                                        <form action="{{ url_for('admin_edit_user') }}" class="form w-75 needs-validation"
+                                            method="GET" novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="user"><i
+                                                            class="fas fa-user-shield"></i></span>
+                                                    <select id="user" name="player" class="validate form-control form-select"
+                                                        required>
+                                                        <option value="" disabled selected>Select Player</option>
+                                                        {% for player in player %}
+                                                        <option
+                                                            value="{{ player.surname }}, {{ player.first_name }} '{{ player.nickname }}'">
+                                                            {{ player.surname }}, {{ player.first_name }}
+                                                            '{{ player.nickname }}'</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <label for="user"></label>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose Player 1
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose Player 1
+                                                <div class="input-group m-auto text-center">
+                                                    <button type="submit" class="btn btn-primary mb-5 form-submit-button">Edit
+                                                        Player</button>
                                                 </div>
                                             </div>
-                                            <div class="input-group m-auto text-center">
-                                                <button type="submit" class="btn btn-primary mb-5 form-submit-button">Edit Player</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12 form-div">
-                                    <form action="{{ url_for('admin_edit_user') }}" class="form w-75 needs-validation" method="POST" oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")' novalidate>
-                                        <div class="form-group">
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="first_name"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="first_name" class="form-control" value="{{ user.first_name }}" aria-label="first_name" aria-describedby="first_name" autocomplete="given-name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                                <div class="row justify-content-center">
+                                    <div class="col-12 form-div">
+                                        <form action="{{ url_for('admin_edit_user') }}" class="form w-75 needs-validation"
+                                            method="POST"
+                                            oninput='password.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'
+                                            novalidate>
+                                            <div class="form-group">
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="first_name"><i
+                                                            class="fas fa-user"></i></span>
+                                                    <input type="text" name="first_name" class="form-control"
+                                                        value="{{ user.first_name }}" aria-label="first_name"
+                                                        aria-describedby="first_name" autocomplete="given-name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please Edit First Name.
+                                                    </div>
                                                 </div>
-                                                <div class="invalid-feedback">
-                                                    Please Edit First Name.
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="nickname"><i
+                                                            class="far fa-user"></i></span>
+                                                    <input type="text" name="nickname" class="form-control"
+                                                        placeholder="Player Nickname" aria-label="nickname"
+                                                        aria-describedby="nickname" autocomplete="nickname" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your Nickname.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="surname"><i
+                                                            class="fas fa-user"></i></span>
+                                                    <input type="text" name="surname" class="form-control"
+                                                        placeholder="Player Surname" aria-label="surname"
+                                                        aria-describedby="surname" autocomplete="family-name" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type your Surname.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
+                                                    <input type="email" name="email" class="form-control"
+                                                        placeholder="Player Email Address" aria-label="email"
+                                                        aria-describedby="email" autocomplete="email" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a valid Email Address.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="telephone"><i
+                                                            class="fas fa-mobile-alt"></i></span>
+                                                    <input type="tel" name="telephone" class="form-control"
+                                                        placeholder="Player Mobile Number" aria-label="telephone"
+                                                        aria-describedby="telephone" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please type a Mobile Number.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="password"><i
+                                                            class="fas fa-key"></i></span>
+                                                    <input type="password" name="password" class="form-control" minlength="5"
+                                                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                                                        placeholder="Player Password" aria-label="password"" aria-describedby="
+                                                        password" autocomplete="new-password" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please choose a Password.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4">
+                                                    <span class="input-group-text" id="password2"><i
+                                                            class="fas fa-lock"></i></span>
+                                                    <input type="password2" name="password2" class="form-control"
+                                                        placeholder="Confirm Password"
+                                                        aria-label="password2"" aria-describedby=" password2"
+                                                        autocomplete="new-password">
+                                                    <span>*Passwords must be 5-15 charachters and contain only letters and
+                                                        numbers</span>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Those Passwords do not match.
+                                                    </div>
+                                                </div>
+                                                <div class="text-center gap-1 justify-content-center">
+                                                    <button type="submit"
+                                                        class="btn btn-primary mb-4 mt-3 mx-1 form-submit-button">Update
+                                                        league</button>
+                                                    <button type="submit"
+                                                        class="btn btn-danger mb-4 mt-3 mx-1 form-submit-button">Delete
+                                                        League</button>
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="nickname"><i class="far fa-user"></i></span>
-                                                <input type="text" name="nickname" class="form-control" placeholder="Player Nickname" aria-label="nickname" aria-describedby="nickname" autocomplete="nickname" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your Nickname.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="surname"><i class="fas fa-user"></i></span>
-                                                <input type="text" name="surname" class="form-control" placeholder="Player Surname" aria-label="surname" aria-describedby="surname" autocomplete="family-name" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type your Surname.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="email"><i class="fas fa-at"></i></span>
-                                                <input type="email" name="email" class="form-control" placeholder="Player Email Address" aria-label="email" aria-describedby="email" autocomplete="email" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a valid Email Address.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="telephone"><i class="fas fa-mobile-alt"></i></span>
-                                                <input type="tel" name="telephone" class="form-control" placeholder="Player Mobile Number" aria-label="telephone" aria-describedby="telephone" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please type a Mobile Number.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password"><i class="fas fa-key"></i></span>
-                                                <input type="password" name="password" class="form-control" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Player Password" aria-label="password"" aria-describedby="password" autocomplete="new-password" required>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Please choose a Password.
-                                                </div>
-                                            </div>
-                                            <div class="input-group mb-4">
-                                                <span class="input-group-text" id="password2"><i class="fas fa-lock"></i></span>
-                                                <input type="password2" name="password2" class="form-control" placeholder="Confirm Password" aria-label="password2"" aria-describedby="password2" autocomplete="new-password">
-                                                <span>*Passwords must be 5-15 charachters and contain only letters and numbers</span>
-                                                <div class="valid-feedback">
-                                                    Looks good!
-                                                </div>
-                                                <div class="invalid-feedback">
-                                                    Those Passwords do not match.
-                                                </div>
-                                            </div>
-                                            <div class="text-center gap-1 justify-content-center">
-                                                <button type="submit" class="btn btn-primary mb-4 mt-3 mx-1 form-submit-button">Update league</button>
-                                                <button type="submit" class="btn btn-danger mb-4 mt-3 mx-1 form-submit-button">Delete League</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="pt-1 text-center">
-                    <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    <!-- END of Edit Player card and form -->
+                    <!-- Back button -->
+                    <div class="pt-1 text-center">
+                        <a class="btn btn-primary" href="{{ url_for('admin_home') }}"> <i
+                                class="far fa-arrow-alt-circle-left"></i> Back </a>
+                    </div>
+                    <!-- END of Back button -->
                 </div>
             </div>
         </div>
-    </div>
-
-    
+    </section>
+    <!-- END of Edit Player page view (admin view) -->
 {% endblock %}

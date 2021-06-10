@@ -429,7 +429,8 @@ def archive():
     League stats for that League
     """
     # TODO: Select archived league from dropdown list and present
-    # league stats in table (comment left here intentionally)
+    # league stats in table or seperate page view
+    # (comment left here intentionally)
     league = mongo.db.league.find()
     # Finds all Leagues in the league collection
     archive = mongo.db.archive.find()

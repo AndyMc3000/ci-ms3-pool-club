@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="container-fluid ">
-        <div class="row my-5 justify-content-center">
-            <div class="col-6 my-5 py-5 text-center">
-                <H1>Ooops! 404 Error</H1>
-                <H2>That page was not found</H2>
-                <p class="lead">Click here to return to the Homepage</p>
-                <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i> Home </a>
+    <!-- 404 Exception handling page view -->
+    <section>
+        <div class="container-fluid ">
+            <div class="row my-5 justify-content-center">
+                <div class="col-6 my-5 py-5 text-center">
+                    <H1>Ooops! 404 Error</H1>
+                    <H2>That page was not found</H2>
+                    <p class="lead">Click here to return to the Homepage</p>
+                    <!-- Button to Homepage -->
+                    <a class="btn btn-primary" href="{{ url_for('user') }}"> <i class="far fa-arrow-alt-circle-left"></i>
+                        Home </a>
+                    <!-- END of Button to Homepage -->
+                </div>
             </div>
         </div>
-    </div>
-    
+    </section>
+    <!-- END of 404 Exception handling page view -->
 {% endblock %}
