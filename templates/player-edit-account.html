@@ -108,7 +108,7 @@
                                                         Please choose a Password.
                                                     </div>
                                                 </div>
-                                                <div class="input-group">
+                                                <div class="input-group mb-4">
                                                     <span class="input-group-text" id="password2"><i
                                                             class="fas fa-lock"></i></span>
                                                     <input type="password" name="password2" class="form-control" minlength="5"
@@ -123,25 +123,54 @@
                                                         Those Passwords do not match.
                                                     </div>
                                                 </div>
+                                                <!-- Hidden Fields who's value's are not to be changed by 'player_edit_account' update function in app.py-->
                                                 <div class="input-group">
-                                                    <span class="input-group-text" id="admin"><i
-                                                            class="fas fa-lock"></i></span>
-                                                    <input type="text" name="admin" value="{{ player.admin }}" class="form-control"
-                                                        placeholder="Confirm Password"
+                                                    <span class="input-group-text hidden-field" id="admin"></span>
+                                                    <input type="hidden" name="admin" value="{{ player.admin }}" class="form-control"
                                                         aria-label="admin" aria-describedby="admin"
                                                         autocomplete="off" required>
-                                                    <div class="valid-feedback">
-                                                        Looks good!
-                                                    </div>
-                                                    <div class="invalid-feedback">
-                                                        Those Passwords do not match.
-                                                    </div>
                                                 </div>
-                                                <div class="input-group mb-4 hidden-field" id="games_won" >
-                                                    <input type="hidden" name="games_won" value="{{ player.games_won }}">
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="points"></span>
+                                                    <input type="hidden" name="points" value="{{ player.points }}" class="form-control"
+                                                        aria-label="points" aria-describedby="points"
+                                                        autocomplete="off" required>
                                                 </div>
-                                                <div class="input-group mb-4 hidden-field" id="points">
-                                                    <input type="hidden" name="points" value="{{ player.points }}">
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="matches_played"></span>
+                                                    <input type="hidden" name="matches_played" value="{{ player.matches_played }}" class="form-control"
+                                                        aria-label="amatches_played" aria-describedby="matches_played"
+                                                        autocomplete="off" required>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="matches_won"></span>
+                                                    <input type="hidden" name="matches_won" value="{{ player.matches_won }}" class="form-control"
+                                                        aria-label="matches_won" aria-describedby="matches_won"
+                                                        autocomplete="off" required>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="matches_lost"></span>
+                                                    <input type="hidden" name="matches_lost" value="{{ player.matches_lost }}" class="form-control"
+                                                        aria-label="matches_lost" aria-describedby="matches_lost"
+                                                        autocomplete="off" required>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="games_won"></span>
+                                                    <input type="hidden" name="games_won" value="{{ player.games_won }}" class="form-control"
+                                                        aria-label="games_won" aria-describedby="games_won"
+                                                        autocomplete="off" required>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="games_lost"></span>
+                                                    <input type="hidden" name="games_lost" value="{{ player.games_lost }}" class="form-control"
+                                                        aria-label="games_lost" aria-describedby="games_lost"
+                                                        autocomplete="off" required>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text hidden-field" id="entered_leagues"></span>
+                                                    <input type="hidden" name="entered_leagues" value="{{ player.entered_leagues }}" class="form-control"
+                                                        aria-label="entered_leagues" aria-describedby="entered_leagues"
+                                                        autocomplete="off" required>
                                                 </div>
                                                 <div class="input-group m-auto text-center">
                                                     <button type="submit"

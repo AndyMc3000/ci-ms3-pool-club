@@ -230,16 +230,22 @@ def player_edit_account():
             "email": request.form.get("email"),
             "telephone": request.form.get("telephone"),
             "password": generate_password_hash(request.form.get("password")),
-            "admin": request.form.get("admin"),
-            "points": request.form.get("points")
+            # These values Wil not be changed from what already
+            # exits in the user collection
+            "admin": bool(request.form.get("admin")),
+            "points": int(request.form.get("points")),
+            "matches_played": int(request.form.get("matches_played")),
+            "matches_won": int(request.form.get("matches_won")),
+            "matches_lost": int(request.form.get("matches_lost")),
+            "games_won": int(request.form.get("games_won")),
+            "games_lost": int(request.form.get("games_lost"))
         }
-
         mongo.db.user.update(player, update_player)
         flash("Account Successfully Updated")
         return redirect(url_for("player_home", first_name=session["user"]))
-    print(player)
+
     return render_template(
-        "player-edit-account.html", player=player, user=user)
+        "player-edit-account.html", player=player, user=user,)
 
 
 @app.route("/admin-home")
