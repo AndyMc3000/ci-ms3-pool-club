@@ -36,6 +36,7 @@ I have listed the tests I did including those where I encountered bugs here (mos
 * Added 'Contact Us' form to index.html. Using the EmailJS email service, this form can be used to send a message to Club organisers. A user would also receive an email by way of confirmation that their message had been received by the club. I setup an EmailJS template and added the required JavaScript to my script.js file. I also added Bottstrap form validation JavaScript for all forms to script.js. Once everything was in place I tested the system and it worked as expected.
 * Created templates for 'Player Home' and 'Admin Home' and added cards for each view linked from those pages. Each card has a button which links to the relevant template view. I tested these and all worked as expected.
 * Created templates for all required pages. Added 'Back' buttons to the top and bottom of these pages. Tested all and all worked as expected.
+* Exception Handling
 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -235,7 +236,7 @@ I completed the above manual testing on the following browsers. Please see resul
 * All tests ran OK. 
 
 ### Safari ###
-* All tests ran OK. 
+* Safari date picker
 
 #### [Back To Top ^ ](#top-of-page) ####
 
