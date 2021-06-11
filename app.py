@@ -229,7 +229,9 @@ def player_edit_account():
             "nickname": request.form.get("nickname"),
             "email": request.form.get("email"),
             "telephone": request.form.get("telephone"),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "admin": request.form.get("admin"),
+            "points": request.form.get("points")
         }
 
         mongo.db.user.update(player, update_player)
@@ -363,7 +365,7 @@ def not_found_exception_handler(e):
     Catches 404 Page Not Found errors
     """
     print(e)
-    return render_template("error-404.html")
+    return render_template("error-404.html", user=user)
 
 
 @app.errorhandler(Exception)
@@ -372,7 +374,7 @@ def generic_exception_handler(e):
     # Catches ANY other exception
     # """
     print(e)
-    return render_template("error-exception.html")
+    return render_template("error-exception.html", user=user)
 
 
 # -------------- FUTURE FUNCTIONS/FEATURES --------------
@@ -526,4 +528,4 @@ def player_archive_stats():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)

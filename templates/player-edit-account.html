@@ -114,7 +114,7 @@
                                                     <input type="password" name="password2" class="form-control" minlength="5"
                                                         maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
                                                         placeholder="Confirm Password"
-                                                        aria-label="password2"" aria-describedby=" password2"
+                                                        aria-label="password2"" aria-describedby="password2"
                                                         autocomplete="new-password" required>
                                                     <div class="valid-feedback">
                                                         Looks good!
@@ -122,6 +122,30 @@
                                                     <div class="invalid-feedback">
                                                         Those Passwords do not match.
                                                     </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-text" id="admin"><i
+                                                            class="fas fa-lock"></i></span>
+                                                    <input type="text" name="admin" value="{{ player.admin }}" class="form-control"
+                                                        placeholder="Confirm Password"
+                                                        aria-label="admin" aria-describedby="admin"
+                                                        autocomplete="off" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Those Passwords do not match.
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-4 hidden-field" id="games_won" >
+                                                    <input type="hidden" name="games_won" value="{{ player.games_won }}">
+                                                </div>
+                                                <div class="input-group mb-4 hidden-field" id="points">
+                                                    <input type="hidden" name="points" value="{{ player.points }}">
+                                                </div>
+                                                <div class="input-group m-auto text-center">
+                                                    <button type="submit"
+                                                        class="btn btn-primary mb-3 form-submit-button">Add League</button>
                                                 </div>
                                                 <div class="mb-4 text-center">
                                                 <span><small>*Passwords must be 5-15 charachters and contain only letters and
