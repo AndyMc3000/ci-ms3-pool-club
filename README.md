@@ -138,14 +138,14 @@ Based on the outcomes from the Strategy Plane, The Scope Plane determines what f
    * When redirected to the Edit League page, a form will be pre-populated with the following data about the selected League; League Name, League Description, Start Date, and End Date. An Admin can then edit the League details. On clicking an "Update League' button an Admin can then update that leagues document in the League collection of a MongoDB database. Alternatively, an Admin can also click a 'Delete League' button which will delete a League document from the league collection in a MongoDB database.  
    
 #### Content Requirements: ####
-* The images used on the Homepage Carousel should show people playing pool. The images should be colourful and 'exciting', in order to entice new members to join the club. 
-* The 'Why Join' section on the Homepage should briefly, but completely, convey what the benefits are of joining the Club. 
-* The 'Why Join' section should also contain appropriate images and texts contained within Bootstrap cards to reinforce the 'Why Join' messaging.
-* The 'Our Leagues' section on the Homepage should briefly, but completely, describe what the Club Leagues are and how often they are run. 
-* This 'Our Leagues' section should also contain Bootstrap cards which contain images, texts, and a link button which links to the current League Table page.
-* The Contact Us section should include text to describe how the Club can be contacted, including a telephone nunber and an email address, and which should be placed above a Contact Form.
-* The 'Visit our Sponsors' scrolling carousel section should contain a selection of attractive sponsor marketing banners, and include links to the external sponsor websites.
-* The Footer section should contain a single CPC logo which also serves as a link to the Homepage.
+ * The images used on the Homepage Carousel should show people playing pool. The images should be colourful and 'exciting', in order to entice new members to join the club. 
+ * The 'Why Join' section on the Homepage should briefly, but completely, convey what the benefits are of joining the Club. 
+ * The 'Why Join' section should also contain appropriate images and texts contained within Bootstrap cards to reinforce the 'Why Join' messaging.
+ * The 'Our Leagues' section on the Homepage should briefly, but completely, describe what the Club Leagues are and how often they are run. 
+ * This 'Our Leagues' section should also contain Bootstrap cards which contain images, texts, and a link button which links to the current League Table page.
+ * The Contact Us section should include text to describe how the Club can be contacted, including a telephone nunber and an email address, and which should be placed above a Contact Form.
+ * The 'Visit our Sponsors' scrolling carousel section should contain a selection of attractive sponsor marketing banners, and include links to the external sponsor websites.
+ * The Footer section should contain a single CPC logo which also serves as a link to the Homepage.
 
 ### 3. The Structure Plane ###
 
@@ -156,27 +156,27 @@ Please find details below about Structure Plane decision based under the followi
 Interaction design is defined as the "..development of application flows to facilitate user tasks, defining how the user interacts with site functionality". Inline with this principle, the pages were designed as follows;
 
 * ##### The Homepage and linked pages/views; #####
-* It should have a navigation bar with individual links to the Registration and Login pages. The navigation bar should also be fixed to the top of the page view.
-* The 'hero' carousel banners at the top of the Homepage should include a link button linking to the Registration page.
-* The 'Why Join' section should also contain a link button linking to the Registration page.
-* The 'Our Leagues' section should contain a button linking a user to the current League Table page.
-* On completion and submission the Contact Form should send an email (cc'ing the user) to a CPC organiser using the EmailJS email service. 
-* The sponsor carousel banners in the 'Visit our Sponsor' section should be clickable and link a user to an external sponsor website, where that page opens in a new browser window/tab.
-* The Current League page should have back buttons above and below the League Table container and link a user back to the Homepage.
-* The Login page should have back buttons above and below the Log In form container and link a user back to the Homepage.
-* The Registration page should have back buttons above and below the Registration Form container and link a user back to the Homepage.
+  * It should have a navigation bar with individual links to the Registration and Login pages. The navigation bar should also be fixed to the top of the page view.
+  * The 'hero' carousel banners at the top of the Homepage should include a link button linking to the Registration page.
+  * The 'Why Join' section should also contain a link button linking to the Registration page.
+  * The 'Our Leagues' section should contain a button linking a user to the current League Table page.
+  * On completion and submission the Contact Form should send an email (cc'ing the user) to a CPC organiser using the EmailJS email service. 
+  * The sponsor carousel banners in the 'Visit our Sponsor' section should be clickable and link a user to an external sponsor website, where that page opens in a new browser window/tab.
+  * The Current League page should have back buttons above and below the League Table container and link a user back to the Homepage.
+  * The Login page should have back buttons above and below the Log In form container and link a user back to the Homepage.
+  * The Registration page should have back buttons above and below the Registration Form container and link a user back to the Homepage.
 
 * ##### The Player Homepage and linked pages/views; #####
-* Once a Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), and Log Out (which reroutes a user to the Login page).  
-* The Player Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
-* Each function listed on the Player Homepage should have its own page.
-* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning a Player to their Player Homepage. The function pages to be included are: 'My League Stats', 'Add Match Result', and 'Edit My Account'.
+  * Once a Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), and Log Out (which reroutes a user to the Login page).  
+  * The Player Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
+  * Each function listed on the Player Homepage should have its own page.
+  * Each of the function pages should have a 'Back' button positioned both below and above the content area, returning a Player to their Player Homepage. The function pages to be included are: 'My League Stats', 'Add Match Result', and 'Edit My Account'.
 
 * ##### The Admin Homepage and linked pages/views; #####
-* If a Player is also an Admin, and once that Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), Admin (Admin Homepage) and Log Out (which should reroute a user to the Login page). 
-* The Admin Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
-* Each function listed on the Admin Homepage should have its own page.
-* Each of the function pages should have a 'Back' button positioned both below and above the content area, returning an Admin to their Player Homepage. The function pages to be included are: 'Add League', 'Add Player', and 'Edit League'.
+  * If a Player is also an Admin, and once that Player is logged in and is rerouted to their Player Homepage, the navigation bar should change and show individual links for; Home (Homepage), MyHome (Player Homepage), Admin (Admin Homepage) and Log Out (which should reroute a user to the Login page). 
+  * The Admin Homepage should have individual Bootstrap cards with clearly visible link buttons for each function a user can perform there.
+  * Each function listed on the Admin Homepage should have its own page.
+  * Each of the function pages should have a 'Back' button positioned both below and above the content area, returning an Admin to their Player Homepage. The function pages to be included are: 'Add League', 'Add Player', and 'Edit League'.
 
 #### Information Architecture: ####
 
@@ -185,50 +185,51 @@ Information Architechture is defined as; "The structural design of the informati
 With this in mind, please ind details below about the CPC sitemap, navigation, and security considerations.
 
 * ##### Sitemap #####
- * The structure of the website is outlined in the Sitemap. Click here to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
-
-* TO DO *
+  * The structure of the website is outlined in the Sitemap. Click here to view the <a href="readme-assets/cpc-sitemap.png"><strong>Sitemap.</strong></a>
 
 * ##### Navigation & Security #####
- * The CPC website should also be designed to allow users to easily and securely navigate throughout the site. For example, the navigation bar should be fixed to the top of the page view so that it is always immediately accessible. 
- * Buttons and links should be clearly visible and communicate their purpose in an unambiguous way. 
- * Function pages should have 2 'Back' buttons situated at the top and bottom of the page view to allow for an easy back and forth between pages.
- * The site should not all users to access areas without privileges. For example, a user should not be able to access another users Player Homepage or be able to edit another players account details. Or, A non-Admin should not be able to edit matches or access the Admin Homepage.
- * MongoDB Atlas access credentials should not be visible anywhere on the site.
- * A user should not be able to access another users password. 
+  * The CPC website should also be designed to allow users to easily and securely navigate throughout the site. For example, the navigation bar should be fixed to the top of the page view so that it is always immediately accessible. 
+  * Buttons and links should be clearly visible and communicate their purpose in an unambiguous way. 
+  * User feature/function pages should have two 'Back' buttons situated at the top and bottom of the page view to allow for an easy back and forth between pages.
+  * The site should not allow users to access areas without access privileges. For example, a user should not be able to access another users Player Homepage or be able to edit another players account details. Or, A non-Admin should not be able to edit matches or access the Admin Homepage.
+  * MongoDB Atlas access credentials should not be visible anywhere on the site.
+  * A user should not be able to access another users password. 
+  * Errors should be handled gracefully through exception handling functions, where an user is shown a site page when an error occurs as opposed to a generic browser-rendered error message. The error page should briefly explain the error and offer the user redirection back to the homepage. 
 
 #### Data & Database Schema ####
-The CPC website should be designed to allow a user to create, read, update, and delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in four Collections named: 'user', 'league', and 'matches'. Each Collection will contain documents with unique 'id's, storing key:value pairs of relevant information. The user functions/actions on the CPC site will interact with and/or populate the documents with relevant values.
+The CPC website should be designed to allow a user to Create, Read, Update, and Delete data intuitively and quickly. CPC will use a NoSql MongoDB Atlas database to store all data. The database will be called 'pool_club'. It will store data in three Collections named: 'user', 'league', and 'matches'. Each Collection will contain documents with unique 'id's, and store key:value pairs of relevant information. The user features/functions on the CPC site will interact with and/or populate the database documents with relevant values.
 
- * The 'user' collection should store information relating to registered club members, or Players. The keys in this collection will be;
+ * The 'user' collection should store information relating to registered club members. The keys in this collection will be;
    * 'first_name', 'nickname', 'surname', 'email', 'telephone', 'password', 'admin', 'points' 'matches_played', 'matches_won', 'matches_lost', 'games_won', 'games_lost, and 'entered_leagues'. * Please note that some keys will store data for future features - please see the future features section below for more details about future relases.  
 
- * The 'league' collection should store information relating to the current league (the current league is that which has an end date in the future but a start date in the past). The keys in this collection will be;
+ * The 'league' collection should store information relating to the current league. The keys in this collection will be;
    * 'name', 'description', 'start_date', 'end_date', and 'participating_players'. * Please note that some keys will store data for future features - please see the future features section below for more details about future relases.   
   
  * The 'matches' collection should store information relating to individual matches played. The keys in the documents of this collection will be;
    * 'player_one', 'player_two', 'player_one_won', 'player_two_won', 'date', 'league', 'created_by', and 'referee'. * Please note that some keys will store data for future features - please see the future features section below for more details about future relases.  
   
-* The Data Types for each value in the Collections can be seen in the Database Schema <a href="readme-assets/cpc-database-schema.md"><strong>Here.</strong></a>
+* The Data Types for each value in the Collections can be seen in the <a href="readme-assets/cpc-database-schema.md"><strong>Database Schema</strong></a>
 
 ### 4. The Skeleton Plane ###
 
 Following on from the tasks decided upon in the Structure Plane, the Skeleton Plane is defined as follows; ".. The skeleton is designed to optimize the arrangement of these elements (such as the placement of buttons, tabs, photos's and blocks of text) for maximum effect and efficiency..".
 
-With this in mind I created the below wireframes, to detail the layout of the website pages and individual sections/containers etc. Due to the number of pages involved, I created multiple and split them into groups. I created 2 wireframes for the Homepage and the pages directly linked from the Homapgae. I created 2 wireframes for the Player Homepage and the pages directly linked from the Player Homepage. And I created 2 wireframes for the Admin Homepage and the pages directly linked from the Admin Homepage. Please click on the the links below to view these wireframes. * Please note that these wireframes include references to features not yet available.
+With this in mind I created the below wireframes, to detail the layout of the website pages and individual sections/containers etc. Due to the number of pages involved, I created multiple wireframes and split them into groups. I created two wireframes for the Homepage and the pages directly linked from the Homapgae. I also created two wireframes for the Player Homepage and the pages directly linked from the Player Homepage. And I created two wireframes for the Admin Homepage and the pages directly linked from the Admin Homepage. 
+
+Please click on the the links below to view these wireframes. * Please note that these wireframes include references to sectionsfeatures which are not yet available on the live Heroku site. Please see the Future Features sectuin below for more details on future functionality.
 
 ##### Wireframes #####
 * Wireframes for the Homepage and related pages;
-1. <a href="readme-assets/cpc-homepage-and-linked-pages-wireframes-large.png"><strong>Homepage on Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-homepage-and-related-pages-wireframes-mobile.png"><strong>Homepage on Mobile Devices</strong></a>
+  * <a href="readme-assets/cpc-homepage-and-linked-pages-wireframes-large.png"><strong>Homepage on Large Screen Devices</strong></a>
+  * <a href="readme-assets/cpc-homepage-and-related-pages-wireframes-mobile.png"><strong>Homepage on Mobile Devices</strong></a>
 
 * Wireframes for the Player Homepage and related pages;
-1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-large.png"><strong>Player Homepage on Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-mobile.png"><strong>Player Homepage on Mobile Devices</strong></a>
+  * <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-large.png"><strong>Player Homepage on Large Screen Devices</strong></a>
+  * <a href="readme-assets/cpc-player-homepage-and-linked-pages-wireframes-mobile.png"><strong>Player Homepage on Mobile Devices</strong></a>
 
 * Wireframes for the Admin Homepage and related pages;
-1. <a href="readme-assets/cpc-admin-homepage-and-linked-pages-wireframes-large.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
-1. <a href="readme-assets/cpc-admin-homepage-and-linkeded-pages-wireframes-mobile.png"><strong>Admin Homepage on Mobile Devices</strong></a>
+  * <a href="readme-assets/cpc-admin-homepage-and-linked-pages-wireframes-large.png"><strong>Admin Homepage on Large Screen Devices</strong></a>
+  * <a href="readme-assets/cpc-admin-homepage-and-linkeded-pages-wireframes-mobile.png"><strong>Admin Homepage on Mobile Devices</strong></a>
 
 
 ### 5. The Surface Plane ###
@@ -371,6 +372,7 @@ Any bugs or issues discovered are also listed below along with remedies if appli
 1. HTML validator warning - 
 1. Floating Footer - When I initally created my base.html and index.html templates and added a navbar and footer, the footbar did not behave itself. It was 'floating' up from the bottom of the page and hugging the bottom of the last container on the page. I did some research and found that I could fix it by applying some CSS to it. I added the 'Margin-Top: auto' property and value and it fixed the issue.
 1. On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68). 
+1. Safari datepicker
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -455,9 +457,11 @@ The live version of the CPC website deployed via Heroku can be seen: [Here!](htt
 * [StackOverflow.com](https://stackoverflow.com/)
 * [CSSTricks.com](https://css-tricks.com/)
   
-1. Code Institute Course Material - I referred to and used Code Instiute course material to help with this project.
+1. Code Institute Course Material - I referred to and used Code Instiute course material to help with this project. I also used and edited some code snippets from the BAckend Development lessons/projects.
 
 1. I copied and used jQuery code to stop Bootstrap form validation from validating the Contact form on index.html again, after submission. I found some jQuery code on a GitHub issues thread which fixed the problem when I added the code to my EmailJS JavaScript code on script.js. This thread was owned by a GitHub user called Cina Saffary. See the GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68).
+ 
+1. Bootstrap Tables
 
 1. EmailJS code - I copied relevant JavaScript code from the EmailJS website in order to send emails from my Contact Form on index.html.
 
