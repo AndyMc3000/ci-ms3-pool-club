@@ -176,7 +176,7 @@ def add_match():
     """
     if request.method == "POST":
         match = {
-            # player_one and player_two represent the user ObjectId's
+            # Player_one and player_two represent the user ObjectId's
             "player_one": request.form.get("player_one"),
             "player_two": request.form.get("player_two"),
             "player_one_games_won": request.form.get("player_one_games_won"),
@@ -229,13 +229,13 @@ def player_edit_account():
             "nickname": request.form.get("nickname"),
             "email": request.form.get("email"),
             "telephone": request.form.get("telephone"),
-            "password": request.form.get("password"),
-            "password": request.form.get("password")
+            "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.user.update({"_id": ObjectId(player)}, update_player)
+
+        mongo.db.user.update(player, update_player)
         flash("Account Successfully Updated")
         return redirect(url_for("player_home", first_name=session["user"]))
-
+    print(player)
     return render_template(
         "player-edit-account.html", player=player, user=user)
 
@@ -369,8 +369,8 @@ def not_found_exception_handler(e):
 @app.errorhandler(Exception)
 def generic_exception_handler(e):
     """
-    Catches ANY other exception
-    """
+    # Catches ANY other exception
+    # """
     print(e)
     return render_template("error-exception.html")
 
@@ -526,4 +526,4 @@ def player_archive_stats():
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
