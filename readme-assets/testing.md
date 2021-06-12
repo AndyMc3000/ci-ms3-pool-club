@@ -6,6 +6,7 @@
 <br>
 
 ## Table of Contents ##
+1. [Test User Accounts](#test-user-accounts)
 1. [Development Testing](#development-testing)
 1. [User & Client Stories Testing](#user-client-stories-testing)
 1. [Code Validation](#code-validation)
@@ -13,7 +14,9 @@
 1. [Browser Testing](#browser-testing)
 1. [Bugs Discovered](#bugs-discovered)
 
-### Testing User Accounts ###
+<br>
+
+## 1. <a name="test-user-accounts">Test User Accounts</a> ##
 
 Both Admin and Player views on the CPC site can be tested by using the following user accounts;
 
@@ -24,7 +27,7 @@ Both Admin and Player views on the CPC site can be tested by using the following
 #### Player User: Ding "Pot Noodle" Junhui ####
 * Username/Email: ding@cpc.ie
 * Password: potnoodle
-* 
+
 <br>
 
 ## 1. <a name="development-testing">Development Testing</a> ##
@@ -124,16 +127,16 @@ I ran my script.js file through the JSHint validator and foucn the following War
 63	emailjs
 
 * The warnings described relate to the Bootstrap from validation JavaScript. When I attempted to resolve these warnings, by adding semicolon's in the relvant places, it broke the form validation feature. As a result I reverted to the otiginal Bootstrap code.
-* I also the EmailJS variable as is as I couldn't find a fix for it and didn't wnat to break the Contact Us Form EmailJS feature. 
+* I also left the EmailJS variable warning 'as is', as I couldn't find a fix for it and didn't wntn to break the Contact Us Form EmailJS feature. 
 
 #### Python ####
 
 I ran my app.py file through the PEP8online.com Python validator and found the following Error. 
 
-Error Code	Line	Column	Text
-E128	      89	  13	    continuation line under-indented for visual indent
+* Error Code	Line	Column	Text
+* E128	      89	  13	    continuation line under-indented for visual indent
 
-I fixed this error by continuing the relevant line of code onto the next line. I then repeated the test and got an 'All right' messgae from the validator.
+I fixed this error by continuing the relevant line of code onto the next line in app.py. I then repeated the test and got an 'All right' messgae from the validator.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -143,99 +146,147 @@ I fixed this error by continuing the relevant line of code onto the next line. I
 
 I manually tested the CPC site elements/components under the following headings;
 
-### Homepage ###
+## Homepage ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested Join link.
-* Tested Home link.
-* Tested Log In link.
-* Tested Registered User view.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested Join link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Log In link. -> Result: Worked as expected.
+* Tested Registered User view. -> Result: Worked as expected.
 
 #### Hero Carousel ####
-* Tested Sign Me Up! button on three slides.
+* Tested Sign Me Up! button on three slides. -> Result: Worked as expected.
 
 #### Why Join Us Section ####
-* Tested Join Today button.
+* Tested Join Today button. -> Result: Worked as expected.
 
 #### League Section ####
-* Tested League Table button.
+* Tested League Table button. -> Result: Worked as expected.
 
 #### Contact Us Section ####
-* Tested Contact Us Form
-* * Tested Form validation.
-* * Tested Success message.
-* * Tested EmailJS send feature
+* Tested Contact Us Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Success message. -> Result: Worked as expected.
+* * Tested EmailJS send feature. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
 
 #### Footer Section ####
-* Tested Logo link.
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
-
-
-### League Table Page ###
+## League Table Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested Home Link.
-* Tested Join link.
-* Tested Log in link.
-* Tested Registered User view.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested Home Link. -> Result: Worked as expected.
+* Tested Join link. -> Result: Worked as expected.
+* Tested Log in link. -> Result: Worked as expected.
+* Tested Registered User view. -> Result: Worked as expected.
 
 #### Body ####
-* Tested Back buttons
+* Tested Back buttons -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
 
 #### Footer Section ####
-* Tested Logo link.
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
-
-
-### Registration Page ###
+## Registration Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested Join link.
-* Tested Home link.
-* Tested Log in link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested Join link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Log in link. -> Result: Worked as expected.
 
 #### Body ####
-* Tested Back buttons
+* Tested Back buttons. -> Result: Worked as expected.
 
 #### Registration Form Section ####
-* Tested Registration Form
-* * Tested Form validation.
-* * Tested Flash Success & Error messages.
-* * Tested 'register' Python function.
+* Tested Registration Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'register' Python function. -> Result: Worked as expected.
+* * Tested Already Registered link. -> Result: Worked as expected.
 
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+* 
 #### Footer Section ####
-* Tested Logo link.
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
 
 
-### Login Page ###
+## Login Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested Join link.
-* Tested Home link.
-* Tested Log in link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested Join link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Log in link. -> Result: Worked as expected.
 
 #### Log In Form Section ####
-* Tested Registration Form
-* * Tested Form validation.
-* * Tested Flash Success & Error messages.
-* * Tested 'register' Python function.
+* Tested Registration Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'loginr' Python function. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
+## Player Homepage ##
+
+#### Navbar ####
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Body ####
+* Tested Feature button link. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
-### Player Homepage ###
+
+## Admin Homepage ##
+
+#### Navbar ####
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Body ####
+* Tested Feature button link. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
+
+
+
+## My League Stats Page ##
 
 #### Navbar ####
 * Tested Logo Link.
@@ -243,88 +294,153 @@ I manually tested the CPC site elements/components under the following headings;
 * Tested Home link.
 * Tested Admin link.
 
+#### Body ####
+* Tested Back buttons. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
-### Admin Homepage ###
-
-#### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
-
-
-
-
-### My League Stats Page ###
+## Edit My Account Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Edit Account Form Section ####
+* Tested Edit Account Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'player_edit_account' Python function. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
 
-### Edit My Account Page ###
 
-#### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
-
-
-
-### Add Match Result Page ###
-
-#### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
-
-
-
-### Add a League Page ###
+## Add Match Result Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Add Match Result Form Section ####
+* Tested Add Match Result Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'padd_match_result' Python function. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
-### Add a Player Page ###
+
+
+
+## Add a League Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Add League Form Section ####
+* Tested Add League Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'add_league' Python function. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
 
-### Select A League Page ###
+## Add a Player Page ##
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Add Player Form Section ####
+* Tested Add Player Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'add_player' Python function. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
+
+
+
+
+## Select A League Page ##
+
+#### Navbar ####
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
+
+#### Select League Form Section ####
+* Tested Select League Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'select_league' Python function. -> Result: Worked as expected.
+* 
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
+
+
 
 
 ### Edit A League Page ###
 
 #### Navbar ####
-* Tested Logo Link.
-* Tested MyHome link.
-* Tested Home link.
-* Tested Admin link.
+* Tested Logo Link. -> Result: Worked as expected.
+* Tested MyHome link. -> Result: Worked as expected.
+* Tested Home link. -> Result: Worked as expected.
+* Tested Admin link. -> Result: Worked as expected.
 
+#### Edit League Form Section ####
+* Tested Edit League Form.
+* * Tested Form validation. -> Result: Worked as expected.
+* * Tested Flash Success & Error messages. -> Result: Worked as expected.
+* * Tested 'edit_league' Python function. -> Result: Worked as expected.
+
+#### Banner Adverts ####
+* Tested banner links. -> Result: Worked as expected.
+
+#### Footer Section ####
+* Tested Logo link. -> Result: Worked as expected.
 
 
 
@@ -334,7 +450,7 @@ I manually tested the CPC site elements/components under the following headings;
 
 ## 5. <a name="browser-testing">Browser Testing</a> ##
 
-I completed the above manual testing on the following browsers. Please see results below.
+I completed the above manual testing of the CPC site on the following browsers. Please see results below.
 
 ### Chrome ###
 * All tests ran OK.
@@ -343,7 +459,8 @@ I completed the above manual testing on the following browsers. Please see resul
 * All tests ran OK. 
 
 ### Safari ###
-* Safari date picker
+* Issue discovered with the fact that Safari doesn't support Form DatePicker by default. Pleasee see Bugs Discovered section for more detail.
+* All other tests ran OK. 
 
 #### [Back To Top ^ ](#top-of-page) ####
 
