@@ -11,7 +11,20 @@
 1. [Code Validation](#code-validation)
 1. [Manual Testing](#manual-testing)
 1. [Browser Testing](#browser-testing)
+1. [Bugs Discovered ]#bugs-discovered)
 
+### Testing User Accounts ###
+
+Both Admin and Player views on the CPC site can be tested by using the following user accounts;
+
+#### Admin User: Steve "The Ginger Magician" Davis ####
+* Username/Email: steve@cpc.ie
+* Password: theginger
+
+#### Player User: Ding "Pot Noodle" Junhui ####
+* Username/Email: ding@cpc.ie
+* Password: potnoodle
+* 
 <br>
 
 ## 1. <a name="development-testing">Development Testing</a> ##
@@ -36,7 +49,7 @@ I have listed the tests I did including those where I encountered bugs here (mos
 * Added 'Contact Us' form to index.html. Using the EmailJS email service, this form can be used to send a message to Club organisers. A user would also receive an email by way of confirmation that their message had been received by the club. I setup an EmailJS template and added the required JavaScript to my script.js file. I also added Bottstrap form validation JavaScript for all forms to script.js. Once everything was in place I tested the system and it worked as expected.
 * Created templates for 'Player Home' and 'Admin Home' and added cards for each view linked from those pages. Each card has a button which links to the relevant template view. I tested these and all worked as expected.
 * Created templates for all required pages. Added 'Back' buttons to the top and bottom of these pages. Tested all and all worked as expected.
-* Exception Handling
+* Exception Handling. I added to Python functions to my app.py file to manage any erros which may happen while a usr is using the site. One function manages 404/'Page not Found' type erros, and the other manages all other exceptions/errors. In both cases a user should be directed to one of two pages which explain that an error occurred and which offer a button to direct a user back to the Homepage. I test this cand it worked as expected.
 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -48,29 +61,29 @@ I have listed the tests I did including those where I encountered bugs here (mos
 I tested each of the Client and User stories which were used to determine the features, functions and styling of the CPC website. See the results of these tests here; 
 
 #### Client Stories ####
-> - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.” - Result: The site describes what the club is, what the benefits are of being a member, and how leagues operate.
-> - [x] “The website must give Club organisers a place to add new members and create and edit Leagues.
-> - [x] “The website must allow users on the site to view the current League Table.” 
-> - [x] “The website must allow new members to register and join the Club.” 
-> - [x] “The website must provide an area where club members can view their current League statistics.”
-> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee. Adding a match must update the League Table and a members League statistics appropriately.”
-> - [x] “The website must provide an area where club members can edit and update their Account information.”
-> - [x] “The website must provide an area where site Admininstrators can add a new League."
-> - [x] “The website must provide an area where site Admininstrators can add a new Player/Member."
-> - [x] “The website must provide an area where site Admininstrators can edit or delete a League."
-> - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.”
-> - [x] “The website must have a section showing banner adverts for CPC sponsors.”
-> - [x] “The website must be mobile-friendly.”
-> - [x] “The website colours must be dark. The website will be used by Players at Match events on their mobile phones, and so a dark colour scheme will ensure that viewing the website while near a pool table will reduce the risk of Player distraction.”
+> - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.” - TEST RESULT: The site describes what the club is, what the benefits are of being a member, and how leagues operate.
+> - [x] “The website must give Club organisers a place to add new members and create and edit Leagues. - TEST RESULT:
+> - [x] “The website must allow users on the site to view the current League Table.” - TEST RESULT: 
+> - [x] “The website must allow new members to register and join the Club.” - TEST RESULT: 
+> - [x] “The website must provide an area where club members can view their current League statistics.” - TEST RESULT:
+> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee. Adding a match must update the League Table and a members League statistics appropriately.” - TEST RESULT:
+> - [x] “The website must provide an area where club members can edit and update their Account information.” - TEST RESULT:
+> - [x] “The website must provide an area where site Admininstrators can add a new League." - TEST RESULT:
+> - [x] “The website must provide an area where site Admininstrators can add a new Player/Member." - TEST RESULT:
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a League." - TEST RESULT:
+> - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.” - TEST RESULT:
+> - [x] “The website must have a section showing banner adverts for CPC sponsors.” - TEST RESULT:
+> - [x] “The website must be mobile-friendly.” - TEST RESULT:
+> - [x] “The website colours must be dark. The website will be used by Players at Match events on their mobile phones, and so a dark colour scheme will ensure that viewing the website while near a pool table will reduce the risk of Player distraction.” - TEST RESULT:
 
 #### User Stories ####
-> - [x] “I want to learn about what the CPC is.”
-> - [x] “I want to be able to view the current League Table.”
-> - [x] “I want to be able to register and sign-up to join the CPC.”
-> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - my League Points, and my Matches Won/Lost.
-> - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.”
-> - [x] “I want to be able to edit and update my Account information."
-> - [x] “I want to be able to find contact infromation for the CPC, and be able to send a message to the CPC organisers."
+> - [x] “I want to learn about what the CPC is.” - TEST RESULT:
+> - [x] “I want to be able to view the current League Table.” - TEST RESULT:
+> - [x] “I want to be able to register and sign-up to join the CPC.” - TEST RESULT:
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - my League Points, and my Matches Won/Lost. - TEST RESULT:
+> - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.” - TEST RESULT:
+> - [x] “I want to be able to edit and update my Account information." - TEST RESULT:
+> - [x] “I want to be able to find contact infromation for the CPC, and be able to send a message to the CPC organisers." - TEST RESULT:
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -84,13 +97,6 @@ I ran the website through the W3C validators for [HTML](https://validator.w3.org
 
 The validator highlighted the followings errors across index.html and contact.html.
 
-* The aria-controls attribute must point to an element in the same document.
-* The aria-describedby attribute must point to an element in the same document.
-* The aria-describedby attribute must point to an element in the same document.
-* Illegal character in path segment: space is not allowed.
-* An img element must have an alt attribute, except under certain conditions.
-* Element h3 not allowed as child of element span in this context. 
-* Attribute row not allowed on element div at this point.
 
 All errors were fixed by making neccessary changes.
 
@@ -100,11 +106,6 @@ The W3C CSS Validation Service
 
 The validator highlighted the following errors in style.css;
 
-* 44	.close:hover	Parse Error (1.3)
-* 51	.close i:hover	Parse Error (1.3)
-* 176	.btn-danger:hover	Parse Error (1.2)
-* 275	.navbar button:hover	Parse Error (1.2)
-* 357	.button.nav-link.mymenu:hover	Parse Error (1.2)
 
 All errors were fixed by making necessary changes.
 
@@ -115,10 +116,7 @@ The validator also highlighted 2 x Errors and 768 x Warnings relating to the boo
 I ran the following files though the JSHint validator;
 
 store.js
-maps.js
-emailjs-homepage-request-a-quote.js
-emailjs-contact-page-contact-form.js
-bootstrap-form-validation.js
+
 
 Once I configued the validator to accept jQuery and JavaScript ES6, no Errors were listed.
 
@@ -241,3 +239,19 @@ I completed the above manual testing on the following browsers. Please see resul
 #### [Back To Top ^ ](#top-of-page) ####
 
 
+## 6. <a name="bugs-discovered">Bugs Discovered / Remedies</a> ##
+
+While developing and testing the site I discovered the below bugs/issues. If I founc a remedy to a bug I have listed this below.
+
+1. Bootstrap form validation - When I tried to validate the JavaScript code I got from Bootsrap on JSHint.com, it thrw back warnings saying the code was missing semi-colons. So, I added them to my code. However this stopped the vaidation so I had to revert to the original code.
+1. CSS animation error - I added the animation property to my style.css along with the required vendor prefixes and @keyframe syntax. When I ran my code through the W3 Jigsaw validator, it threw errors for my animation code. I did some research and it seems that W3/CSS specification don't yet recognise vendor prefixes. As such I removed the animation code to ensure I ran no errors.
+1. Bootstrap CSS errors. When I ran my site through the W3 Jigsaw CSS validator it through multiple warnings and erros for the Bootstrap CDN-linked CSS file in my base.html. I discussed this with Student Support and was advised that as it was a Bootstra file (and I have no control over it), it was acceptable to leave this as is. 
+1. EMailJS Console error - 
+1. HTML validator warning - 
+1. Floating Footer - When I initally created my base.html and index.html templates and added a navbar and footer, the footbar did not behave itself. It was 'floating' up from the bottom of the page and hugging the bottom of the last container on the page. I did some research and found that I could fix it by applying some CSS to it. I added the 'Margin-Top: auto' property and value and it fixed the issue.
+1. On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68). 
+1. Safari datepicker.
+
+#### [Back To Top ^ ](#top-of-page) ####
+
+<a name="top-of-page">![Cill na Martra Pool Club (CPC) Logo created using Canva.com and Clipart.com](/readme-assets/cpcp-logo-readme-header.png)</a>
