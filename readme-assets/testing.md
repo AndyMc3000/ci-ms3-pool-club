@@ -11,7 +11,7 @@
 1. [Code Validation](#code-validation)
 1. [Manual Testing](#manual-testing)
 1. [Browser Testing](#browser-testing)
-1. [Bugs Discovered ]#bugs-discovered)
+1. [Bugs Discovered](#bugs-discovered)
 
 ### Testing User Accounts ###
 
@@ -50,6 +50,7 @@ I have listed the tests I did including those where I encountered bugs here (mos
 * Created templates for 'Player Home' and 'Admin Home' and added cards for each view linked from those pages. Each card has a button which links to the relevant template view. I tested these and all worked as expected.
 * Created templates for all required pages. Added 'Back' buttons to the top and bottom of these pages. Tested all and all worked as expected.
 * Exception Handling. I added to Python functions to my app.py file to manage any erros which may happen while a usr is using the site. One function manages 404/'Page not Found' type erros, and the other manages all other exceptions/errors. In both cases a user should be directed to one of two pages which explain that an error occurred and which offer a button to direct a user back to the Homepage. I test this cand it worked as expected.
+* Python and JavaScript functions testing are detailed under the Manual Testing section below.
 
 
 #### [Back To Top ^ ](#top-of-page) ####
@@ -62,28 +63,28 @@ I tested each of the Client and User stories which were used to determine the fe
 
 #### Client Stories ####
 > - [x] “One of the main goals of the website is to grow the membership of Cill na Martra Pool Club, and to provide value to visitors in the information is provides about the CPC.” - TEST RESULT: The site describes what the club is, what the benefits are of being a member, and how leagues operate.
-> - [x] “The website must give Club organisers a place to add new members and create and edit Leagues. - TEST RESULT:
-> - [x] “The website must allow users on the site to view the current League Table.” - TEST RESULT: 
-> - [x] “The website must allow new members to register and join the Club.” - TEST RESULT: 
-> - [x] “The website must provide an area where club members can view their current League statistics.” - TEST RESULT:
-> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee. Adding a match must update the League Table and a members League statistics appropriately.” - TEST RESULT:
-> - [x] “The website must provide an area where club members can edit and update their Account information.” - TEST RESULT:
-> - [x] “The website must provide an area where site Admininstrators can add a new League." - TEST RESULT:
-> - [x] “The website must provide an area where site Admininstrators can add a new Player/Member." - TEST RESULT:
-> - [x] “The website must provide an area where site Admininstrators can edit or delete a League." - TEST RESULT:
-> - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.” - TEST RESULT:
-> - [x] “The website must have a section showing banner adverts for CPC sponsors.” - TEST RESULT:
-> - [x] “The website must be mobile-friendly.” - TEST RESULT:
-> - [x] “The website colours must be dark. The website will be used by Players at Match events on their mobile phones, and so a dark colour scheme will ensure that viewing the website while near a pool table will reduce the risk of Player distraction.” - TEST RESULT:
+> - [x] “The website must give Club organisers a place to add new members and create and edit Leagues. - TEST RESULT: Admins can create new leagues, edit leagues, and add new members from functions listed on the Admin Homepage.
+> - [x] “The website must allow users on the site to view the current League Table.” - TEST RESULT: A League Tabel can be accessed via a button on the Homepage. 
+> - [x] “The website must allow new members to register and join the Club.” - TEST RESULT: The site has a Registration page where users can sing up abd join the club.
+> - [x] “The website must provide an area where club members can view their current League statistics.” - TEST RESULT: A club member can view thier Points, Matches Won, and Matches Lost statistics by clicking a 'My League Stats' buttton on the Player Homepage.
+> - [x] “The website must provide an area where club members can add a Match result when they have acted as a Match Referee. Adding a match must update the League Table and a members League statistics appropriately.” - TEST RESULT: A member can add a match result by clicking on a 'Add Match Result' button on the Player Homepage. Once a member submist the Add Match Result form, a Python function calculates the additional points accrued by each Player in the Match, and also increments either their Matches Won or Matche Lost total.
+> - [x] “The website must provide an area where club members can edit and update their Account information.” - TEST RESULT: A member can update their Account details by clicking on an Edit My Account button on the Player Homepage.
+> - [x] “The website must provide an area where site Admininstrators can add a new League." - TEST RESULT: An Admin can add a new League by clicking on an Add League button on the Admin Homepage.
+> - [x] “The website must provide an area where site Admininstrators can add a new Player/Member." - TEST RESULT: An Admin can add a new Player by clicking on an Edit League button on the Admin Homepage. 
+> - [x] “The website must provide an area where site Admininstrators can edit or delete a League." - TEST RESULT: An Admin can edit a League, or delete it by clicking on an Add League button on the Admin Homepage. When they click the button they are taken to a 'Select a League' page. Once they selct a league and 'Edit League page opens.
+> - [x] “The website must allow users to find contact details for Club organisers and include a Contact Us form.” - TEST RESULT: A Contact section on index.html lists a telephone number and an email address which can be used to contact CPC organiser. A Contact From in the same section allows a user to send a message to CPC organisers (they will also receive a copy of their message by email).
+> - [x] “The website must have a section showing banner adverts for CPC sponsors.” - TEST RESULT: All pages on the CPC site have a banner carousrel at the bottom of the page showing rotating banners for club sponsors.
+> - [x] “The website must be mobile-friendly.” - TEST RESULT: The CPC site is responsive to tablet and mobile devices.
+> - [x] “The website colours must be dark. The website will be used by Players at Match events on their mobile phones, and so a dark colour scheme will ensure that viewing the website while near a pool table will reduce the risk of Player distraction.” - TEST RESULT: Dark backgroundcolours have been used in the design of the CPC site.
 
 #### User Stories ####
-> - [x] “I want to learn about what the CPC is.” - TEST RESULT:
-> - [x] “I want to be able to view the current League Table.” - TEST RESULT:
-> - [x] “I want to be able to register and sign-up to join the CPC.” - TEST RESULT:
-> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - my League Points, and my Matches Won/Lost. - TEST RESULT:
-> - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.” - TEST RESULT:
-> - [x] “I want to be able to edit and update my Account information." - TEST RESULT:
-> - [x] “I want to be able to find contact infromation for the CPC, and be able to send a message to the CPC organisers." - TEST RESULT:
+> - [x] “I want to learn about what the CPC is.” - TEST RESULT: The index.html page has an introduction sections which outlines who the CPC are and how they operate.
+> - [x] “I want to be able to view the current League Table.” - TEST RESULT: A user can view the current league table by clicking a button in the Leagues Table section section on index.html
+> - [x] “I want to be able to register and sign-up to join the CPC.” - TEST RESULT: A user can acces a registration page/form from a link in the navbar on index.html, or from button on the carousel and in the introduction section on index.html.
+> - [x] “Once I'm sined-up and logged in, I want to be able to view my personal League statistics - my League Points, and my Matches Won/Lost. - TEST RESULT: A user can view their personal league stats by clicking a 'My League Stats' buttton on the Player Homepage.
+> - [x] “If I act as a Referee for a League Match, I want to be able to record the Match result and update the current League Table.” - TEST RESULT: A registered member can add a match result by clicking on an Add Match Result button on the Player Homepage.
+> - [x] “I want to be able to edit and update my Account information." - TEST RESULT: A User can edit their Account detilas by clicking an 'Edit My Account' button on the Player Homepage.
+> - [x] “I want to be able to find contact information for the CPC, and be able to send a message to the CPC organisers." - TEST RESULT: A user can find contact details (telephone and email) for the CPC organisers on a Contact section on index.htmk. A user can also send a message to CPC organisers using a contact form in the Contact section on index.html. A copy of their message is sent to the user via email. 
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -95,27 +96,21 @@ I ran the website through the W3C validators for [HTML](https://validator.w3.org
 
 #### HTML ####
 
-The validator highlighted the followings errors across index.html and contact.html.
+The W3C CSS Validation Service. The validator highlighted the following warning for index.html. No other errors or warnings were found.
 
-
-All errors were fixed by making neccessary changes.
+* "Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections." - I decide not to 'fix' the issue this warning relates to. It relates to the title of the introduction section which is a h1 title. I decide to leave it as a h1 as it looks better like this when underneath the 'hero' carousel.
 
 #### CSS ####
 
-The W3C CSS Validation Service
+The W3C CSS Validation Service. The validator found the following errors. No toher warnings or erros were found.
 
-The validator highlighted the following errors in style.css;
-
-
-All errors were fixed by making necessary changes.
-
-The validator also highlighted 2 x Errors and 768 x Warnings relating to the bootstrap.min.css style sheet. I queried this with Student support and was advised that as I have no control over the Bootstrap style sheet as I am using a CDN to access the file, these were acceptable issues.
+* The validator highlighted 18 Errors and 768 Warnings relating to the bootstrap.min.css style sheet. I queried this with Tutor Support and was advised that these were acceptable issues as I have no control over the CDN-delivered Bootstrap style sheet.
 
 #### JavaScript ####
 
-I ran the following files though the JSHint validator;
+I ran my script.js file through the JSHint validator;
 
-store.js
+
 
 
 Once I configued the validator to accept jQuery and JavaScript ES6, no Errors were listed.
@@ -243,14 +238,15 @@ I completed the above manual testing on the following browsers. Please see resul
 
 While developing and testing the site I discovered the below bugs/issues. If I founc a remedy to a bug I have listed this below.
 
+#### Bugs Discovered / Remedies ####
 1. Bootstrap form validation - When I tried to validate the JavaScript code I got from Bootsrap on JSHint.com, it thrw back warnings saying the code was missing semi-colons. So, I added them to my code. However this stopped the vaidation so I had to revert to the original code.
 1. CSS animation error - I added the animation property to my style.css along with the required vendor prefixes and @keyframe syntax. When I ran my code through the W3 Jigsaw validator, it threw errors for my animation code. I did some research and it seems that W3/CSS specification don't yet recognise vendor prefixes. As such I removed the animation code to ensure I ran no errors.
 1. Bootstrap CSS errors. When I ran my site through the W3 Jigsaw CSS validator it through multiple warnings and erros for the Bootstrap CDN-linked CSS file in my base.html. I discussed this with Student Support and was advised that as it was a Bootstra file (and I have no control over it), it was acceptable to leave this as is. 
-1. EMailJS Console error - 
-1. HTML validator warning - 
+1. EMailJS Console error - The EmailJS JavaScript code produces and 'AddEventListener' error in the console. I didn't have time to find a solution to this.
+1. HTML validator warning - The W3 HTML validator produced a Warning in regard to a section not having an accetable heading. It relates to the Introduction section on index.html. I decided to leave this issue as is, as it looks better on the page to have a H1 there instead of a H2 to H6 version of the text.
 1. Floating Footer - When I initally created my base.html and index.html templates and added a navbar and footer, the footbar did not behave itself. It was 'floating' up from the bottom of the page and hugging the bottom of the last container on the page. I did some research and found that I could fix it by applying some CSS to it. I added the 'Margin-Top: auto' property and value and it fixed the issue.
 1. On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68). 
-1. Safari datepicker.
+1. Safari datepicker. I found that Safari does not HTML datepicker. I found a jQuery-based solution on [StackOverflow](https://stackoverflow.com/questions/35682138/html5-date-picker-doesnt-show-on-safari), but didn't have time to implement/test it.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
