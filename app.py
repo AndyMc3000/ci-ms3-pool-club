@@ -85,7 +85,7 @@ def register():
         # session user is the user with the same email as the current user
         session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
-        return redirect(url_for("player_home", first_name=session["user"]))
+        return redirect(url_for("player_home", first_name=session["user"], user=user))
 
     return render_template("register.html", user=user)
 
@@ -110,7 +110,7 @@ def login():
                 flash("You have logged in as: {}".format(
                     request.form.get("email")))
                 return redirect(url_for(
-                    "player_home", first_name=session["user"]))
+                    "player_home", first_name=session["user"], user=user))
 
             else:
                 # Returns message if password incorrect
@@ -179,10 +179,10 @@ def add_match():
             # Player_one and player_two represent the user ObjectId's
             "player_one": request.form.get("player_one"),
             "player_two": request.form.get("player_two"),
-            "player_one_games_won": int(request.form.get
-                    ("player_one_games_won")),
-            "player_two_games_won": int(request.form.get
-                    ("player_two_games_won")),
+            "player_one_games_won":
+                int(request.form.get("player_one_games_won")),
+            "player_two_games_won":
+                int(request.form.get("player_two_games_won")),
             "date": (request.form.get("date")),
             "league": request.form.get("league"),
             "referee": request.form.get("referee"),
