@@ -67,7 +67,7 @@ def register():
             "first_name": request.form.get("first_name"),
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
-            "telephone": request.form.get("telephone"),
+            "telephone": int(request.form.get("telephone")),
             # list of default user values for league statistics
             "admin": False,
             "points": 0,
@@ -179,9 +179,9 @@ def add_match():
             # Player_one and player_two represent the user ObjectId's
             "player_one": request.form.get("player_one"),
             "player_two": request.form.get("player_two"),
-            "player_one_games_won": request.form.get("player_one_games_won"),
-            "player_two_games_won": request.form.get("player_two_games_won"),
-            "date": request.form.get("date"),
+            "player_one_games_won": int(request.form.get("player_one_games_won")),
+            "player_two_games_won": int(request.form.get("player_two_games_won")),
+            "date": (request.form.get("date")),
             "league": request.form.get("league"),
             "referee": request.form.get("referee"),
             "created_by": session["user"]
