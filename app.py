@@ -85,7 +85,8 @@ def register():
         # session user is the user with the same email as the current user
         session["user"] = request.form.get("email").lower()
         flash("Registration Successful!")
-        return redirect(url_for("player_home", first_name=session["user"], user=user))
+        return redirect(url_for(
+            "player_home", first_name=session["user"], user=user))
 
     return render_template("register.html", user=user)
 
