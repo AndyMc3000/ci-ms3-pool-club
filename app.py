@@ -230,7 +230,7 @@ def player_edit_account():
             "surname": request.form.get("surname"),
             "nickname": request.form.get("nickname"),
             "email": request.form.get("email"),
-            "telephone": request.form.get("telephone"),
+            "telephone": int(request.form.get("telephone")),
             "password": generate_password_hash(request.form.get("password")),
             # These values Wil not be changed from what already
             # exits in the user collection
