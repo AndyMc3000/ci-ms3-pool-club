@@ -362,16 +362,6 @@ Any bugs or issues discovered are also listed below along with remedies if appli
 1. Device Testing
 1. Browser Testing
 1. Bugs Discovered
-  
-#### Bugs Discovered / Remedies ####
-1. Bootstrap form validation - When I tried to validate the JavaScript code I got from Bootsrap on JSHint.com, it thrw back warnings saying the code was missing semi-colons. So, I added them to my code. However this stopped the vaidation so I had to revert to the original code.
-1. CSS animation error - I added the animation property to my style.css along with the required vendor prefixes and @keyframe syntax. When I ran my code through the W3 Jigsaw validator, it threw errors for my animation code. I did some research and it seems that W3/CSS specification don't yet recognise vendor prefixes. As such I removed the animation code to ensure I ran no errors.
-1. Bootstrap CSS errors. When I ran my site through the W3 Jigsaw CSS validator it through multiple warnings and erros for the Bootstrap CDN-linked CSS file in my base.html. I discussed this with Student Support and was advised that as it was a Bootstra file (and I have no control over it), it was acceptable to leave this as is. 
-1. EMailJS Console error - The EmailJS JavaScript code produces and 'AddEventListener' error in the console. I didn't have time to find a solution to this.
-1. HTML validator warning - The W3 HTML validator produced a Warning in regard to a section not having an accetable heading. It relates to the Introduction section on index.html. I decided to leave this issue as is, as it looks better on the page to have a H1 there instead of a H2 to H6 version of the text.
-1. Floating Footer - When I initally created my base.html and index.html templates and added a navbar and footer, the footbar did not behave itself. It was 'floating' up from the bottom of the page and hugging the bottom of the last container on the page. I did some research and found that I could fix it by applying some CSS to it. I added the 'Margin-Top: auto' property and value and it fixed the issue.
-1. On a previous project I had a bug with form submission where Bootstrap was validating a contact form after it had been 'submit' and 'reset'. As the form had been reset, this resulted in Bootstrap validation errors appearing on the blank form after form submission. This may give a user the impression that their message/form had not been sent, even though an Alert had been sent to the browser to confirm that the message had been sent. This is a known issue with Bootstrap. With help from Tutor support and a Google search I found some jQuery code on a GitHub chat thread which fixed the problem. When I added the code to my EmailJS JavaScript code on script.js it fixed the problem. See that GitHub thread here - ['Resetting form doesn't clear validation errors'](https://github.com/1000hz/bootstrap-validator/issues/68). 
-1. Safari datepicker. I found that Safari does not HTML datepicker. I found a jQuery-based solution on [StackOverflow](https://stackoverflow.com/questions/35682138/html5-date-picker-doesnt-show-on-safari), but didn't have time to implement/test it.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
