@@ -92,7 +92,7 @@ I tested each of the Client and User stories which were used to determine the fe
 
 ## 3. <a name="code-validation">Code Validation</a> ##
 
-I ran the website through the W3C validators for [HTML](https://validator.w3.org/) and [CSS](https://jigsaw.w3.org/css-validator/). I also ran my JavaScript code through the [JSHint.com](https://jshint.com/) code checker, and used the PEP8 checker at [PEP8online.com](http://pep8online.com/) to check my Python code for PEP8 compliance.  
+I ran the website through the W3C validators for [HTML](https://validator.w3.org/) and [CSS](https://jigsaw.w3.org/css-validator/). I also ran my JavaScript & jQuery code through the [JSHint.com](https://jshint.com/) code checker, and used the PEP8 checker at [PEP8online.com](http://pep8online.com/) to check my Python code for PEP8 compliance.  
 
 #### HTML ####
 
@@ -106,17 +106,34 @@ The W3C CSS Validation Service. The validator found the following errors. No toh
 
 * The validator highlighted 18 Errors and 768 Warnings relating to the bootstrap.min.css style sheet. I queried this with Tutor Support and was advised that these were acceptable issues as I have no control over the CDN-delivered Bootstrap style sheet.
 
-#### JavaScript ####
+#### JavaScript & jQuery ####
 
-I ran my script.js file through the JSHint validator;
+I ran my script.js file through the JSHint validator and foucn the following Warnings. No errors were found.
 
+* Eight warnings - the following show the line number of the warning and the warning description;
+18	Missing semicolon.
+21	Missing semicolon.
+28	Missing semicolon.
+29	Missing semicolon.
+32	Missing semicolon.
+33	Missing semicolon.
+34	Missing semicolon.
+35	Missing semicolon.
 
+* One undefined variable
+63	emailjs
 
-
-Once I configued the validator to accept jQuery and JavaScript ES6, no Errors were listed.
+* The warnings described relate to the Bootstrap from validation JavaScript. When I attempted to resolve these warnings, by adding semicolon's in the relvant places, it broke the form validation feature. As a result I reverted to the otiginal Bootstrap code.
+* I also the EmailJS variable as is as I couldn't find a fix for it and didn't wnat to break the Contact Us Form EmailJS feature. 
 
 #### Python ####
-......
+
+I ran my app.py file through the PEP8online.com Python validator and found the following Error. 
+
+Error Code	Line	Column	Text
+E128	      89	  13	    continuation line under-indented for visual indent
+
+I fixed this error by continuing the relevant line of code onto the next line. I then repeated the test and got an 'All right' messgae from the validator.
 
 #### [Back To Top ^ ](#top-of-page) ####
 
@@ -124,95 +141,192 @@ Once I configued the validator to accept jQuery and JavaScript ES6, no Errors we
 
 ## 4. <a name="manual-testing">Manual Testing</a> ##
 
-I manually tested all website elements/components under the following headings;
+I manually tested the CPC site elements/components under the following headings;
 
 ### Homepage ###
 
 #### Navbar ####
-* When I click on the party Chef Logo in the navbar it loads index.html as expected.
-* The Home link button on the navbar shows an active status (button border) as expected.
-* When I hover over the Contact button in the navabr it changes color as expected.
-* When I click on the Contact button it opens contact.html as expected.
-* When I click on the MyMenu button it opens the MyMenu Modal as expected.
+* Tested Logo Link.
+* Tested Join link.
+* Tested Home link.
+* Tested Log In link.
+* Tested Registered User view.
 
-#### Hero Image ####
-* When I hover over the button on the hero images (Jumbotron) it hovers and grows as expected.
-* When I click on the hero image button it opens contact.html as expected.
+#### Hero Carousel ####
+* Tested Sign Me Up! button on three slides.
 
-#### Menus Section ####
-* When I hover over any/all menu accordion heading button it changes color and grows as expected.
-* When I click on the menu heading button it opens the menu accordion as expected.
-* When I click inside the open accordion the list of items scroll up/down as expected.
-* When I hover over the 'Add To MyMenu' button it grows as expected.
-* When I click on the 'Add To MyMenu' button it and alert appears to say 'Menu item added to your MyMenu' as expected.
-* When I close the alert the item quantity indicator on the MyMenu button increases by one as expected.
-* When I click on the MyMenu button the MyMenu modal opens and my item is listed as expected.
-* When I add multiple items to MyMenu they all appear as expected.
+#### Why Join Us Section ####
+* Tested Join Today button.
 
-#### Gallery Section ####
-* When I hover over the gallery section image it grows as expected.
-* When I click on the gallery section image it opens the gallery modal showing photo number one as expected.
-* When I click the 'next' carousel control icon the next photo appears as expected.
-* When I keep clicking the next carousel control button all images appear correctly as expected.
-* When I click the previous carousel control button the previous photo appears as expected.
-* When I click the close button on the modal the modal closes as expected.
-* When I open the gallery carousel and click anywhere on the page outside the modal the modal closes as expected.
+#### League Section ####
+* Tested League Table button.
 
-#### Footer ####
-* When I hover over the Home and Contact Us navigation buttons they change colour as expected.
-* When I click on the Home button it reloads the homepage as expected.
-* When I click on the Contact Us button it loads contact.html as expected.
-* When I hover over the social media icons they grow as expected.
+#### Contact Us Section ####
+* Tested Contact Us Form
+* * Tested Form validation.
+* * Tested Success message.
+* * Tested EmailJS send feature
+
+#### Footer Section ####
+* Tested Logo link.
 
 
-### MyMenu Modal ###
 
-#### Modal ####
-* When I click on the MyMenu button in the nabar the MyMenu modal opens as expected.
-* When I click the close button on the modal the modal closes as expected.
-* When I open the MyMenu modal and click anywhere on the page outside the modal the modal closes as expected.
 
-#### MyMenu Item List ####
-* When I add an item to the MYMenu modal it appears in the list which a default quantity of 1 as expected.
-* When I add an item to the MyMenu modal the 'Total' price figure updates correctly as expected.
-* When I try to reduce the item quantity using the quantity controls I am stopped from reducing the quantity to zero as expected.
-* When I increase the item quantity using the quantity controls the Total price increases correctly as expected.
-* When I reduce the item quantity the Total price figure reduces correctly as expected.
-* When I click on the remove item buttom the item disappears and an alert appears.
 
-#### Reast-A-Quote Form ####
-* When I click on the Contact Us link in the Request A Quote introduction section contact.html loads as expected.
-* When I hover on the 'Lets Party' button it changes color and grows as expected.
-* When I enter details in all fields correctly and hit the 'Send Request' button on the form, the Bootstrap validation highlights the fields in green as           expected.
-* When I enter details in all fields correctly and hit the 'Send Request' button on the form, an Alert appears to notfy me my message has been sent.
+### League Table Page ###
 
-### Contact Page ###
 #### Navbar ####
-* When I click on the party Chef Logo in the navbar it loads index.html as expected.
-* The Contact link button on the navbar shows an active status (button border) as expected.
-* When I hover over the Home button in the navbar it changes color as expected.
-* When I click on the Home button it opens index.html as expected.
+* Tested Logo Link.
+* Tested Home Link.
+* Tested Join link.
+* Tested Log in link.
+* Tested Registered User view.
 
-#### Google Map ####
-* When Google Map controls work expected - Pan, Zoom in/out, Pegman, Map/Satellite views, and Full screen mode.
-* When Click on a Party Chef marker and InfoWindow pops up with kitchen contact details as expected. All markers worked as expected.
-* When I click on a new marker while an InfoWindow is already open, the existing InfoWindow closes and the new one opens as expected.
+#### Body ####
+* Tested Back buttons
 
-#### Social Media Section ####
-* When I hover over a social media icon it grows as expected.
-* When I click on a social media icon it launches the social media website in a new tab/page.
+#### Footer Section ####
+* Tested Logo link.
 
-#### Contact Form ####
-* When I complete the form correctly the fields are highlighted in green as expected.
-* When I complete the form correctly and hit the 'Send Message' button I get a 'Message Sent Successfully' alert.
-* When I close the 'Message Sent Successfully' alert the form clears as expected.
-* When I complete the form correctly and hit the 'Send Message' button I receive an email to the Party Chef email and my personal email address as expected.
 
-#### Footer ####
-* When I hover over the Home and Contact Us navigation buttons they change colour as expected.
-* When I click on the Home button it loads the index.html as expected.
-* When I click on the Contact Us button it reloads contact.html and sends me to the top of the page as expected.
-* When I hover over the social media icons they grow as expected.
+
+
+
+### Registration Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested Join link.
+* Tested Home link.
+* Tested Log in link.
+
+#### Body ####
+* Tested Back buttons
+
+#### Registration Form Section ####
+* Tested Registration Form
+* * Tested Form validation.
+* * Tested Flash Success & Error messages.
+* * Tested 'register' Python function.
+
+#### Footer Section ####
+* Tested Logo link.
+
+
+
+
+
+### Login Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested Join link.
+* Tested Home link.
+* Tested Log in link.
+
+#### Log In Form Section ####
+* Tested Registration Form
+* * Tested Form validation.
+* * Tested Flash Success & Error messages.
+* * Tested 'register' Python function.
+
+
+
+
+
+### Player Homepage ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
+
+### Admin Homepage ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
+
+### My League Stats Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
+
+### Edit My Account Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
+### Add Match Result Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
+### Add a League Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+### Add a Player Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
+
+### Select A League Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+### Edit A League Page ###
+
+#### Navbar ####
+* Tested Logo Link.
+* Tested MyHome link.
+* Tested Home link.
+* Tested Admin link.
+
+
+
 
 #### [Back To Top ^ ](#top-of-page) ####
 
